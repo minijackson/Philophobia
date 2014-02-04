@@ -1,7 +1,8 @@
 package org.debug;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.util.logging.Logger;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
 import java.io.IOException;
 
 /**
@@ -20,11 +21,12 @@ public class Verbose {
 	 * - Level 5 : Everything, included Class instanciations and function calls and level 4 displayed
 	 */
 	private int verboseMode = 0;
-	/**
-	 * Buffer in which we write the log
-	 */
-	private BufferedWriter log = null;
 	
+	/**
+	 * Logger used to log messages into a file
+	 */
+	Logger log;
+
 	/**
 	 * Class constructor
 	 * 
@@ -37,36 +39,32 @@ public class Verbose {
 		if(level > 0) {
 			System.out.println("Verbose mode activated at level " + level);
 			
-			try {
-				log = new BufferedWriter(new FileWriter("a3p.log"));
+				log = Logger.getLogger("a3p.log");
+				
+				try {
+					log.addHandler(new FileHandler("a3p.log"));
+				} catch (IOException e) {
+					warning("Error initializing the log file", "org/debug/Verbose.java", "Verbose.Verbose(int)");
+				}
 
-				log.write("Verbose at level " + level + ".");
-				log.newLine();
-				log.write("Displayed messages are :");
-				log.newLine();
-				log.write("- Criticals");
-				log.newLine();
+				log.setLevel(Level.parse("ALL"));
+
+				log.info("Verbose at level " + level + ".");
+				log.info("Displayed messages are :");
+				log.info("- Criticals");
 
 				if(level >= 2) {
-					log.write("- Serious");
-					log.newLine();
+					log.info("- Serious");
 				}
 				if(level >= 3) {
-					log.write("- Warnings");
-					log.newLine();
+					log.info("- Warnings");
 				}
 				if(level >= 4) {
-					log.write("- Informations");
-					log.newLine();
+					log.info("- Informations");
 				}
 				if(level >= 5) {
-					log.write("- Class instanciations and function calls");
-					log.newLine();
+					log.info("- Class instanciations and function calls");
 				}
-
-			} catch(IOException e) {
-				System.out.println("Aille");
-			}
 		}
 
 		this.calls("Verbose class created", "org/debug/Verbose.java", "Verbose.Verbose(int)");
@@ -84,12 +82,11 @@ public class Verbose {
 		if(verboseMode >= 1) {
 			System.out.println("Critical : " + message);
 
-			try {
-				log.write("Critical : " + message + " in file " + file + " in " + location);
-				log.newLine();
-			} catch(IOException e) {
+//			try {
+				log.severe("Critical : " + message + " in file " + file + " in " + location);
+/*			} catch(IOException e) {
 				warning("Unable to write in log file", "org/debug/Verbose.java", "Verbose.critical(String, String, String)");
-			}
+			}*/
 		}
 	}
 
@@ -105,12 +102,11 @@ public class Verbose {
 		if(verboseMode >= 2) {
 			System.out.println("Serious : " + message);
 			
-			try {
-				log.write("Serious : " + message + " in file " + file + " in " + location);
-				log.newLine();
-			} catch(IOException e) {
+//			try {
+				log.severe("Serious : " + message + " in file " + file + " in " + location);
+/*			} catch(IOException e) {
 				warning("Unable to write in log file", "org/debug/Verbose.java", "Verbose.serious(String, String, String)");
-			}
+			}*/
 		}
 	}
 	
@@ -126,12 +122,12 @@ public class Verbose {
 		if(verboseMode >= 3) {
 			System.out.println("Warning : " + message);
 			
-			try {
-				log.write("Warning : " + message + " in file " + file + " in " + location);
-				log.newLine();
-			} catch(IOException e) {
-				warning("Unable to write in log file", "org/debug/Verbose.java", "Verbose.warning(String, String, String)");
-			}
+//			try {
+				log.warning("Warning : " + message + " in file " + file + " in " + location);
+/*			} catch(IOException e) {
+				// Not warning in order to prevent from infinite loop
+				System.out.println("Unable to write in log file in file org/debug/Verbose.java in Verbose.warning(String, String, String)");
+			}*/
 		}
 	}
 	
@@ -147,12 +143,11 @@ public class Verbose {
 		if(verboseMode >= 4) {
 			System.out.println("Information : " + message);
 			
-			try {
-				log.write("Information : " + message + " in file " + file + " in " + location);
-				log.newLine();
-			} catch(IOException e) {
+//			try {
+				log.info("Information : " + message + " in file " + file + " in " + location);
+/*			} catch(IOException e) {
 				warning("Unable to write in log file", "org/debug/Verbose.java", "Verbose.information(String, String, String)");
-			}
+			}*/
 		}
 	}
 	
@@ -168,23 +163,11 @@ public class Verbose {
 		if(verboseMode >= 5) {
 			System.out.println("Calls : " + message);
 			
-			try {
-				log.write("Calls : " + message + " in file " + file + " in " + location);
-				log.newLine();
-			} catch(IOException e) {
+//			try {
+				log.finer("Calls : " + message + " in file " + file + " in " + location);
+/*			} catch(IOException e) {
 				warning("Unable to write in log file", "org/debug/Verbose.java", "Verbose.calls(String, String, String)");
-			}
-		}
-	}
-	
-	/**
-	 * Close the log file (needed to complete the writing)
-	 */
-	public void closeFile() {
-		try {
-			log.close();
-		} catch(IOException e) {
-			warning("Unable to close the log file", "org/debug/Verbose.java", "Verbose.close()");
+			}*/
 		}
 	}
 };

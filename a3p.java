@@ -45,6 +45,5 @@ public class a3p {
 
 		System.out.println("Vous vous appellez " + pseudo);
 		
-		verbose.closeFile();
 	}
 };
