@@ -39,10 +39,10 @@ public class Verbose {
 		if(level > 0) {
 			System.out.println("Verbose mode activated at level " + level);
 			
-				log = Logger.getLogger("a3p.log");
+				log = Logger.getLogger("Philophobia.log");
 				
 				try {
-					log.addHandler(new FileHandler("a3p.log"));
+					log.addHandler(new FileHandler("Philophobia.log"));
 				} catch (IOException e) {
 					warning("Error initializing the log file", "org/debug/Verbose.java", "Verbose.Verbose(int)");
 				}
