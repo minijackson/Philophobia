@@ -11,7 +11,7 @@ public class Philophobia {
 	 * Global variable used for debugging
 	 * @see org.debug.Verbose
 	 */
-	public static Verbose verbose;
+	private static Verbose verbose;
 
 	/**
 	 * Main function of the A3P program
@@ -27,4 +27,9 @@ public class Philophobia {
 		Philophobia.verbose = new Verbose(options.getVerboseLevel());
 			
 	}
+
+	public static Verbose getVerbose() {
+		return verbose;
+	}
+
 };
