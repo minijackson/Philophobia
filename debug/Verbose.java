@@ -82,11 +82,7 @@ public class Verbose {
 		if(verboseMode >= 1) {
 			System.out.println("Critical : " + message);
 
-//			try {
-				log.severe("Critical : " + message + " in file " + file + " in " + location);
-/*			} catch(IOException e) {
-				warning("Unable to write in log file", "org/debug/Verbose.java", "Verbose.critical(String, String, String)");
-			}*/
+			log.severe("Critical : " + message + " in file " + file + " in " + location);
 		}
 	}
 
@@ -102,11 +98,7 @@ public class Verbose {
 		if(verboseMode >= 2) {
 			System.out.println("Serious : " + message);
 			
-//			try {
-				log.severe("Serious : " + message + " in file " + file + " in " + location);
-/*			} catch(IOException e) {
-				warning("Unable to write in log file", "org/debug/Verbose.java", "Verbose.serious(String, String, String)");
-			}*/
+			log.severe("Serious : " + message + " in file " + file + " in " + location);
 		}
 	}
 	
@@ -122,12 +114,7 @@ public class Verbose {
 		if(verboseMode >= 3) {
 			System.out.println("Warning : " + message);
 			
-//			try {
-				log.warning("Warning : " + message + " in file " + file + " in " + location);
-/*			} catch(IOException e) {
-				// Not warning in order to prevent from infinite loop
-				System.out.println("Unable to write in log file in file org/debug/Verbose.java in Verbose.warning(String, String, String)");
-			}*/
+			log.warning("Warning : " + message + " in file " + file + " in " + location);
 		}
 	}
 	
@@ -143,11 +130,7 @@ public class Verbose {
 		if(verboseMode >= 4) {
 			System.out.println("Information : " + message);
 			
-//			try {
-				log.info("Information : " + message + " in file " + file + " in " + location);
-/*			} catch(IOException e) {
-				warning("Unable to write in log file", "org/debug/Verbose.java", "Verbose.information(String, String, String)");
-			}*/
+			log.info("Information : " + message + " in file " + file + " in " + location);
 		}
 	}
 	
@@ -163,11 +146,7 @@ public class Verbose {
 		if(verboseMode >= 5) {
 			System.out.println("Calls : " + message);
 			
-//			try {
-				log.finer("Calls : " + message + " in file " + file + " in " + location);
-/*			} catch(IOException e) {
-				warning("Unable to write in log file", "org/debug/Verbose.java", "Verbose.calls(String, String, String)");
-			}*/
+			log.finer("Calls : " + message + " in file " + file + " in " + location);
 		}
 	}
 };
