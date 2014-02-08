@@ -1,4 +1,4 @@
-package org.world
+package world
 
 public class Scenery {
 	

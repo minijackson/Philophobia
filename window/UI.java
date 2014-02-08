@@ -1,4 +1,4 @@
-package org.window;
+package window;
 
 import java.awt.Graphics;
 import javax.swing.JPanel;

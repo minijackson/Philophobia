@@ -1,3 +1,5 @@
+package main;
+
 import java.util.Scanner;
 import org.debug.CliOptions;
 import org.debug.Verbose;

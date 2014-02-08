@@ -1,4 +1,4 @@
-package org.debug;
+package debug;
 
 import java.util.logging.Logger;
 import java.util.logging.FileHandler;

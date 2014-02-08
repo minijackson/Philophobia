@@ -1,4 +1,4 @@
-package org.world;
+package world;
 
 import org.debug.Verbose;
 import javax.swing.JFrame;

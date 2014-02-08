@@ -1,4 +1,4 @@
-package	 org.window;
+package	 window;
 
 import javax.swing.JFrame;
 import org.window.UI;

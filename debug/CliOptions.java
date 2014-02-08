@@ -1,4 +1,4 @@
-package org.debug;
+package debug;
 
 import java.util.List;
 import java.util.LinkedList;
