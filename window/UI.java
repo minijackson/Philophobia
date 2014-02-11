@@ -2,6 +2,7 @@ package window;
 
 import java.awt.Graphics;
 import javax.swing.JPanel;
+import main.Philophobia;
 
 public class UI extends JPanel {
 

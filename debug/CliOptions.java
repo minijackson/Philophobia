@@ -12,12 +12,20 @@ import java.util.ListIterator;
  * You can set a level of verbose mode from 0 to 5, you just have to put -v for verbose mode level 1, -vv for level 2 and so on
  */
 public class CliOptions {
-	
+
+	/**
+	 * Level of verbosing detected due to the args passed to the program
+	 *
+	 * @see Verbose
+	 * @see Verbose#verboseMode
+	 */
 	private int verboseLevel;
 
 
 	/**
 	 * Constructor of the CliOption
+	 *
+	 * @param args Options passed to the program when launching it
 	 */
 	public CliOptions(String[] args) {
 

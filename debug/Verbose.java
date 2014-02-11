@@ -12,7 +12,7 @@ public class Verbose {
 
 	/**
 	 * Level of verbosing, from 0 to 5
-	 * <p>
+	 * <p> 
 	 * The number of information displayed and logged goes increasingly as the number increase
 	 * - Level 1 : Only critical errors and exeptions are displayed on the console
 	 * - Level 2 : Serious but not critical errors and level 1 displayed
@@ -31,7 +31,7 @@ public class Verbose {
 	 * Class constructor
 	 * 
 	 * @param level Level of "verbosing"
-	 * @see verboseMode
+	 * @see #verboseMode
 	 */
 	public Verbose(int level) {
 		this.verboseMode = level;
