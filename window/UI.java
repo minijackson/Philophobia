@@ -1,8 +1,10 @@
 package window;
 
+import main.Philophobia;
+import world.World;
+
 import java.awt.Graphics;
 import javax.swing.JPanel;
-import main.Philophobia;
 
 public class UI extends JPanel {
 

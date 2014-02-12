@@ -1,8 +1,9 @@
 package	 window;
 
-import javax.swing.JFrame;
 import main.Philophobia;
 import window.UI;
+
+import javax.swing.JFrame;
 
 public class Window extends JFrame {
 
