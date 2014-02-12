@@ -20,7 +20,7 @@ public class Verbose {
 	 * - Level 4 : Informations and level 3 displayed
 	 * - Level 5 : Everything, included Class instanciations and function calls and level 4 displayed
 	 */
-	private int verboseMode = 0;
+	protected int verboseMode = 0;
 	
 	/**
 	 * Logger used to log messages into a file

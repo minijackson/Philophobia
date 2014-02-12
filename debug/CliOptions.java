@@ -19,7 +19,7 @@ public class CliOptions {
 	 * @see Verbose
 	 * @see Verbose#verboseMode
 	 */
-	private int verboseLevel;
+	protected int verboseLevel;
 
 
 	/**

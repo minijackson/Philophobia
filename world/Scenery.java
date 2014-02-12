@@ -17,10 +17,29 @@ import java.io.IOException;
  */
 public class Scenery {
 	
+	/**
+	 * Image graphically representing the object
+	 */
 	protected Image spriteImage;
+
+	/**
+	 * Image height
+	 */
 	protected int height;
+	
+	/**
+	 * Image width
+	 */
 	protected int width;
+
+	/**
+	 * Horizontal shifting for the image
+	 */
 	protected int xShift;
+
+	/**
+	 * Vertical shifting for the image
+	 */
 	protected int yShift;
 
 	/**
