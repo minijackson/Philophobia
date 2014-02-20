@@ -43,13 +43,20 @@ public class Scenery {
 	protected int yShift;
 
 	/**
+	 * Boolean equals to true if the scenery is visible, false if the scenery is not
+	 */
+	protected boolean visible;
+
+	/**
 	 * Scenery class constructor with height and width as parameters
 	 * 
 	 * @param spritePath Path of the image used to represent the object
 	 * @param height height of the object's pictural representaion
 	 * @param width width of the object's pictural representation
 	 */
-	public Scenery(final String spritePath, final int height, final int width) {
+	public Scenery(final String spritePath, final int height, final int width) {	
+		Philophobia.getVerbose().calls("Scenery object created", "world/Scenery.java", "Scenery.Scenery(Image, int, int)");
+
 		try {
 			spriteImage = ImageIO.read(new File(spritePath));
 		} catch(IOException e) {
@@ -61,8 +68,6 @@ public class Scenery {
 
 		xShift = 0;
 		yShift = 0;
-
-		Philophobia.getVerbose().calls("Scenery object created", "world/Scenery.java", "Scenery.Scenery(Image, int, int)");
 	}
 
 	/**
@@ -115,6 +120,8 @@ public class Scenery {
 	public void drawScenery(Graphics g, final int xLocation, final int yLocation, Observer obs) {
 		// drawImage(Image img, int x, int y, int width, int height, Observer obs);
 		g.drawImage(spriteImage, xLocation + xShift, yLocation + yShift, width, height, obs);
+
+		visible = true;
 	}
 
 };
