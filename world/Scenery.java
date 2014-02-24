@@ -18,6 +18,16 @@ import java.io.IOException;
  abstract public class Scenery {
 	
 	/**
+	 * Height of the graphical representation of a Scenery object
+	 */
+	protected static int SCENERY_HEIGHT;
+	
+	/**
+	 * Width of the graphical representation of a Scenery object
+	 */
+	protected static int SCENERY_WIDTH;
+	
+	/**
 	 * Image graphically representing the object
 	 */
 	protected Image spriteImage;
@@ -96,7 +106,7 @@ import java.io.IOException;
 	 * Scenery class constructor with height, width, x shifting and y shifting as parameters
 	 *
 	 * @param spritePath Path of the image used to represent the object
-	 * @param height height of the object's pictural representaion
+	 * @param height height of the object's pictural representation
 	 * @param width width of the object's pictural representation
 	 * @param xShift Horizontal shift of the image
 	 * @param yShift Vertical shift or the image
@@ -124,4 +134,19 @@ import java.io.IOException;
 		visible = true;
 	}
 
+	/**
+	 * Getter for the SCENERY_HEIGHT static field
+	 * @see #SCENERY_HEIGHT
+	 */
+	public static int getSceneryHeight() {
+		return SCENERY_HEIGHT;
+	}
+
+	/**
+	 * Getter for the SCENERY_WIDTH static field
+	 * @see #SCENERY_WIDTH
+	 */
+	public static int getSceneryWidth() {
+		return SCENERY_WIDTH;
+	}
 };

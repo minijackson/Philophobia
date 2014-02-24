@@ -2,6 +2,7 @@ package window;
 
 import main.Philophobia;
 import world.World;
+import world.Scenery;
 
 import java.awt.Graphics;
 import javax.swing.JPanel;
@@ -42,6 +43,7 @@ public class UI extends JPanel {
 		this.windowHeight = windowHeight;
 		this.windowWidth = windowWidth;
 
+		displayedWorld = new World("test", windowHeight - 10, windowWidth);
 	}
 
 	/**
@@ -50,9 +52,30 @@ public class UI extends JPanel {
 	public void paintComponent(Graphics g) {
 		Philophobia.getVerbose().calls("painting components", "org/window/UI.java", "UI.paintComponent(Graphics)");
 		
+		// Top Bar
 		g.drawRect(0,0,10, windowWidth);
 
-		displayedWorld = new World("test", g, windowHeight - 10, windowWidth);
+		drawWorld(g);
+	}
+
+	/**
+	 * Function called to draw the world
+	 * <p>
+	 * This function just display each Scenery one by one
+	 * @see #displayedWorld
+	 */
+	private void drawWorld(Graphics g) {
+		
+		Scenery[][] worldMap = displayedWorld.getMap();
+		int worldMapXSize = displayedWorld.getSizeX();
+		int worldMapYSize = displayedWorld.getSizeY();
+
+		for(int i = 0 ; i < worldMapXSize ; ++i) {
+			for(int j = 0 ; j < worldMapYSize ; ++j) {
+				worldMap[i][j].drawScenery(g, i*Scenery.getSceneryHeight(), j*Scenery.getSceneryWidth(), this);
+			}
+		}
+
 	}
 
 };

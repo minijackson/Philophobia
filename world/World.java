@@ -22,11 +22,6 @@ import java.io.IOException;
 public class World {
 	
 	/**
-	 * Boolean equals to true if the world is visible, false is the world is not
-	 */
-	protected boolean visible;
-
-	/**
 	 * Horizontal size of the map
 	 */
 	protected int sizeX;
@@ -47,11 +42,10 @@ public class World {
 	/**
 	 * World class constructor
 	 * @param filename filename containing the data of the current map
-	 * @param g Graphics object used to draw the world
 	 * @param canvasHeight Height of the canvas in which we draw the world
 	 * @param canvasWidth Widht of the canvas in which we draw the world
 	 */
-	public World(String filename, Graphics g, int canvasHeight, int canvasWidth) {
+	public World(String filename, int canvasHeight, int canvasWidth) {
 		Philophobia.getVerbose().information("World class creation", "world/World.java", "World.World(String)");
 
 		this.visible = false;
@@ -83,8 +77,30 @@ public class World {
 		}
 	}
 
-	public void show() {
-		this.visible = true;
+	/**
+	 * Getter for the sizeX Field
+	 * @return int Horizontal size of the map (in Scenery objects)
+	 * @see #sizeX
+	 */
+	public int getSizeX() {
+		return this.sizeX;
 	}
 
+	/**
+	 * Getter for the sizeY Field
+	 * @return int Vertical size of the map (in Scenery objects)
+	 * @see #sizeY
+	 */
+	public int getSizeY() {
+		return this.sizeY;
+	}
+
+	/**
+	 * Getter for the map Field
+	 * @return Scenery[][] The map of the world
+	 * @see #map
+	 */
+	public int getMap() {
+		return this.map;
+	}
 };
