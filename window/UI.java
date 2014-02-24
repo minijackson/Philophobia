@@ -39,6 +39,11 @@ public class UI extends JPanel {
 	 */
 	protected static int TOPBAR_HEIGHT = 42;
 
+	/**
+	 * UI class constructor
+	 * @param windowHeight Height of the window
+	 * @param windowWidth Width of the window
+	 */
 	public UI(int windowHeight, int windowWidth) {
 		// We call the parent's constructor
 		super();
