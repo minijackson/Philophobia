@@ -34,6 +34,11 @@ public class UI extends JPanel {
 	 */
 	protected int windowWidth;
 
+	/**
+	 * Height of the UI's topbar (default : 42)
+	 */
+	protected static int TOPBAR_HEIGHT = 42;
+
 	public UI(int windowHeight, int windowWidth) {
 		// We call the parent's constructor
 		super();
@@ -43,7 +48,7 @@ public class UI extends JPanel {
 		this.windowHeight = windowHeight;
 		this.windowWidth = windowWidth;
 
-		displayedWorld = new World("test", windowHeight - 10, windowWidth);
+		displayedWorld = new World("test", windowHeight - TOPBAR_HEIGHT, windowWidth);
 	}
 
 	/**
@@ -53,9 +58,9 @@ public class UI extends JPanel {
 		Philophobia.getVerbose().calls("painting components", "org/window/UI.java", "UI.paintComponent(Graphics)");
 		
 		// Top Bar
-		g.drawRect(0,0,10, windowWidth);
+		g.fillRect(0,0, windowWidth, TOPBAR_HEIGHT);
 
-		drawWorld(g);
+		//drawWorld(g);
 	}
 
 	/**

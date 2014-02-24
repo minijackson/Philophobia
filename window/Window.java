@@ -4,6 +4,7 @@ import main.Philophobia;
 import window.UI;
 
 import javax.swing.JFrame;
+import java.awt.Toolkit;
 
 public class Window extends JFrame {
 
@@ -20,11 +21,11 @@ public class Window extends JFrame {
 		Philophobia.getVerbose().calls("Creating Window class", "org/window/Window.java", "Window.Window()");
 
 		this.setTitle("Philophobia");
-//		this.setSize(600,500);
+		this.setSize(((int) Toolkit.getDefaultToolkit().getScreenSize().getWidth()), ((int) Toolkit.getDefaultToolkit().getScreenSize().getHeight()));
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		// Fullscreen mode
-		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+		this.setExtendedState(this.getExtendedState() | JFrame.MAXIMIZED_BOTH);
 		this.setUndecorated(true);
 
 		userInterface = new UI(this.getHeight(), this.getWidth());

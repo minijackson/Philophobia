@@ -48,8 +48,6 @@ public class World {
 	public World(String filename, int canvasHeight, int canvasWidth) {
 		Philophobia.getVerbose().information("World class creation", "world/World.java", "World.World(String)");
 
-		this.visible = false;
-
 		try {
 
 			BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(new File(filename)));
@@ -100,7 +98,7 @@ public class World {
 	 * @return Scenery[][] The map of the world
 	 * @see #map
 	 */
-	public int getMap() {
+	public Scenery[][] getMap() {
 		return this.map;
 	}
 };

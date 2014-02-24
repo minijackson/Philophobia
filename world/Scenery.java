@@ -7,6 +7,7 @@ import java.io.File;
 import java.awt.Image;
 import javax.imageio.ImageIO;
 import java.util.Observer;
+import java.awt.image.ImageObserver;
 import java.io.IOException;
 
 /**
@@ -20,12 +21,12 @@ import java.io.IOException;
 	/**
 	 * Height of the graphical representation of a Scenery object
 	 */
-	protected static int SCENERY_HEIGHT;
+	protected static int SCENERY_HEIGHT = 48;
 	
 	/**
 	 * Width of the graphical representation of a Scenery object
 	 */
-	protected static int SCENERY_WIDTH;
+	protected static int SCENERY_WIDTH = 48;
 	
 	/**
 	 * Image graphically representing the object
@@ -93,8 +94,8 @@ import java.io.IOException;
 		}
 		
 		
-		height = spriteImage.getHeight();
-		width = spriteImage.getWidth();
+		height = spriteImage.getHeight(null);
+		width = spriteImage.getWidth(null);
 
 		xShift = 0;
 		yShift = 0;
@@ -127,7 +128,7 @@ import java.io.IOException;
 		Philophobia.getVerbose().calls("Scenery object created", "world/Scenery.java", "Scenery.Scenery(Image, int, int, int, int)");
 	}
 
-	public void drawScenery(Graphics g, final int xLocation, final int yLocation, Observer obs) {
+	public void drawScenery(Graphics g, final int xLocation, final int yLocation, ImageObserver obs) {
 		// drawImage(Image img, int x, int y, int width, int height, Observer obs);
 		g.drawImage(spriteImage, xLocation + xShift, yLocation + yShift, width, height, obs);
 
