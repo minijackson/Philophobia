@@ -5,6 +5,7 @@ import world.Scenery;
 
 import debug.Verbose;
 import javax.swing.JFrame;
+import java.awt.Graphics;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.BufferedInputStream;
@@ -46,8 +47,11 @@ public class World {
 	/**
 	 * World class constructor
 	 * @param filename filename containing the data of the current map
+	 * @param g Graphics object used to draw the world
+	 * @param canvasHeight Height of the canvas in which we draw the world
+	 * @param canvasWidth Widht of the canvas in which we draw the world
 	 */
-	public World(String filename) {
+	public World(String filename, Graphics g, int canvasHeight, int canvasWidth) {
 		Philophobia.getVerbose().information("World class creation", "world/World.java", "World.World(String)");
 
 		this.visible = false;

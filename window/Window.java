@@ -20,14 +20,17 @@ public class Window extends JFrame {
 		Philophobia.getVerbose().calls("Creating Window class", "org/window/Window.java", "Window.Window()");
 
 		this.setTitle("Philophobia");
-		this.setSize(600,500);
+//		this.setSize(600,500);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		// Fullscreen mode
 		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		this.setUndecorated(true);
 
-		userInterface = new UI();
+		userInterface = new UI(this.getHeight(), this.getWidth());
 		this.setContentPane(userInterface);
+
+		this.setVisible(true);
 	}
 
 };

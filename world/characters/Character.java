@@ -3,7 +3,13 @@ package world.characters;
 import main.Philophobia;
 import world.Scenery;
 
-public class Character extends Scenery {
+/**
+ * Class used to handle a character (player or non-player)
+ * <p>
+ * A character can be a purely decorative character
+ * or a talking character or a player character (the hero)
+ */
+abstract public class Character extends Scenery {
 
 	/**
 	 * Height of the character's image (fixed)
