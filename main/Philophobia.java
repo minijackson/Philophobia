@@ -36,7 +36,20 @@ public class Philophobia {
 
 		Philophobia.verbose = new Verbose(options.getVerboseLevel());
 
-		Philophobia.window = new Window();
+		if(!options.isHelpQueried()) {
+			Philophobia.window = new Window();
+		} else {
+	
+			System.out.println("");
+			System.out.println("Usage: philophobia [options]");
+			System.out.println("");
+			System.out.println("Options:");
+			System.out.println("  Debugging options:");
+			System.out.println("    -v                    Activate verbose mode (to be use multiple times for more verbosity)");
+			System.out.println("    -h      --help        Print this help");
+			System.out.println("");
+
+		}
 			
 	}
 
