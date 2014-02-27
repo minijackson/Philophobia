@@ -6,6 +6,10 @@ import world.Scenery;
 
 import java.awt.Graphics;
 import javax.swing.JPanel;
+import java.io.File;
+import java.io.IOException;
+import java.awt.Image;
+import javax.imageio.ImageIO;
 
 /**
  * Class used to handle the window's user interface
@@ -37,9 +41,14 @@ public class UI extends JPanel {
 	protected int windowWidth;
 
 	/**
-	 * Height of the UI's topbar (default : 41)
+	 * Height of the UI's top bar (default: 42px)
 	 */
 	protected static int TOPBAR_HEIGHT = 42;
+
+	/**
+	 * Margin of the top bar (default: 10px)
+	 */
+	protected static int TOPBAR_MARGIN = 10;
 
 	/**
 	 * UI class constructor
@@ -67,6 +76,24 @@ public class UI extends JPanel {
 		
 		// Top Bar
 		g.fillRect(0,0, windowWidth, TOPBAR_HEIGHT);
+
+		// Close Button
+		try {
+			Image closeImage = ImageIO.read(new File("images/closebutton.png"));
+			g.drawImage(closeImage, windowWidth - TOPBAR_HEIGHT, (int)(TOPBAR_MARGIN / 2), TOPBAR_HEIGHT - TOPBAR_MARGIN, TOPBAR_HEIGHT - TOPBAR_MARGIN, null);
+		} catch(IOException e) {
+			Philophobia.getVerbose().warning("Close button image load failed: " + e.getMessage(), "window/UI.java", "UI.paintComponent(Graphics)");
+		}
+
+		// Pause button
+		try {
+
+			Image pauseImage = ImageIO.read(new File("images/pausebutton.png"));
+			g.drawImage(pauseImage, windowWidth - (TOPBAR_HEIGHT *2 + TOPBAR_MARGIN), (int)(TOPBAR_MARGIN / 2), TOPBAR_HEIGHT - TOPBAR_MARGIN, TOPBAR_HEIGHT - TOPBAR_MARGIN, null);
+
+		} catch(IOException e) {
+			Philophobia.getVerbose().warning("Pause button image load failed: " + e.getMessage(), "window/UI.java", "UI.paintComponent(Graphics)");
+		}
 
 		//drawWorld(g);
 	}
