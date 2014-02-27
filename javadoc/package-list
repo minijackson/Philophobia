@@ -1,5 +1,7 @@
 debug
 main
 window
+window.topbar
+window.ui
 world
 world.characters
