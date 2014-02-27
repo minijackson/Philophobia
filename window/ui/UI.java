@@ -1,4 +1,4 @@
-package window;
+package window.ui;
 
 import main.Philophobia;
 import world.World;
@@ -6,10 +6,6 @@ import world.Scenery;
 
 import java.awt.Graphics;
 import javax.swing.JPanel;
-import java.io.File;
-import java.io.IOException;
-import java.awt.Image;
-import javax.imageio.ImageIO;
 
 /**
  * Class used to handle the window's user interface
@@ -41,16 +37,6 @@ public class UI extends JPanel {
 	protected int windowWidth;
 
 	/**
-	 * Height of the UI's top bar (default: 42px)
-	 */
-	protected static int TOPBAR_HEIGHT = 42;
-
-	/**
-	 * Margin of the top bar (default: 10px)
-	 */
-	protected static int TOPBAR_MARGIN = 10;
-
-	/**
 	 * UI class constructor
 	 * @param windowHeight Height of the window
 	 * @param windowWidth Width of the window
@@ -59,7 +45,7 @@ public class UI extends JPanel {
 		// We call the parent's constructor
 		super();
 
-		Philophobia.getVerbose().calls("Creating UI class", "org/window/UI.java", "UI.UI(int, int)");
+		Philophobia.getVerbose().calls("Creating UI class", "window/ui/UI.java", "UI.UI(int, int)");
 
 		this.windowHeight = windowHeight;
 		this.windowWidth = windowWidth;
@@ -72,29 +58,8 @@ public class UI extends JPanel {
 	 * Function called when the program ask to paint the graphics
 	 */
 	public void paintComponent(Graphics g) {
-		Philophobia.getVerbose().calls("painting components", "org/window/UI.java", "UI.paintComponent(Graphics)");
+		Philophobia.getVerbose().calls("painting components", "window/ui/UI.java", "UI.paintComponent(Graphics)");
 		
-		// Top Bar
-		g.fillRect(0,0, windowWidth, TOPBAR_HEIGHT);
-
-		// Close Button
-		try {
-			Image closeImage = ImageIO.read(new File("images/closebutton.png"));
-			g.drawImage(closeImage, windowWidth - TOPBAR_HEIGHT, (int)(TOPBAR_MARGIN / 2), TOPBAR_HEIGHT - TOPBAR_MARGIN, TOPBAR_HEIGHT - TOPBAR_MARGIN, null);
-		} catch(IOException e) {
-			Philophobia.getVerbose().warning("Close button image load failed: " + e.getMessage(), "window/UI.java", "UI.paintComponent(Graphics)");
-		}
-
-		// Pause button
-		try {
-
-			Image pauseImage = ImageIO.read(new File("images/pausebutton.png"));
-			g.drawImage(pauseImage, windowWidth - (TOPBAR_HEIGHT *2 + TOPBAR_MARGIN), (int)(TOPBAR_MARGIN / 2), TOPBAR_HEIGHT - TOPBAR_MARGIN, TOPBAR_HEIGHT - TOPBAR_MARGIN, null);
-
-		} catch(IOException e) {
-			Philophobia.getVerbose().warning("Pause button image load failed: " + e.getMessage(), "window/UI.java", "UI.paintComponent(Graphics)");
-		}
-
 		//drawWorld(g);
 	}
 
@@ -105,7 +70,9 @@ public class UI extends JPanel {
 	 * @see #displayedWorld
 	 */
 	private void drawWorld(Graphics g) {
-		
+	
+		Philophobia.getVerbose().calls("Painting the world", "window/ui/UI.java", "UI.drawWorld(Graphics)");
+
 		Scenery[][] worldMap = displayedWorld.getMap();
 		int worldMapXSize = displayedWorld.getSizeX();
 		int worldMapYSize = displayedWorld.getSizeY();
