@@ -4,7 +4,7 @@ import java.util.Scanner;
 import debug.CliOptions;
 import debug.Verbose;
 
-import window.Window;
+import gameplay.GamePlay;
 
 /**
  * Main class
@@ -12,16 +12,29 @@ import window.Window;
 public class Philophobia {
 
 	/**
-	 * Global variable used for debugging
-	 * @see debug.Verbose
+	 * Directory containing all the image files
 	 */
-	private static Verbose verbose;
+	protected static String IMAGE_FILE_PREFIX = "src/images/";
 
 	/**
-	 * Main window of the program
-	 * @see window.Window
+	 * Directory containing all the world files
 	 */
-	private static Window window;
+	protected static String WORLD_FILE_PREFIX = "src/world/";
+
+	/**
+	 * Global variable used for debugging
+	 */
+	protected static Verbose verbose;
+/*
+	/**
+	 * Main window of the program
+	 */
+//	private static Window window;
+
+	/**
+	 * Game handler
+	 */
+	protected static GamePlay gamePlay;
 
 	/**
 	 * Main function of the A3P program
@@ -37,7 +50,8 @@ public class Philophobia {
 		Philophobia.verbose = new Verbose(options.getVerboseLevel());
 
 		if(!options.isHelpQueried()) {
-			Philophobia.window = new Window();
+			// Philophobia.window = new Window();
+			Philophobia.gamePlay = new GamePlay(options);
 		} else {
 	
 			System.out.println("");
@@ -54,11 +68,27 @@ public class Philophobia {
 	}
 
 	/**
-	 * Getter for the verbose property
+	 * Getter for the verbose field
 	 * @return The main class verbose static property
 	 */
 	public static Verbose getVerbose() {
 		return verbose;
+	}
+
+	/**
+	 * Getter for the IMAGE_FILE_PREFIX field
+	 * @see #IMAGE_FILE_PREFIX
+	 */
+	public static String getImageFilePrefix() {
+		return IMAGE_FILE_PREFIX;
+	}
+
+	/**
+	 * Getter for the WORLD_FILE_PREFIX field
+	 * @see #WORLD_FILE_PREFIX
+	 */
+	public static String getWorldFilePrefix() {
+		return WORLD_FILE_PREFIX;
 	}
 
 };

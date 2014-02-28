@@ -37,6 +37,7 @@ class TopBarButton extends JButton {
 		try {
 			buttonImage = ImageIO.read(new File(imagePath));
 			this.setIcon(new ImageIcon(buttonImage));
+			this.setBorder(null);
 		} catch(IOException e) {
 			Philophobia.getVerbose().warning("Button image load failed: " + e.getMessage(), "window/ui/TopBarButton.java", "TopBarButton.TopBarButton(String)");
 			buttonImage = null;
@@ -45,7 +46,6 @@ class TopBarButton extends JButton {
 	}
 
 	public void paintComponent(Graphics g) {
-
 		Philophobia.getVerbose().calls("painting TopBarButton component", "window/ui/TopBarButton.java", "TopBarButton.paintComponent(Graphics)");
 
 		int buttonSize = TopBar.getTopBarHeight() - TopBar.getTopBarMargin();

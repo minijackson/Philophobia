@@ -42,11 +42,9 @@ public class World {
 	/**
 	 * World class constructor
 	 * @param filename filename containing the data of the current map
-	 * @param canvasHeight Height of the canvas in which we draw the world
-	 * @param canvasWidth Widht of the canvas in which we draw the world
 	 */
-	public World(String filename, int canvasHeight, int canvasWidth) {
-		Philophobia.getVerbose().information("World class creation", "world/World.java", "World.World(String)");
+	public World(String filename) {
+		Philophobia.getVerbose().information("Creating World class", "world/World.java", "World.World(String)");
 
 		try {
 

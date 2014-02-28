@@ -12,12 +12,20 @@ import java.awt.BorderLayout;
 public class Window extends JFrame {
 
 	/**
-	 * User interface which handle the game graphics inside the window
-	 * @see window.ui.UI
+	 * Window's current state
+	 * @see window.WindowState
 	 */
-	private UI userInterface;
+	protected WindowState windowState;
 
-	private TopBar topbar;
+	/**
+	 * Window top bar
+	 */
+	protected TopBar topbar;
+
+	/**
+	 * User interface which handle the game graphics inside the window
+	 */
+	protected UI userInterface;
 
 	/**
 	 * Constructor of the Window class
@@ -34,19 +42,97 @@ public class Window extends JFrame {
 		this.setUndecorated(true);
 
 		this.setLayout(new BorderLayout());
-	
+
+		windowState = WindowState.FirstLoading;
+
 		userInterface = new UI(this.getHeight(), this.getWidth());
-		this.getContentPane().add(userInterface, BorderLayout.CENTER);
+//		this.getContentPane().add(userInterface, BorderLayout.CENTER);
 
-		TopBar topbar = new TopBar();
+		topbar = new TopBar();
 		this.getContentPane().add(topbar, BorderLayout.PAGE_START);
-
-/*
-		this.setContentPane(userInterface);
-*/
 		this.pack();
 		this.setVisible(true);
 
 	}
+
+	public void setLoadingState() {
+		Philophobia.getVerbose().information("Setting window's Loading mode", "window/Window.java", "Window.setLoadingState()");
+		topbar.hidePauseButton();
+		windowState = WindowState.LoadingScreen;
+	}
+
+	public void setGameState() {
+		Philophobia.getVerbose().information("Setting window's Game mode", "window/Window.java", "Window.setGameState()");
+		topbar.showPauseButton();
+		this.getContentPane().add(userInterface, BorderLayout.CENTER);
+		windowState = WindowState.Game;
+	}
+
+	public void setFailState() {
+		Philophobia.getVerbose().information("Setting window's Fail mode", "window/Window.java", "Window.setFailState()");
+		topbar.hidePauseButton();
+		windowState = WindowState.Fail;
+	}
+
+	public void setWinState() {
+		Philophobia.getVerbose().information("Setting window's Win mode", "window/Window.java", "Window.setWindState()");
+		topbar.hidePauseButton();
+		windowState = WindowState.Win;
+	}
+
+	public UI getUserInterface() {
+		return userInterface;
+	}
+
+};
+
+/**
+ * Enumeration of the possible states of the displayed graphics
+ * <p>
+ * The state can be the "in game" state, a loading screen,
+ * the "win" or "fail" screen
+ * @see Window
+ * @see #FirstLoading
+ * @see #Game
+ * @see #LoadingScreen
+ * @see #Win
+ * @see #Fail
+ */
+enum WindowState {
+
+	/**
+	 * The FirstLoading state correspond to
+	 * the state where the window has just
+	 * been called and a special animation
+	 * is displayed
+	 */
+	FirstLoading,
+
+	/**
+	 * The Game state correspond to the state
+	 * in which the player is playing the game
+	 */
+	Game,
+
+	/**
+	 * The LoadingScreen state correspond to
+	 * the state where a loading animation
+	 * is displayed
+	 */
+	LoadingScreen,
+
+	/**
+	 * The Win state correspond to the state
+	 * where the player has won the game and
+	 * a congratulation screen is displayed
+	 */
+	Win,
+
+	/**
+	 * The Fail state correspond to the state
+	 * where the player has lost the game
+	 * and a condolence screen is displayed
+	 */
+	Fail
 
 };
