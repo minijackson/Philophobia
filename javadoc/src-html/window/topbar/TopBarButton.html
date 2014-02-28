@@ -45,15 +45,15 @@
 <span class="sourceLineNo">037</span>                try {<a name="line.37"></a>
 <span class="sourceLineNo">038</span>                        buttonImage = ImageIO.read(new File(imagePath));<a name="line.38"></a>
 <span class="sourceLineNo">039</span>                        this.setIcon(new ImageIcon(buttonImage));<a name="line.39"></a>
-<span class="sourceLineNo">040</span>                } catch(IOException e) {<a name="line.40"></a>
-<span class="sourceLineNo">041</span>                        Philophobia.getVerbose().warning("Button image load failed: " + e.getMessage(), "window/ui/TopBarButton.java", "TopBarButton.TopBarButton(String)");<a name="line.41"></a>
-<span class="sourceLineNo">042</span>                        buttonImage = null;<a name="line.42"></a>
-<span class="sourceLineNo">043</span>                }<a name="line.43"></a>
-<span class="sourceLineNo">044</span><a name="line.44"></a>
-<span class="sourceLineNo">045</span>        }<a name="line.45"></a>
-<span class="sourceLineNo">046</span><a name="line.46"></a>
-<span class="sourceLineNo">047</span>        public void paintComponent(Graphics g) {<a name="line.47"></a>
-<span class="sourceLineNo">048</span><a name="line.48"></a>
+<span class="sourceLineNo">040</span>                        this.setBorder(null);<a name="line.40"></a>
+<span class="sourceLineNo">041</span>                } catch(IOException e) {<a name="line.41"></a>
+<span class="sourceLineNo">042</span>                        Philophobia.getVerbose().warning("Button image load failed: " + e.getMessage(), "window/ui/TopBarButton.java", "TopBarButton.TopBarButton(String)");<a name="line.42"></a>
+<span class="sourceLineNo">043</span>                        buttonImage = null;<a name="line.43"></a>
+<span class="sourceLineNo">044</span>                }<a name="line.44"></a>
+<span class="sourceLineNo">045</span><a name="line.45"></a>
+<span class="sourceLineNo">046</span>        }<a name="line.46"></a>
+<span class="sourceLineNo">047</span><a name="line.47"></a>
+<span class="sourceLineNo">048</span>        public void paintComponent(Graphics g) {<a name="line.48"></a>
 <span class="sourceLineNo">049</span>                Philophobia.getVerbose().calls("painting TopBarButton component", "window/ui/TopBarButton.java", "TopBarButton.paintComponent(Graphics)");<a name="line.49"></a>
 <span class="sourceLineNo">050</span><a name="line.50"></a>
 <span class="sourceLineNo">051</span>                int buttonSize = TopBar.getTopBarHeight() - TopBar.getTopBarMargin();<a name="line.51"></a>
