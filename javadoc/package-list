@@ -5,4 +5,5 @@ window
 window.topbar
 window.ui
 world
-world.characters
+world.character
+world.scenery
