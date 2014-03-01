@@ -1,4 +1,4 @@
-package world.characters;
+package world.character;
 
 import main.Philophobia;
 import world.Scenery;
@@ -32,18 +32,12 @@ abstract public class Character extends Scenery {
 	protected int posY;
 
 	/**
-	 * Boolean equals to true if the character is visible, false if the character is not
-	 */
-	protected boolean visible;
-
-	/**
 	 * Character class constructor
 	 * @param image Image filename representing the character
 	 */
-	public Character(final String image) {
+	public Character(final String imagePath) {
 		Philophobia.getVerbose().calls("Character class created", "world/characters/Character.java", "Character.Character(String)");
 
-		this.visible = false;
 		super(image, CHARACTER_HEIGHT, CHARACTER_WIDTH);
 
 	}
