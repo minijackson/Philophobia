@@ -34,7 +34,7 @@ abstract public class Character extends Scenery implements InteractiveObject {
 
 	/**
 	 * Character class constructor
-	 * @param image Image filename representing the character
+	 * @param imagePath Image filename representing the character
 	 */
 	public Character(final String imagePath) {
 		Philophobia.getVerbose().calls("Character class created", "world/characters/Character.java", "Character.Character(String)");
