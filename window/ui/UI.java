@@ -2,7 +2,7 @@ package window.ui;
 
 import main.Philophobia;
 import world.World;
-import world.Scenery;
+import world.scenery.Scenery;
 
 import java.awt.Graphics;
 import javax.swing.JPanel;
