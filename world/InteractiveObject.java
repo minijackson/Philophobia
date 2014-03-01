@@ -1,4 +1,4 @@
-package world.scenery;
+package world;
 
 import main.Philophobia;
 import world.scenery.Scenery;
