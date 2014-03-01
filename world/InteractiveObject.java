@@ -30,4 +30,12 @@ public interface InteractiveObject {
 	 */
 	public void playerLeave();
 
+	/**
+	 * Returns true if the player is able
+	 * to pass through the object and
+	 * false if the player is not able
+	 * to cross the object
+	 */
+	public boolean isTraversable();
+
 };

@@ -16,7 +16,7 @@ import java.io.IOException;
  * The Scenery class is used to handle the objects
  * that are displayed in the graphical game world.
  */
- abstract public class Scenery {
+abstract public class Scenery {
 	
 	/**
 	 * Height of the graphical representation of a Scenery object

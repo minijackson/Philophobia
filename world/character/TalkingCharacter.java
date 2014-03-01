@@ -2,12 +2,11 @@ package world.character;
 
 import main.Philophobia;
 import world.character.Character;
-import world.InteractiveObject;
 
 /**
  * Class handling a talking character
  */
-public class TalkingCharacter extends Character implements InteractiveObject {
+public class TalkingCharacter extends Character {
 
 	/**
 	 * TalkingCharacter constructor
@@ -31,19 +30,5 @@ public class TalkingCharacter extends Character implements InteractiveObject {
 	public void triggerAction() {
 		talk();
 	}
-
-	public void playerNear() {
-
-	}
-
-	public void playerEnter() {
-
-	}
-
-	public void playerLeave() {
-
-	}
-
-
 
 };

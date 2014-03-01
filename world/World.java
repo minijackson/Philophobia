@@ -1,7 +1,7 @@
 package world;
 
 import main.Philophobia;
-import world.scenery.Scenery;
+import world.scenery.*;
 
 import debug.Verbose;
 import javax.swing.JFrame;

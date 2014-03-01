@@ -1,7 +1,8 @@
 package world.character;
 
 import main.Philophobia;
-import world.Scenery;
+import world.scenery.Scenery;
+import world.InteractiveObject;
 
 /**
  * Class used to handle a character (player or non-player)
@@ -9,7 +10,7 @@ import world.Scenery;
  * A character can be a purely decorative character
  * or a talking character or a player character (the hero)
  */
-abstract public class Character extends Scenery {
+abstract public class Character extends Scenery implements InteractiveObject {
 
 	/**
 	 * Height of the character's image (fixed)
@@ -136,5 +137,31 @@ abstract public class Character extends Scenery {
 		}
 
 	}
+
+	// ===============================
+	// == InteractiveObject methods ==
+	// ===============================
+	
+	public void triggerAction() {
+
+	}
+
+	public void playerNear() {
+
+	}
+
+	public void playerEnter() {
+
+	}
+
+	public void playerLeave() {
+
+	}
+
+	public boolean isTraversable() {
+		return false;
+	}
+
+
 	
 };
