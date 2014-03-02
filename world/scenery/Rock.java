@@ -25,11 +25,6 @@ public class Rock extends Scenery implements InteractiveObject {
 	protected static String ALPINE_TUNDRA = "alpinetundra";
 
 	/**
-	 * Steppe rock type
-	 */
-	protected static String STEPPE = "steppe";
-
-	/**
 	 * Cave rock type
 	 */
 	protected static String CAVE = "cave";
@@ -38,16 +33,6 @@ public class Rock extends Scenery implements InteractiveObject {
 	 * Polar desert rock type
 	 */
 	protected static String POLAR_DESERT = "polardesert";
-
-	/**
-	 * Xeric shrublands rock type
-	 */
-	protected static String XERIC_SHRUBLANDS = "xericshrublands";
-
-	/**
-	 * Savanna rock type
-	 */
-	protected static String SAVANNA = "savanna";
 
 	public Rock(final String type) {
 
@@ -67,24 +52,12 @@ public class Rock extends Scenery implements InteractiveObject {
 		return ALPINE_TUNDRA;
 	}
 
-	public static String STEPPE() {
-		return STEPPE;
-	}
-
 	public static String CAVE() {
 		return CAVE;
 	}
 
 	public static String POLAR_DESERT() {
 		return POLAR_DESERT;
-	}
-
-	public static String XERIC_SHRUBLANDS() {
-		return XERIC_SHRUBLANDS;
-	}
-
-	public static String SAVANNA() {
-		return SAVANNA;
 	}
 
 	// ===============================
