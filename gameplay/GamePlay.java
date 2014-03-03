@@ -4,6 +4,7 @@ import main.Philophobia;
 import debug.CliOptions;
 import window.Window;
 import world.World;
+import gameplay.ai.AI;
 
 /**
  * Class handling the game play of this game
@@ -38,11 +39,11 @@ public class GamePlay {
 	 */
 	protected Window window;
 
-	/*
+	/**
 	 * Malicious artificial intelligence
 	 * driving the player mad
 	 */
-//	protected AI artificialIntelligence;
+	protected AI artificialIntelligence;
 
 	/**
 	 * Constructor of the GamePlay class
@@ -63,6 +64,8 @@ public class GamePlay {
 		} catch(InterruptedException e) {
 			Philophobia.getVerbose().warning("Sleep interrupted: " + e.getMessage(), "gameplay/GamePlay.java", "GamePlay.GamePlay(CliOptions)");
 		}
+
+		artificialIntelligence = new AI(currentWorld);
 
 		window.getUserInterface().setDisplayedWorld(currentWorld);
 		window.setGameState();
