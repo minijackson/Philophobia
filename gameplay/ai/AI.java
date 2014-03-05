@@ -78,21 +78,10 @@ public class AI {
 	 * (does not do what the AI asked)
 	 */
 	public void newBetrayal() {
+		Philophobia.getVerbose().calls("New betrayal action detected", "gameplay/ai/AI.java", "AI.newBetrayal()");
 		betrayalCount++;
 		if(currentFeeling.incrementBetrayalCount() >= currentFeeling.getBetrayalThreshold()) {
-
-			Class newFeelingClass = currentFeeling.getNextFeeling();
-
-			try {
-				Philophobia.getVerbose().information("AI switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling", "gameplay/ai/AI.java", "AI.newBetrayal()");
-				newFeelingClass.newInstance();
-			} catch(SecurityException e) {
-				Philophobia.getVerbose().serious("Security exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.newBetrayal()");
-			} catch(InstantiationException e) {
-				Philophobia.getVerbose().serious("Instanciation exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.newBetrayal()");
-			} catch(IllegalAccessException e) {
-				Philophobia.getVerbose().serious("Illegal access exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.newBetrayal()");
-			} 
+			changeFeeling(currentFeeling.getNextFeeling());
 		}
 	}
 
@@ -101,22 +90,28 @@ public class AI {
 	 * do what the AI asked
 	 */
 	public void newSlavery() {
+		Philophobia.getVerbose().calls("New slavery action detected", "gameplay/ai/AI.java", "AI.newSlavery()");
 		slaveryCount++;
 		if(currentFeeling.incrementSlaveryCount() >= currentFeeling.getSlaveryThreshold()) {
-			
-			Class newFeelingClass = currentFeeling.getPreviousFeeling();
-
-			try {
-				Philophobia.getVerbose().information("AI switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling", "gameplay/ai/AI.java", "AI.newSlavery()");
-				newFeelingClass.newInstance();
-			} catch(SecurityException e) {
-				Philophobia.getVerbose().serious("Security exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.newSlavery()");
-			} catch(InstantiationException e) {
-				Philophobia.getVerbose().serious("Instanciation exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.newSlavery()");
-			} catch(IllegalAccessException e) {
-				Philophobia.getVerbose().serious("Illegal access exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.newBetrayal()");
-			} 
+			changeFeeling(currentFeeling.getPreviousFeeling());
 		}
 	}
 
+	/**
+	 * Change the current feeling field
+	 * from a Class object
+	 * @see #currentFeeling
+	 */
+	protected void changeFeeling(Class feelingClass) {	
+		try {
+			Philophobia.getVerbose().information("AI switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling", "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
+			currentFeeling = feelingClass.newInstance();
+		} catch(SecurityException e) {
+			Philophobia.getVerbose().serious("Security exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
+		} catch(InstantiationException e) {
+			Philophobia.getVerbose().serious("Instanciation exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
+		} catch(IllegalAccessException e) {
+			Philophobia.getVerbose().serious("Illegal access exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
+		} 
+	}
 };
