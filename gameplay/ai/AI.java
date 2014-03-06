@@ -102,16 +102,16 @@ public class AI {
 	 * from a Class object
 	 * @see #currentFeeling
 	 */
-	protected void changeFeeling(Class feelingClass) {	
+	protected void changeFeeling(Class<Feeling> feelingClass) {	
 		try {
-			Philophobia.getVerbose().information("AI switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling", "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
+			Philophobia.getVerbose().information("AI switching from " + currentFeeling.getClass().getName() + " feeling to " + feelingClass.getName() + " feeling", "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
 			currentFeeling = feelingClass.newInstance();
 		} catch(SecurityException e) {
-			Philophobia.getVerbose().serious("Security exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
+			Philophobia.getVerbose().serious("Security exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + feelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
 		} catch(InstantiationException e) {
-			Philophobia.getVerbose().serious("Instanciation exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
+			Philophobia.getVerbose().serious("Instanciation exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + feelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
 		} catch(IllegalAccessException e) {
-			Philophobia.getVerbose().serious("Illegal access exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + newFeelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
+			Philophobia.getVerbose().serious("Illegal access exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + feelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
 		} 
 	}
 };

@@ -1,5 +1,7 @@
 package gameplay.ai.feeling;
 
+import main.Philophobia;
+
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -63,6 +65,8 @@ public abstract class Feeling {
 	 */
 	public Feeling(int betrayalThreshold, int slaveryThreshold) {
 
+		Philophobia.getVerbose().information("Creating new Feeling class", "gameplay/ai/feeling/Feeling.java", "Feeling.Feeling(int, int)");
+
 		this.betrayalThreshold = betrayalThreshold;
 		this.slaveryThreshold = slaveryThreshold;
 
@@ -121,7 +125,7 @@ public abstract class Feeling {
 	 * this function is called and return a new
 	 * feeling given their probabilities
 	 */
-	public Class getNextFeeling() {
+	public Class<Feeling> getNextFeeling() {
 		Iterator<ProbabilityFeeling> it = nextFeelings.iterator();
 		ProbabilityFeeling probFeeling = null;
 		while(it.hasNext()) {
@@ -141,7 +145,7 @@ public abstract class Feeling {
 	 * this function is called and return a new
 	 * feeling given their probabilities
 	 */
-	public Class getPreviousFeeling() {
+	public Class<Feeling> getPreviousFeeling() {
 		Iterator<ProbabilityFeeling> it = previousFeelings.iterator();
 		ProbabilityFeeling probFeeling = null;
 		while(it.hasNext()) {
@@ -168,7 +172,7 @@ class ProbabilityFeeling {
 	 * Feeling for which there is
 	 * a probability to be chosen
 	 */
-	protected Class feeling;
+	protected Class<Feeling> feeling;
 
 	/**
 	 * Probability of the feeling
@@ -180,7 +184,7 @@ class ProbabilityFeeling {
 	 * Constructor of the probability
 	 * feeling class
 	 */
-	public ProbabilityFeeling(Class feeling, double probability) {
+	public ProbabilityFeeling(Class<Feeling> feeling, double probability) {
 		this.feeling = feeling;
 		this.probability = probability;
 	}
@@ -189,7 +193,7 @@ class ProbabilityFeeling {
 	 * Getter for the feeling field
 	 * @see #feeling
 	 */
-	public Class getFeeling() {
+	public Class<Feeling> getFeeling() {
 		return feeling;
 	}
 
