@@ -18,9 +18,14 @@ public class Shore extends Scenery {
 	 */
 	protected static String POLAR_DESERT = "polardesert";
 
-	public Shore(final String type) {
+	/**
+	 * Shore class constructor
+	 * @param type Theme of the sprite (see static fields)
+	 * @param orientation Orientation of the sprite (possible : "n", "s", "e", "w", "nee", "nwe", "nei", "nwi", "see", "swe", "sei", "swi")
+	 */
+	public Shore(final String type, final String orientation) {
 
-		super(Philophobia.getImageFilePrefix() + type + "shore.png");
+		super(Philophobia.getImageFilePrefix() + type + "shore" + orientation + ".png");
 
 	}
 
