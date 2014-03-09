@@ -80,7 +80,17 @@ public class World {
 		for(int i = 0 ; i < sizeX ; ++i) {
 			for(int j = 0 ; i < sizeY ; ++j) {
 
-				Class<Scenery> sceneryObject = Ground.class;
+				float random = Math.random();
+
+				Scenery currentScenery;
+
+				if(0 <= random < .3) {
+//					currentScenery = new Tree(type);
+				} else if(.3 <= random .6) {
+//					currentScenery = new Rock(type);
+				} else {
+//					currencScenery = new Ground(type);
+				}
 
 				try {
 					map[i][j] = sceneryObject.newInstance();
