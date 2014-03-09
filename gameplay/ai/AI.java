@@ -109,7 +109,7 @@ public class AI {
 		} catch(SecurityException e) {
 			Philophobia.getVerbose().serious("Security exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + feelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
 		} catch(InstantiationException e) {
-			Philophobia.getVerbose().serious("Instanciation exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + feelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
+			Philophobia.getVerbose().serious("Instantiation exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + feelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
 		} catch(IllegalAccessException e) {
 			Philophobia.getVerbose().serious("Illegal access exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + feelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
 		} 

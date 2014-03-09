@@ -4,33 +4,22 @@ import main.Philophobia;
 import world.scenery.Scenery;
 import world.InteractiveObject;
 
+import world.scenery.TaigaTheme;
+import world.scenery.PolarDesertTheme;
+
 /**
  * Class used to handle a water object
  */
-public class Water extends Scenery implements InteractiveObject {
+public class Water extends Scenery implements InteractiveObject, TaigaTheme, PolarDesertTheme {
 
 	/**
-	 * Taiga water type
+	 * Water class constructor
+	 * @param type Style of the water
 	 */
-	protected static String TAIGA = "taiga";
-
-	/**
-	 * Polar desert water type
-	 */
-	protected static String POLAR_DESERT = "polardesert";
-
 	public Water(final String type) {
 
 		super(Philophobia.getImageFilePrefix() + type + "water.png");
 
-	}
-
-	public static String TAIGA() {
-		return TAIGA;
-	}
-
-	public static String POLAR_DESERT() {
-		return POLAR_DESERT;
 	}
 
 	// ===============================

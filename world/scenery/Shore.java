@@ -3,24 +3,17 @@ package world.scenery;
 import main.Philophobia;
 import world.scenery.Scenery;
 
+import world.scenery.TaigaTheme;
+import world.scenery.PolarDesertTheme;
+
 /**
  * Class used to handle a shore object
  */
-public class Shore extends Scenery {
-
-	/**
-	 * Taiga shore type
-	 */
-	protected static String TAIGA = "taiga";
-
-	/**
-	 * Polar desert shore type
-	 */
-	protected static String POLAR_DESERT = "polardesert";
+public class Shore extends Scenery implements TaigaTheme, PolarDesertTheme {
 
 	/**
 	 * Shore class constructor
-	 * @param type Theme of the sprite (see static fields)
+	 * @param type Style of the shore
 	 * @param orientation Orientation of the sprite (possible : "n", "s", "e", "w", "nee", "nwe", "nei", "nwi", "see", "swe", "sei", "swi")
 	 */
 	public Shore(final String type, final String orientation) {
@@ -28,13 +21,4 @@ public class Shore extends Scenery {
 		super(Philophobia.getImageFilePrefix() + type + "shore" + orientation + ".png");
 
 	}
-
-	public static String TAIGA() {
-		return TAIGA;
-	}
-
-	public static String POLAR_DESERT() {
-		return POLAR_DESERT;
-	}
-
 };

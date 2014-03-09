@@ -7,11 +7,6 @@ import world.character.*;
 import debug.Verbose;
 import javax.swing.JFrame;
 import java.awt.Graphics;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.BufferedInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 /**
  * World is a class used to handle the game world graphics
@@ -41,36 +36,63 @@ public class World {
 	protected Scenery[][] map;
 
 	/**
-	 * World class constructor
-	 * @param filename filename containing the data of the current map
+	 * Style of the world
 	 */
-	public World(String filename) {
+	protected String type;
+
+	/**
+	 * World class constructor
+	 * @param type Style of the world
+	 */
+	public World(final String type) {
 		Philophobia.getVerbose().information("Creating World class", "world/World.java", "World.World(String)");
 
-		try {
+		this.type = type;
+		this.sizeX = 128;
+		this.sizeY = 128;
 
-			BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(new File(filename)));
-			
-			while(inputStream.read() != -1) {
-				// Count
+		generateWorld();
+	}
+
+	/**
+	 * World class constructor with size parameters
+	 * @param style Style of the world
+	 * @param sizeX Horizontal size of the world
+	 * @param sizeY Vertical size of the world
+	 */
+	public World(final String type, final int sizeX, final int sizeY) {
+		Philophobia.getVerbose().information("Creating World class", "world/World.java", "World.World(String, int, int)");
+
+		this.type = type;
+		this.sizeX = sizeX;
+		this.sizeY = sizeY;
+
+		generateWorld();
+	}
+
+	/**
+	 * Function randomly generating the world
+	 */
+	protected void generateWorld() {
+		map = new Scenery[sizeX][sizeY];
+
+		// Loop generating the world
+		for(int i = 0 ; i < sizeX ; ++i) {
+			for(int j = 0 ; i < sizeY ; ++j) {
+
+				Class<Scenery> sceneryObject = Ground.class;
+
+				try {
+					map[i][j] = sceneryObject.newInstance();
+				} catch (SecurityException e) {
+					Philophobia.getVerbose().critical("Security exception when generating the world: " + e.getMessage(), "world/World.java", "world.generateWorld()");
+					System.exit(-1);
+				} catch (InstantiationException e) {
+					Philophobia.getVerbose().critical("Instantiation exception when generating the world: " + e.getMessage(), "world/World.java", "world.generateWorld()");
+				} catch (IllegalAccessException e) {
+					Philophobia.getVerbose().critical("Illegal access exception when generating the world: " + e.getMessage(), "world/World.java", "world.generateWorld()");
+				}
 			}
-
-			sizeX = 42;
-			sizeY = 42;
-
-			this.map = new Scenery[sizeX][sizeY];
-
-			while(inputStream.read() != -1) {
-				// Fill this.map
-			}
-
-		} catch(FileNotFoundException e) {
-
-			Philophobia.getVerbose().critical("File " + filename + " not found", "world/World.java", "World.World(String)");
-			System.exit(-1);
-
-		} catch(IOException e) {
-			Philophobia.getVerbose().serious("Error reading the file " + filename, "world/World.java", "World.World(String)");
 		}
 	}
 

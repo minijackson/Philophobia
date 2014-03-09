@@ -3,44 +3,22 @@ package world.scenery;
 import main.Philophobia;
 import world.scenery.Scenery;
 
+import world.scenery.TemperateBroadleafTheme;
+import world.scenery.TaigaTheme;
+import world.scenery.AlpineTundraTheme;
+
 /**
  * Class used to handle a flower object
  */
-public class Flower extends Scenery {
+public class Flower extends Scenery implements TemperateBroadleafTheme, TaigaTheme, AlpineTundraTheme {
 
 	/**
-	 * Temparate broadleaf flower type
+	 * Flower class constructor
+	 * @param type Style of the flower
 	 */
-	protected static String TEMPERATE_BROADLEAF = "temperatebroadleaf";
-
-	/**
-	 * Taiga flower type
-	 */
-	protected static String TAIGA = "taiga";
-
-	/**
-	 * Alpine tundra flower type
-	 */
-	protected static String ALPINE_TUNDRA = "alpinetundra";
-
 	public Flower(final String type) {
 
 		super(Philophobia.getImageFilePrefix() + type + "flower.png");
 
 	}
-
-	public static String TEMPERATE_BROADLEAF() {
-		return TEMPERATE_BROADLEAF;
-	}
-
-	public static String TAIGA() {
-		return TAIGA;
-	}
-
-	public static String ALPINE_TUNDRA() {
-		return ALPINE_TUNDRA;
-	}
-
-
-
 };

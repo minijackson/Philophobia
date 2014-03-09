@@ -4,60 +4,25 @@ import main.Philophobia;
 import world.scenery.Scenery;
 import world.InteractiveObject;
 
+import world.scenery.TemperateBroadleafTheme;
+import world.scenery.TaigaTheme;
+import world.scenery.AlpineTundraTheme;
+import world.scenery.CaveTheme;
+import world.scenery.PolarDesertTheme;
+
 /**
  * Class used to handle a rock object
  */
-public class Rock extends Scenery implements InteractiveObject {
+public class Rock extends Scenery implements InteractiveObject, TemperateBroadleafTheme, TaigaTheme, AlpineTundraTheme, CaveTheme, PolarDesertTheme {
 
 	/**
-	 * Temparate broadleaf rock type
+	 * Rock class constructor
+	 * @param type Style of the rock
 	 */
-	protected static String TEMPERATE_BROADLEAF = "temperatebroadleaf";
-
-	/**
-	 * Taiga rock type
-	 */
-	protected static String TAIGA = "taiga";
-
-	/**
-	 * Alpine rock type
-	 */
-	protected static String ALPINE_TUNDRA = "alpinetundra";
-
-	/**
-	 * Cave rock type
-	 */
-	protected static String CAVE = "cave";
-
-	/**
-	 * Polar desert rock type
-	 */
-	protected static String POLAR_DESERT = "polardesert";
-
 	public Rock(final String type) {
 
 		super(Philophobia.getImageFilePrefix() + type + "rock.png");
 
-	}
-
-	public static String TEMPERATE_BROADLEAF() {
-		return TEMPERATE_BROADLEAF;
-	}
-
-	public static String TAIGA() {
-		return TAIGA;
-	}
-
-	public static String ALPINE_TUNDRA() {
-		return ALPINE_TUNDRA;
-	}
-
-	public static String CAVE() {
-		return CAVE;
-	}
-
-	public static String POLAR_DESERT() {
-		return POLAR_DESERT;
 	}
 
 	// ===============================
