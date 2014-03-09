@@ -30,5 +30,4 @@ public class TalkingCharacter extends Character {
 	public void triggerAction() {
 		talk();
 	}
-
 };
