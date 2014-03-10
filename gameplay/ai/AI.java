@@ -22,7 +22,7 @@ import gameplay.ai.feeling.PowerComplex;
  * the user's choices and interact with the environment in
  * a bad way
  *
- * @see gameplay.ai.feelings
+ * @see gameplay.ai.feeling.Feeling
  */
 public class AI {
 

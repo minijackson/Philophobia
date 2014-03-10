@@ -3,7 +3,7 @@ package world.character;
 import main.Philophobia;
 import world.character.Character;
 
-public class Hero implements Character {
+public class Hero extends Character {
 
 	public Hero() {
 		super(Philophobia.getImageFilePrefix() + "hero.png");

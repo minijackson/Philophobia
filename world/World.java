@@ -56,7 +56,7 @@ public class World {
 
 	/**
 	 * World class constructor with size parameters
-	 * @param style Style of the world
+	 * @param type Style of the world
 	 * @param sizeX Horizontal size of the world
 	 * @param sizeY Vertical size of the world
 	 */
