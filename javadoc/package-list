@@ -1,5 +1,7 @@
 debug
 gameplay
+gameplay.ai
+gameplay.ai.feeling
 main
 window
 window.topbar
