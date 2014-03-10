@@ -80,28 +80,19 @@ public class World {
 		for(int i = 0 ; i < sizeX ; ++i) {
 			for(int j = 0 ; i < sizeY ; ++j) {
 
-				float random = Math.random();
+				double random = Math.random();
 
 				Scenery currentScenery;
 
-				if(0 <= random < .3) {
-//					currentScenery = new Tree(type);
-				} else if(.3 <= random .6) {
-//					currentScenery = new Rock(type);
+				if(0 <= random && random < .3) {
+					currentScenery = new Tree(type);
+				} else if(.3 <= random && random < .6) {
+					currentScenery = new Rock(type);
 				} else {
-//					currencScenery = new Ground(type);
+					currentScenery = new Ground(type);
 				}
 
-				try {
-					map[i][j] = sceneryObject.newInstance();
-				} catch (SecurityException e) {
-					Philophobia.getVerbose().critical("Security exception when generating the world: " + e.getMessage(), "world/World.java", "world.generateWorld()");
-					System.exit(-1);
-				} catch (InstantiationException e) {
-					Philophobia.getVerbose().critical("Instantiation exception when generating the world: " + e.getMessage(), "world/World.java", "world.generateWorld()");
-				} catch (IllegalAccessException e) {
-					Philophobia.getVerbose().critical("Illegal access exception when generating the world: " + e.getMessage(), "world/World.java", "world.generateWorld()");
-				}
+				map[i][j] = currentScenery;
 			}
 		}
 	}
