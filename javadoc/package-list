@@ -2,6 +2,7 @@ debug
 gameplay
 gameplay.ai
 gameplay.ai.feeling
+gameplay.ai.phrasing
 main
 window
 window.topbar
