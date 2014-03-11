@@ -7,6 +7,7 @@ import gameplay.ai.feeling.Curiosity;
 import gameplay.ai.feeling.Anger;
 import gameplay.ai.feeling.Depression;
 import gameplay.ai.feeling.PowerComplex;
+import gameplay.ai.phrasing.Phrasing;
 
 /**
  * Class representing the sadistic robot
@@ -37,6 +38,11 @@ public class AI {
 	protected Feeling currentFeeling;
 
 	/**
+	 * AI talk system
+	 */
+	protected Phrasing phrasingSystem;
+
+	/**
 	 * Number of betrayals done by the player
 	 */
 	protected int betrayalCount;
@@ -56,6 +62,7 @@ public class AI {
 
 		this.currentWorld = currentWorld;
 		currentFeeling  = new Curiosity();
+		phrasingSystem = new Phrasing();
 		betrayalCount = 0;
 		slaveryCount = 0;
 	}

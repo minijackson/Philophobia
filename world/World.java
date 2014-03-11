@@ -78,7 +78,7 @@ public class World {
 
 		// Loop generating the world
 		for(int i = 0 ; i < sizeX ; ++i) {
-			for(int j = 0 ; i < sizeY ; ++j) {
+			for(int j = 0 ; j < sizeY ; ++j) {
 
 				double random = Math.random();
 

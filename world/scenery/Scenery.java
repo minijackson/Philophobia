@@ -89,13 +89,15 @@ abstract public class Scenery {
 	public Scenery(final String spritePath) {
 		try {
 			spriteImage = ImageIO.read(new File(spritePath));
+
+			height = spriteImage.getHeight(null);
+			width = spriteImage.getWidth(null);
+
 		} catch(IOException e) {
 				Philophobia.getVerbose().warning("Scenery image load failed: " + e.getMessage(), "world/Scenery.java", "Scenery.Scenery(Image)");
+				height = 0;
+				width = 0;
 		}
-		
-		
-		height = spriteImage.getHeight(null);
-		width = spriteImage.getWidth(null);
 
 		xShift = 0;
 		yShift = 0;

@@ -22,6 +22,11 @@ public class Philophobia {
 	protected static String WORLD_FILE_PREFIX = "src/world/";
 
 	/**
+	 * Directory containing all the phrases files
+	 */
+	protected static String PHRASES_FILE_PREFIX = "src/phrases/";
+
+	/**
 	 * Global variable used for debugging
 	 */
 	protected static Verbose verbose;
@@ -89,6 +94,10 @@ public class Philophobia {
 	 */
 	public static String getWorldFilePrefix() {
 		return WORLD_FILE_PREFIX;
+	}
+
+	public static String getPhrasesFilePrefix() {
+		return PHRASES_FILE_PREFIX;
 	}
 
 };
