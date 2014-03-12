@@ -6,28 +6,94 @@ import gameplay.ai.phrasing.OrderedPhrases;
 public class Phrasing {
 
 	/**
-	 * Attribute containing the phrases for the
-	 * curiosity Feeling
+	 * Attribute containing the AI phrases for the
+	 * curiosity Feeling that aims to motivate
+	 * the player to do some actions
 	 */
-	protected OrderedPhrases curiosityPhrases;
+	protected OrderedPhrases curiosityMotivationPhrases;
 
 	/**
-	 * Attribute containing the phrases for the
-	 * anger Feeling
+	 * Attribute containing the AI phrases for the
+	 * curiosity Feeling that are said when the
+	 * player refused to do the asked action
 	 */
-	protected OrderedPhrases angerPhrases;
+	protected OrderedPhrases curiosityBetrayalPhrases;
 
 	/**
-	 * Attribute containing the phrases for the
-	 * depression Feeling
+	 * Attribute containing the AI phrases for the
+	 * curiosity Feeling that are said when the
+	 * player did the asked action
 	 */
-	protected OrderedPhrases depressionPhrases;
+	protected OrderedPhrases curiositySlaveryPhrases;
 
 	/**
-	 * Attribute containing the phrases for the
-	 * power complex Feeling
+	 * Attribute containing the AI phrases for the
+	 * anger Feeling that aims to motivate
+	 * the player to do some actions
 	 */
-	protected OrderedPhrases powerComplexPhrases;
+	protected OrderedPhrases angerMotivationPhrases;
+
+	/**
+	 * Attribute containing the AI phrases for the
+	 * anger Feeling that are said when the
+	 * player refused to do the asked action
+	 */
+	protected OrderedPhrases angerBetrayalPhrases;
+
+	/**
+	 * Attribute containing the AI phrases for the
+	 * anger Feeling that are said when the
+	 * player did the asked action
+	 */
+	protected OrderedPhrases angerSlaveryPhrases;
+
+	/**
+	 * Attribute containing the AI phrases for the
+	 * depression Feeling that aims to motivate
+	 * the player to do some actions
+	 */
+	protected OrderedPhrases depressionMotivationPhrases;
+
+	/**
+	 * Attribute containing the AI phrases for the
+	 * depression Feeling that are said when the
+	 * player refused to do the asked action
+	 */
+	protected OrderedPhrases depressionBetrayalPhrases;
+
+	/**
+	 * Attribute containing the AI phrases for the
+	 * depression Feeling that are said when the
+	 * player did the asked action
+	 */
+	protected OrderedPhrases depressionSlaveryPhrases;
+
+	/**
+	 * Attribute containing the AI phrases for the
+	 * power complex Feeling that aims to motivate
+	 * the player to do some actions
+	 */
+	protected OrderedPhrases powerComplexMotivationPhrases;
+
+	/**
+	 * Attribute containing the AI phrases for the
+	 * power complex Feeling that are said when the
+	 * player refused to do the asked action
+	 */
+	protected OrderedPhrases powerComplexBetrayalPhrases;
+
+	/**
+	 * Attribute containing the AI phrases for the
+	 * power complex Feeling that are said when the
+	 * player did the asked action
+	 */
+	protected OrderedPhrases powerComplexSlaveryPhrases;
+
+	/**
+	 * Field containing the asked action in a
+	 * human readable format
+	 */
+	protected String actionAsked;
 
 	/**
 	 * Phrasing class constructor
@@ -35,10 +101,21 @@ public class Phrasing {
 	public Phrasing() {
 		Philophobia.getVerbose().calls("Creating Phrasing class", "gameplay/ai/phrasing/Phrasing.java", "Phrasing.Phrasing()");
 
-		curiosityPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "curiosity.phrases");
-		angerPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "anger.phrases");
-		depressionPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "depression.phrases");
-		powerComplexPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "powercomplex.phrases");
+		curiosityMotivationPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "curiositymotivation.phrases");
+		curiosityBetrayalPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "curiositybetrayal.phrases");
+		curiositySlaveryPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "curiosityslavery.phrases");
+		
+		angerMotivationPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "angermotivation.phrases");
+		angerBetrayalPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "angerbetrayal.phrases");
+		angerSlaveryPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "angerslavery.phrases");
+
+		depressionMotivationPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "depressionmotivation.phrases");
+		depressionBetrayalPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "depressionbetrayal.phrases");
+		depressionSlaveryPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "depressionslavery.phrases");
+
+		powerComplexMotivationPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "powercomplexmotivation.phrases");
+		powerComplexBetrayalPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "powercomplexbetrayal.phrases");
+		powerComplexSlaveryPhrases = new OrderedPhrases(Philophobia.getPhrasesFilePrefix() + "powercomplexslavery.phrases");
 
 	}
 
