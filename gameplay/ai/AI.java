@@ -2,11 +2,11 @@ package gameplay.ai;
 
 import main.Philophobia;
 import world.World;
-import gameplay.ai.feeling.Feeling;
-import gameplay.ai.feeling.Curiosity;
-import gameplay.ai.feeling.Anger;
-import gameplay.ai.feeling.Depression;
-import gameplay.ai.feeling.PowerComplex;
+import gameplay.ai.mood.Mood;
+import gameplay.ai.mood.Curiosity;
+import gameplay.ai.mood.Anger;
+import gameplay.ai.mood.Depression;
+import gameplay.ai.mood.PowerComplex;
 import gameplay.ai.phrasing.Phrasing;
 
 /**
@@ -16,14 +16,14 @@ import gameplay.ai.phrasing.Phrasing;
  * without taking out the player's choice to do or
  * not to do the task
  * <p>
- * The AI has a feeling system with 4 basic feelings :
+ * The AI has a mood system with 4 basic moods :
  * Curiosity, Anger, Depression, Power complex
  * <p>
- * The robot can switch between these feelings considering
+ * The robot can switch between these moods considering
  * the user's choices and interact with the environment in
  * a bad way
  *
- * @see gameplay.ai.feeling.Feeling
+ * @see gameplay.ai.mood.Mood
  */
 public class AI {
 
@@ -33,9 +33,9 @@ public class AI {
 	protected World currentWorld;
 
 	/**
-	 * Feeling in which the AI is currently in
+	 * Mood in which the AI is currently in
 	 */
-	protected Feeling currentFeeling;
+	protected Mood currentMood;
 
 	/**
 	 * AI talk system
@@ -61,7 +61,7 @@ public class AI {
 		Philophobia.getVerbose().information("Creating sadistic AI", "gameplay/ai/AI.java", "AI.AI(World)");
 
 		this.currentWorld = currentWorld;
-		currentFeeling  = new Curiosity();
+		currentMood  = new Curiosity();
 		phrasingSystem = new Phrasing();
 		betrayalCount = 0;
 		slaveryCount = 0;
@@ -76,7 +76,7 @@ public class AI {
 	}
 
 	// ===================
-	// == Feelings part ==
+	// == Moods part ==
 	// ===================
 
 	/**
@@ -87,8 +87,8 @@ public class AI {
 	public void newBetrayal() {
 		Philophobia.getVerbose().calls("New betrayal action detected", "gameplay/ai/AI.java", "AI.newBetrayal()");
 		betrayalCount++;
-		if(currentFeeling.incrementBetrayalCount() >= currentFeeling.getBetrayalThreshold()) {
-			changeFeeling(currentFeeling.getNextFeeling());
+		if(currentMood.incrementBetrayalCount() >= currentMood.getBetrayalThreshold()) {
+			changeMood(currentMood.getNextMood());
 		}
 	}
 
@@ -99,26 +99,26 @@ public class AI {
 	public void newSlavery() {
 		Philophobia.getVerbose().calls("New slavery action detected", "gameplay/ai/AI.java", "AI.newSlavery()");
 		slaveryCount++;
-		if(currentFeeling.incrementSlaveryCount() >= currentFeeling.getSlaveryThreshold()) {
-			changeFeeling(currentFeeling.getPreviousFeeling());
+		if(currentMood.incrementSlaveryCount() >= currentMood.getSlaveryThreshold()) {
+			changeMood(currentMood.getPreviousMood());
 		}
 	}
 
 	/**
-	 * Change the current feeling field
+	 * Change the current mood field
 	 * from a Class object
-	 * @see #currentFeeling
+	 * @see #currentMood
 	 */
-	protected void changeFeeling(Class<Feeling> feelingClass) {	
+	protected void changeMood(Class<Mood> moodClass) {	
 		try {
-			Philophobia.getVerbose().information("AI switching from " + currentFeeling.getClass().getName() + " feeling to " + feelingClass.getName() + " feeling", "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
-			currentFeeling = feelingClass.newInstance();
+			Philophobia.getVerbose().information("AI switching from " + currentMood.getClass().getName() + " mood to " + moodClass.getName() + " mood", "gameplay/ai/AI.java", "AI.changeMood(Class)");
+			currentMood = moodClass.newInstance();
 		} catch(SecurityException e) {
-			Philophobia.getVerbose().serious("Security exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + feelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
+			Philophobia.getVerbose().serious("Security exception when switching from " + currentMood.getClass().getName() + " mood to " + moodClass.getName() + " mood: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeMood(Class)");
 		} catch(InstantiationException e) {
-			Philophobia.getVerbose().serious("Instantiation exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + feelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
+			Philophobia.getVerbose().serious("Instantiation exception when switching from " + currentMood.getClass().getName() + " mood to " + moodClass.getName() + " mood: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeMood(Class)");
 		} catch(IllegalAccessException e) {
-			Philophobia.getVerbose().serious("Illegal access exception when switching from " + currentFeeling.getClass().getName() + " feeling to " + feelingClass.getName() + " feeling: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeFeeling(Class)");
+			Philophobia.getVerbose().serious("Illegal access exception when switching from " + currentMood.getClass().getName() + " mood to " + moodClass.getName() + " mood: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeMood(Class)");
 		} 
 	}
 };

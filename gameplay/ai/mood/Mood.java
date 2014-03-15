@@ -1,4 +1,4 @@
-package gameplay.ai.feeling;
+package gameplay.ai.mood;
 
 import main.Philophobia;
 
@@ -7,15 +7,15 @@ import java.util.Iterator;
 
 /**
  * Abstract class representing an
- * AI feeling
+ * AI mood
  */
-public abstract class Feeling {
+public abstract class Mood {
 
 	/**
 	 * If the betrayal count goes
 	 * above the betrayal threshold,
 	 * then the robot must change its
-	 * current feeling (randomness required)
+	 * current mood (randomness required)
 	 */
 	protected int betrayalThreshold;
 
@@ -23,7 +23,7 @@ public abstract class Feeling {
 	 * If the slavery count goes
 	 * above the betrayal threshold,
 	 * then the robot must change its
-	 * current feeling (randomness required)
+	 * current mood (randomness required)
 	 */
 	protected int slaveryThreshold;
 
@@ -31,41 +31,41 @@ public abstract class Feeling {
 	 * Number of betrayals (requests from
 	 * the AI not done by the user)
 	 * done by the user when the AI
-	 * was currently in this feeling
+	 * was currently in this mood
 	 * state
 	 */
-	protected int feelingsBetrayalCount;
+	protected int moodsBetrayalCount;
 
 	/**
 	 * Number of requests from the AI
 	 * done positively by the user when
-	 * the AI was in this feeling state
+	 * the AI was in this mood state
 	 */
-	protected int feelingsSlaveryCount;
+	protected int moodsSlaveryCount;
 
 	/**
 	 * Associative array containing the possible
-	 * feelings if the number of betrayals
-	 * (when the AI was in this feeling state)
+	 * moods if the number of betrayals
+	 * (when the AI was in this mood state)
 	 * is greater than its threshold
 	 * with the probability associated
 	 */
-	protected HashSet<ProbabilityFeeling> nextFeelings;
+	protected HashSet<ProbabilityMood> nextMoods;
 
 	/**
 	 * Associative array containing the possible
-	 * feelings if the number of done actions asked
+	 * moods if the number of done actions asked
 	 * by the AI is greater than its threshold
 	 * with the probability associated
 	 */
-	protected HashSet<ProbabilityFeeling> previousFeelings;
+	protected HashSet<ProbabilityMood> previousMoods;
 
 	/**
-	 * Feeling constructor
+	 * Mood constructor
 	 */
-	public Feeling(int betrayalThreshold, int slaveryThreshold) {
+	public Mood(int betrayalThreshold, int slaveryThreshold) {
 
-		Philophobia.getVerbose().information("Creating new Feeling class", "gameplay/ai/feeling/Feeling.java", "Feeling.Feeling(int, int)");
+		Philophobia.getVerbose().information("Creating new Mood class", "gameplay/ai/mood/Mood.java", "Mood.Mood(int, int)");
 
 		this.betrayalThreshold = betrayalThreshold;
 		this.slaveryThreshold = slaveryThreshold;
@@ -90,111 +90,111 @@ public abstract class Feeling {
 
 	/**
 	 * Getter for the betrayal count field
-	 * @see #feelingsBetrayalCount
+	 * @see #moodsBetrayalCount
 	 */
-	public int getFeelingsBetrayalCount() {
-		return feelingsBetrayalCount;
+	public int getMoodsBetrayalCount() {
+		return moodsBetrayalCount;
 	}
 
 	/**
 	 * Getter for the slavery count field
-	 * @see #feelingsSlaveryCount
+	 * @see #moodsSlaveryCount
 	 */
-	public int getFeelingsSlaveryThreshold() {
-		return feelingsSlaveryCount;
+	public int getMoodsSlaveryThreshold() {
+		return moodsSlaveryCount;
 	}
 
 	/**
 	 * Increment and return the betrayal count field
-	 * @see #feelingsBetrayalCount
+	 * @see #moodsBetrayalCount
 	 */
 	public int incrementBetrayalCount() {
-		return ++feelingsBetrayalCount;
+		return ++moodsBetrayalCount;
 	}
 
 	/**
 	 * Increment and return the slavery count field
-	 * @see #feelingsSlaveryCount
+	 * @see #moodsSlaveryCount
 	 */
 	public int incrementSlaveryCount() {
-		return ++feelingsSlaveryCount;
+		return ++moodsSlaveryCount;
 	}
 
 	/**
 	 * When the betrayal threshold is exceeded,
 	 * this function is called and return a new
-	 * feeling given their probabilities
+	 * mood given their probabilities
 	 */
-	public Class<Feeling> getNextFeeling() {
-		Iterator<ProbabilityFeeling> it = nextFeelings.iterator();
-		ProbabilityFeeling probFeeling = null;
+	public Class<Mood> getNextMood() {
+		Iterator<ProbabilityMood> it = nextMoods.iterator();
+		ProbabilityMood probMood = null;
 		while(it.hasNext()) {
 
-			probFeeling = it.next();
-			if(Math.random() >= probFeeling.getProbability()) {
-				return probFeeling.getFeeling();
+			probMood = it.next();
+			if(Math.random() >= probMood.getProbability()) {
+				return probMood.getMood();
 			}
 
 		}
 
-		return probFeeling.getFeeling();
+		return probMood.getMood();
 	}
 
 	/**
 	 * When the slavery threshold is exceeded,
 	 * this function is called and return a new
-	 * feeling given their probabilities
+	 * mood given their probabilities
 	 */
-	public Class<Feeling> getPreviousFeeling() {
-		Iterator<ProbabilityFeeling> it = previousFeelings.iterator();
-		ProbabilityFeeling probFeeling = null;
+	public Class<Mood> getPreviousMood() {
+		Iterator<ProbabilityMood> it = previousMoods.iterator();
+		ProbabilityMood probMood = null;
 		while(it.hasNext()) {
 
-			probFeeling = it.next();
-			if(Math.random() >= probFeeling.getProbability()) {
-				return probFeeling.getFeeling();
+			probMood = it.next();
+			if(Math.random() >= probMood.getProbability()) {
+				return probMood.getMood();
 			}
 
 		}
 
-		return probFeeling.getFeeling();
+		return probMood.getMood();
 	}
 
 };
 
 /**
  * Class used to associate a
- * feeling with a probability
+ * mood with a probability
  */
-class ProbabilityFeeling {
+class ProbabilityMood {
 
 	/**
-	 * Feeling for which there is
+	 * Mood for which there is
 	 * a probability to be chosen
 	 */
-	protected Class<Feeling> feeling;
+	protected Class<Mood> mood;
 
 	/**
-	 * Probability of the feeling
+	 * Probability of the mood
 	 * to be chosen
 	 */
 	protected double probability;
 
 	/**
 	 * Constructor of the probability
-	 * feeling class
+	 * mood class
 	 */
-	public ProbabilityFeeling(Class<Feeling> feeling, double probability) {
-		this.feeling = feeling;
+	public ProbabilityMood(Class<Mood> mood, double probability) {
+		this.mood = mood;
 		this.probability = probability;
 	}
 
 	/**
-	 * Getter for the feeling field
-	 * @see #feeling
+	 * Getter for the mood field
+	 * @see #mood
 	 */
-	public Class<Feeling> getFeeling() {
-		return feeling;
+	public Class<Mood> getMood() {
+		return mood;
 	}
 
 	/**
