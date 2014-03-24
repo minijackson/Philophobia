@@ -54,7 +54,7 @@ public class GamePlay {
 
 		// The default world is the Temperate Broadleaf world
 		currentWorldName = "Temperate Broadleaf";
-		currentWorld = new World(Philophobia.getWorldFilePrefix() + "temperatebroadleaf.world");
+		currentWorld = new World("temperatebroadleaf");
 
 		window = new Window();
 

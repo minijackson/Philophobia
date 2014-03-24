@@ -66,12 +66,12 @@ abstract public class Scenery {
 	 * @param width width of the object's pictural representation
 	 */
 	public Scenery(final String spritePath, final int height, final int width) {	
-		Philophobia.getVerbose().calls("Scenery object created", "world/Scenery.java", "Scenery.Scenery(Image, int, int)");
+		Philophobia.getVerbose().calls("Creating Scenery object", "world/Scenery.java", "Scenery.Scenery(String, int, int)");
 
 		try {
 			spriteImage = ImageIO.read(new File(spritePath));
 		} catch(IOException e) {
-			Philophobia.getVerbose().warning("Scenery image load failed: " + e.getMessage(), "world/Scenery.java", "Scenery.Scenery(Image, int, int)");
+			Philophobia.getVerbose().warning("Scenery image \"" + spritePath + "\" load failed: " + e.getMessage(), "world/Scenery.java", "Scenery.Scenery(String, int, int)");
 		}
 		
 		this.height = height;
@@ -87,6 +87,8 @@ abstract public class Scenery {
 	 * @param spritePath Path of the image used to represent the object
 	 */
 	public Scenery(final String spritePath) {
+		Philophobia.getVerbose().calls("Creating Scenery object", "world/Scenery.java", "Scenery.Scenery(String)");
+
 		try {
 			spriteImage = ImageIO.read(new File(spritePath));
 
@@ -94,15 +96,13 @@ abstract public class Scenery {
 			width = spriteImage.getWidth(null);
 
 		} catch(IOException e) {
-				Philophobia.getVerbose().warning("Scenery image load failed: " + e.getMessage(), "world/Scenery.java", "Scenery.Scenery(Image)");
+				Philophobia.getVerbose().warning("Scenery image \"" + spritePath + "\"  load failed: " + e.getMessage(), "world/Scenery.java", "Scenery.Scenery(String)");
 				height = 0;
 				width = 0;
 		}
 
 		xShift = 0;
 		yShift = 0;
-
-		Philophobia.getVerbose().calls("Scenery object created", "world/Scenery.java", "Scenery.Scenery(Image)");
 	}
 
 	/**
@@ -115,10 +115,12 @@ abstract public class Scenery {
 	 * @param yShift Vertical shift or the image
 	 */
 	public Scenery(final String spritePath, final int height, final int width, final int xShift, final int yShift) {
+		Philophobia.getVerbose().calls("Creating Scenery object", "world/Scenery.java", "Scenery.Scenery(String, int, int, int, int)");
+
 		try {
 			spriteImage = ImageIO.read(new File(spritePath));
 		} catch(IOException e) {
-			Philophobia.getVerbose().warning("Scenery image load failed: " + e.getMessage(), "world/Scenery.java", "Scenery.Scenery(Image, int, int, int, int)");
+			Philophobia.getVerbose().warning("Scenery image load failed: " + e.getMessage(), "world/Scenery.java", "Scenery.Scenery(String, int, int, int, int)");
 		}
 	
 		this.height = height;
@@ -126,8 +128,6 @@ abstract public class Scenery {
 
 		this.xShift = xShift;
 		this.yShift = yShift;
-
-		Philophobia.getVerbose().calls("Scenery object created", "world/Scenery.java", "Scenery.Scenery(Image, int, int, int, int)");
 	}
 
 	public void drawScenery(Graphics g, final int xLocation, final int yLocation, ImageObserver obs) {
