@@ -17,6 +17,9 @@ import gameplay.ai.AI;
  * <p>
  * The GamePlay class also controls the user interface mode
  * (loading screen, win, fail, etc…)
+ * <p>
+ * This class is the equivalent of the controller in the
+ * MVC paradigm.
  * @see world.World
  */
 public class GamePlay {
