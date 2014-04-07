@@ -30,10 +30,10 @@ public class Philophobia {
 	 * Global variable used for debugging
 	 */
 	protected static Verbose verbose;
-/*
-	/**
-	 * Main window of the program
-	 */
+
+//	/**
+//	 * Main window of the program
+//	 */
 //	private static Window window;
 
 	/**
@@ -42,7 +42,7 @@ public class Philophobia {
 	protected static GamePlay gamePlay;
 
 	/**
-	 * Main function of the A3P program
+	 * Main function of the program
 	 * You can set options like verbose mode to the program
 	 * @see debug.CliOptions
 	 *
