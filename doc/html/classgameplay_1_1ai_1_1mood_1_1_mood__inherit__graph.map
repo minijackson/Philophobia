@@ -1,6 +1,6 @@
 <map id="gameplay.ai.mood.Mood" name="gameplay.ai.mood.Mood">
-<area shape="rect" id="node3" href="$classgameplay_1_1ai_1_1mood_1_1_anger.html" title="{gameplay.ai.mood.Anger\n||+ Anger()\l}" alt="" coords="5,430,171,527"/>
-<area shape="rect" id="node5" href="$classgameplay_1_1ai_1_1mood_1_1_curiosity.html" title="{gameplay.ai.mood.Curiosity\n||+ Curiosity()\l}" alt="" coords="195,430,376,527"/>
-<area shape="rect" id="node7" href="$classgameplay_1_1ai_1_1mood_1_1_depression.html" title="{gameplay.ai.mood.Depression\n||+ Depression()\l}" alt="" coords="400,430,597,527"/>
-<area shape="rect" id="node9" href="$classgameplay_1_1ai_1_1mood_1_1_power_complex.html" title="{gameplay.ai.mood.PowerComplex\n||+ PowerComplex()\l}" alt="" coords="621,430,840,527"/>
+<area shape="rect" id="node3" href="$classgameplay_1_1ai_1_1mood_1_1_anger.html" title="Class used to handle the Anger mood. " alt="" coords="5,430,171,527"/>
+<area shape="rect" id="node5" href="$classgameplay_1_1ai_1_1mood_1_1_curiosity.html" title="Class used to handle the Curiosity mood. " alt="" coords="195,430,376,527"/>
+<area shape="rect" id="node7" href="$classgameplay_1_1ai_1_1mood_1_1_depression.html" title="Class used to handle the Depression mood. " alt="" coords="400,430,597,527"/>
+<area shape="rect" id="node9" href="$classgameplay_1_1ai_1_1mood_1_1_power_complex.html" title="Class used to handle the Power Complex mood. " alt="" coords="621,430,840,527"/>
 </map>

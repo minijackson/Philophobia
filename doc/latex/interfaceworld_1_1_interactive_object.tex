@@ -1,0 +1,133 @@
+\hypertarget{interfaceworld_1_1_interactive_object}{\section{world.\-Interactive\-Object Interface Reference}
+\label{interfaceworld_1_1_interactive_object}\index{world.\-Interactive\-Object@{world.\-Interactive\-Object}}
+}
+
+
+Interface telling that the object interacts with the player.  
+
+
+
+
+Inheritance diagram for world.\-Interactive\-Object\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceworld_1_1_interactive_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for world.\-Interactive\-Object\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{interfaceworld_1_1_interactive_object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interfaceworld_1_1_interactive_object_a841a0e3dba2416de9a7d12c73725ec0d}{trigger\-Action} ()
+\begin{DoxyCompactList}\small\item\em Method to be called when the player is near the object and presses the action key. \end{DoxyCompactList}\item 
+void \hyperlink{interfaceworld_1_1_interactive_object_a8cebf64b8b0823be212f7c0a0a29d044}{player\-Near} ()
+\begin{DoxyCompactList}\small\item\em Method to be called when the player is near the object. \end{DoxyCompactList}\item 
+void \hyperlink{interfaceworld_1_1_interactive_object_ab3cca356bc5980e1a229e2f3f954237a}{player\-Enter} ()
+\begin{DoxyCompactList}\small\item\em Method to be called when the player was near and is now over the object. \end{DoxyCompactList}\item 
+void \hyperlink{interfaceworld_1_1_interactive_object_acf8ca40042c26ee08bf2cba15e12ae59}{player\-Leave} ()
+\begin{DoxyCompactList}\small\item\em Method to be called when the player was over and is now near the object. \end{DoxyCompactList}\item 
+boolean \hyperlink{interfaceworld_1_1_interactive_object_aa1066b03a82447c77ac45bd29a2d051a}{is\-Traversable} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the player is able to pass through the object and false if the player is not able to cross the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface telling that the object interacts with the player. 
+
+The object can trigger an action when the player press the action key, is near the object, enter or leave the object 
+
+It also specifies if the player can pass over the object 
+
+Definition at line 14 of file Interactive\-Object.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceworld_1_1_interactive_object_aa1066b03a82447c77ac45bd29a2d051a}{\index{world\-::\-Interactive\-Object@{world\-::\-Interactive\-Object}!is\-Traversable@{is\-Traversable}}
+\index{is\-Traversable@{is\-Traversable}!world::InteractiveObject@{world\-::\-Interactive\-Object}}
+\subsubsection[{is\-Traversable}]{\setlength{\rightskip}{0pt plus 5cm}boolean world.\-Interactive\-Object.\-is\-Traversable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceworld_1_1_interactive_object_aa1066b03a82447c77ac45bd29a2d051a}
+
+
+Returns true if the player is able to pass through the object and false if the player is not able to cross the object. 
+
+
+
+Implemented in \hyperlink{classworld_1_1character_1_1_character_afe899056167497ab0de734cd2f19219a}{world.\-character.\-Character}, \hyperlink{classworld_1_1scenery_1_1_tree_adb76d3bf389981034e765c0c0f29de6a}{world.\-scenery.\-Tree}, \hyperlink{classworld_1_1scenery_1_1_rock_a9a626a55bb40a8937abb5049480a7ba9}{world.\-scenery.\-Rock}, and \hyperlink{classworld_1_1scenery_1_1_water_a7c2130a888a7fdcd0f7dd2d601c137bd}{world.\-scenery.\-Water}.
+
+\hypertarget{interfaceworld_1_1_interactive_object_ab3cca356bc5980e1a229e2f3f954237a}{\index{world\-::\-Interactive\-Object@{world\-::\-Interactive\-Object}!player\-Enter@{player\-Enter}}
+\index{player\-Enter@{player\-Enter}!world::InteractiveObject@{world\-::\-Interactive\-Object}}
+\subsubsection[{player\-Enter}]{\setlength{\rightskip}{0pt plus 5cm}void world.\-Interactive\-Object.\-player\-Enter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceworld_1_1_interactive_object_ab3cca356bc5980e1a229e2f3f954237a}
+
+
+Method to be called when the player was near and is now over the object. 
+
+
+
+Implemented in \hyperlink{classworld_1_1character_1_1_character_a9e727e0924694a8dcb032d6bb61b30d9}{world.\-character.\-Character}, \hyperlink{classworld_1_1scenery_1_1_tree_acfcba6dd6fbd6cebb54b4bbfe22b071e}{world.\-scenery.\-Tree}, \hyperlink{classworld_1_1scenery_1_1_rock_af334cebe76b712f9d93cdda4d23cd4c4}{world.\-scenery.\-Rock}, and \hyperlink{classworld_1_1scenery_1_1_water_af5befcc28519a242b8d3718f91126524}{world.\-scenery.\-Water}.
+
+\hypertarget{interfaceworld_1_1_interactive_object_acf8ca40042c26ee08bf2cba15e12ae59}{\index{world\-::\-Interactive\-Object@{world\-::\-Interactive\-Object}!player\-Leave@{player\-Leave}}
+\index{player\-Leave@{player\-Leave}!world::InteractiveObject@{world\-::\-Interactive\-Object}}
+\subsubsection[{player\-Leave}]{\setlength{\rightskip}{0pt plus 5cm}void world.\-Interactive\-Object.\-player\-Leave (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceworld_1_1_interactive_object_acf8ca40042c26ee08bf2cba15e12ae59}
+
+
+Method to be called when the player was over and is now near the object. 
+
+
+
+Implemented in \hyperlink{classworld_1_1character_1_1_character_a94b4af7f2a48ad7288e64be4393ffeb2}{world.\-character.\-Character}, \hyperlink{classworld_1_1scenery_1_1_tree_a41f658609a997f04252ac1f602ed4ac7}{world.\-scenery.\-Tree}, \hyperlink{classworld_1_1scenery_1_1_rock_a31f1aa4f4b21091140cf1c11c2ae21c1}{world.\-scenery.\-Rock}, and \hyperlink{classworld_1_1scenery_1_1_water_ac83d0b5037692e5169c2d47370a7407f}{world.\-scenery.\-Water}.
+
+\hypertarget{interfaceworld_1_1_interactive_object_a8cebf64b8b0823be212f7c0a0a29d044}{\index{world\-::\-Interactive\-Object@{world\-::\-Interactive\-Object}!player\-Near@{player\-Near}}
+\index{player\-Near@{player\-Near}!world::InteractiveObject@{world\-::\-Interactive\-Object}}
+\subsubsection[{player\-Near}]{\setlength{\rightskip}{0pt plus 5cm}void world.\-Interactive\-Object.\-player\-Near (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceworld_1_1_interactive_object_a8cebf64b8b0823be212f7c0a0a29d044}
+
+
+Method to be called when the player is near the object. 
+
+
+
+Implemented in \hyperlink{classworld_1_1character_1_1_character_a367d28c710b44853dd42daf2f35d1de8}{world.\-character.\-Character}, \hyperlink{classworld_1_1scenery_1_1_tree_ad77fdbe4c5134b565dbee2acb74a937d}{world.\-scenery.\-Tree}, \hyperlink{classworld_1_1scenery_1_1_rock_a10b048a09c4733da9ab3c902156f7d02}{world.\-scenery.\-Rock}, and \hyperlink{classworld_1_1scenery_1_1_water_a7271baf99a9b939821a5fbc7ae2cc481}{world.\-scenery.\-Water}.
+
+\hypertarget{interfaceworld_1_1_interactive_object_a841a0e3dba2416de9a7d12c73725ec0d}{\index{world\-::\-Interactive\-Object@{world\-::\-Interactive\-Object}!trigger\-Action@{trigger\-Action}}
+\index{trigger\-Action@{trigger\-Action}!world::InteractiveObject@{world\-::\-Interactive\-Object}}
+\subsubsection[{trigger\-Action}]{\setlength{\rightskip}{0pt plus 5cm}void world.\-Interactive\-Object.\-trigger\-Action (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interfaceworld_1_1_interactive_object_a841a0e3dba2416de9a7d12c73725ec0d}
+
+
+Method to be called when the player is near the object and presses the action key. 
+
+
+
+Implemented in \hyperlink{classworld_1_1character_1_1_character_afcf977fccc24a077f5445e2a4e73836a}{world.\-character.\-Character}, \hyperlink{classworld_1_1scenery_1_1_tree_a273e28b5881ded9ee71e59d6d5733e70}{world.\-scenery.\-Tree}, \hyperlink{classworld_1_1scenery_1_1_rock_a44cae36b6160b445a8b76b108fcc0323}{world.\-scenery.\-Rock}, \hyperlink{classworld_1_1character_1_1_talking_character_a880e0de97bfae094b3d25a12c055cad2}{world.\-character.\-Talking\-Character}, and \hyperlink{classworld_1_1scenery_1_1_water_a610b70068f3b567290ff7fbc41e78aca}{world.\-scenery.\-Water}.
+
+
+
+The documentation for this interface was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+world/\hyperlink{_interactive_object_8java}{Interactive\-Object.\-java}\end{DoxyCompactItemize}

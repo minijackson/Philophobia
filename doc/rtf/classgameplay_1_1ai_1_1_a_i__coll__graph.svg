@@ -25,7 +25,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<a xlink:href="$classgameplay_1_1ai_1_1phrasing_1_1_phrasing.html" xlink:title="{gameplay.ai.phrasing.Phrasing\n|# angerBetrayalPhrases\l# powerComplexMotivationPhrases\l# actionAsked\l|+ Phrasing()\l}">
+<a xlink:href="$classgameplay_1_1ai_1_1phrasing_1_1_phrasing.html" xlink:title="Class handling the talk system for the AI. ">
 <polygon fill="white" stroke="black" points="-0.5,-279 -0.5,-383 170.5,-383 170.5,-279 -0.5,-279"/>
 <text text-anchor="middle" x="85" y="-370" font-family="Helvetica,sans-Serif" font-size="10.00">gameplay.ai.phrasing.Phrasing</text>
 <polyline fill="none" stroke="black" points="-0.5,-359 170.5,-359 "/>

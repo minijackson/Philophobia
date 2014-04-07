@@ -132,7 +132,7 @@ Protected Attributes</h2></td></tr>
 <p>This class is the equivalent of the controller in the MVC paradigm. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classworld_1_1_world.html" title="World is a class used to handle the game world graphics. ">world.World</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_game_play_8java_source.html#l00025">25</a> of file <a class="el" href="_game_play_8java_source.html">GamePlay.java</a>.</p>
+<p>Definition at line <a class="el" href="_game_play_8java_source.html#l00029">29</a> of file <a class="el" href="_game_play_8java_source.html">GamePlay.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="acaa399a84e39a11a776da53da43ed3ea"></a>
 <div class="memitem">
@@ -156,34 +156,34 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_game_play_8java_source.html#l00055">55</a> of file <a class="el" href="_game_play_8java_source.html">GamePlay.java</a>.</p>
+<p>Definition at line <a class="el" href="_game_play_8java_source.html#l00059">59</a> of file <a class="el" href="_game_play_8java_source.html">GamePlay.java</a>.</p>
 
-<p>References <a class="el" href="_game_play_8java_source.html#l00049">gameplay.GamePlay.artificialIntelligence</a>, <a class="el" href="_game_play_8java_source.html#l00030">gameplay.GamePlay.currentWorld</a>, <a class="el" href="_game_play_8java_source.html#l00038">gameplay.GamePlay.currentWorldName</a>, and <a class="el" href="_game_play_8java_source.html#l00043">gameplay.GamePlay.window</a>.</p>
-<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                           {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        Philophobia.getVerbose().information(<span class="stringliteral">&quot;Creating GamePlay class&quot;</span>, <span class="stringliteral">&quot;gameplay/Gameplay.java&quot;</span>, <span class="stringliteral">&quot;GamePlay.GamePlay()&quot;</span>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">// The default world is the Temperate Broadleaf world</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="classgameplay_1_1_game_play.html#adcc37bdd0470d8adc27fa249d93adcff">currentWorldName</a> = <span class="stringliteral">&quot;Temperate Broadleaf&quot;</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classgameplay_1_1_game_play.html#acac96730473a405274e9ff0a58e4d77e">currentWorld</a> = <span class="keyword">new</span> World(<span class="stringliteral">&quot;temperatebroadleaf&quot;</span>);</div>
+<p>References <a class="el" href="_game_play_8java_source.html#l00053">gameplay.GamePlay.artificialIntelligence</a>, <a class="el" href="_game_play_8java_source.html#l00034">gameplay.GamePlay.currentWorld</a>, <a class="el" href="_game_play_8java_source.html#l00042">gameplay.GamePlay.currentWorldName</a>, and <a class="el" href="_game_play_8java_source.html#l00047">gameplay.GamePlay.window</a>.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                           {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        Philophobia.getVerbose().information(<span class="stringliteral">&quot;Creating GamePlay class&quot;</span>, <span class="stringliteral">&quot;gameplay/Gameplay.java&quot;</span>, <span class="stringliteral">&quot;GamePlay.GamePlay()&quot;</span>);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="classgameplay_1_1_game_play.html#aed3cc7a8f5e4838bb0b37d4014c6133e">window</a> = <span class="keyword">new</span> Window();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">// Sleep during the length of the animation</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            Thread.sleep(2000);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        } <span class="keywordflow">catch</span>(InterruptedException e) {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            Philophobia.getVerbose().warning(<span class="stringliteral">&quot;Sleep interrupted: &quot;</span> + e.getMessage(), <span class="stringliteral">&quot;gameplay/GamePlay.java&quot;</span>, <span class="stringliteral">&quot;GamePlay.GamePlay(CliOptions)&quot;</span>);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="classgameplay_1_1_game_play.html#a416406c147a47ba292990aa11064d9aa">artificialIntelligence</a> = <span class="keyword">new</span> AI(<a class="code" href="classgameplay_1_1_game_play.html#acac96730473a405274e9ff0a58e4d77e">currentWorld</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        window.getUserInterface().setDisplayedWorld(<a class="code" href="classgameplay_1_1_game_play.html#acac96730473a405274e9ff0a58e4d77e">currentWorld</a>);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        window.setGameState();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="ttc" id="classgameplay_1_1_game_play_html_adcc37bdd0470d8adc27fa249d93adcff"><div class="ttname"><a href="classgameplay_1_1_game_play.html#adcc37bdd0470d8adc27fa249d93adcff">gameplay.GamePlay.currentWorldName</a></div><div class="ttdeci">String currentWorldName</div><div class="ttdoc">Name of the world currently being played. </div><div class="ttdef"><b>Definition:</b> <a href="_game_play_8java_source.html#l00038">GamePlay.java:38</a></div></div>
-<div class="ttc" id="classgameplay_1_1_game_play_html_acac96730473a405274e9ff0a58e4d77e"><div class="ttname"><a href="classgameplay_1_1_game_play.html#acac96730473a405274e9ff0a58e4d77e">gameplay.GamePlay.currentWorld</a></div><div class="ttdeci">World currentWorld</div><div class="ttdoc">World currently being played. </div><div class="ttdef"><b>Definition:</b> <a href="_game_play_8java_source.html#l00030">GamePlay.java:30</a></div></div>
-<div class="ttc" id="classgameplay_1_1_game_play_html_a416406c147a47ba292990aa11064d9aa"><div class="ttname"><a href="classgameplay_1_1_game_play.html#a416406c147a47ba292990aa11064d9aa">gameplay.GamePlay.artificialIntelligence</a></div><div class="ttdeci">AI artificialIntelligence</div><div class="ttdoc">Malicious artificial intelligence driving the player mad. </div><div class="ttdef"><b>Definition:</b> <a href="_game_play_8java_source.html#l00049">GamePlay.java:49</a></div></div>
-<div class="ttc" id="classgameplay_1_1_game_play_html_aed3cc7a8f5e4838bb0b37d4014c6133e"><div class="ttname"><a href="classgameplay_1_1_game_play.html#aed3cc7a8f5e4838bb0b37d4014c6133e">gameplay.GamePlay.window</a></div><div class="ttdeci">Window window</div><div class="ttdoc">The game window. </div><div class="ttdef"><b>Definition:</b> <a href="_game_play_8java_source.html#l00043">GamePlay.java:43</a></div></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// The default world is the Temperate Broadleaf world</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="classgameplay_1_1_game_play.html#adcc37bdd0470d8adc27fa249d93adcff">currentWorldName</a> = <span class="stringliteral">&quot;Temperate Broadleaf&quot;</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="classgameplay_1_1_game_play.html#acac96730473a405274e9ff0a58e4d77e">currentWorld</a> = <span class="keyword">new</span> World(<span class="stringliteral">&quot;temperatebroadleaf&quot;</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="classgameplay_1_1_game_play.html#aed3cc7a8f5e4838bb0b37d4014c6133e">window</a> = <span class="keyword">new</span> Window();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="comment">// Sleep during the length of the animation</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            Thread.sleep(2000);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        } <span class="keywordflow">catch</span>(InterruptedException e) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            Philophobia.getVerbose().warning(<span class="stringliteral">&quot;Sleep interrupted: &quot;</span> + e.getMessage(), <span class="stringliteral">&quot;gameplay/GamePlay.java&quot;</span>, <span class="stringliteral">&quot;GamePlay.GamePlay(CliOptions)&quot;</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="classgameplay_1_1_game_play.html#a416406c147a47ba292990aa11064d9aa">artificialIntelligence</a> = <span class="keyword">new</span> AI(<a class="code" href="classgameplay_1_1_game_play.html#acac96730473a405274e9ff0a58e4d77e">currentWorld</a>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        window.getUserInterface().setDisplayedWorld(<a class="code" href="classgameplay_1_1_game_play.html#acac96730473a405274e9ff0a58e4d77e">currentWorld</a>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        window.setGameState();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="ttc" id="classgameplay_1_1_game_play_html_adcc37bdd0470d8adc27fa249d93adcff"><div class="ttname"><a href="classgameplay_1_1_game_play.html#adcc37bdd0470d8adc27fa249d93adcff">gameplay.GamePlay.currentWorldName</a></div><div class="ttdeci">String currentWorldName</div><div class="ttdoc">Name of the world currently being played. </div><div class="ttdef"><b>Definition:</b> <a href="_game_play_8java_source.html#l00042">GamePlay.java:42</a></div></div>
+<div class="ttc" id="classgameplay_1_1_game_play_html_acac96730473a405274e9ff0a58e4d77e"><div class="ttname"><a href="classgameplay_1_1_game_play.html#acac96730473a405274e9ff0a58e4d77e">gameplay.GamePlay.currentWorld</a></div><div class="ttdeci">World currentWorld</div><div class="ttdoc">World currently being played. </div><div class="ttdef"><b>Definition:</b> <a href="_game_play_8java_source.html#l00034">GamePlay.java:34</a></div></div>
+<div class="ttc" id="classgameplay_1_1_game_play_html_a416406c147a47ba292990aa11064d9aa"><div class="ttname"><a href="classgameplay_1_1_game_play.html#a416406c147a47ba292990aa11064d9aa">gameplay.GamePlay.artificialIntelligence</a></div><div class="ttdeci">AI artificialIntelligence</div><div class="ttdoc">Malicious artificial intelligence driving the player mad. </div><div class="ttdef"><b>Definition:</b> <a href="_game_play_8java_source.html#l00053">GamePlay.java:53</a></div></div>
+<div class="ttc" id="classgameplay_1_1_game_play_html_aed3cc7a8f5e4838bb0b37d4014c6133e"><div class="ttname"><a href="classgameplay_1_1_game_play.html#aed3cc7a8f5e4838bb0b37d4014c6133e">gameplay.GamePlay.window</a></div><div class="ttdeci">Window window</div><div class="ttdoc">The game window. </div><div class="ttdef"><b>Definition:</b> <a href="_game_play_8java_source.html#l00047">GamePlay.java:47</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -208,9 +208,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Malicious artificial intelligence driving the player mad. </p>
 
-<p>Definition at line <a class="el" href="_game_play_8java_source.html#l00049">49</a> of file <a class="el" href="_game_play_8java_source.html">GamePlay.java</a>.</p>
+<p>Definition at line <a class="el" href="_game_play_8java_source.html#l00053">53</a> of file <a class="el" href="_game_play_8java_source.html">GamePlay.java</a>.</p>
 
-<p>Referenced by <a class="el" href="_game_play_8java_source.html#l00055">gameplay.GamePlay.GamePlay()</a>.</p>
+<p>Referenced by <a class="el" href="_game_play_8java_source.html#l00059">gameplay.GamePlay.GamePlay()</a>.</p>
 
 </div>
 </div>
@@ -234,9 +234,9 @@ Protected Attributes</h2></td></tr>
 
 <p>World currently being played. </p>
 
-<p>Definition at line <a class="el" href="_game_play_8java_source.html#l00030">30</a> of file <a class="el" href="_game_play_8java_source.html">GamePlay.java</a>.</p>
+<p>Definition at line <a class="el" href="_game_play_8java_source.html#l00034">34</a> of file <a class="el" href="_game_play_8java_source.html">GamePlay.java</a>.</p>
 
-<p>Referenced by <a class="el" href="_game_play_8java_source.html#l00055">gameplay.GamePlay.GamePlay()</a>.</p>
+<p>Referenced by <a class="el" href="_game_play_8java_source.html#l00059">gameplay.GamePlay.GamePlay()</a>.</p>
 
 </div>
 </div>
@@ -261,9 +261,9 @@ Protected Attributes</h2></td></tr>
 <p>Name of the world currently being played. </p>
 <p>It is used to detect in which world the player is and where are the other worlds </p>
 
-<p>Definition at line <a class="el" href="_game_play_8java_source.html#l00038">38</a> of file <a class="el" href="_game_play_8java_source.html">GamePlay.java</a>.</p>
+<p>Definition at line <a class="el" href="_game_play_8java_source.html#l00042">42</a> of file <a class="el" href="_game_play_8java_source.html">GamePlay.java</a>.</p>
 
-<p>Referenced by <a class="el" href="_game_play_8java_source.html#l00055">gameplay.GamePlay.GamePlay()</a>.</p>
+<p>Referenced by <a class="el" href="_game_play_8java_source.html#l00059">gameplay.GamePlay.GamePlay()</a>.</p>
 
 </div>
 </div>
@@ -287,9 +287,9 @@ Protected Attributes</h2></td></tr>
 
 <p>The game window. </p>
 
-<p>Definition at line <a class="el" href="_game_play_8java_source.html#l00043">43</a> of file <a class="el" href="_game_play_8java_source.html">GamePlay.java</a>.</p>
+<p>Definition at line <a class="el" href="_game_play_8java_source.html#l00047">47</a> of file <a class="el" href="_game_play_8java_source.html">GamePlay.java</a>.</p>
 
-<p>Referenced by <a class="el" href="_game_play_8java_source.html#l00055">gameplay.GamePlay.GamePlay()</a>.</p>
+<p>Referenced by <a class="el" href="_game_play_8java_source.html#l00059">gameplay.GamePlay.GamePlay()</a>.</p>
 
 </div>
 </div>
@@ -299,7 +299,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 7 2014 20:18:47 for Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 7 2014 21:28:20 for Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

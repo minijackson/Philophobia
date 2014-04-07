@@ -163,7 +163,7 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node3 -->
 <g id="node5" class="node"><title>Node3</title>
-<a xlink:href="classworld_1_1character_1_1_hero.html" target="_top" xlink:title="{world.character.Hero\n||+ Hero()\l}">
+<a xlink:href="classworld_1_1character_1_1_hero.html" target="_top" xlink:title="Class handling the main playing Character. ">
 <polygon fill="white" stroke="black" points="-0.5,-17 -0.5,-89 106.5,-89 106.5,-17 -0.5,-17"/>
 <text text-anchor="middle" x="53" y="-76" font-family="Helvetica,sans-Serif" font-size="10.00">world.character.Hero</text>
 <polyline fill="none" stroke="black" points="-0.5,-65 106.5,-65 "/>

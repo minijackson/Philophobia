@@ -20,7 +20,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<a xlink:href="classwindow_1_1_window.html" target="_top" xlink:title="{window.Window\n||+ Window()\l+ setLoadingState()\l+ setGameState()\l+ setFailState()\l+ setWinState()\l+ getUserInterface()\l}">
+<a xlink:href="classwindow_1_1_window.html" target="_top" xlink:title="Class handling the window with decorations, size, title, etc and the main components inside it...">
 <polygon fill="white" stroke="black" points="243,-127 243,-279 347,-279 347,-127 243,-127"/>
 <text text-anchor="middle" x="295" y="-266" font-family="Helvetica,sans-Serif" font-size="10.00">window.Window</text>
 <polyline fill="none" stroke="black" points="243,-255 347,-255 "/>
@@ -281,7 +281,7 @@
 </g>
 <!-- Node14 -->
 <g id="node28" class="node"><title>Node14</title>
-<a xlink:href="classgameplay_1_1ai_1_1phrasing_1_1_phrasing.html" target="_top" xlink:title="{gameplay.ai.phrasing.Phrasing\n|# angerBetrayalPhrases\l# powerComplexMotivationPhrases\l# actionAsked\l|+ Phrasing()\l}">
+<a xlink:href="classgameplay_1_1ai_1_1phrasing_1_1_phrasing.html" target="_top" xlink:title="Class handling the talk system for the AI. ">
 <polygon fill="white" stroke="black" points="629.5,-643 629.5,-747 800.5,-747 800.5,-643 629.5,-643"/>
 <text text-anchor="middle" x="715" y="-734" font-family="Helvetica,sans-Serif" font-size="10.00">gameplay.ai.phrasing.Phrasing</text>
 <polyline fill="none" stroke="black" points="629.5,-723 800.5,-723 "/>

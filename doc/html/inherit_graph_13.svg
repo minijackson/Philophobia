@@ -118,7 +118,7 @@
 </g>
 <!-- Node9 -->
 <g id="node19" class="node"><title>Node9</title>
-<a xlink:href="interfaceworld_1_1_interactive_object.html" target="_top" xlink:title="world.InteractiveObject">
+<a xlink:href="interfaceworld_1_1_interactive_object.html" target="_top" xlink:title="Interface telling that the object interacts with the player. ">
 <polygon fill="white" stroke="black" points="25.5,-22 25.5,-46 142.5,-46 142.5,-22 25.5,-22"/>
 <text text-anchor="middle" x="84" y="-33" font-family="Helvetica,sans-Serif" font-size="10.00">world.InteractiveObject</text>
 </a>
@@ -159,7 +159,7 @@
 </g>
 <!-- Node11 -->
 <g id="node23" class="node"><title>Node11</title>
-<a xlink:href="classworld_1_1character_1_1_hero.html" target="_top" xlink:title="world.character.Hero">
+<a xlink:href="classworld_1_1character_1_1_hero.html" target="_top" xlink:title="Class handling the main playing Character. ">
 <polygon fill="white" stroke="black" points="394.5,-42 394.5,-66 501.5,-66 501.5,-42 394.5,-42"/>
 <text text-anchor="middle" x="448" y="-53" font-family="Helvetica,sans-Serif" font-size="10.00">world.character.Hero</text>
 </a>

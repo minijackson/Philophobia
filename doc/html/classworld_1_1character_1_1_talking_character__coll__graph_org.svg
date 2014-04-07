@@ -94,7 +94,7 @@
 </g>
 <!-- Node5 -->
 <g id="node8" class="node"><title>Node5</title>
-<a xlink:href="interfaceworld_1_1_interactive_object.html" target="_top" xlink:title="{world.InteractiveObject\n||+ triggerAction()\l+ playerNear()\l+ playerEnter()\l+ playerLeave()\l+ isTraversable()\l}">
+<a xlink:href="interfaceworld_1_1_interactive_object.html" target="_top" xlink:title="Interface telling that the object interacts with the player. ">
 <polygon fill="white" stroke="black" points="133.5,-537 133.5,-673 250.5,-673 250.5,-537 133.5,-537"/>
 <text text-anchor="middle" x="192" y="-660" font-family="Helvetica,sans-Serif" font-size="10.00">world.InteractiveObject</text>
 <polyline fill="none" stroke="black" points="133.5,-649 250.5,-649 "/>

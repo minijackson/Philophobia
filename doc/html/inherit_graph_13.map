@@ -7,10 +7,10 @@
 <area shape="rect" id="node11" href="$classworld_1_1scenery_1_1_shrub.html" title="Class used to handle a shrub object. " alt="" coords="293,203,432,237"/>
 <area shape="rect" id="node13" href="$classworld_1_1scenery_1_1_tree.html" title="Class used to handle a tree object. " alt="" coords="297,315,428,349"/>
 <area shape="rect" id="node14" href="$interfaceworld_1_1scenery_1_1_cave_theme.html" title="Interface used to tell that a Scenery object has a Cave style. " alt="" coords="29,349,205,382"/>
-<area shape="rect" id="node19" href="$interfaceworld_1_1_interactive_object.html" title="world.InteractiveObject" alt="" coords="40,594,195,627"/>
+<area shape="rect" id="node19" href="$interfaceworld_1_1_interactive_object.html" title="Interface telling that the object interacts with the player. " alt="" coords="40,594,195,627"/>
 <area shape="rect" id="node21" href="$classworld_1_1character_1_1_character.html" title="Class used to handle a character (player or non&#45;player) " alt="" coords="277,595,448,629"/>
 <area shape="rect" id="node29" href="$classworld_1_1scenery_1_1_water.html" title="Class used to handle a water object. " alt="" coords="293,539,432,573"/>
-<area shape="rect" id="node23" href="$classworld_1_1character_1_1_hero.html" title="world.character.Hero" alt="" coords="532,567,673,601"/>
+<area shape="rect" id="node23" href="$classworld_1_1character_1_1_hero.html" title="Class handling the main playing Character. " alt="" coords="532,567,673,601"/>
 <area shape="rect" id="node25" href="$classworld_1_1character_1_1_talking_character.html" title="Class handling a talking character. " alt="" coords="497,623,708,657"/>
 <area shape="rect" id="node30" href="$interfaceworld_1_1scenery_1_1_polar_desert_theme.html" title="Interface used to define that a Scenery object has a Polar Desert style. " alt="" coords="31,517,204,571"/>
 <area shape="rect" id="node34" href="$classworld_1_1scenery_1_1_shore.html" title="Class used to handle a shore object. " alt="" coords="293,483,432,517"/>

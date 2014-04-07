@@ -1,7 +1,7 @@
 <map id="main.Philophobia" name="main.Philophobia">
 <area shape="rect" id="node2" href="$classdebug_1_1_verbose.html" title="Class used to display and log messages all over this program. " alt="" coords="317,1785,427,1989"/>
 <area shape="rect" id="node6" href="$classgameplay_1_1_game_play.html" title="Class handling the game play of this game. " alt="" coords="473,1838,615,1935"/>
-<area shape="rect" id="node8" href="$classwindow_1_1_window.html" title="{window.Window\n||+ Window()\l+ setLoadingState()\l+ setGameState()\l+ setFailState()\l+ setWinState()\l+ getUserInterface()\l}" alt="" coords="785,1510,924,1714"/>
+<area shape="rect" id="node8" href="$classwindow_1_1_window.html" title="Class handling the window with decorations, size, title, etc and the main components inside it..." alt="" coords="785,1510,924,1714"/>
 <area shape="rect" id="node12" href="$enumwindow_1_1_window_state.html" title="Enumeration of the possible states of the displayed graphics. " alt="" coords="1044,1235,1191,1418"/>
 <area shape="rect" id="node14" href="$classwindow_1_1topbar_1_1_top_bar.html" title="Class handling the top bar of the program&#39;s main window. " alt="" coords="780,1214,929,1439"/>
 <area shape="rect" id="node24" href="$classwindow_1_1ui_1_1_u_i.html" title="Class used to handle the window&#39;s user interface. " alt="" coords="604,1225,756,1429"/>
@@ -9,7 +9,7 @@
 <area shape="rect" id="node29" href="$classworld_1_1scenery_1_1_scenery.html" title="Class used to handle any world object. " alt="" coords="487,174,641,506"/>
 <area shape="rect" id="node27" href="$classworld_1_1_world.html" title="World is a class used to handle the game world graphics. " alt="" coords="501,833,627,1079"/>
 <area shape="rect" id="node32" href="$classgameplay_1_1ai_1_1_a_i.html" title="Class representing the sadistic robot. " alt="" coords="308,1225,444,1429"/>
-<area shape="rect" id="node34" href="$classgameplay_1_1ai_1_1phrasing_1_1_phrasing.html" title="{gameplay.ai.phrasing.Phrasing\n|# angerBetrayalPhrases\l# powerComplexMotivationPhrases\l# actionAsked\l|+ Phrasing()\l}" alt="" coords="5,886,232,1026"/>
+<area shape="rect" id="node34" href="$classgameplay_1_1ai_1_1phrasing_1_1_phrasing.html" title="Class handling the talk system for the AI. " alt="" coords="5,886,232,1026"/>
 <area shape="rect" id="node36" href="$classgameplay_1_1ai_1_1phrasing_1_1_ordered_phrases.html" title="Class used to contain an ordered list of phrases. " alt="" coords="21,259,216,421"/>
 <area shape="rect" id="node38" href="$classgameplay_1_1ai_1_1mood_1_1_mood.html" title="Abstract class representing an AI mood. " alt="" coords="256,790,456,1122"/>
 </map>

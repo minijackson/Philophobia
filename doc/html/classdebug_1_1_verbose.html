@@ -141,7 +141,7 @@ Package Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class used to display and log messages all over this program. </p>
 
-<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00011">11</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00015">15</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a91cd6412ba96325ae848b77964096ee1"></a>
 <div class="memitem">
@@ -166,47 +166,47 @@ Package Attributes</h2></td></tr>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70" title="Level of verbosing, from 0 to 5. ">verboseMode</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00036">36</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00040">40</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
 
-<p>References <a class="el" href="_verbose_8java_source.html#l00028">debug.Verbose.log</a>, and <a class="el" href="_verbose_8java_source.html#l00113">debug.Verbose.warning()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                              {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        this.verboseMode = level;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">if</span>(level &gt; 0) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            System.out.println(<span class="stringliteral">&quot;Verbose mode activated at level &quot;</span> + level);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <a class="code" href="classdebug_1_1_verbose.html#a1642fc3a3308caeb65e4d837675591e5">log</a> = Logger.getLogger(<span class="stringliteral">&quot;Philophobia.log&quot;</span>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    log.addHandler(<span class="keyword">new</span> FileHandler(<span class="stringliteral">&quot;Philophobia.log&quot;</span>));</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                } <span class="keywordflow">catch</span> (IOException e) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    <a class="code" href="classdebug_1_1_verbose.html#a178f9afaeb03db850592a967ab911dee">warning</a>(<span class="stringliteral">&quot;Error initializing the log file&quot;</span>, <span class="stringliteral">&quot;org/debug/Verbose.java&quot;</span>, <span class="stringliteral">&quot;Verbose.Verbose(int)&quot;</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                log.setLevel(Level.parse(<span class="stringliteral">&quot;ALL&quot;</span>));</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                log.info(<span class="stringliteral">&quot;Verbose at level &quot;</span> + level + <span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                log.info(<span class="stringliteral">&quot;Displayed messages are :&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                log.info(<span class="stringliteral">&quot;- Criticals&quot;</span>);</div>
+<p>References <a class="el" href="_verbose_8java_source.html#l00032">debug.Verbose.log</a>, and <a class="el" href="_verbose_8java_source.html#l00117">debug.Verbose.warning()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                              {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        this.verboseMode = level;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span>(level &gt; 0) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            System.out.println(<span class="stringliteral">&quot;Verbose mode activated at level &quot;</span> + level);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <a class="code" href="classdebug_1_1_verbose.html#a1642fc3a3308caeb65e4d837675591e5">log</a> = Logger.getLogger(<span class="stringliteral">&quot;Philophobia.log&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    log.addHandler(<span class="keyword">new</span> FileHandler(<span class="stringliteral">&quot;Philophobia.log&quot;</span>));</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    <a class="code" href="classdebug_1_1_verbose.html#a178f9afaeb03db850592a967ab911dee">warning</a>(<span class="stringliteral">&quot;Error initializing the log file&quot;</span>, <span class="stringliteral">&quot;org/debug/Verbose.java&quot;</span>, <span class="stringliteral">&quot;Verbose.Verbose(int)&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                log.setLevel(Level.parse(<span class="stringliteral">&quot;ALL&quot;</span>));</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">if</span>(level &gt;= 2) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    log.info(<span class="stringliteral">&quot;- Serious&quot;</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">if</span>(level &gt;= 3) {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    log.info(<span class="stringliteral">&quot;- Warnings&quot;</span>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">if</span>(level &gt;= 4) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    log.info(<span class="stringliteral">&quot;- Informations&quot;</span>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">if</span>(level &gt;= 5) {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    log.info(<span class="stringliteral">&quot;- Class instanciations and function calls&quot;</span>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        this.calls(<span class="stringliteral">&quot;Verbose class created&quot;</span>, <span class="stringliteral">&quot;org/debug/Verbose.java&quot;</span>, <span class="stringliteral">&quot;Verbose.Verbose(int)&quot;</span>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="ttc" id="classdebug_1_1_verbose_html_a1642fc3a3308caeb65e4d837675591e5"><div class="ttname"><a href="classdebug_1_1_verbose.html#a1642fc3a3308caeb65e4d837675591e5">debug.Verbose.log</a></div><div class="ttdeci">Logger log</div><div class="ttdoc">Logger used to log messages into a file. </div><div class="ttdef"><b>Definition:</b> <a href="_verbose_8java_source.html#l00028">Verbose.java:28</a></div></div>
-<div class="ttc" id="classdebug_1_1_verbose_html_a178f9afaeb03db850592a967ab911dee"><div class="ttname"><a href="classdebug_1_1_verbose.html#a178f9afaeb03db850592a967ab911dee">debug.Verbose.warning</a></div><div class="ttdeci">void warning(String message, String file, String location)</div><div class="ttdoc">Display and log a message with additionnal informations in the log file The message is displayed and ...</div><div class="ttdef"><b>Definition:</b> <a href="_verbose_8java_source.html#l00113">Verbose.java:113</a></div></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                log.info(<span class="stringliteral">&quot;Verbose at level &quot;</span> + level + <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                log.info(<span class="stringliteral">&quot;Displayed messages are :&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                log.info(<span class="stringliteral">&quot;- Criticals&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">if</span>(level &gt;= 2) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    log.info(<span class="stringliteral">&quot;- Serious&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">if</span>(level &gt;= 3) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    log.info(<span class="stringliteral">&quot;- Warnings&quot;</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">if</span>(level &gt;= 4) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    log.info(<span class="stringliteral">&quot;- Informations&quot;</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">if</span>(level &gt;= 5) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    log.info(<span class="stringliteral">&quot;- Class instanciations and function calls&quot;</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        this.calls(<span class="stringliteral">&quot;Verbose class created&quot;</span>, <span class="stringliteral">&quot;org/debug/Verbose.java&quot;</span>, <span class="stringliteral">&quot;Verbose.Verbose(int)&quot;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="ttc" id="classdebug_1_1_verbose_html_a1642fc3a3308caeb65e4d837675591e5"><div class="ttname"><a href="classdebug_1_1_verbose.html#a1642fc3a3308caeb65e4d837675591e5">debug.Verbose.log</a></div><div class="ttdeci">Logger log</div><div class="ttdoc">Logger used to log messages into a file. </div><div class="ttdef"><b>Definition:</b> <a href="_verbose_8java_source.html#l00032">Verbose.java:32</a></div></div>
+<div class="ttc" id="classdebug_1_1_verbose_html_a178f9afaeb03db850592a967ab911dee"><div class="ttname"><a href="classdebug_1_1_verbose.html#a178f9afaeb03db850592a967ab911dee">debug.Verbose.warning</a></div><div class="ttdeci">void warning(String message, String file, String location)</div><div class="ttdoc">Display and log a message with additionnal informations in the log file The message is displayed and ...</div><div class="ttdef"><b>Definition:</b> <a href="_verbose_8java_source.html#l00117">Verbose.java:117</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -258,17 +258,17 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00145">145</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00149">149</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
 
-<p>References <a class="el" href="_verbose_8java_source.html#l00023">debug.Verbose.verboseMode</a>.</p>
-<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                                                                    {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 5) {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            System.out.println(<span class="stringliteral">&quot;Calls : &quot;</span> + message);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            log.finer(<span class="stringliteral">&quot;Calls : &quot;</span> + message + <span class="stringliteral">&quot; in file &quot;</span> + file + <span class="stringliteral">&quot; in &quot;</span> + location);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
-<div class="ttc" id="classdebug_1_1_verbose_html_a2269eebcfd65682c66c8401d59bb0d70"><div class="ttname"><a href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">debug.Verbose.verboseMode</a></div><div class="ttdeci">int verboseMode</div><div class="ttdoc">Level of verbosing, from 0 to 5. </div><div class="ttdef"><b>Definition:</b> <a href="_verbose_8java_source.html#l00023">Verbose.java:23</a></div></div>
+<p>References <a class="el" href="_verbose_8java_source.html#l00027">debug.Verbose.verboseMode</a>.</p>
+<div class="fragment"><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                                                                    {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 5) {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            System.out.println(<span class="stringliteral">&quot;Calls : &quot;</span> + message);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            log.finer(<span class="stringliteral">&quot;Calls : &quot;</span> + message + <span class="stringliteral">&quot; in file &quot;</span> + file + <span class="stringliteral">&quot; in &quot;</span> + location);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div>
+<div class="ttc" id="classdebug_1_1_verbose_html_a2269eebcfd65682c66c8401d59bb0d70"><div class="ttname"><a href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">debug.Verbose.verboseMode</a></div><div class="ttdeci">int verboseMode</div><div class="ttdoc">Level of verbosing, from 0 to 5. </div><div class="ttdef"><b>Definition:</b> <a href="_verbose_8java_source.html#l00027">Verbose.java:27</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -312,17 +312,17 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00081">81</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00085">85</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
 
-<p>References <a class="el" href="_verbose_8java_source.html#l00023">debug.Verbose.verboseMode</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                                                       {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 1) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            System.out.println(<span class="stringliteral">&quot;Critical : &quot;</span> + message);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            log.severe(<span class="stringliteral">&quot;Critical : &quot;</span> + message + <span class="stringliteral">&quot; in file &quot;</span> + file + <span class="stringliteral">&quot; in &quot;</span> + location);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
-<div class="ttc" id="classdebug_1_1_verbose_html_a2269eebcfd65682c66c8401d59bb0d70"><div class="ttname"><a href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">debug.Verbose.verboseMode</a></div><div class="ttdeci">int verboseMode</div><div class="ttdoc">Level of verbosing, from 0 to 5. </div><div class="ttdef"><b>Definition:</b> <a href="_verbose_8java_source.html#l00023">Verbose.java:23</a></div></div>
+<p>References <a class="el" href="_verbose_8java_source.html#l00027">debug.Verbose.verboseMode</a>.</p>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                                                                       {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 1) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            System.out.println(<span class="stringliteral">&quot;Critical : &quot;</span> + message);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            log.severe(<span class="stringliteral">&quot;Critical : &quot;</span> + message + <span class="stringliteral">&quot; in file &quot;</span> + file + <span class="stringliteral">&quot; in &quot;</span> + location);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="ttc" id="classdebug_1_1_verbose_html_a2269eebcfd65682c66c8401d59bb0d70"><div class="ttname"><a href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">debug.Verbose.verboseMode</a></div><div class="ttdeci">int verboseMode</div><div class="ttdoc">Level of verbosing, from 0 to 5. </div><div class="ttdef"><b>Definition:</b> <a href="_verbose_8java_source.html#l00027">Verbose.java:27</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -366,17 +366,17 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00129">129</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00133">133</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
 
-<p>References <a class="el" href="_verbose_8java_source.html#l00023">debug.Verbose.verboseMode</a>.</p>
-<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                                                                          {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 4) {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            System.out.println(<span class="stringliteral">&quot;Information : &quot;</span> + message);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            log.info(<span class="stringliteral">&quot;Information : &quot;</span> + message + <span class="stringliteral">&quot; in file &quot;</span> + file + <span class="stringliteral">&quot; in &quot;</span> + location);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
-<div class="ttc" id="classdebug_1_1_verbose_html_a2269eebcfd65682c66c8401d59bb0d70"><div class="ttname"><a href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">debug.Verbose.verboseMode</a></div><div class="ttdeci">int verboseMode</div><div class="ttdoc">Level of verbosing, from 0 to 5. </div><div class="ttdef"><b>Definition:</b> <a href="_verbose_8java_source.html#l00023">Verbose.java:23</a></div></div>
+<p>References <a class="el" href="_verbose_8java_source.html#l00027">debug.Verbose.verboseMode</a>.</p>
+<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                                                                          {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 4) {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            System.out.println(<span class="stringliteral">&quot;Information : &quot;</span> + message);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            log.info(<span class="stringliteral">&quot;Information : &quot;</span> + message + <span class="stringliteral">&quot; in file &quot;</span> + file + <span class="stringliteral">&quot; in &quot;</span> + location);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
+<div class="ttc" id="classdebug_1_1_verbose_html_a2269eebcfd65682c66c8401d59bb0d70"><div class="ttname"><a href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">debug.Verbose.verboseMode</a></div><div class="ttdeci">int verboseMode</div><div class="ttdoc">Level of verbosing, from 0 to 5. </div><div class="ttdef"><b>Definition:</b> <a href="_verbose_8java_source.html#l00027">Verbose.java:27</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -420,17 +420,17 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00097">97</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00101">101</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
 
-<p>References <a class="el" href="_verbose_8java_source.html#l00023">debug.Verbose.verboseMode</a>.</p>
-<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                                                      {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 2) {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            System.out.println(<span class="stringliteral">&quot;Serious : &quot;</span> + message);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            log.severe(<span class="stringliteral">&quot;Serious : &quot;</span> + message + <span class="stringliteral">&quot; in file &quot;</span> + file + <span class="stringliteral">&quot; in &quot;</span> + location);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="ttc" id="classdebug_1_1_verbose_html_a2269eebcfd65682c66c8401d59bb0d70"><div class="ttname"><a href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">debug.Verbose.verboseMode</a></div><div class="ttdeci">int verboseMode</div><div class="ttdoc">Level of verbosing, from 0 to 5. </div><div class="ttdef"><b>Definition:</b> <a href="_verbose_8java_source.html#l00023">Verbose.java:23</a></div></div>
+<p>References <a class="el" href="_verbose_8java_source.html#l00027">debug.Verbose.verboseMode</a>.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 2) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            System.out.println(<span class="stringliteral">&quot;Serious : &quot;</span> + message);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            log.severe(<span class="stringliteral">&quot;Serious : &quot;</span> + message + <span class="stringliteral">&quot; in file &quot;</span> + file + <span class="stringliteral">&quot; in &quot;</span> + location);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="ttc" id="classdebug_1_1_verbose_html_a2269eebcfd65682c66c8401d59bb0d70"><div class="ttname"><a href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">debug.Verbose.verboseMode</a></div><div class="ttdeci">int verboseMode</div><div class="ttdoc">Level of verbosing, from 0 to 5. </div><div class="ttdef"><b>Definition:</b> <a href="_verbose_8java_source.html#l00027">Verbose.java:27</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -474,19 +474,19 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00113">113</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00117">117</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
 
-<p>References <a class="el" href="_verbose_8java_source.html#l00023">debug.Verbose.verboseMode</a>.</p>
+<p>References <a class="el" href="_verbose_8java_source.html#l00027">debug.Verbose.verboseMode</a>.</p>
 
-<p>Referenced by <a class="el" href="_verbose_8java_source.html#l00036">debug.Verbose.Verbose()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                                                      {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 3) {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            System.out.println(<span class="stringliteral">&quot;Warning : &quot;</span> + message);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            log.warning(<span class="stringliteral">&quot;Warning : &quot;</span> + message + <span class="stringliteral">&quot; in file &quot;</span> + file + <span class="stringliteral">&quot; in &quot;</span> + location);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
-<div class="ttc" id="classdebug_1_1_verbose_html_a2269eebcfd65682c66c8401d59bb0d70"><div class="ttname"><a href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">debug.Verbose.verboseMode</a></div><div class="ttdeci">int verboseMode</div><div class="ttdoc">Level of verbosing, from 0 to 5. </div><div class="ttdef"><b>Definition:</b> <a href="_verbose_8java_source.html#l00023">Verbose.java:23</a></div></div>
+<p>Referenced by <a class="el" href="_verbose_8java_source.html#l00040">debug.Verbose.Verbose()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 3) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            System.out.println(<span class="stringliteral">&quot;Warning : &quot;</span> + message);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            log.warning(<span class="stringliteral">&quot;Warning : &quot;</span> + message + <span class="stringliteral">&quot; in file &quot;</span> + file + <span class="stringliteral">&quot; in &quot;</span> + location);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="ttc" id="classdebug_1_1_verbose_html_a2269eebcfd65682c66c8401d59bb0d70"><div class="ttname"><a href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">debug.Verbose.verboseMode</a></div><div class="ttdeci">int verboseMode</div><div class="ttdoc">Level of verbosing, from 0 to 5. </div><div class="ttdef"><b>Definition:</b> <a href="_verbose_8java_source.html#l00027">Verbose.java:27</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -518,9 +518,9 @@ Here is the caller graph for this function:</div>
 
 <p>Logger used to log messages into a file. </p>
 
-<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00028">28</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00032">32</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
 
-<p>Referenced by <a class="el" href="_verbose_8java_source.html#l00036">debug.Verbose.Verbose()</a>.</p>
+<p>Referenced by <a class="el" href="_verbose_8java_source.html#l00040">debug.Verbose.Verbose()</a>.</p>
 
 </div>
 </div>
@@ -552,9 +552,9 @@ Here is the caller graph for this function:</div>
 <li>Level 5 : Everything, included Class instanciations and function calls and level 4 displayed </li>
 </ul>
 
-<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00023">23</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+<p>Definition at line <a class="el" href="_verbose_8java_source.html#l00027">27</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
 
-<p>Referenced by <a class="el" href="_verbose_8java_source.html#l00145">debug.Verbose.calls()</a>, <a class="el" href="_verbose_8java_source.html#l00081">debug.Verbose.critical()</a>, <a class="el" href="_verbose_8java_source.html#l00129">debug.Verbose.information()</a>, <a class="el" href="_verbose_8java_source.html#l00097">debug.Verbose.serious()</a>, and <a class="el" href="_verbose_8java_source.html#l00113">debug.Verbose.warning()</a>.</p>
+<p>Referenced by <a class="el" href="_verbose_8java_source.html#l00149">debug.Verbose.calls()</a>, <a class="el" href="_verbose_8java_source.html#l00085">debug.Verbose.critical()</a>, <a class="el" href="_verbose_8java_source.html#l00133">debug.Verbose.information()</a>, <a class="el" href="_verbose_8java_source.html#l00101">debug.Verbose.serious()</a>, and <a class="el" href="_verbose_8java_source.html#l00117">debug.Verbose.warning()</a>.</p>
 
 </div>
 </div>
@@ -564,7 +564,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 7 2014 20:18:47 for Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 7 2014 21:28:20 for Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

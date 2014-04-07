@@ -1,0 +1,333 @@
+\hypertarget{classwindow_1_1topbar_1_1_top_bar}{\section{window.\-topbar.\-Top\-Bar Class Reference}
+\label{classwindow_1_1topbar_1_1_top_bar}\index{window.\-topbar.\-Top\-Bar@{window.\-topbar.\-Top\-Bar}}
+}
+
+
+Class handling the top bar of the program's main window.  
+
+
+
+
+Inheritance diagram for window.\-topbar.\-Top\-Bar\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classwindow_1_1topbar_1_1_top_bar__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for window.\-topbar.\-Top\-Bar\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classwindow_1_1topbar_1_1_top_bar__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwindow_1_1topbar_1_1_top_bar_ae999683bfcfd73faf457c8b2bd3a2bed}{Top\-Bar} ()
+\begin{DoxyCompactList}\small\item\em Constructor of the \hyperlink{classwindow_1_1topbar_1_1_top_bar}{Top\-Bar} class. \end{DoxyCompactList}\item 
+void \hyperlink{classwindow_1_1topbar_1_1_top_bar_a229c7498d8eaf6dc749a4e6375cbd3a5}{hide\-Pause\-Button} ()
+\item 
+void \hyperlink{classwindow_1_1topbar_1_1_top_bar_af6068d1b149160701c3afd1f41117c06}{show\-Pause\-Button} ()
+\item 
+void \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8e6b906172c633d85e182809dd63891c}{paint\-Component} (Graphics g)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classwindow_1_1topbar_1_1_top_bar_a847fe55578ff23c63533ff68168c8fed}{get\-Top\-Bar\-Height} ()
+\item 
+static int \hyperlink{classwindow_1_1topbar_1_1_top_bar_adfdb55a34a781ed9c1c28dcc820b10e3}{get\-Top\-Bar\-Margin} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwindow_1_1topbar_1_1_top_bar_button}{Top\-Bar\-Button} \hyperlink{classwindow_1_1topbar_1_1_top_bar_a98271c11b9bbb79d1e79e03752d4e0b4}{close\-Button}
+\begin{DoxyCompactList}\small\item\em Button closing the program when activated. \end{DoxyCompactList}\item 
+\hyperlink{classwindow_1_1topbar_1_1_top_bar_button}{Top\-Bar\-Button} \hyperlink{classwindow_1_1topbar_1_1_top_bar_ac7b4f88657cb97d1ae3df6a99d3694e9}{pause\-Button}
+\begin{DoxyCompactList}\small\item\em Button pausing the program when activated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{T\-O\-P\-B\-A\-R\-\_\-\-H\-E\-I\-G\-H\-T} = 42
+\begin{DoxyCompactList}\small\item\em Height of the U\-I's top bar (default\-: 42px) \end{DoxyCompactList}\item 
+static int \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{T\-O\-P\-B\-A\-R\-\_\-\-M\-A\-R\-G\-I\-N} = 10
+\begin{DoxyCompactList}\small\item\em Margin of the top bar (default\-: 10px) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class handling the top bar of the program's main window. 
+
+Definition at line 20 of file Top\-Bar.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classwindow_1_1topbar_1_1_top_bar_ae999683bfcfd73faf457c8b2bd3a2bed}{\index{window\-::topbar\-::\-Top\-Bar@{window\-::topbar\-::\-Top\-Bar}!Top\-Bar@{Top\-Bar}}
+\index{Top\-Bar@{Top\-Bar}!window::topbar::TopBar@{window\-::topbar\-::\-Top\-Bar}}
+\subsubsection[{Top\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}window.\-topbar.\-Top\-Bar.\-Top\-Bar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classwindow_1_1topbar_1_1_top_bar_ae999683bfcfd73faf457c8b2bd3a2bed}
+
+
+Constructor of the \hyperlink{classwindow_1_1topbar_1_1_top_bar}{Top\-Bar} class. 
+
+
+
+Definition at line 45 of file Top\-Bar.\-java.
+
+
+
+References window.\-topbar.\-Top\-Bar.\-close\-Button, main.\-Philophobia.\-get\-Image\-File\-Prefix(), window.\-topbar.\-Top\-Bar.\-pause\-Button, window.\-topbar.\-Top\-Bar.\-T\-O\-P\-B\-A\-R\-\_\-\-H\-E\-I\-G\-H\-T, and window.\-topbar.\-Top\-Bar.\-T\-O\-P\-B\-A\-R\-\_\-\-M\-A\-R\-G\-I\-N.
+
+
+\begin{DoxyCode}
+45                     \{
+46 
+47         super();
+48 
+49         Philophobia.getVerbose().calls(\textcolor{stringliteral}{"Creating TopBar class"}, \textcolor{stringliteral}{"window/topbar/TopBar.java"}, \textcolor{stringliteral}{"
+      TopBar.TopBar()"});
+50 
+51         this.setLayout(\textcolor{keyword}{new} BoxLayout(\textcolor{keyword}{this}, BoxLayout.LINE\_AXIS));
+52         this.add(Box.createHorizontalGlue());
+53 
+54         \hyperlink{classwindow_1_1topbar_1_1_top_bar_a98271c11b9bbb79d1e79e03752d4e0b4}{closeButton} = \textcolor{keyword}{new} TopBarButton(Philophobia.getImageFilePrefix() + \textcolor{stringliteral}{"closebutton.png"});
+55         closeButton.setPreferredSize(\textcolor{keyword}{new} Dimension(\hyperlink{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{TOPBAR\_HEIGHT} - 
+      \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{TOPBAR\_MARGIN}, \hyperlink{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{TOPBAR\_HEIGHT} - \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{TOPBAR\_MARGIN}));
+56         closeButton.setMinimumSize(\textcolor{keyword}{new} Dimension(\hyperlink{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{TOPBAR\_HEIGHT} - 
+      \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{TOPBAR\_MARGIN}, \hyperlink{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{TOPBAR\_HEIGHT} - \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{TOPBAR\_MARGIN}));
+57         closeButton.setMaximumSize(\textcolor{keyword}{new} Dimension(\hyperlink{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{TOPBAR\_HEIGHT} - 
+      \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{TOPBAR\_MARGIN}, \hyperlink{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{TOPBAR\_HEIGHT} - \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{TOPBAR\_MARGIN}));
+58 
+59         \hyperlink{classwindow_1_1topbar_1_1_top_bar_ac7b4f88657cb97d1ae3df6a99d3694e9}{pauseButton} = \textcolor{keyword}{new} TopBarButton(Philophobia.getImageFilePrefix() + \textcolor{stringliteral}{"pausebutton.png"});
+60         pauseButton.setPreferredSize(\textcolor{keyword}{new} Dimension(\hyperlink{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{TOPBAR\_HEIGHT} - 
+      \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{TOPBAR\_MARGIN}, \hyperlink{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{TOPBAR\_HEIGHT} - \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{TOPBAR\_MARGIN}));
+61         pauseButton.setMinimumSize(\textcolor{keyword}{new} Dimension(\hyperlink{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{TOPBAR\_HEIGHT} - 
+      \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{TOPBAR\_MARGIN}, \hyperlink{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{TOPBAR\_HEIGHT} - \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{TOPBAR\_MARGIN}));
+62         pauseButton.setMaximumSize(\textcolor{keyword}{new} Dimension(\hyperlink{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{TOPBAR\_HEIGHT} - 
+      \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{TOPBAR\_MARGIN}, \hyperlink{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{TOPBAR\_HEIGHT} - \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{TOPBAR\_MARGIN}));
+63 
+64         this.add(\hyperlink{classwindow_1_1topbar_1_1_top_bar_a98271c11b9bbb79d1e79e03752d4e0b4}{closeButton});
+65     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindow_1_1topbar_1_1_top_bar_ae999683bfcfd73faf457c8b2bd3a2bed_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classwindow_1_1topbar_1_1_top_bar_a847fe55578ff23c63533ff68168c8fed}{\index{window\-::topbar\-::\-Top\-Bar@{window\-::topbar\-::\-Top\-Bar}!get\-Top\-Bar\-Height@{get\-Top\-Bar\-Height}}
+\index{get\-Top\-Bar\-Height@{get\-Top\-Bar\-Height}!window::topbar::TopBar@{window\-::topbar\-::\-Top\-Bar}}
+\subsubsection[{get\-Top\-Bar\-Height}]{\setlength{\rightskip}{0pt plus 5cm}static int window.\-topbar.\-Top\-Bar.\-get\-Top\-Bar\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classwindow_1_1topbar_1_1_top_bar_a847fe55578ff23c63533ff68168c8fed}
+
+
+Definition at line 67 of file Top\-Bar.\-java.
+
+
+
+References window.\-topbar.\-Top\-Bar.\-T\-O\-P\-B\-A\-R\-\_\-\-H\-E\-I\-G\-H\-T.
+
+
+\begin{DoxyCode}
+67                                         \{
+68         \textcolor{keywordflow}{return} \hyperlink{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{TOPBAR\_HEIGHT};
+69     \}
+\end{DoxyCode}
+\hypertarget{classwindow_1_1topbar_1_1_top_bar_adfdb55a34a781ed9c1c28dcc820b10e3}{\index{window\-::topbar\-::\-Top\-Bar@{window\-::topbar\-::\-Top\-Bar}!get\-Top\-Bar\-Margin@{get\-Top\-Bar\-Margin}}
+\index{get\-Top\-Bar\-Margin@{get\-Top\-Bar\-Margin}!window::topbar::TopBar@{window\-::topbar\-::\-Top\-Bar}}
+\subsubsection[{get\-Top\-Bar\-Margin}]{\setlength{\rightskip}{0pt plus 5cm}static int window.\-topbar.\-Top\-Bar.\-get\-Top\-Bar\-Margin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classwindow_1_1topbar_1_1_top_bar_adfdb55a34a781ed9c1c28dcc820b10e3}
+
+
+Definition at line 71 of file Top\-Bar.\-java.
+
+
+
+References window.\-topbar.\-Top\-Bar.\-T\-O\-P\-B\-A\-R\-\_\-\-M\-A\-R\-G\-I\-N.
+
+
+
+Referenced by window.\-topbar.\-Top\-Bar\-Button.\-paint\-Component().
+
+
+\begin{DoxyCode}
+71                                         \{
+72         \textcolor{keywordflow}{return} \hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{TOPBAR\_MARGIN};
+73     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindow_1_1topbar_1_1_top_bar_adfdb55a34a781ed9c1c28dcc820b10e3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classwindow_1_1topbar_1_1_top_bar_a229c7498d8eaf6dc749a4e6375cbd3a5}{\index{window\-::topbar\-::\-Top\-Bar@{window\-::topbar\-::\-Top\-Bar}!hide\-Pause\-Button@{hide\-Pause\-Button}}
+\index{hide\-Pause\-Button@{hide\-Pause\-Button}!window::topbar::TopBar@{window\-::topbar\-::\-Top\-Bar}}
+\subsubsection[{hide\-Pause\-Button}]{\setlength{\rightskip}{0pt plus 5cm}void window.\-topbar.\-Top\-Bar.\-hide\-Pause\-Button (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classwindow_1_1topbar_1_1_top_bar_a229c7498d8eaf6dc749a4e6375cbd3a5}
+
+
+Definition at line 75 of file Top\-Bar.\-java.
+
+
+
+References window.\-topbar.\-Top\-Bar.\-close\-Button.
+
+
+\begin{DoxyCode}
+75                                   \{
+76         Philophobia.getVerbose().calls(\textcolor{stringliteral}{"Hidding pause button"}, \textcolor{stringliteral}{"window/topbar/TopBar.java"}, \textcolor{stringliteral}{"
+      TopBar.hidePauseButton()"});
+77         this.removeAll();
+78         this.add(Box.createHorizontalGlue());
+79         this.add(\hyperlink{classwindow_1_1topbar_1_1_top_bar_a98271c11b9bbb79d1e79e03752d4e0b4}{closeButton});
+80         this.repaint();
+81     \}
+\end{DoxyCode}
+\hypertarget{classwindow_1_1topbar_1_1_top_bar_a8e6b906172c633d85e182809dd63891c}{\index{window\-::topbar\-::\-Top\-Bar@{window\-::topbar\-::\-Top\-Bar}!paint\-Component@{paint\-Component}}
+\index{paint\-Component@{paint\-Component}!window::topbar::TopBar@{window\-::topbar\-::\-Top\-Bar}}
+\subsubsection[{paint\-Component}]{\setlength{\rightskip}{0pt plus 5cm}void window.\-topbar.\-Top\-Bar.\-paint\-Component (
+\begin{DoxyParamCaption}
+\item[{Graphics}]{g}
+\end{DoxyParamCaption}
+)}}\label{classwindow_1_1topbar_1_1_top_bar_a8e6b906172c633d85e182809dd63891c}
+
+
+Definition at line 93 of file Top\-Bar.\-java.
+
+
+\begin{DoxyCode}
+93                                            \{
+94         Philophobia.getVerbose().calls(\textcolor{stringliteral}{"Paintint TopBar component"}, \textcolor{stringliteral}{"window/topbar/TopBar.java"}, \textcolor{stringliteral}{"
+      TopBar.painComponent(Graphics)"});
+95         \textcolor{comment}{// Top bar background}
+96         g.fillRect(0, 0, this.getWidth(), this.getHeight());
+97 
+98         super.paintComponents(g);
+99     \}
+\end{DoxyCode}
+\hypertarget{classwindow_1_1topbar_1_1_top_bar_af6068d1b149160701c3afd1f41117c06}{\index{window\-::topbar\-::\-Top\-Bar@{window\-::topbar\-::\-Top\-Bar}!show\-Pause\-Button@{show\-Pause\-Button}}
+\index{show\-Pause\-Button@{show\-Pause\-Button}!window::topbar::TopBar@{window\-::topbar\-::\-Top\-Bar}}
+\subsubsection[{show\-Pause\-Button}]{\setlength{\rightskip}{0pt plus 5cm}void window.\-topbar.\-Top\-Bar.\-show\-Pause\-Button (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classwindow_1_1topbar_1_1_top_bar_af6068d1b149160701c3afd1f41117c06}
+
+
+Definition at line 83 of file Top\-Bar.\-java.
+
+
+
+References window.\-topbar.\-Top\-Bar.\-close\-Button, window.\-topbar.\-Top\-Bar.\-pause\-Button, and window.\-topbar.\-Top\-Bar.\-T\-O\-P\-B\-A\-R\-\_\-\-M\-A\-R\-G\-I\-N.
+
+
+\begin{DoxyCode}
+83                                   \{
+84         Philophobia.getVerbose().calls(\textcolor{stringliteral}{"Showing pause button"}, \textcolor{stringliteral}{"window/topbar/TopBar.java"}, \textcolor{stringliteral}{"
+      TopBar.showPauseButton()"});
+85         this.removeAll();
+86         this.add(Box.createHorizontalGlue());
+87         this.add(\hyperlink{classwindow_1_1topbar_1_1_top_bar_ac7b4f88657cb97d1ae3df6a99d3694e9}{pauseButton});
+88         this.add(Box.createRigidArea(\textcolor{keyword}{new} Dimension(\hyperlink{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{TOPBAR\_MARGIN}, 0)));
+89         this.add(\hyperlink{classwindow_1_1topbar_1_1_top_bar_a98271c11b9bbb79d1e79e03752d4e0b4}{closeButton});
+90         this.repaint();
+91     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classwindow_1_1topbar_1_1_top_bar_a98271c11b9bbb79d1e79e03752d4e0b4}{\index{window\-::topbar\-::\-Top\-Bar@{window\-::topbar\-::\-Top\-Bar}!close\-Button@{close\-Button}}
+\index{close\-Button@{close\-Button}!window::topbar::TopBar@{window\-::topbar\-::\-Top\-Bar}}
+\subsubsection[{close\-Button}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Top\-Bar\-Button} window.\-topbar.\-Top\-Bar.\-close\-Button\hspace{0.3cm}{\ttfamily [protected]}}}\label{classwindow_1_1topbar_1_1_top_bar_a98271c11b9bbb79d1e79e03752d4e0b4}
+
+
+Button closing the program when activated. 
+
+
+
+Definition at line 35 of file Top\-Bar.\-java.
+
+
+
+Referenced by window.\-topbar.\-Top\-Bar.\-hide\-Pause\-Button(), window.\-topbar.\-Top\-Bar.\-show\-Pause\-Button(), and window.\-topbar.\-Top\-Bar.\-Top\-Bar().
+
+\hypertarget{classwindow_1_1topbar_1_1_top_bar_ac7b4f88657cb97d1ae3df6a99d3694e9}{\index{window\-::topbar\-::\-Top\-Bar@{window\-::topbar\-::\-Top\-Bar}!pause\-Button@{pause\-Button}}
+\index{pause\-Button@{pause\-Button}!window::topbar::TopBar@{window\-::topbar\-::\-Top\-Bar}}
+\subsubsection[{pause\-Button}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Top\-Bar\-Button} window.\-topbar.\-Top\-Bar.\-pause\-Button\hspace{0.3cm}{\ttfamily [protected]}}}\label{classwindow_1_1topbar_1_1_top_bar_ac7b4f88657cb97d1ae3df6a99d3694e9}
+
+
+Button pausing the program when activated. 
+
+
+
+Definition at line 40 of file Top\-Bar.\-java.
+
+
+
+Referenced by window.\-topbar.\-Top\-Bar.\-show\-Pause\-Button(), and window.\-topbar.\-Top\-Bar.\-Top\-Bar().
+
+\hypertarget{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}{\index{window\-::topbar\-::\-Top\-Bar@{window\-::topbar\-::\-Top\-Bar}!T\-O\-P\-B\-A\-R\-\_\-\-H\-E\-I\-G\-H\-T@{T\-O\-P\-B\-A\-R\-\_\-\-H\-E\-I\-G\-H\-T}}
+\index{T\-O\-P\-B\-A\-R\-\_\-\-H\-E\-I\-G\-H\-T@{T\-O\-P\-B\-A\-R\-\_\-\-H\-E\-I\-G\-H\-T}!window::topbar::TopBar@{window\-::topbar\-::\-Top\-Bar}}
+\subsubsection[{T\-O\-P\-B\-A\-R\-\_\-\-H\-E\-I\-G\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}int window.\-topbar.\-Top\-Bar.\-T\-O\-P\-B\-A\-R\-\_\-\-H\-E\-I\-G\-H\-T = 42\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classwindow_1_1topbar_1_1_top_bar_aa7100cb3da5276c12e4fae659823bf4e}
+
+
+Height of the U\-I's top bar (default\-: 42px) 
+
+
+
+Definition at line 25 of file Top\-Bar.\-java.
+
+
+
+Referenced by window.\-topbar.\-Top\-Bar.\-get\-Top\-Bar\-Height(), and window.\-topbar.\-Top\-Bar.\-Top\-Bar().
+
+\hypertarget{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}{\index{window\-::topbar\-::\-Top\-Bar@{window\-::topbar\-::\-Top\-Bar}!T\-O\-P\-B\-A\-R\-\_\-\-M\-A\-R\-G\-I\-N@{T\-O\-P\-B\-A\-R\-\_\-\-M\-A\-R\-G\-I\-N}}
+\index{T\-O\-P\-B\-A\-R\-\_\-\-M\-A\-R\-G\-I\-N@{T\-O\-P\-B\-A\-R\-\_\-\-M\-A\-R\-G\-I\-N}!window::topbar::TopBar@{window\-::topbar\-::\-Top\-Bar}}
+\subsubsection[{T\-O\-P\-B\-A\-R\-\_\-\-M\-A\-R\-G\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}int window.\-topbar.\-Top\-Bar.\-T\-O\-P\-B\-A\-R\-\_\-\-M\-A\-R\-G\-I\-N = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classwindow_1_1topbar_1_1_top_bar_a8d48486507d36a825223a21b1b6333ac}
+
+
+Margin of the top bar (default\-: 10px) 
+
+
+
+Definition at line 30 of file Top\-Bar.\-java.
+
+
+
+Referenced by window.\-topbar.\-Top\-Bar.\-get\-Top\-Bar\-Margin(), window.\-topbar.\-Top\-Bar.\-show\-Pause\-Button(), and window.\-topbar.\-Top\-Bar.\-Top\-Bar().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+window/topbar/\hyperlink{_top_bar_8java}{Top\-Bar.\-java}\end{DoxyCompactItemize}

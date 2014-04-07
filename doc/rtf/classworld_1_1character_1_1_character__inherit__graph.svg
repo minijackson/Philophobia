@@ -34,7 +34,7 @@
 </g>
 <!-- Node4 -->
 <g id="node7" class="node"><title>Node4</title>
-<a xlink:href="$classworld_1_1character_1_1_hero.html" xlink:title="{world.character.Hero\n||+ Hero()\l}">
+<a xlink:href="$classworld_1_1character_1_1_hero.html" xlink:title="Class handling the main playing Character. ">
 <polygon fill="white" stroke="black" points="-0.5,-17 -0.5,-89 106.5,-89 106.5,-17 -0.5,-17"/>
 <text text-anchor="middle" x="53" y="-76" font-family="Helvetica,sans-Serif" font-size="10.00">world.character.Hero</text>
 <polyline fill="none" stroke="black" points="-0.5,-65 106.5,-65 "/>
@@ -96,7 +96,7 @@
 </g>
 <!-- Node3 -->
 <g id="node4" class="node"><title>Node3</title>
-<a xlink:href="$interfaceworld_1_1_interactive_object.html" xlink:title="{world.InteractiveObject\n||+ triggerAction()\l+ playerNear()\l+ playerEnter()\l+ playerLeave()\l+ isTraversable()\l}">
+<a xlink:href="$interfaceworld_1_1_interactive_object.html" xlink:title="Interface telling that the object interacts with the player. ">
 <polygon fill="white" stroke="black" points="136.5,-541 136.5,-677 253.5,-677 253.5,-541 136.5,-541"/>
 <text text-anchor="middle" x="195" y="-664" font-family="Helvetica,sans-Serif" font-size="10.00">world.InteractiveObject</text>
 <polyline fill="none" stroke="black" points="136.5,-653 253.5,-653 "/>

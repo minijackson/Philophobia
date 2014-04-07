@@ -1,0 +1,159 @@
+\hypertarget{classwindow_1_1topbar_1_1_top_bar_button}{\section{window.\-topbar.\-Top\-Bar\-Button Class Reference}
+\label{classwindow_1_1topbar_1_1_top_bar_button}\index{window.\-topbar.\-Top\-Bar\-Button@{window.\-topbar.\-Top\-Bar\-Button}}
+}
+
+
+Class handling the U\-I buttons.  
+
+
+
+
+Inheritance diagram for window.\-topbar.\-Top\-Bar\-Button\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classwindow_1_1topbar_1_1_top_bar_button__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for window.\-topbar.\-Top\-Bar\-Button\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classwindow_1_1topbar_1_1_top_bar_button__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwindow_1_1topbar_1_1_top_bar_button_ad3d5951123e05fbf97030d53abc70814}{Top\-Bar\-Button} (String image\-Path)
+\begin{DoxyCompactList}\small\item\em U\-I\-Button constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classwindow_1_1topbar_1_1_top_bar_button_a5268cb4eb3f6f1f7dc3925827c1664d8}{paint\-Component} (Graphics g)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Image \hyperlink{classwindow_1_1topbar_1_1_top_bar_button_a2a050ade4f03c9c48f1d338e88b9e21c}{button\-Image}
+\begin{DoxyCompactList}\small\item\em Image of the graphical representation of the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class handling the U\-I buttons. 
+
+Definition at line 19 of file Top\-Bar\-Button.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classwindow_1_1topbar_1_1_top_bar_button_ad3d5951123e05fbf97030d53abc70814}{\index{window\-::topbar\-::\-Top\-Bar\-Button@{window\-::topbar\-::\-Top\-Bar\-Button}!Top\-Bar\-Button@{Top\-Bar\-Button}}
+\index{Top\-Bar\-Button@{Top\-Bar\-Button}!window::topbar::TopBarButton@{window\-::topbar\-::\-Top\-Bar\-Button}}
+\subsubsection[{Top\-Bar\-Button}]{\setlength{\rightskip}{0pt plus 5cm}window.\-topbar.\-Top\-Bar\-Button.\-Top\-Bar\-Button (
+\begin{DoxyParamCaption}
+\item[{String}]{image\-Path}
+\end{DoxyParamCaption}
+)}}\label{classwindow_1_1topbar_1_1_top_bar_button_ad3d5951123e05fbf97030d53abc70814}
+
+
+U\-I\-Button constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\-Path} & path of the button's image \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classwindow_1_1topbar_1_1_top_bar_button_a2a050ade4f03c9c48f1d338e88b9e21c}{button\-Image} 
+\end{DoxySeeAlso}
+
+
+Definition at line 31 of file Top\-Bar\-Button.\-java.
+
+
+
+References window.\-topbar.\-Top\-Bar\-Button.\-button\-Image.
+
+
+\begin{DoxyCode}
+31                                           \{
+32 
+33         super();
+34 
+35         Philophobia.getVerbose().calls(\textcolor{stringliteral}{"Creating TopBarButton class"}, \textcolor{stringliteral}{"window/ui/TopBarButton.java"}, \textcolor{stringliteral}{"
+      TopBarButton.TopBarButton(String)"});
+36 
+37         \textcolor{keywordflow}{try} \{
+38             \hyperlink{classwindow_1_1topbar_1_1_top_bar_button_a2a050ade4f03c9c48f1d338e88b9e21c}{buttonImage} = ImageIO.read(\textcolor{keyword}{new} File(imagePath));
+39             this.setIcon(\textcolor{keyword}{new} ImageIcon(\hyperlink{classwindow_1_1topbar_1_1_top_bar_button_a2a050ade4f03c9c48f1d338e88b9e21c}{buttonImage}));
+40             this.setBorder(null);
+41         \} \textcolor{keywordflow}{catch}(IOException e) \{
+42             Philophobia.getVerbose().warning(\textcolor{stringliteral}{"Button image load failed: "} + e.getMessage(), \textcolor{stringliteral}{"
+      window/ui/TopBarButton.java"}, \textcolor{stringliteral}{"TopBarButton.TopBarButton(String)"});
+43             \hyperlink{classwindow_1_1topbar_1_1_top_bar_button_a2a050ade4f03c9c48f1d338e88b9e21c}{buttonImage} = null;
+44         \}
+45 
+46     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classwindow_1_1topbar_1_1_top_bar_button_a5268cb4eb3f6f1f7dc3925827c1664d8}{\index{window\-::topbar\-::\-Top\-Bar\-Button@{window\-::topbar\-::\-Top\-Bar\-Button}!paint\-Component@{paint\-Component}}
+\index{paint\-Component@{paint\-Component}!window::topbar::TopBarButton@{window\-::topbar\-::\-Top\-Bar\-Button}}
+\subsubsection[{paint\-Component}]{\setlength{\rightskip}{0pt plus 5cm}void window.\-topbar.\-Top\-Bar\-Button.\-paint\-Component (
+\begin{DoxyParamCaption}
+\item[{Graphics}]{g}
+\end{DoxyParamCaption}
+)}}\label{classwindow_1_1topbar_1_1_top_bar_button_a5268cb4eb3f6f1f7dc3925827c1664d8}
+
+
+Definition at line 48 of file Top\-Bar\-Button.\-java.
+
+
+
+References window.\-topbar.\-Top\-Bar\-Button.\-button\-Image, and window.\-topbar.\-Top\-Bar.\-get\-Top\-Bar\-Margin().
+
+
+\begin{DoxyCode}
+48                                            \{
+49         Philophobia.getVerbose().calls(\textcolor{stringliteral}{"painting TopBarButton component"}, \textcolor{stringliteral}{"window/ui/TopBarButton.java"}, \textcolor{stringliteral}{"
+      TopBarButton.paintComponent(Graphics)"});
+50 
+51         \textcolor{keywordtype}{int} buttonSize = TopBar.getTopBarHeight() - TopBar.getTopBarMargin();
+52 
+53         g.drawImage(\hyperlink{classwindow_1_1topbar_1_1_top_bar_button_a2a050ade4f03c9c48f1d338e88b9e21c}{buttonImage}, 0, 0, this.getWidth(), this.getHeight(), \textcolor{keyword}{this});
+54     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindow_1_1topbar_1_1_top_bar_button_a5268cb4eb3f6f1f7dc3925827c1664d8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classwindow_1_1topbar_1_1_top_bar_button_a2a050ade4f03c9c48f1d338e88b9e21c}{\index{window\-::topbar\-::\-Top\-Bar\-Button@{window\-::topbar\-::\-Top\-Bar\-Button}!button\-Image@{button\-Image}}
+\index{button\-Image@{button\-Image}!window::topbar::TopBarButton@{window\-::topbar\-::\-Top\-Bar\-Button}}
+\subsubsection[{button\-Image}]{\setlength{\rightskip}{0pt plus 5cm}Image window.\-topbar.\-Top\-Bar\-Button.\-button\-Image\hspace{0.3cm}{\ttfamily [protected]}}}\label{classwindow_1_1topbar_1_1_top_bar_button_a2a050ade4f03c9c48f1d338e88b9e21c}
+
+
+Image of the graphical representation of the button. 
+
+
+
+Definition at line 24 of file Top\-Bar\-Button.\-java.
+
+
+
+Referenced by window.\-topbar.\-Top\-Bar\-Button.\-paint\-Component(), and window.\-topbar.\-Top\-Bar\-Button.\-Top\-Bar\-Button().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+window/topbar/\hyperlink{_top_bar_button_8java}{Top\-Bar\-Button.\-java}\end{DoxyCompactItemize}

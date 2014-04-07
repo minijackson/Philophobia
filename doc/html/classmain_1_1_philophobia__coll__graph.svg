@@ -126,7 +126,7 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node5 -->
 <g id="node8" class="node"><title>Node5</title>
-<a xlink:href="classwindow_1_1_window.html" target="_top" xlink:title="{window.Window\n||+ Window()\l+ setLoadingState()\l+ setGameState()\l+ setFailState()\l+ setWinState()\l+ getUserInterface()\l}">
+<a xlink:href="classwindow_1_1_window.html" target="_top" xlink:title="Class handling the window with decorations, size, title, etc and the main components inside it...">
 <polygon fill="white" stroke="black" points="585,-429 585,-581 689,-581 689,-429 585,-429"/>
 <text text-anchor="middle" x="637" y="-568" font-family="Helvetica,sans-Serif" font-size="10.00">window.Window</text>
 <polyline fill="none" stroke="black" points="585,-557 689,-557 "/>
@@ -387,7 +387,7 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node17 -->
 <g id="node34" class="node"><title>Node17</title>
-<a xlink:href="classgameplay_1_1ai_1_1phrasing_1_1_phrasing.html" target="_top" xlink:title="{gameplay.ai.phrasing.Phrasing\n|# angerBetrayalPhrases\l# powerComplexMotivationPhrases\l# actionAsked\l|+ Phrasing()\l}">
+<a xlink:href="classgameplay_1_1ai_1_1phrasing_1_1_phrasing.html" target="_top" xlink:title="Class handling the talk system for the AI. ">
 <polygon fill="white" stroke="black" points="-0.5,-945 -0.5,-1049 170.5,-1049 170.5,-945 -0.5,-945"/>
 <text text-anchor="middle" x="85" y="-1036" font-family="Helvetica,sans-Serif" font-size="10.00">gameplay.ai.phrasing.Phrasing</text>
 <polyline fill="none" stroke="black" points="-0.5,-1025 170.5,-1025 "/>

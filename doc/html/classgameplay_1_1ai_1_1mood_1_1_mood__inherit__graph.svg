@@ -79,7 +79,7 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node2 -->
 <g id="node3" class="node"><title>Node2</title>
-<a xlink:href="classgameplay_1_1ai_1_1mood_1_1_anger.html" target="_top" xlink:title="{gameplay.ai.mood.Anger\n||+ Anger()\l}">
+<a xlink:href="classgameplay_1_1ai_1_1mood_1_1_anger.html" target="_top" xlink:title="Class used to handle the Anger mood. ">
 <polygon fill="white" stroke="black" points="0,-1 0,-73 124,-73 124,-1 0,-1"/>
 <text text-anchor="middle" x="62" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">gameplay.ai.mood.Anger</text>
 <polyline fill="none" stroke="black" points="0,-49 124,-49 "/>
@@ -95,7 +95,7 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node3 -->
 <g id="node5" class="node"><title>Node3</title>
-<a xlink:href="classgameplay_1_1ai_1_1mood_1_1_curiosity.html" target="_top" xlink:title="{gameplay.ai.mood.Curiosity\n||+ Curiosity()\l}">
+<a xlink:href="classgameplay_1_1ai_1_1mood_1_1_curiosity.html" target="_top" xlink:title="Class used to handle the Curiosity mood. ">
 <polygon fill="white" stroke="black" points="141.5,-1 141.5,-73 278.5,-73 278.5,-1 141.5,-1"/>
 <text text-anchor="middle" x="210" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">gameplay.ai.mood.Curiosity</text>
 <polyline fill="none" stroke="black" points="141.5,-49 278.5,-49 "/>
@@ -111,7 +111,7 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node4 -->
 <g id="node7" class="node"><title>Node4</title>
-<a xlink:href="classgameplay_1_1ai_1_1mood_1_1_depression.html" target="_top" xlink:title="{gameplay.ai.mood.Depression\n||+ Depression()\l}">
+<a xlink:href="classgameplay_1_1ai_1_1mood_1_1_depression.html" target="_top" xlink:title="Class used to handle the Depression mood. ">
 <polygon fill="white" stroke="black" points="296,-1 296,-73 444,-73 444,-1 296,-1"/>
 <text text-anchor="middle" x="370" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">gameplay.ai.mood.Depression</text>
 <polyline fill="none" stroke="black" points="296,-49 444,-49 "/>
@@ -127,7 +127,7 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node5 -->
 <g id="node9" class="node"><title>Node5</title>
-<a xlink:href="classgameplay_1_1ai_1_1mood_1_1_power_complex.html" target="_top" xlink:title="{gameplay.ai.mood.PowerComplex\n||+ PowerComplex()\l}">
+<a xlink:href="classgameplay_1_1ai_1_1mood_1_1_power_complex.html" target="_top" xlink:title="Class used to handle the Power Complex mood. ">
 <polygon fill="white" stroke="black" points="461.5,-1 461.5,-73 626.5,-73 626.5,-1 461.5,-1"/>
 <text text-anchor="middle" x="544" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">gameplay.ai.mood.PowerComplex</text>
 <polyline fill="none" stroke="black" points="461.5,-49 626.5,-49 "/>
