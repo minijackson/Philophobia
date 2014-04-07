@@ -1,4 +1,4 @@
 <map id="debug.CliOptions.CliOptions" name="debug.CliOptions.CliOptions">
-<area shape="rect" id="node3" href="$classdebug_1_1_cli_options.html#af9e27c7e2ce04aa2b9cfb42ac35db767" title="Check the verbose level considering the options with one dash. " alt="" coords="240,5,448,59"/>
-<area shape="rect" id="node5" href="$classdebug_1_1_cli_options.html#ab0a2db9986b5ae6ac696e9a5e596eff1" title="Chech if the help mode has been queried considering the options with on or two dashes. " alt="" coords="251,82,437,115"/>
+<area shape="rect" id="node3" href="$classdebug_1_1_cli_options.html#ab0a2db9986b5ae6ac696e9a5e596eff1" title="Chech if the help mode has been queried considering the options with on or two dashes. " alt="" coords="251,5,437,38"/>
+<area shape="rect" id="node5" href="$classdebug_1_1_cli_options.html#af9e27c7e2ce04aa2b9cfb42ac35db767" title="Check the verbose level considering the options with one dash. " alt="" coords="240,61,448,115"/>
 </map>

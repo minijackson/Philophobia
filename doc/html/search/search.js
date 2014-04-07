@@ -12,8 +12,7 @@ var indexSectionsWithContent =
   2: "dgmw",
   3: "acdfghimoprstuvwx",
   4: "acdfghijmnoprstuvw",
-  5: "abcdfghilmnopstuvwxy",
-  6: "p"
+  5: "abcdfghilmnopstuvwxy"
 };
 
 var indexSectionNames =
@@ -23,8 +22,7 @@ var indexSectionNames =
   2: "namespaces",
   3: "files",
   4: "functions",
-  5: "variables",
-  6: "pages"
+  5: "variables"
 };
 
 function convertToId(search)

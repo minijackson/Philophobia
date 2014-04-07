@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -73,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -99,6 +98,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>Class used to associate a mood with a probability.  
  <a href="classgameplay_1_1ai_1_1mood_1_1_probability_mood.html#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for gameplay.ai.mood.ProbabilityMood:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classgameplay_1_1ai_1_1mood_1_1_probability_mood__coll__graph.svg" width="235" height="174"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -153,6 +157,8 @@ Protected Attributes</h2></td></tr>
 <p>Constructor of the probability mood class. </p>
 
 <p>Definition at line <a class="el" href="_mood_8java_source.html#l00187">187</a> of file <a class="el" href="_mood_8java_source.html">Mood.java</a>.</p>
+
+<p>References <a class="el" href="_mood_8java_source.html#l00175">gameplay.ai.mood.ProbabilityMood.mood</a>, and <a class="el" href="_mood_8java_source.html#l00181">gameplay.ai.mood.ProbabilityMood.probability</a>.</p>
 <div class="fragment"><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                                                                 {</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        this.mood = <a class="code" href="classgameplay_1_1ai_1_1mood_1_1_probability_mood.html#afe864a647d2e9d766688d5e7549feec4">mood</a>;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        this.probability = <a class="code" href="classgameplay_1_1ai_1_1mood_1_1_probability_mood.html#a44377e9c9418a71f5151439c58f7b555">probability</a>;</div>
@@ -180,6 +186,8 @@ Protected Attributes</h2></td></tr>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classgameplay_1_1ai_1_1mood_1_1_probability_mood.html#afe864a647d2e9d766688d5e7549feec4" title="Mood for which there is a probability to be chosen. ">mood</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="_mood_8java_source.html#l00196">196</a> of file <a class="el" href="_mood_8java_source.html">Mood.java</a>.</p>
+
+<p>References <a class="el" href="_mood_8java_source.html#l00175">gameplay.ai.mood.ProbabilityMood.mood</a>.</p>
 <div class="fragment"><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                                 {</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classgameplay_1_1ai_1_1mood_1_1_probability_mood.html#afe864a647d2e9d766688d5e7549feec4">mood</a>;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
@@ -204,6 +212,8 @@ Protected Attributes</h2></td></tr>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classgameplay_1_1ai_1_1mood_1_1_probability_mood.html#a44377e9c9418a71f5151439c58f7b555" title="Probability of the mood to be chosen. ">probability</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="_mood_8java_source.html#l00204">204</a> of file <a class="el" href="_mood_8java_source.html">Mood.java</a>.</p>
+
+<p>References <a class="el" href="_mood_8java_source.html#l00181">gameplay.ai.mood.ProbabilityMood.probability</a>.</p>
 <div class="fragment"><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                                   {</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classgameplay_1_1ai_1_1mood_1_1_probability_mood.html#a44377e9c9418a71f5151439c58f7b555">probability</a>;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
@@ -234,6 +244,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_mood_8java_source.html#l00175">175</a> of file <a class="el" href="_mood_8java_source.html">Mood.java</a>.</p>
 
+<p>Referenced by <a class="el" href="_mood_8java_source.html#l00196">gameplay.ai.mood.ProbabilityMood.getMood()</a>, and <a class="el" href="_mood_8java_source.html#l00187">gameplay.ai.mood.ProbabilityMood.ProbabilityMood()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a44377e9c9418a71f5151439c58f7b555"></a>
@@ -258,6 +270,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_mood_8java_source.html#l00181">181</a> of file <a class="el" href="_mood_8java_source.html">Mood.java</a>.</p>
 
+<p>Referenced by <a class="el" href="_mood_8java_source.html#l00204">gameplay.ai.mood.ProbabilityMood.getProbability()</a>, and <a class="el" href="_mood_8java_source.html#l00187">gameplay.ai.mood.ProbabilityMood.ProbabilityMood()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -266,7 +280,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 7 2014 17:40:03 for Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 7 2014 20:18:47 for Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -73,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -103,10 +102,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Collaboration diagram for world.World:</div>
 <div class="dyncontent">
-<div class="center"><img src="classworld_1_1_world__coll__graph.png" border="0" usemap="#world_8_world_coll__map" alt="Collaboration graph"/></div>
-<map name="world_8_world_coll__map" id="world_8_world_coll__map">
-<area shape="rect" id="node2" href="classworld_1_1scenery_1_1_scenery.html" title="Class used to handle any world object. " alt="" coords="5,110,160,143"/></map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classworld_1_1_world__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -176,6 +173,8 @@ Protected Attributes</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="_world_8java_source.html#l00047">47</a> of file <a class="el" href="_world_8java_source.html">World.java</a>.</p>
+
+<p>References <a class="el" href="_world_8java_source.html#l00076">world.World.generateWorld()</a>, and <a class="el" href="_world_8java_source.html#l00041">world.World.type</a>.</p>
 <div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                    {</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        Philophobia.getVerbose().information(<span class="stringliteral">&quot;Creating World class&quot;</span>, <span class="stringliteral">&quot;world/World.java&quot;</span>, <span class="stringliteral">&quot;World.World(String)&quot;</span>);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
@@ -191,9 +190,7 @@ Protected Attributes</h2></td></tr>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classworld_1_1_world_afad8d3e3ce39f09fa0305fa412fc2080_cgraph.png" border="0" usemap="#classworld_1_1_world_afad8d3e3ce39f09fa0305fa412fc2080_cgraph" alt=""/></div>
-<map name="classworld_1_1_world_afad8d3e3ce39f09fa0305fa412fc2080_cgraph" id="classworld_1_1_world_afad8d3e3ce39f09fa0305fa412fc2080_cgraph">
-<area shape="rect" id="node3" href="classworld_1_1_world.html#aad82a66d1f2f8a7c8afa0483692754e8" title="Function randomly generating the world. " alt="" coords="184,5,363,38"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classworld_1_1_world_afad8d3e3ce39f09fa0305fa412fc2080_cgraph.svg" width="368" height="43"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -240,6 +237,8 @@ Here is the call graph for this function:</div>
 </dl>
 
 <p>Definition at line <a class="el" href="_world_8java_source.html#l00063">63</a> of file <a class="el" href="_world_8java_source.html">World.java</a>.</p>
+
+<p>References <a class="el" href="_world_8java_source.html#l00076">world.World.generateWorld()</a>, <a class="el" href="_world_8java_source.html#l00023">world.World.sizeX</a>, <a class="el" href="_world_8java_source.html#l00028">world.World.sizeY</a>, and <a class="el" href="_world_8java_source.html#l00041">world.World.type</a>.</p>
 <div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                                                      {</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        Philophobia.getVerbose().information(<span class="stringliteral">&quot;Creating World class&quot;</span>, <span class="stringliteral">&quot;world/World.java&quot;</span>, <span class="stringliteral">&quot;World.World(String, int, int)&quot;</span>);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
@@ -257,9 +256,7 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classworld_1_1_world_a59be3f314d90297f99652c9d45936425_cgraph.png" border="0" usemap="#classworld_1_1_world_a59be3f314d90297f99652c9d45936425_cgraph" alt=""/></div>
-<map name="classworld_1_1_world_a59be3f314d90297f99652c9d45936425_cgraph" id="classworld_1_1_world_a59be3f314d90297f99652c9d45936425_cgraph">
-<area shape="rect" id="node3" href="classworld_1_1_world.html#aad82a66d1f2f8a7c8afa0483692754e8" title="Function randomly generating the world. " alt="" coords="184,5,363,38"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classworld_1_1_world_a59be3f314d90297f99652c9d45936425_cgraph.svg" width="368" height="43"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -290,6 +287,10 @@ Here is the call graph for this function:</div>
 <p>Function randomly generating the world. </p>
 
 <p>Definition at line <a class="el" href="_world_8java_source.html#l00076">76</a> of file <a class="el" href="_world_8java_source.html">World.java</a>.</p>
+
+<p>References <a class="el" href="_world_8java_source.html#l00036">world.World.map</a>, <a class="el" href="_world_8java_source.html#l00023">world.World.sizeX</a>, <a class="el" href="_world_8java_source.html#l00028">world.World.sizeY</a>, and <a class="el" href="_world_8java_source.html#l00041">world.World.type</a>.</p>
+
+<p>Referenced by <a class="el" href="_world_8java_source.html#l00047">world.World.World()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                   {</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classworld_1_1_world.html#ab586ab2ff7a28c66e492722dd30a2d5a">map</a> = <span class="keyword">new</span> <a class="code" href="classworld_1_1scenery_1_1_scenery.html">Scenery</a>[<a class="code" href="classworld_1_1_world.html#ab2ca92c9d2a56f6fa1872dc6cf0f4ab3">sizeX</a>][<a class="code" href="classworld_1_1_world.html#a3a110ad1276dc7dfa6bc47d9a663ec5e">sizeY</a>];</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
@@ -325,9 +326,7 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classworld_1_1_world_aad82a66d1f2f8a7c8afa0483692754e8_icgraph.png" border="0" usemap="#classworld_1_1_world_aad82a66d1f2f8a7c8afa0483692754e8_icgraph" alt=""/></div>
-<map name="classworld_1_1_world_aad82a66d1f2f8a7c8afa0483692754e8_icgraph" id="classworld_1_1_world_aad82a66d1f2f8a7c8afa0483692754e8_icgraph">
-<area shape="rect" id="node3" href="classworld_1_1_world.html#afad8d3e3ce39f09fa0305fa412fc2080" title="World class constructor. " alt="" coords="233,5,361,38"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classworld_1_1_world_aad82a66d1f2f8a7c8afa0483692754e8_icgraph.svg" width="368" height="43"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -429,6 +428,8 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="_world_8java_source.html#l00036">36</a> of file <a class="el" href="_world_8java_source.html">World.java</a>.</p>
 
+<p>Referenced by <a class="el" href="_world_8java_source.html#l00076">world.World.generateWorld()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab2ca92c9d2a56f6fa1872dc6cf0f4ab3"></a>
@@ -452,6 +453,8 @@ Here is the caller graph for this function:</div>
 <p>Horizontal size of the map. </p>
 
 <p>Definition at line <a class="el" href="_world_8java_source.html#l00023">23</a> of file <a class="el" href="_world_8java_source.html">World.java</a>.</p>
+
+<p>Referenced by <a class="el" href="_world_8java_source.html#l00076">world.World.generateWorld()</a>, and <a class="el" href="_world_8java_source.html#l00063">world.World.World()</a>.</p>
 
 </div>
 </div>
@@ -477,6 +480,8 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="_world_8java_source.html#l00028">28</a> of file <a class="el" href="_world_8java_source.html">World.java</a>.</p>
 
+<p>Referenced by <a class="el" href="_world_8java_source.html#l00076">world.World.generateWorld()</a>, and <a class="el" href="_world_8java_source.html#l00063">world.World.World()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a008564127f7e69c09224a84ca7081893"></a>
@@ -501,6 +506,8 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="_world_8java_source.html#l00041">41</a> of file <a class="el" href="_world_8java_source.html">World.java</a>.</p>
 
+<p>Referenced by <a class="el" href="_world_8java_source.html#l00076">world.World.generateWorld()</a>, and <a class="el" href="_world_8java_source.html#l00047">world.World.World()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -509,7 +516,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 7 2014 17:40:04 for Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 7 2014 20:18:47 for Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

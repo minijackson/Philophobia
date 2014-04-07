@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -73,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -103,8 +102,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Collaboration diagram for debug.Verbose:</div>
 <div class="dyncontent">
-<div class="center"><img src="classdebug_1_1_verbose__coll__graph.png" border="0" usemap="#debug_8_verbose_coll__map" alt="Collaboration graph"/></div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classdebug_1_1_verbose__coll__graph.svg" width="120" height="384"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -168,6 +167,8 @@ Package Attributes</h2></td></tr>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70" title="Level of verbosing, from 0 to 5. ">verboseMode</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="_verbose_8java_source.html#l00036">36</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+
+<p>References <a class="el" href="_verbose_8java_source.html#l00028">debug.Verbose.log</a>, and <a class="el" href="_verbose_8java_source.html#l00113">debug.Verbose.warning()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                              {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        this.verboseMode = level;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
@@ -210,9 +211,7 @@ Package Attributes</h2></td></tr>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classdebug_1_1_verbose_a91cd6412ba96325ae848b77964096ee1_cgraph.png" border="0" usemap="#classdebug_1_1_verbose_a91cd6412ba96325ae848b77964096ee1_cgraph" alt=""/></div>
-<map name="classdebug_1_1_verbose_a91cd6412ba96325ae848b77964096ee1_cgraph" id="classdebug_1_1_verbose_a91cd6412ba96325ae848b77964096ee1_cgraph">
-<area shape="rect" id="node3" href="classdebug_1_1_verbose.html#a178f9afaeb03db850592a967ab911dee" title="Display and log a message with additionnal informations in the log file The message is displayed and ..." alt="" coords="213,5,371,38"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classdebug_1_1_verbose_a91cd6412ba96325ae848b77964096ee1_cgraph.svg" width="376" height="43"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -260,6 +259,8 @@ Here is the call graph for this function:</div>
 </dl>
 
 <p>Definition at line <a class="el" href="_verbose_8java_source.html#l00145">145</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+
+<p>References <a class="el" href="_verbose_8java_source.html#l00023">debug.Verbose.verboseMode</a>.</p>
 <div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                                                                    {</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 5) {</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            System.out.println(<span class="stringliteral">&quot;Calls : &quot;</span> + message);</div>
@@ -312,6 +313,8 @@ Here is the call graph for this function:</div>
 </dl>
 
 <p>Definition at line <a class="el" href="_verbose_8java_source.html#l00081">81</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+
+<p>References <a class="el" href="_verbose_8java_source.html#l00023">debug.Verbose.verboseMode</a>.</p>
 <div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                                                       {</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 1) {</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            System.out.println(<span class="stringliteral">&quot;Critical : &quot;</span> + message);</div>
@@ -364,6 +367,8 @@ Here is the call graph for this function:</div>
 </dl>
 
 <p>Definition at line <a class="el" href="_verbose_8java_source.html#l00129">129</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+
+<p>References <a class="el" href="_verbose_8java_source.html#l00023">debug.Verbose.verboseMode</a>.</p>
 <div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                                                                          {</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 4) {</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            System.out.println(<span class="stringliteral">&quot;Information : &quot;</span> + message);</div>
@@ -416,6 +421,8 @@ Here is the call graph for this function:</div>
 </dl>
 
 <p>Definition at line <a class="el" href="_verbose_8java_source.html#l00097">97</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+
+<p>References <a class="el" href="_verbose_8java_source.html#l00023">debug.Verbose.verboseMode</a>.</p>
 <div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                                                      {</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 2) {</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            System.out.println(<span class="stringliteral">&quot;Serious : &quot;</span> + message);</div>
@@ -468,6 +475,10 @@ Here is the call graph for this function:</div>
 </dl>
 
 <p>Definition at line <a class="el" href="_verbose_8java_source.html#l00113">113</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+
+<p>References <a class="el" href="_verbose_8java_source.html#l00023">debug.Verbose.verboseMode</a>.</p>
+
+<p>Referenced by <a class="el" href="_verbose_8java_source.html#l00036">debug.Verbose.Verbose()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                                                      {</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classdebug_1_1_verbose.html#a2269eebcfd65682c66c8401d59bb0d70">verboseMode</a> &gt;= 3) {</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            System.out.println(<span class="stringliteral">&quot;Warning : &quot;</span> + message);</div>
@@ -480,9 +491,7 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classdebug_1_1_verbose_a178f9afaeb03db850592a967ab911dee_icgraph.png" border="0" usemap="#classdebug_1_1_verbose_a178f9afaeb03db850592a967ab911dee_icgraph" alt=""/></div>
-<map name="classdebug_1_1_verbose_a178f9afaeb03db850592a967ab911dee_icgraph" id="classdebug_1_1_verbose_a178f9afaeb03db850592a967ab911dee_icgraph">
-<area shape="rect" id="node3" href="classdebug_1_1_verbose.html#a91cd6412ba96325ae848b77964096ee1" title="Class constructor. " alt="" coords="212,5,369,38"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classdebug_1_1_verbose_a178f9afaeb03db850592a967ab911dee_icgraph.svg" width="376" height="43"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -510,6 +519,8 @@ Here is the caller graph for this function:</div>
 <p>Logger used to log messages into a file. </p>
 
 <p>Definition at line <a class="el" href="_verbose_8java_source.html#l00028">28</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
+
+<p>Referenced by <a class="el" href="_verbose_8java_source.html#l00036">debug.Verbose.Verbose()</a>.</p>
 
 </div>
 </div>
@@ -543,6 +554,8 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="_verbose_8java_source.html#l00023">23</a> of file <a class="el" href="_verbose_8java_source.html">Verbose.java</a>.</p>
 
+<p>Referenced by <a class="el" href="_verbose_8java_source.html#l00145">debug.Verbose.calls()</a>, <a class="el" href="_verbose_8java_source.html#l00081">debug.Verbose.critical()</a>, <a class="el" href="_verbose_8java_source.html#l00129">debug.Verbose.information()</a>, <a class="el" href="_verbose_8java_source.html#l00097">debug.Verbose.serious()</a>, and <a class="el" href="_verbose_8java_source.html#l00113">debug.Verbose.warning()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -551,7 +564,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 7 2014 17:40:03 for Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 7 2014 20:18:47 for Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

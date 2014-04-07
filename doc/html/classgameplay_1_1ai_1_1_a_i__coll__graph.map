@@ -1,7 +1,7 @@
 <map id="gameplay.ai.AI" name="gameplay.ai.AI">
-<area shape="rect" id="node2" href="$classgameplay_1_1ai_1_1phrasing_1_1_phrasing.html" title="gameplay.ai.phrasing.Phrasing" alt="" coords="628,230,825,263"/>
-<area shape="rect" id="node4" href="$classgameplay_1_1ai_1_1phrasing_1_1_ordered_phrases.html" title="Class used to contain an ordered list of phrases. " alt="" coords="187,209,381,263"/>
-<area shape="rect" id="node6" href="$classgameplay_1_1ai_1_1mood_1_1_mood.html" title="Abstract class representing an AI mood. " alt="" coords="645,297,808,330"/>
-<area shape="rect" id="node10" href="$classworld_1_1_world.html" title="World is a class used to handle the game world graphics. " alt="" coords="681,355,772,389"/>
-<area shape="rect" id="node12" href="$classworld_1_1scenery_1_1_scenery.html" title="Class used to handle any world object. " alt="" coords="207,363,361,397"/>
+<area shape="rect" id="node2" href="$classgameplay_1_1ai_1_1phrasing_1_1_phrasing.html" title="{gameplay.ai.phrasing.Phrasing\n|# angerBetrayalPhrases\l# powerComplexMotivationPhrases\l# actionAsked\l|+ Phrasing()\l}" alt="" coords="5,886,232,1026"/>
+<area shape="rect" id="node4" href="$classgameplay_1_1ai_1_1phrasing_1_1_ordered_phrases.html" title="Class used to contain an ordered list of phrases. " alt="" coords="21,259,216,421"/>
+<area shape="rect" id="node6" href="$classgameplay_1_1ai_1_1mood_1_1_mood.html" title="Abstract class representing an AI mood. " alt="" coords="256,790,456,1122"/>
+<area shape="rect" id="node10" href="$classworld_1_1_world.html" title="World is a class used to handle the game world graphics. " alt="" coords="481,833,607,1079"/>
+<area shape="rect" id="node12" href="$classworld_1_1scenery_1_1_scenery.html" title="Class used to handle any world object. " alt="" coords="475,174,629,506"/>
 </map>

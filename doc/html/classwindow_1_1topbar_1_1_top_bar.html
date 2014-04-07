@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -73,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,15 +103,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Inheritance diagram for window.topbar.TopBar:</div>
 <div class="dyncontent">
-<div class="center"><img src="classwindow_1_1topbar_1_1_top_bar__inherit__graph.png" border="0" usemap="#window_8topbar_8_top_bar_inherit__map" alt="Inheritance graph"/></div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classwindow_1_1topbar_1_1_top_bar__inherit__graph.svg" width="160" height="427"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <div class="dynheader">
 Collaboration diagram for window.topbar.TopBar:</div>
 <div class="dyncontent">
-<div class="center"><img src="classwindow_1_1topbar_1_1_top_bar__coll__graph.png" border="0" usemap="#window_8topbar_8_top_bar_coll__map" alt="Collaboration graph"/></div>
-<map name="window_8topbar_8_top_bar_coll__map" id="window_8topbar_8_top_bar_coll__map">
-<area shape="rect" id="node4" href="classwindow_1_1topbar_1_1_top_bar_button.html" title="Class handling the UI buttons. " alt="" coords="91,110,277,143"/></map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classwindow_1_1topbar_1_1_top_bar__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -172,6 +169,8 @@ Static Protected Attributes</h2></td></tr>
 <p>Constructor of the <a class="el" href="classwindow_1_1topbar_1_1_top_bar.html" title="Class handling the top bar of the program&#39;s main window. ">TopBar</a> class. </p>
 
 <p>Definition at line <a class="el" href="_top_bar_8java_source.html#l00041">41</a> of file <a class="el" href="_top_bar_8java_source.html">TopBar.java</a>.</p>
+
+<p>References <a class="el" href="_top_bar_8java_source.html#l00031">window.topbar.TopBar.closeButton</a>, <a class="el" href="_philophobia_8java_source.html#l00087">main.Philophobia.getImageFilePrefix()</a>, <a class="el" href="_top_bar_8java_source.html#l00036">window.topbar.TopBar.pauseButton</a>, <a class="el" href="_top_bar_8java_source.html#l00021">window.topbar.TopBar.TOPBAR_HEIGHT</a>, and <a class="el" href="_top_bar_8java_source.html#l00026">window.topbar.TopBar.TOPBAR_MARGIN</a>.</p>
 <div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        super();</div>
@@ -201,9 +200,7 @@ Static Protected Attributes</h2></td></tr>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classwindow_1_1topbar_1_1_top_bar_ae999683bfcfd73faf457c8b2bd3a2bed_cgraph.png" border="0" usemap="#classwindow_1_1topbar_1_1_top_bar_ae999683bfcfd73faf457c8b2bd3a2bed_cgraph" alt=""/></div>
-<map name="classwindow_1_1topbar_1_1_top_bar_ae999683bfcfd73faf457c8b2bd3a2bed_cgraph" id="classwindow_1_1topbar_1_1_top_bar_ae999683bfcfd73faf457c8b2bd3a2bed_cgraph">
-<area shape="rect" id="node3" href="classmain_1_1_philophobia.html#af77ca65c091ecf625186103af2eac126" title="Getter for the IMAGE_FILE_PREFIX field. " alt="" coords="248,5,427,59"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classwindow_1_1topbar_1_1_top_bar_ae999683bfcfd73faf457c8b2bd3a2bed_cgraph.svg" width="432" height="64"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -232,6 +229,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_top_bar_8java_source.html#l00063">63</a> of file <a class="el" href="_top_bar_8java_source.html">TopBar.java</a>.</p>
+
+<p>References <a class="el" href="_top_bar_8java_source.html#l00021">window.topbar.TopBar.TOPBAR_HEIGHT</a>.</p>
 <div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                        {</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classwindow_1_1topbar_1_1_top_bar.html#aa7100cb3da5276c12e4fae659823bf4e">TOPBAR_HEIGHT</a>;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
@@ -261,6 +260,10 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_top_bar_8java_source.html#l00067">67</a> of file <a class="el" href="_top_bar_8java_source.html">TopBar.java</a>.</p>
+
+<p>References <a class="el" href="_top_bar_8java_source.html#l00026">window.topbar.TopBar.TOPBAR_MARGIN</a>.</p>
+
+<p>Referenced by <a class="el" href="_top_bar_button_8java_source.html#l00048">window.topbar.TopBarButton.paintComponent()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                        {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classwindow_1_1topbar_1_1_top_bar.html#a8d48486507d36a825223a21b1b6333ac">TOPBAR_MARGIN</a>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
@@ -269,9 +272,7 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classwindow_1_1topbar_1_1_top_bar_adfdb55a34a781ed9c1c28dcc820b10e3_icgraph.png" border="0" usemap="#classwindow_1_1topbar_1_1_top_bar_adfdb55a34a781ed9c1c28dcc820b10e3_icgraph" alt=""/></div>
-<map name="classwindow_1_1topbar_1_1_top_bar_adfdb55a34a781ed9c1c28dcc820b10e3_icgraph" id="classwindow_1_1topbar_1_1_top_bar_adfdb55a34a781ed9c1c28dcc820b10e3_icgraph">
-<area shape="rect" id="node3" href="classwindow_1_1topbar_1_1_top_bar_button.html#a5268cb4eb3f6f1f7dc3925827c1664d8" title="window.topbar.TopBarButton.paint\lComponent" alt="" coords="224,5,443,59"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classwindow_1_1topbar_1_1_top_bar_adfdb55a34a781ed9c1c28dcc820b10e3_icgraph.svg" width="448" height="64"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -291,6 +292,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_top_bar_8java_source.html#l00071">71</a> of file <a class="el" href="_top_bar_8java_source.html">TopBar.java</a>.</p>
+
+<p>References <a class="el" href="_top_bar_8java_source.html#l00031">window.topbar.TopBar.closeButton</a>.</p>
 <div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                  {</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        Philophobia.getVerbose().calls(<span class="stringliteral">&quot;Hidding pause button&quot;</span>, <span class="stringliteral">&quot;window/topbar/TopBar.java&quot;</span>, <span class="stringliteral">&quot;TopBar.hidePauseButton()&quot;</span>);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        this.removeAll();</div>
@@ -341,6 +344,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_top_bar_8java_source.html#l00079">79</a> of file <a class="el" href="_top_bar_8java_source.html">TopBar.java</a>.</p>
+
+<p>References <a class="el" href="_top_bar_8java_source.html#l00031">window.topbar.TopBar.closeButton</a>, <a class="el" href="_top_bar_8java_source.html#l00036">window.topbar.TopBar.pauseButton</a>, and <a class="el" href="_top_bar_8java_source.html#l00026">window.topbar.TopBar.TOPBAR_MARGIN</a>.</p>
 <div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                  {</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        Philophobia.getVerbose().calls(<span class="stringliteral">&quot;Showing pause button&quot;</span>, <span class="stringliteral">&quot;window/topbar/TopBar.java&quot;</span>, <span class="stringliteral">&quot;TopBar.showPauseButton()&quot;</span>);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        this.removeAll();</div>
@@ -379,6 +384,8 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="_top_bar_8java_source.html#l00031">31</a> of file <a class="el" href="_top_bar_8java_source.html">TopBar.java</a>.</p>
 
+<p>Referenced by <a class="el" href="_top_bar_8java_source.html#l00071">window.topbar.TopBar.hidePauseButton()</a>, <a class="el" href="_top_bar_8java_source.html#l00079">window.topbar.TopBar.showPauseButton()</a>, and <a class="el" href="_top_bar_8java_source.html#l00041">window.topbar.TopBar.TopBar()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ac7b4f88657cb97d1ae3df6a99d3694e9"></a>
@@ -402,6 +409,8 @@ Here is the caller graph for this function:</div>
 <p>Button pausing the program when activated. </p>
 
 <p>Definition at line <a class="el" href="_top_bar_8java_source.html#l00036">36</a> of file <a class="el" href="_top_bar_8java_source.html">TopBar.java</a>.</p>
+
+<p>Referenced by <a class="el" href="_top_bar_8java_source.html#l00079">window.topbar.TopBar.showPauseButton()</a>, and <a class="el" href="_top_bar_8java_source.html#l00041">window.topbar.TopBar.TopBar()</a>.</p>
 
 </div>
 </div>
@@ -427,6 +436,8 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="_top_bar_8java_source.html#l00021">21</a> of file <a class="el" href="_top_bar_8java_source.html">TopBar.java</a>.</p>
 
+<p>Referenced by <a class="el" href="_top_bar_8java_source.html#l00063">window.topbar.TopBar.getTopBarHeight()</a>, and <a class="el" href="_top_bar_8java_source.html#l00041">window.topbar.TopBar.TopBar()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a8d48486507d36a825223a21b1b6333ac"></a>
@@ -451,6 +462,8 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="_top_bar_8java_source.html#l00026">26</a> of file <a class="el" href="_top_bar_8java_source.html">TopBar.java</a>.</p>
 
+<p>Referenced by <a class="el" href="_top_bar_8java_source.html#l00067">window.topbar.TopBar.getTopBarMargin()</a>, <a class="el" href="_top_bar_8java_source.html#l00079">window.topbar.TopBar.showPauseButton()</a>, and <a class="el" href="_top_bar_8java_source.html#l00041">window.topbar.TopBar.TopBar()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -459,7 +472,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 7 2014 17:40:04 for Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 7 2014 20:18:47 for Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
