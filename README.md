@@ -1,6 +1,5 @@
-Philophobia
-===========
+# Philophobia
 
-[![Build Status](https://drone.io/github.com/minijackson/Philophobia/status.png)](https://drone.io/github.com/minijackson/Philophobia/latest)
+[Drone.io :](https://drone.io/github.com/minijackson/Philophobia/latest) ![Build Status](https://drone.io/github.com/minijackson/Philophobia/status.png)
 
-Sadistic Java game project
+A Sadistic Java game project
