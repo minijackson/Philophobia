@@ -1,0 +1,8 @@
+<map id="world.scenery.Grass" name="world.scenery.Grass">
+<area shape="rect" id="node2" href="$classworld_1_1scenery_1_1_scenery.html" title="Class used to handle any world object. " alt="" coords="40,5,195,38"/>
+<area shape="rect" id="node4" href="$interfaceworld_1_1scenery_1_1_temperate_broadleaf_theme.html" title="Interface used to define that a Scenery object have a Temperate Broadleaf style. " alt="" coords="7,61,228,115"/>
+<area shape="rect" id="node6" href="$interfaceworld_1_1scenery_1_1_taiga_theme.html" title="Interface used to define that a Scenery object have a Taiga style. " alt="" coords="29,138,205,171"/>
+<area shape="rect" id="node8" href="$interfaceworld_1_1scenery_1_1_alpine_tundra_theme.html" title="Interface used to define that a Scenery object have an Alpine Tundra style. " alt="" coords="27,194,208,249"/>
+<area shape="rect" id="node10" href="$interfaceworld_1_1scenery_1_1_steppe_theme.html" title="Interface used to define that a Scenery object have a Steppe style. " alt="" coords="24,271,211,305"/>
+<area shape="rect" id="node12" href="$interfaceworld_1_1scenery_1_1_savanna_theme.html" title="Interface used to define that a Scenery object have a Savanna style. " alt="" coords="19,327,216,361"/>
+</map>

@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>currentMood</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/13.html#L38'>currentMood</a>        38 gameplay/ai/AI.java 	protected Mood currentMood;
+<a href='../S/13.html#L64'>currentMood</a>        64 gameplay/ai/AI.java 		currentMood  = new Curiosity();
+<a href='../S/13.html#L90'>currentMood</a>        90 gameplay/ai/AI.java 		if(currentMood.incrementBetrayalCount() &gt;= currentMood.getBetrayalThreshold()) {
+<a href='../S/13.html#L91'>currentMood</a>        91 gameplay/ai/AI.java 			changeMood(currentMood.getNextMood());
+<a href='../S/13.html#L102'>currentMood</a>       102 gameplay/ai/AI.java 		if(currentMood.incrementSlaveryCount() &gt;= currentMood.getSlaveryThreshold()) {
+<a href='../S/13.html#L103'>currentMood</a>       103 gameplay/ai/AI.java 			changeMood(currentMood.getPreviousMood());
+<a href='../S/13.html#L114'>currentMood</a>       114 gameplay/ai/AI.java 			Philophobia.getVerbose().information("AI switching from " + currentMood.getClass().getName() + " mood to " + moodClass.getName() + " mood", "gameplay/ai/AI.java", "AI.changeMood(Class)");
+<a href='../S/13.html#L115'>currentMood</a>       115 gameplay/ai/AI.java 			currentMood = moodClass.newInstance();
+<a href='../S/13.html#L117'>currentMood</a>       117 gameplay/ai/AI.java 			Philophobia.getVerbose().serious("Security exception when switching from " + currentMood.getClass().getName() + " mood to " + moodClass.getName() + " mood: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeMood(Class)");
+<a href='../S/13.html#L119'>currentMood</a>       119 gameplay/ai/AI.java 			Philophobia.getVerbose().serious("Instantiation exception when switching from " + currentMood.getClass().getName() + " mood to " + moodClass.getName() + " mood: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeMood(Class)");
+<a href='../S/13.html#L121'>currentMood</a>       121 gameplay/ai/AI.java 			Philophobia.getVerbose().serious("Illegal access exception when switching from " + currentMood.getClass().getName() + " mood to " + moodClass.getName() + " mood: " + e.getMessage(), "gameplay/ai/AI.java", "AI.changeMood(Class)");
+</pre>
+</body>
+</html>

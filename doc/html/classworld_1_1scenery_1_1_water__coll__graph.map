@@ -1,0 +1,6 @@
+<map id="world.scenery.Water" name="world.scenery.Water">
+<area shape="rect" id="node2" href="$classworld_1_1scenery_1_1_scenery.html" title="Class used to handle any world object. " alt="" coords="199,10,353,43"/>
+<area shape="rect" id="node6" href="$interfaceworld_1_1_interactive_object.html" title="world.InteractiveObject" alt="" coords="199,66,353,99"/>
+<area shape="rect" id="node8" href="$interfaceworld_1_1scenery_1_1_taiga_theme.html" title="Interface used to define that a Scenery object have a Taiga style. " alt="" coords="188,122,364,155"/>
+<area shape="rect" id="node10" href="$interfaceworld_1_1scenery_1_1_polar_desert_theme.html" title="Interface used to define that a Scenery object has a Polar Desert style. " alt="" coords="189,178,363,233"/>
+</map>

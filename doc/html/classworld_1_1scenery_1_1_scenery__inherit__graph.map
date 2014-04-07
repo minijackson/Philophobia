@@ -1,0 +1,13 @@
+<map id="world.scenery.Scenery" name="world.scenery.Scenery">
+<area shape="rect" id="node3" href="$classworld_1_1character_1_1_character.html" title="Class used to handle a character (player or non&#45;player) " alt="" coords="208,33,379,66"/>
+<area shape="rect" id="node9" href="$classworld_1_1scenery_1_1_flower.html" title="Class used to handle a flower object. " alt="" coords="221,89,365,122"/>
+<area shape="rect" id="node11" href="$classworld_1_1scenery_1_1_grass.html" title="Class used to handle a grass object. " alt="" coords="223,145,364,178"/>
+<area shape="rect" id="node13" href="$classworld_1_1scenery_1_1_ground.html" title="Class used to handle a ground object. " alt="" coords="220,201,367,234"/>
+<area shape="rect" id="node15" href="$classworld_1_1scenery_1_1_rock.html" title="Class used to handle a rock object. " alt="" coords="225,257,361,290"/>
+<area shape="rect" id="node17" href="$classworld_1_1scenery_1_1_shore.html" title="Class used to handle a shore object. " alt="" coords="224,313,363,346"/>
+<area shape="rect" id="node19" href="$classworld_1_1scenery_1_1_shrub.html" title="Class used to handle a shrub object. " alt="" coords="224,369,363,402"/>
+<area shape="rect" id="node21" href="$classworld_1_1scenery_1_1_tree.html" title="Class used to handle a tree object. " alt="" coords="228,425,359,458"/>
+<area shape="rect" id="node23" href="$classworld_1_1scenery_1_1_water.html" title="Class used to handle a water object. " alt="" coords="224,481,363,514"/>
+<area shape="rect" id="node5" href="$classworld_1_1character_1_1_hero.html" title="world.character.Hero" alt="" coords="463,5,604,38"/>
+<area shape="rect" id="node7" href="$classworld_1_1character_1_1_talking_character.html" title="Class handling a talking character. " alt="" coords="428,61,639,94"/>
+</map>

@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>window/ui/UI.java</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/160.html'>window</a>/<a href='../files/162.html'>ui</a>/UI.java</h2>
+<i><font color='green'>/* [&lt;][&gt;]<a href='#L70'>[^]</a><a href='#L94'>[v]</a>[top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<h2>DEFINITIONS</h2>
+This source file includes following definitions.
+<ol>
+<li><a href='#L70' title='Defined at 70.'>setDisplayedWorld</a>
+<li><a href='#L78' title='Defined at 78.'>paintComponent</a>
+<li><a href='#L94' title='Defined at 94.'>drawWorld</a>
+</ol>
+<hr>
+<pre>
+<a name='L1'>   1 <b>package</b> <a href='../Y/202.html' title='Multiple used in 13 places.'>window</a>.<a href='../Y/194.html' title='Multiple used in 2 places.'>ui</a>;
+<a name='L2'>   2 
+<a name='L3'>   3 <b>import</b> main.Philophobia;
+<a name='L4'>   4 <b>import</b> world.World;
+<a name='L5'>   5 <b>import</b> world.scenery.Scenery;
+<a name='L6'>   6 <b>import</b> world.scenery.Tree;
+<a name='L7'>   7 
+<a name='L8'>   8 <b>import</b> java.awt.Graphics;
+<a name='L9'>   9 <b>import</b> javax.swing.JPanel;
+<a name='L10'>  10 
+<a name='L11'>  11 <i><font color='green'>/**</font></i>
+<a name='L12'>  12 <i><font color='green'> * Class used to handle the window's user interface</font></i>
+<a name='L13'>  13 <i><font color='green'> * </font></i>
+<a name='L14'>  14 <i><font color='green'> * This class can be in different states</font></i>
+<a name='L15'>  15 <i><font color='green'> */</font></i>
+<a name='L16'>  16 <b>public</b> <b>class</b> <a href='../S/6.html#L48' title='Refered from 48 in window/Window.java.'>UI</a> <b>extends</b> JPanel <font color='red'>{</font>
+<a name='L17'>  17 
+<a name='L18'>  18         <i><font color='green'>/**</font></i>
+<a name='L19'>  19 <i><font color='green'>         * World displayed inside the window</font></i>
+<a name='L20'>  20 <i><font color='green'>         */</font></i>
+<a name='L21'>  21         <b>protected</b> <a href='../Y/93.html' title='Multiple used in 10 places.'>World</a> <a href='../Y/123.html' title='Multiple used in 6 places.'>displayedWorld</a>;
+<a name='L22'>  22 
+<a name='L23'>  23         <i><font color='green'>/**</font></i>
+<a name='L24'>  24 <i><font color='green'>         * Window height</font></i>
+<a name='L25'>  25 <i><font color='green'>         */</font></i>
+<a name='L26'>  26         <b>protected</b> <b>int</b> <a href='../Y/203.html' title='Multiple used in 5 places.'>windowHeight</a>;
+<a name='L27'>  27 
+<a name='L28'>  28         <i><font color='green'>/**</font></i>
+<a name='L29'>  29 <i><font color='green'>         * Window width</font></i>
+<a name='L30'>  30 <i><font color='green'>         */</font></i>
+<a name='L31'>  31         <b>protected</b> <b>int</b> <a href='../Y/205.html' title='Multiple used in 5 places.'>windowWidth</a>;
+<a name='L32'>  32 
+<a name='L33'>  33         <i><font color='green'>/**</font></i>
+<a name='L34'>  34 <i><font color='green'>         * UI class constructor</font></i>
+<a name='L35'>  35 <i><font color='green'>         * @param windowHeight Height of the window</font></i>
+<a name='L36'>  36 <i><font color='green'>         * @param windowWidth Width of the window</font></i>
+<a name='L37'>  37 <i><font color='green'>         */</font></i>
+<a name='L38'>  38         <b>public</b> UI(<b>int</b> <a href='../Y/203.html' title='Multiple used in 5 places.'>windowHeight</a>, <b>int</b> <a href='../Y/205.html' title='Multiple used in 5 places.'>windowWidth</a>) <font color='red'>{</font>
+<a name='L39'>  39                 <i><font color='green'>// We call the parent's constructor</font></i>
+<a name='L40'>  40                 <b>super</b>();
+<a name='L41'>  41 
+<a name='L42'>  42                 <a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L79' title='Defined at 79 in main/Philophobia.java.'>getVerbose</a>().<a href='../S/5.html#L145' title='Defined at 145 in debug/Verbose.java.'>calls</a>("Creating UI class", "window/ui/UI.java", "UI.UI(int, int)");
+<a name='L43'>  43 
+<a name='L44'>  44                 <b>this</b>.<a href='../Y/203.html' title='Multiple used in 5 places.'>windowHeight</a> = <a href='../Y/203.html' title='Multiple used in 5 places.'>windowHeight</a>;
+<a name='L45'>  45                 <b>this</b>.<a href='../Y/205.html' title='Multiple used in 5 places.'>windowWidth</a> = <a href='../Y/205.html' title='Multiple used in 5 places.'>windowWidth</a>;
+<a name='L46'>  46 
+<a name='L47'>  47         <font color='red'>}</font>
+<a name='L48'>  48 
+<a name='L49'>  49         <i><font color='green'>/**</font></i>
+<a name='L50'>  50 <i><font color='green'>         * UI class constructor</font></i>
+<a name='L51'>  51 <i><font color='green'>         * @param windowHeight Height of the window</font></i>
+<a name='L52'>  52 <i><font color='green'>         * @param windowWidth Width of the window</font></i>
+<a name='L53'>  53 <i><font color='green'>         * @param world World to display</font></i>
+<a name='L54'>  54 <i><font color='green'>         */</font></i>
+<a name='L55'>  55         <b>public</b> UI(<b>int</b> <a href='../Y/203.html' title='Multiple used in 5 places.'>windowHeight</a>, <b>int</b> <a href='../Y/205.html' title='Multiple used in 5 places.'>windowWidth</a>, <a href='../Y/93.html' title='Multiple used in 10 places.'>World</a> <a href='../Y/206.html' title='Multiple used in 92 places.'>world</a>) <font color='red'>{</font>
+<a name='L56'>  56                 <b>super</b>();
+<a name='L57'>  57 
+<a name='L58'>  58                 <a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L79' title='Defined at 79 in main/Philophobia.java.'>getVerbose</a>().<a href='../S/5.html#L145' title='Defined at 145 in debug/Verbose.java.'>calls</a>("Creating UI class", "window/ui/UI.java", "UI.UI(int, int,World)");
+<a name='L59'>  59 
+<a name='L60'>  60                 <b>this</b>.<a href='../Y/203.html' title='Multiple used in 5 places.'>windowHeight</a> = <a href='../Y/203.html' title='Multiple used in 5 places.'>windowHeight</a>;
+<a name='L61'>  61                 <b>this</b>.<a href='../Y/205.html' title='Multiple used in 5 places.'>windowWidth</a> = <a href='../Y/205.html' title='Multiple used in 5 places.'>windowWidth</a>;
+<a name='L62'>  62                 <b>this</b>.<a href='../Y/123.html' title='Multiple used in 6 places.'>displayedWorld</a> = <a href='../Y/206.html' title='Multiple used in 92 places.'>world</a>;
+<a name='L63'>  63         <font color='red'>}</font>
+<a name='L64'>  64         
+<a name='L65'>  65         <i><font color='green'>/**</font></i>
+<a name='L66'>  66 <i><font color='green'>         * Setter for the displayedWorld field</font></i>
+<a name='L67'>  67 <i><font color='green'>         * @see #displayedWorld</font></i>
+<a name='L68'>  68 <i><font color='green'>         * @param world World to display</font></i>
+<a name='L69'>  69 <i><font color='green'>         */</font></i>
+<a name='L70'>  70         <b>public</b> <b>void</b> <a href='../S/10.html#L73' title='Refered from 73 in gameplay/GamePlay.java.'>setDisplayedWorld</a>(<a href='../Y/93.html' title='Multiple used in 10 places.'>World</a> <a href='../Y/206.html' title='Multiple used in 92 places.'>world</a>) <font color='red'>{</font>
+<a name='L71'>  71                 <b>this</b>.<a href='../Y/123.html' title='Multiple used in 6 places.'>displayedWorld</a> = <a href='../Y/206.html' title='Multiple used in 92 places.'>world</a>;
+<a name='L72'>  72         <font color='red'>}</font>
+<a name='L73'>  73 
+<a name='L74'>  74         <i><font color='green'>/**</font></i>
+<a name='L75'>  75 <i><font color='green'>         * Function called when the program ask to paint the graphics</font></i>
+<a name='L76'>  76 <i><font color='green'>         * @param g Graphics to use</font></i>
+<a name='L77'>  77 <i><font color='green'>         */</font></i>
+<a name='L78'>  78         <b>public</b> <b>void</b> <a href='../S/7.html#L80' title='Refered from 80 in window/ui/UI.java.'>paintComponent</a>(<a href='../Y/27.html' title='Multiple used in 10 places.'>Graphics</a> <a href='../Y/130.html' title='Multiple used in 13 places.'>g</a>) <font color='red'>{</font>
+<a name='L79'>  79                 <a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L79' title='Defined at 79 in main/Philophobia.java.'>getVerbose</a>().<a href='../S/5.html#L145' title='Defined at 145 in debug/Verbose.java.'>calls</a>("Painting UI components", "window/ui/UI.java", "UI.paintComponent(Graphics)");
+<a name='L80'>  80                 <b>super</b>.<a href='../D/86.html' title='Multiple defined in 3 places.'>paintComponent</a>(<a href='../Y/130.html' title='Multiple used in 13 places.'>g</a>);
+<a name='L81'>  81                 <a href='../S/7.html#L94' title='Defined at 94 in window/ui/UI.java.'>drawWorld</a>(<a href='../Y/130.html' title='Multiple used in 13 places.'>g</a>);
+<a name='L82'>  82         <font color='red'>}</font>
+<a name='L83'>  83 
+<a name='L84'>  84         <i><font color='green'>/**</font></i>
+<a name='L85'>  85 <i><font color='green'>         * Function called to draw the world</font></i>
+<a name='L86'>  86 <i><font color='green'>         * &lt;p&gt;</font></i>
+<a name='L87'>  87 <i><font color='green'>         * This function just display each Scenery one by one</font></i>
+<a name='L88'>  88 <i><font color='green'>         * but trees are displayed after everything else as</font></i>
+<a name='L89'>  89 <i><font color='green'>         * they must be on top of everything because of their</font></i>
+<a name='L90'>  90 <i><font color='green'>         * size</font></i>
+<a name='L91'>  91 <i><font color='green'>         * @see #displayedWorld</font></i>
+<a name='L92'>  92 <i><font color='green'>         * @param g Graphics to use</font></i>
+<a name='L93'>  93 <i><font color='green'>         */</font></i>
+<a name='L94'>  94         <b>private</b> <b>void</b> <a href='../S/7.html#L81' title='Refered from 81 in window/ui/UI.java.'>drawWorld</a>(<a href='../Y/27.html' title='Multiple used in 10 places.'>Graphics</a> <a href='../Y/130.html' title='Multiple used in 13 places.'>g</a>) <font color='red'>{</font>
+<a name='L95'>  95         
+<a name='L96'>  96                 <a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L79' title='Defined at 79 in main/Philophobia.java.'>getVerbose</a>().<a href='../S/5.html#L145' title='Defined at 145 in debug/Verbose.java.'>calls</a>("Painting the world", "window/ui/UI.java", "UI.drawWorld(Graphics)");
+<a name='L97'>  97 
+<a name='L98'>  98                 <a href='../Y/71.html' title='Multiple used in 18 places.'>Scenery</a>[][] <a href='../Y/207.html' title='Multiple used in 5 places.'>worldMap</a> = <a href='../Y/123.html' title='Multiple used in 6 places.'>displayedWorld</a>.<a href='../S/117.html#L123' title='Defined at 123 in world/World.java.'>getMap</a>();
+<a name='L99'>  99                 <b>int</b> <a href='../Y/208.html' title='Multiple used in 3 places.'>worldMapXSize</a> = <a href='../Y/123.html' title='Multiple used in 6 places.'>displayedWorld</a>.<a href='../S/117.html#L105' title='Defined at 105 in world/World.java.'>getSizeX</a>();
+<a name='L100'> 100                 <b>int</b> <a href='../Y/209.html' title='Multiple used in 3 places.'>worldMapYSize</a> = <a href='../Y/123.html' title='Multiple used in 6 places.'>displayedWorld</a>.<a href='../S/117.html#L114' title='Defined at 114 in world/World.java.'>getSizeY</a>();
+<a name='L101'> 101 
+<a name='L102'> 102                 <b>for</b>(<b>int</b> <a href='../Y/135.html' title='Multiple used in 17 places.'>i</a> = 0 ; <a href='../Y/135.html' title='Multiple used in 17 places.'>i</a> &lt; <a href='../Y/208.html' title='Multiple used in 3 places.'>worldMapXSize</a> ; ++<a href='../Y/135.html' title='Multiple used in 17 places.'>i</a>) <font color='red'>{</font>
+<a name='L103'> 103                         <b>for</b>(<b>int</b> <a href='../Y/141.html' title='Multiple used in 8 places.'>j</a> = 0 ; <a href='../Y/141.html' title='Multiple used in 8 places.'>j</a> &lt; <a href='../Y/209.html' title='Multiple used in 3 places.'>worldMapYSize</a> ; ++<a href='../Y/141.html' title='Multiple used in 8 places.'>j</a>) <font color='red'>{</font>
+<a name='L104'> 104                                 <b>if</b>(!<a href='../Y/207.html' title='Multiple used in 5 places.'>worldMap</a>[<a href='../Y/135.html' title='Multiple used in 17 places.'>i</a>][<a href='../Y/141.html' title='Multiple used in 8 places.'>j</a>].getClass().getName().equals("Tree"))
+<a name='L105'> 105                                         <a href='../Y/207.html' title='Multiple used in 5 places.'>worldMap</a>[<a href='../Y/135.html' title='Multiple used in 17 places.'>i</a>][<a href='../Y/141.html' title='Multiple used in 8 places.'>j</a>].<a href='../S/122.html#L133' title='Defined at 133 in world/scenery/Scenery.java.'>drawScenery</a>(<a href='../Y/130.html' title='Multiple used in 13 places.'>g</a>, <a href='../Y/135.html' title='Multiple used in 17 places.'>i</a>*<a href='../Y/71.html' title='Multiple used in 18 places.'>Scenery</a>.<a href='../S/122.html#L144' title='Defined at 144 in world/scenery/Scenery.java.'>getSceneryHeight</a>(), <a href='../Y/141.html' title='Multiple used in 8 places.'>j</a>*<a href='../Y/71.html' title='Multiple used in 18 places.'>Scenery</a>.<a href='../S/122.html#L152' title='Defined at 152 in world/scenery/Scenery.java.'>getSceneryWidth</a>(), <b>this</b>);
+<a name='L106'> 106                         <font color='red'>}</font>
+<a name='L107'> 107                 <font color='red'>}</font>
+<a name='L108'> 108 
+<a name='L109'> 109                 <b>for</b>(<b>int</b> <a href='../Y/135.html' title='Multiple used in 17 places.'>i</a> = 0 ; <a href='../Y/135.html' title='Multiple used in 17 places.'>i</a> &lt; <a href='../Y/208.html' title='Multiple used in 3 places.'>worldMapXSize</a> ; ++<a href='../Y/135.html' title='Multiple used in 17 places.'>i</a>) <font color='red'>{</font>
+<a name='L110'> 110                         <b>for</b>(<b>int</b> <a href='../Y/141.html' title='Multiple used in 8 places.'>j</a> = 0 ; <a href='../Y/141.html' title='Multiple used in 8 places.'>j</a> &lt; <a href='../Y/209.html' title='Multiple used in 3 places.'>worldMapYSize</a> ; ++<a href='../Y/141.html' title='Multiple used in 8 places.'>j</a>) <font color='red'>{</font>
+<a name='L111'> 111                                 <b>if</b>(<a href='../Y/207.html' title='Multiple used in 5 places.'>worldMap</a>[<a href='../Y/135.html' title='Multiple used in 17 places.'>i</a>][<a href='../Y/141.html' title='Multiple used in 8 places.'>j</a>].getClass().getName().equals("Tree"))
+<a name='L112'> 112                                         <a href='../Y/207.html' title='Multiple used in 5 places.'>worldMap</a>[<a href='../Y/135.html' title='Multiple used in 17 places.'>i</a>][<a href='../Y/141.html' title='Multiple used in 8 places.'>j</a>].<a href='../S/122.html#L133' title='Defined at 133 in world/scenery/Scenery.java.'>drawScenery</a>(<a href='../Y/130.html' title='Multiple used in 13 places.'>g</a>, <a href='../Y/135.html' title='Multiple used in 17 places.'>i</a>*<a href='../Y/71.html' title='Multiple used in 18 places.'>Scenery</a>.<a href='../S/122.html#L144' title='Defined at 144 in world/scenery/Scenery.java.'>getSceneryHeight</a>(), <a href='../Y/141.html' title='Multiple used in 8 places.'>j</a>*<a href='../Y/71.html' title='Multiple used in 18 places.'>Scenery</a>.<a href='../S/122.html#L152' title='Defined at 152 in world/scenery/Scenery.java.'>getSceneryWidth</a>(), <b>this</b>);
+<a name='L113'> 113                         <font color='red'>}</font>
+<a name='L114'> 114                 <font color='red'>}</font>
+<a name='L115'> 115 
+<a name='L116'> 116         <font color='red'>}</font>
+<a name='L117'> 117 
+<a name='L118'> 118 <font color='red'>}</font>;
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;]<a href='#L70'>[^]</a><a href='#L94'>[v]</a><a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>

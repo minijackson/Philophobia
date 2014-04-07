@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>world/InteractiveObject.java</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/163.html'>world</a>/InteractiveObject.java</h2>
+<i><font color='green'>/* [&lt;][&gt;]<a href='#L13'>[^]</a><a href='#L39'>[v]</a>[top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<h2>DEFINITIONS</h2>
+This source file includes following definitions.
+<ol>
+<li><a href='#L13' title='Defined at 13.'>triggerAction</a>
+<li><a href='#L19' title='Defined at 19.'>playerNear</a>
+<li><a href='#L25' title='Defined at 25.'>playerEnter</a>
+<li><a href='#L31' title='Defined at 31.'>playerLeave</a>
+<li><a href='#L39' title='Defined at 39.'>isTraversable</a>
+</ol>
+<hr>
+<pre>
+<a name='L1'>   1 <b>package</b> <a href='../Y/206.html' title='Multiple used in 92 places.'>world</a>;
+<a name='L2'>   2 
+<a name='L3'>   3 <b>import</b> main.Philophobia;
+<a name='L4'>   4 <b>import</b> world.scenery.Scenery;
+<a name='L5'>   5 
+<a name='L6'>   6 <b>public</b> <b>interface</b> <a href='../R/9.html' title='Multiple refered from 4 places.'>InteractiveObject</a> <font color='red'>{</font>
+<a name='L7'>   7 
+<a name='L8'>   8         <i><font color='green'>/**</font></i>
+<a name='L9'>   9 <i><font color='green'>         * Method to be called when the player</font></i>
+<a name='L10'>  10 <i><font color='green'>         * is near the object and presses the</font></i>
+<a name='L11'>  11 <i><font color='green'>         * action key</font></i>
+<a name='L12'>  12 <i><font color='green'>         */</font></i>
+<a name='L13'>  13         <b>public</b> <b>void</b> triggerAction();
+<a name='L14'>  14 
+<a name='L15'>  15         <i><font color='green'>/**</font></i>
+<a name='L16'>  16 <i><font color='green'>         * Method to be called when the player</font></i>
+<a name='L17'>  17 <i><font color='green'>         * is near the object</font></i>
+<a name='L18'>  18 <i><font color='green'>         */</font></i>
+<a name='L19'>  19         <b>public</b> <b>void</b> playerNear();
+<a name='L20'>  20 
+<a name='L21'>  21         <i><font color='green'>/**</font></i>
+<a name='L22'>  22 <i><font color='green'>         * Method to be called when the player</font></i>
+<a name='L23'>  23 <i><font color='green'>         * was near and is now over the object</font></i>
+<a name='L24'>  24 <i><font color='green'>         */</font></i>
+<a name='L25'>  25         <b>public</b> <b>void</b> playerEnter();
+<a name='L26'>  26 
+<a name='L27'>  27         <i><font color='green'>/**</font></i>
+<a name='L28'>  28 <i><font color='green'>         * Method to be called when the player</font></i>
+<a name='L29'>  29 <i><font color='green'>         * was over and is now near the object</font></i>
+<a name='L30'>  30 <i><font color='green'>         */</font></i>
+<a name='L31'>  31         <b>public</b> <b>void</b> playerLeave();
+<a name='L32'>  32 
+<a name='L33'>  33         <i><font color='green'>/**</font></i>
+<a name='L34'>  34 <i><font color='green'>         * Returns true if the player is able</font></i>
+<a name='L35'>  35 <i><font color='green'>         * to pass through the object and</font></i>
+<a name='L36'>  36 <i><font color='green'>         * false if the player is not able</font></i>
+<a name='L37'>  37 <i><font color='green'>         * to cross the object</font></i>
+<a name='L38'>  38 <i><font color='green'>         */</font></i>
+<a name='L39'>  39         <b>public</b> <b>boolean</b> isTraversable();
+<a name='L40'>  40 
+<a name='L41'>  41 <font color='red'>}</font>;
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;]<a href='#L13'>[^]</a><a href='#L39'>[v]</a><a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>window/topbar/TopBarButton.java</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/160.html'>window</a>/<a href='../files/161.html'>topbar</a>/TopBarButton.java</h2>
+<i><font color='green'>/* [&lt;][&gt;]<a href='#L48'>[^]</a>[v][top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<h2>DEFINITIONS</h2>
+This source file includes following definitions.
+<ol>
+<li><a href='#L48' title='Defined at 48.'>paintComponent</a>
+</ol>
+<hr>
+<pre>
+<a name='L1'>   1 <b>package</b> <a href='../Y/202.html' title='Multiple used in 13 places.'>window</a>.<a href='../Y/191.html' title='Multiple used in 12 places.'>topbar</a>;
+<a name='L2'>   2 
+<a name='L3'>   3 <b>import</b> main.Philophobia;
+<a name='L4'>   4 <b>import</b> window.topbar.TopBar;
+<a name='L5'>   5 
+<a name='L6'>   6 <b>import</b> java.awt.Graphics;
+<a name='L7'>   7 <b>import</b> java.awt.Graphics2D;
+<a name='L8'>   8 <b>import</b> java.io.File;
+<a name='L9'>   9 <b>import</b> java.awt.Image;
+<a name='L10'>  10 <b>import</b> java.io.IOException;
+<a name='L11'>  11 <b>import</b> javax.swing.ImageIcon;
+<a name='L12'>  12 <b>import</b> javax.imageio.ImageIO;
+<a name='L13'>  13 
+<a name='L14'>  14 <b>import</b> javax.swing.JButton;
+<a name='L15'>  15 
+<a name='L16'>  16 <i><font color='green'>/**</font></i>
+<a name='L17'>  17 <i><font color='green'> * Class handling the UI buttons </font></i>
+<a name='L18'>  18 <i><font color='green'> */</font></i>
+<a name='L19'>  19 <b>class</b> <a href='../R/21.html' title='Multiple refered from 2 places.'>TopBarButton</a> <b>extends</b> JButton <font color='red'>{</font>
+<a name='L20'>  20 
+<a name='L21'>  21         <i><font color='green'>/**</font></i>
+<a name='L22'>  22 <i><font color='green'>         * Image of the graphical representation of the button</font></i>
+<a name='L23'>  23 <i><font color='green'>         */</font></i>
+<a name='L24'>  24         <b>protected</b> <a href='../Y/33.html' title='Multiple used in 4 places.'>Image</a> <a href='../Y/106.html' title='Multiple used in 5 places.'>buttonImage</a>;
+<a name='L25'>  25 
+<a name='L26'>  26         <i><font color='green'>/**</font></i>
+<a name='L27'>  27 <i><font color='green'>         * UIButton constructor</font></i>
+<a name='L28'>  28 <i><font color='green'>         * @param imagePath path of the button's image</font></i>
+<a name='L29'>  29 <i><font color='green'>         * @see #buttonImage</font></i>
+<a name='L30'>  30 <i><font color='green'>         */</font></i>
+<a name='L31'>  31         <b>public</b> TopBarButton(<a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/137.html' title='Multiple used in 5 places.'>imagePath</a>) <font color='red'>{</font>
+<a name='L32'>  32 
+<a name='L33'>  33                 <b>super</b>();
+<a name='L34'>  34 
+<a name='L35'>  35                 <a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L79' title='Defined at 79 in main/Philophobia.java.'>getVerbose</a>().<a href='../S/5.html#L145' title='Defined at 145 in debug/Verbose.java.'>calls</a>("Creating TopBarButton class", "window/ui/TopBarButton.java", "TopBarButton.TopBarButton(String)");
+<a name='L36'>  36 
+<a name='L37'>  37                 <b>try</b> <font color='red'>{</font>
+<a name='L38'>  38                         <a href='../Y/106.html' title='Multiple used in 5 places.'>buttonImage</a> = <a href='../Y/34.html' title='Multiple used in 6 places.'>ImageIO</a>.read(<b>new</b> File(<a href='../Y/137.html' title='Multiple used in 5 places.'>imagePath</a>));
+<a name='L39'>  39                         <b>this</b>.setIcon(<b>new</b> ImageIcon(<a href='../Y/106.html' title='Multiple used in 5 places.'>buttonImage</a>));
+<a name='L40'>  40                         <b>this</b>.setBorder(<b>null</b>);
+<a name='L41'>  41                 <font color='red'>}</font> <b>catch</b>(<a href='../Y/31.html' title='Multiple used in 11 places.'>IOException</a> <a href='../Y/127.html' title='Multiple used in 25 places.'>e</a>) <font color='red'>{</font>
+<a name='L42'>  42                         <a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L79' title='Defined at 79 in main/Philophobia.java.'>getVerbose</a>().<a href='../S/5.html#L113' title='Defined at 113 in debug/Verbose.java.'>warning</a>("Button image load failed: " + <a href='../Y/127.html' title='Multiple used in 25 places.'>e</a>.getMessage(), "window/ui/TopBarButton.java", "TopBarButton.TopBarButton(String)");
+<a name='L43'>  43                         <a href='../Y/106.html' title='Multiple used in 5 places.'>buttonImage</a> = <b>null</b>;
+<a name='L44'>  44                 <font color='red'>}</font>
+<a name='L45'>  45 
+<a name='L46'>  46         <font color='red'>}</font>
+<a name='L47'>  47 
+<a name='L48'>  48         <b>public</b> <b>void</b> <a href='../S/7.html#L80' title='Refered from 80 in window/ui/UI.java.'>paintComponent</a>(<a href='../Y/27.html' title='Multiple used in 10 places.'>Graphics</a> <a href='../Y/130.html' title='Multiple used in 13 places.'>g</a>) <font color='red'>{</font>
+<a name='L49'>  49                 <a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L79' title='Defined at 79 in main/Philophobia.java.'>getVerbose</a>().<a href='../S/5.html#L145' title='Defined at 145 in debug/Verbose.java.'>calls</a>("painting TopBarButton component", "window/ui/TopBarButton.java", "TopBarButton.paintComponent(Graphics)");
+<a name='L50'>  50 
+<a name='L51'>  51                 <b>int</b> buttonSize = <a href='../Y/84.html' title='Multiple used in 4 places.'>TopBar</a>.<a href='../S/9.html#L63' title='Defined at 63 in window/topbar/TopBar.java.'>getTopBarHeight</a>() - <a href='../Y/84.html' title='Multiple used in 4 places.'>TopBar</a>.<a href='../S/9.html#L67' title='Defined at 67 in window/topbar/TopBar.java.'>getTopBarMargin</a>();
+<a name='L52'>  52 
+<a name='L53'>  53                 <a href='../Y/130.html' title='Multiple used in 13 places.'>g</a>.drawImage(<a href='../Y/106.html' title='Multiple used in 5 places.'>buttonImage</a>, 0, 0, <b>this</b>.getWidth(), <b>this</b>.getHeight(), <b>this</b>);
+<a name='L54'>  54         <font color='red'>}</font>
+<a name='L55'>  55 
+<a name='L56'>  56 <font color='red'>}</font>;
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;][^]<a href='#L48'>[v]</a><a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>

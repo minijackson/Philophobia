@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>gameplay/ai/phrasing/Phrasing.java</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/155.html'>gameplay</a>/<a href='../files/156.html'>ai</a>/<a href='../files/158.html'>phrasing</a>/Phrasing.java</h2>
+<i><font color='green'>/* [&lt;][&gt;][^][v][top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<pre>
+<a name='L1'>   1 <b>package</b> <a href='../Y/132.html' title='Multiple used in 22 places.'>gameplay</a>.<a href='../Y/97.html' title='Multiple used in 20 places.'>ai</a>.<a href='../Y/167.html' title='Multiple used in 4 places.'>phrasing</a>;
+<a name='L2'>   2 
+<a name='L3'>   3 <b>import</b> main.Philophobia;
+<a name='L4'>   4 <b>import</b> gameplay.ai.phrasing.OrderedPhrases;
+<a name='L5'>   5 
+<a name='L6'>   6 <b>public</b> <b>class</b> <a href='../S/13.html#L65' title='Refered from 65 in gameplay/ai/AI.java.'>Phrasing</a> <font color='red'>{</font>
+<a name='L7'>   7 
+<a name='L8'>   8         <i><font color='green'>/**</font></i>
+<a name='L9'>   9 <i><font color='green'>         * Attribute containing the AI phrases for the</font></i>
+<a name='L10'>  10 <i><font color='green'>         * curiosity Feeling that aims to motivate</font></i>
+<a name='L11'>  11 <i><font color='green'>         * the player to do some actions</font></i>
+<a name='L12'>  12 <i><font color='green'>         */</font></i>
+<a name='L13'>  13         <b>protected</b> <a href='../Y/55.html' title='Multiple used in 13 places.'>OrderedPhrases</a> <a href='../Y/112.html' title='Multiple used in 2 places.'>curiosityMotivationPhrases</a>;
+<a name='L14'>  14 
+<a name='L15'>  15         <i><font color='green'>/**</font></i>
+<a name='L16'>  16 <i><font color='green'>         * Attribute containing the AI phrases for the</font></i>
+<a name='L17'>  17 <i><font color='green'>         * curiosity Feeling that are said when the</font></i>
+<a name='L18'>  18 <i><font color='green'>         * player refused to do the asked action</font></i>
+<a name='L19'>  19 <i><font color='green'>         */</font></i>
+<a name='L20'>  20         <b>protected</b> <a href='../Y/55.html' title='Multiple used in 13 places.'>OrderedPhrases</a> <a href='../Y/111.html' title='Multiple used in 2 places.'>curiosityBetrayalPhrases</a>;
+<a name='L21'>  21 
+<a name='L22'>  22         <i><font color='green'>/**</font></i>
+<a name='L23'>  23 <i><font color='green'>         * Attribute containing the AI phrases for the</font></i>
+<a name='L24'>  24 <i><font color='green'>         * curiosity Feeling that are said when the</font></i>
+<a name='L25'>  25 <i><font color='green'>         * player did the asked action</font></i>
+<a name='L26'>  26 <i><font color='green'>         */</font></i>
+<a name='L27'>  27         <b>protected</b> <a href='../Y/55.html' title='Multiple used in 13 places.'>OrderedPhrases</a> <a href='../Y/113.html' title='Multiple used in 2 places.'>curiositySlaveryPhrases</a>;
+<a name='L28'>  28 
+<a name='L29'>  29         <i><font color='green'>/**</font></i>
+<a name='L30'>  30 <i><font color='green'>         * Attribute containing the AI phrases for the</font></i>
+<a name='L31'>  31 <i><font color='green'>         * anger Feeling that aims to motivate</font></i>
+<a name='L32'>  32 <i><font color='green'>         * the player to do some actions</font></i>
+<a name='L33'>  33 <i><font color='green'>         */</font></i>
+<a name='L34'>  34         <b>protected</b> <a href='../Y/55.html' title='Multiple used in 13 places.'>OrderedPhrases</a> <a href='../Y/99.html' title='Multiple used in 2 places.'>angerMotivationPhrases</a>;
+<a name='L35'>  35 
+<a name='L36'>  36         <i><font color='green'>/**</font></i>
+<a name='L37'>  37 <i><font color='green'>         * Attribute containing the AI phrases for the</font></i>
+<a name='L38'>  38 <i><font color='green'>         * anger Feeling that are said when the</font></i>
+<a name='L39'>  39 <i><font color='green'>         * player refused to do the asked action</font></i>
+<a name='L40'>  40 <i><font color='green'>         */</font></i>
+<a name='L41'>  41         <b>protected</b> <a href='../Y/55.html' title='Multiple used in 13 places.'>OrderedPhrases</a> <a href='../Y/98.html' title='Multiple used in 2 places.'>angerBetrayalPhrases</a>;
+<a name='L42'>  42 
+<a name='L43'>  43         <i><font color='green'>/**</font></i>
+<a name='L44'>  44 <i><font color='green'>         * Attribute containing the AI phrases for the</font></i>
+<a name='L45'>  45 <i><font color='green'>         * anger Feeling that are said when the</font></i>
+<a name='L46'>  46 <i><font color='green'>         * player did the asked action</font></i>
+<a name='L47'>  47 <i><font color='green'>         */</font></i>
+<a name='L48'>  48         <b>protected</b> <a href='../Y/55.html' title='Multiple used in 13 places.'>OrderedPhrases</a> <a href='../Y/100.html' title='Multiple used in 2 places.'>angerSlaveryPhrases</a>;
+<a name='L49'>  49 
+<a name='L50'>  50         <i><font color='green'>/**</font></i>
+<a name='L51'>  51 <i><font color='green'>         * Attribute containing the AI phrases for the</font></i>
+<a name='L52'>  52 <i><font color='green'>         * depression Feeling that aims to motivate</font></i>
+<a name='L53'>  53 <i><font color='green'>         * the player to do some actions</font></i>
+<a name='L54'>  54 <i><font color='green'>         */</font></i>
+<a name='L55'>  55         <b>protected</b> <a href='../Y/55.html' title='Multiple used in 13 places.'>OrderedPhrases</a> <a href='../Y/121.html' title='Multiple used in 2 places.'>depressionMotivationPhrases</a>;
+<a name='L56'>  56 
+<a name='L57'>  57         <i><font color='green'>/**</font></i>
+<a name='L58'>  58 <i><font color='green'>         * Attribute containing the AI phrases for the</font></i>
+<a name='L59'>  59 <i><font color='green'>         * depression Feeling that are said when the</font></i>
+<a name='L60'>  60 <i><font color='green'>         * player refused to do the asked action</font></i>
+<a name='L61'>  61 <i><font color='green'>         */</font></i>
+<a name='L62'>  62         <b>protected</b> <a href='../Y/55.html' title='Multiple used in 13 places.'>OrderedPhrases</a> <a href='../Y/120.html' title='Multiple used in 2 places.'>depressionBetrayalPhrases</a>;
+<a name='L63'>  63 
+<a name='L64'>  64         <i><font color='green'>/**</font></i>
+<a name='L65'>  65 <i><font color='green'>         * Attribute containing the AI phrases for the</font></i>
+<a name='L66'>  66 <i><font color='green'>         * depression Feeling that are said when the</font></i>
+<a name='L67'>  67 <i><font color='green'>         * player did the asked action</font></i>
+<a name='L68'>  68 <i><font color='green'>         */</font></i>
+<a name='L69'>  69         <b>protected</b> <a href='../Y/55.html' title='Multiple used in 13 places.'>OrderedPhrases</a> <a href='../Y/122.html' title='Multiple used in 2 places.'>depressionSlaveryPhrases</a>;
+<a name='L70'>  70 
+<a name='L71'>  71         <i><font color='green'>/**</font></i>
+<a name='L72'>  72 <i><font color='green'>         * Attribute containing the AI phrases for the</font></i>
+<a name='L73'>  73 <i><font color='green'>         * power complex Feeling that aims to motivate</font></i>
+<a name='L74'>  74 <i><font color='green'>         * the player to do some actions</font></i>
+<a name='L75'>  75 <i><font color='green'>         */</font></i>
+<a name='L76'>  76         <b>protected</b> <a href='../Y/55.html' title='Multiple used in 13 places.'>OrderedPhrases</a> <a href='../Y/172.html' title='Multiple used in 2 places.'>powerComplexMotivationPhrases</a>;
+<a name='L77'>  77 
+<a name='L78'>  78         <i><font color='green'>/**</font></i>
+<a name='L79'>  79 <i><font color='green'>         * Attribute containing the AI phrases for the</font></i>
+<a name='L80'>  80 <i><font color='green'>         * power complex Feeling that are said when the</font></i>
+<a name='L81'>  81 <i><font color='green'>         * player refused to do the asked action</font></i>
+<a name='L82'>  82 <i><font color='green'>         */</font></i>
+<a name='L83'>  83         <b>protected</b> <a href='../Y/55.html' title='Multiple used in 13 places.'>OrderedPhrases</a> <a href='../Y/171.html' title='Multiple used in 2 places.'>powerComplexBetrayalPhrases</a>;
+<a name='L84'>  84 
+<a name='L85'>  85         <i><font color='green'>/**</font></i>
+<a name='L86'>  86 <i><font color='green'>         * Attribute containing the AI phrases for the</font></i>
+<a name='L87'>  87 <i><font color='green'>         * power complex Feeling that are said when the</font></i>
+<a name='L88'>  88 <i><font color='green'>         * player did the asked action</font></i>
+<a name='L89'>  89 <i><font color='green'>         */</font></i>
+<a name='L90'>  90         <b>protected</b> <a href='../Y/55.html' title='Multiple used in 13 places.'>OrderedPhrases</a> <a href='../Y/173.html' title='Multiple used in 2 places.'>powerComplexSlaveryPhrases</a>;
+<a name='L91'>  91 
+<a name='L92'>  92         <i><font color='green'>/**</font></i>
+<a name='L93'>  93 <i><font color='green'>         * Field containing the asked action in a</font></i>
+<a name='L94'>  94 <i><font color='green'>         * human readable format</font></i>
+<a name='L95'>  95 <i><font color='green'>         */</font></i>
+<a name='L96'>  96         <b>protected</b> <a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> actionAsked;
+<a name='L97'>  97 
+<a name='L98'>  98         <i><font color='green'>/**</font></i>
+<a name='L99'>  99 <i><font color='green'>         * Phrasing class constructor</font></i>
+<a name='L100'> 100 <i><font color='green'>         */</font></i>
+<a name='L101'> 101         <b>public</b> Phrasing() <font color='red'>{</font>
+<a name='L102'> 102                 <a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L79' title='Defined at 79 in main/Philophobia.java.'>getVerbose</a>().<a href='../S/5.html#L145' title='Defined at 145 in debug/Verbose.java.'>calls</a>("Creating Phrasing class", "gameplay/ai/phrasing/Phrasing.java", "Phrasing.Phrasing()");
+<a name='L103'> 103 
+<a name='L104'> 104                 <a href='../Y/112.html' title='Multiple used in 2 places.'>curiosityMotivationPhrases</a> = <b>new</b> <a href='../S/11.html#L19' title='Defined at 19 in gameplay/ai/phrasing/OrderedPhrases.java.'>OrderedPhrases</a>(<a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L99' title='Defined at 99 in main/Philophobia.java.'>getPhrasesFilePrefix</a>() + "curiositymotivation.phrases");
+<a name='L105'> 105                 <a href='../Y/111.html' title='Multiple used in 2 places.'>curiosityBetrayalPhrases</a> = <b>new</b> <a href='../S/11.html#L19' title='Defined at 19 in gameplay/ai/phrasing/OrderedPhrases.java.'>OrderedPhrases</a>(<a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L99' title='Defined at 99 in main/Philophobia.java.'>getPhrasesFilePrefix</a>() + "curiositybetrayal.phrases");
+<a name='L106'> 106                 <a href='../Y/113.html' title='Multiple used in 2 places.'>curiositySlaveryPhrases</a> = <b>new</b> <a href='../S/11.html#L19' title='Defined at 19 in gameplay/ai/phrasing/OrderedPhrases.java.'>OrderedPhrases</a>(<a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L99' title='Defined at 99 in main/Philophobia.java.'>getPhrasesFilePrefix</a>() + "curiosityslavery.phrases");
+<a name='L107'> 107                 
+<a name='L108'> 108                 <a href='../Y/99.html' title='Multiple used in 2 places.'>angerMotivationPhrases</a> = <b>new</b> <a href='../S/11.html#L19' title='Defined at 19 in gameplay/ai/phrasing/OrderedPhrases.java.'>OrderedPhrases</a>(<a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L99' title='Defined at 99 in main/Philophobia.java.'>getPhrasesFilePrefix</a>() + "angermotivation.phrases");
+<a name='L109'> 109                 <a href='../Y/98.html' title='Multiple used in 2 places.'>angerBetrayalPhrases</a> = <b>new</b> <a href='../S/11.html#L19' title='Defined at 19 in gameplay/ai/phrasing/OrderedPhrases.java.'>OrderedPhrases</a>(<a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L99' title='Defined at 99 in main/Philophobia.java.'>getPhrasesFilePrefix</a>() + "angerbetrayal.phrases");
+<a name='L110'> 110                 <a href='../Y/100.html' title='Multiple used in 2 places.'>angerSlaveryPhrases</a> = <b>new</b> <a href='../S/11.html#L19' title='Defined at 19 in gameplay/ai/phrasing/OrderedPhrases.java.'>OrderedPhrases</a>(<a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L99' title='Defined at 99 in main/Philophobia.java.'>getPhrasesFilePrefix</a>() + "angerslavery.phrases");
+<a name='L111'> 111 
+<a name='L112'> 112                 <a href='../Y/121.html' title='Multiple used in 2 places.'>depressionMotivationPhrases</a> = <b>new</b> <a href='../S/11.html#L19' title='Defined at 19 in gameplay/ai/phrasing/OrderedPhrases.java.'>OrderedPhrases</a>(<a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L99' title='Defined at 99 in main/Philophobia.java.'>getPhrasesFilePrefix</a>() + "depressionmotivation.phrases");
+<a name='L113'> 113                 <a href='../Y/120.html' title='Multiple used in 2 places.'>depressionBetrayalPhrases</a> = <b>new</b> <a href='../S/11.html#L19' title='Defined at 19 in gameplay/ai/phrasing/OrderedPhrases.java.'>OrderedPhrases</a>(<a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L99' title='Defined at 99 in main/Philophobia.java.'>getPhrasesFilePrefix</a>() + "depressionbetrayal.phrases");
+<a name='L114'> 114                 <a href='../Y/122.html' title='Multiple used in 2 places.'>depressionSlaveryPhrases</a> = <b>new</b> <a href='../S/11.html#L19' title='Defined at 19 in gameplay/ai/phrasing/OrderedPhrases.java.'>OrderedPhrases</a>(<a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L99' title='Defined at 99 in main/Philophobia.java.'>getPhrasesFilePrefix</a>() + "depressionslavery.phrases");
+<a name='L115'> 115 
+<a name='L116'> 116                 <a href='../Y/172.html' title='Multiple used in 2 places.'>powerComplexMotivationPhrases</a> = <b>new</b> <a href='../S/11.html#L19' title='Defined at 19 in gameplay/ai/phrasing/OrderedPhrases.java.'>OrderedPhrases</a>(<a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L99' title='Defined at 99 in main/Philophobia.java.'>getPhrasesFilePrefix</a>() + "powercomplexmotivation.phrases");
+<a name='L117'> 117                 <a href='../Y/171.html' title='Multiple used in 2 places.'>powerComplexBetrayalPhrases</a> = <b>new</b> <a href='../S/11.html#L19' title='Defined at 19 in gameplay/ai/phrasing/OrderedPhrases.java.'>OrderedPhrases</a>(<a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L99' title='Defined at 99 in main/Philophobia.java.'>getPhrasesFilePrefix</a>() + "powercomplexbetrayal.phrases");
+<a name='L118'> 118                 <a href='../Y/173.html' title='Multiple used in 2 places.'>powerComplexSlaveryPhrases</a> = <b>new</b> <a href='../S/11.html#L19' title='Defined at 19 in gameplay/ai/phrasing/OrderedPhrases.java.'>OrderedPhrases</a>(<a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L99' title='Defined at 99 in main/Philophobia.java.'>getPhrasesFilePrefix</a>() + "powercomplexslavery.phrases");
+<a name='L119'> 119 
+<a name='L120'> 120         <font color='red'>}</font>
+<a name='L121'> 121 
+<a name='L122'> 122 <font color='red'>}</font>;
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;][^][v]<a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>

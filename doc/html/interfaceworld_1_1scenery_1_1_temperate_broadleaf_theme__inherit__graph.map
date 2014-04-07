@@ -1,0 +1,8 @@
+<map id="world.scenery.TemperateBroadleafTheme" name="world.scenery.TemperateBroadleafTheme">
+<area shape="rect" id="node3" href="$classworld_1_1scenery_1_1_flower.html" title="Class used to handle a flower object. " alt="" coords="280,5,424,38"/>
+<area shape="rect" id="node5" href="$classworld_1_1scenery_1_1_grass.html" title="Class used to handle a grass object. " alt="" coords="281,61,423,94"/>
+<area shape="rect" id="node7" href="$classworld_1_1scenery_1_1_ground.html" title="Class used to handle a ground object. " alt="" coords="279,117,425,150"/>
+<area shape="rect" id="node9" href="$classworld_1_1scenery_1_1_rock.html" title="Class used to handle a rock object. " alt="" coords="284,173,420,206"/>
+<area shape="rect" id="node11" href="$classworld_1_1scenery_1_1_shrub.html" title="Class used to handle a shrub object. " alt="" coords="283,229,421,262"/>
+<area shape="rect" id="node13" href="$classworld_1_1scenery_1_1_tree.html" title="Class used to handle a tree object. " alt="" coords="287,285,417,318"/>
+</map>

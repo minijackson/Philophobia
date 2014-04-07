@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>gameplay/GamePlay.java</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/155.html'>gameplay</a>/GamePlay.java</h2>
+<i><font color='green'>/* [&lt;][&gt;][^][v][top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<pre>
+<a name='L1'>   1 <b>package</b> <a href='../Y/132.html' title='Multiple used in 22 places.'>gameplay</a>;
+<a name='L2'>   2 
+<a name='L3'>   3 <b>import</b> main.Philophobia;
+<a name='L4'>   4 <b>import</b> debug.CliOptions;
+<a name='L5'>   5 <b>import</b> window.Window;
+<a name='L6'>   6 <b>import</b> world.World;
+<a name='L7'>   7 <b>import</b> gameplay.ai.AI;
+<a name='L8'>   8 
+<a name='L9'>   9 <i><font color='green'>/**</font></i>
+<a name='L10'>  10 <i><font color='green'> * Class handling the game play of this game</font></i>
+<a name='L11'>  11 <i><font color='green'> * &lt;p&gt;</font></i>
+<a name='L12'>  12 <i><font color='green'> * It handle the creation of worlds, the movements</font></i>
+<a name='L13'>  13 <i><font color='green'> * of the main character and all the other characters,</font></i>
+<a name='L14'>  14 <i><font color='green'> * (including the constraints), the interactions between</font></i>
+<a name='L15'>  15 <i><font color='green'> * the main character and the other characters or the</font></i>
+<a name='L16'>  16 <i><font color='green'> * scenery</font></i>
+<a name='L17'>  17 <i><font color='green'> * &lt;p&gt;</font></i>
+<a name='L18'>  18 <i><font color='green'> * The GamePlay class also controls the user interface mode</font></i>
+<a name='L19'>  19 <i><font color='green'> * (loading screen, win, fail, etc…)</font></i>
+<a name='L20'>  20 <i><font color='green'> * &lt;p&gt;</font></i>
+<a name='L21'>  21 <i><font color='green'> * This class is the equivalent of the controller in the</font></i>
+<a name='L22'>  22 <i><font color='green'> * MVC paradigm.</font></i>
+<a name='L23'>  23 <i><font color='green'> * @see world.World</font></i>
+<a name='L24'>  24 <i><font color='green'> */</font></i>
+<a name='L25'>  25 <b>public</b> <b>class</b> <a href='../S/141.html#L59' title='Refered from 59 in main/Philophobia.java.'>GamePlay</a> <font color='red'>{</font>
+<a name='L26'>  26 
+<a name='L27'>  27         <i><font color='green'>/**</font></i>
+<a name='L28'>  28 <i><font color='green'>         * World currently being played</font></i>
+<a name='L29'>  29 <i><font color='green'>         */</font></i>
+<a name='L30'>  30         <b>protected</b> <a href='../Y/93.html' title='Multiple used in 10 places.'>World</a> <a href='../Y/117.html' title='Multiple used in 8 places.'>currentWorld</a>;
+<a name='L31'>  31 
+<a name='L32'>  32         <i><font color='green'>/**</font></i>
+<a name='L33'>  33 <i><font color='green'>         * Name of the world currently being played</font></i>
+<a name='L34'>  34 <i><font color='green'>         * &lt;p&gt;</font></i>
+<a name='L35'>  35 <i><font color='green'>         * It is used to detect in which world the</font></i>
+<a name='L36'>  36 <i><font color='green'>         * player is and where are the other worlds</font></i>
+<a name='L37'>  37 <i><font color='green'>         */</font></i>
+<a name='L38'>  38         <b>protected</b> <a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/118.html' title='Multiple used in 2 places.'>currentWorldName</a>;
+<a name='L39'>  39 
+<a name='L40'>  40         <i><font color='green'>/**</font></i>
+<a name='L41'>  41 <i><font color='green'>         * The game window</font></i>
+<a name='L42'>  42 <i><font color='green'>         */</font></i>
+<a name='L43'>  43         <b>protected</b> <a href='../Y/91.html' title='Multiple used in 2 places.'>Window</a> <a href='../Y/202.html' title='Multiple used in 13 places.'>window</a>;
+<a name='L44'>  44 
+<a name='L45'>  45         <i><font color='green'>/**</font></i>
+<a name='L46'>  46 <i><font color='green'>         * Malicious artificial intelligence</font></i>
+<a name='L47'>  47 <i><font color='green'>         * driving the player mad</font></i>
+<a name='L48'>  48 <i><font color='green'>         */</font></i>
+<a name='L49'>  49         <b>protected</b> <a href='../Y/1.html' title='Multiple used in 2 places.'>AI</a> <a href='../Y/102.html' title='Multiple used in 2 places.'>artificialIntelligence</a>;
+<a name='L50'>  50 
+<a name='L51'>  51         <i><font color='green'>/**</font></i>
+<a name='L52'>  52 <i><font color='green'>         * Constructor of the GamePlay class</font></i>
+<a name='L53'>  53 <i><font color='green'>         * @param cliOptions Opions for the game given via the command line</font></i>
+<a name='L54'>  54 <i><font color='green'>         */</font></i>
+<a name='L55'>  55         <b>public</b> GamePlay(<a href='../Y/15.html' title='Multiple used in 4 places.'>CliOptions</a> cliOptions) <font color='red'>{</font>
+<a name='L56'>  56                 <a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L79' title='Defined at 79 in main/Philophobia.java.'>getVerbose</a>().<a href='../S/5.html#L129' title='Defined at 129 in debug/Verbose.java.'>information</a>("Creating GamePlay class", "gameplay/Gameplay.java", "GamePlay.GamePlay()");
+<a name='L57'>  57 
+<a name='L58'>  58                 <i><font color='green'>// The default world is the Temperate Broadleaf world</font></i>
+<a name='L59'>  59                 <a href='../Y/118.html' title='Multiple used in 2 places.'>currentWorldName</a> = "Temperate Broadleaf";
+<a name='L60'>  60                 <a href='../Y/117.html' title='Multiple used in 8 places.'>currentWorld</a> = <b>new</b> <a href='../S/117.html#L18' title='Defined at 18 in world/World.java.'>World</a>("temperatebroadleaf");
+<a name='L61'>  61 
+<a name='L62'>  62                 <a href='../Y/202.html' title='Multiple used in 13 places.'>window</a> = <b>new</b> <a href='../S/6.html#L12' title='Defined at 12 in window/Window.java.'>Window</a>();
+<a name='L63'>  63 
+<a name='L64'>  64                 <b>try</b> <font color='red'>{</font>
+<a name='L65'>  65                         <i><font color='green'>// Sleep during the length of the animation</font></i>
+<a name='L66'>  66                         Thread.sleep(2000);
+<a name='L67'>  67                 <font color='red'>}</font> <b>catch</b>(InterruptedException <a href='../Y/127.html' title='Multiple used in 25 places.'>e</a>) <font color='red'>{</font>
+<a name='L68'>  68                         <a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L79' title='Defined at 79 in main/Philophobia.java.'>getVerbose</a>().<a href='../S/5.html#L113' title='Defined at 113 in debug/Verbose.java.'>warning</a>("Sleep interrupted: " + <a href='../Y/127.html' title='Multiple used in 25 places.'>e</a>.getMessage(), "gameplay/GamePlay.java", "GamePlay.GamePlay(CliOptions)");
+<a name='L69'>  69                 <font color='red'>}</font>
+<a name='L70'>  70 
+<a name='L71'>  71                 <a href='../Y/102.html' title='Multiple used in 2 places.'>artificialIntelligence</a> = <b>new</b> <a href='../S/13.html#L28' title='Defined at 28 in gameplay/ai/AI.java.'>AI</a>(<a href='../Y/117.html' title='Multiple used in 8 places.'>currentWorld</a>);
+<a name='L72'>  72 
+<a name='L73'>  73                 <a href='../Y/202.html' title='Multiple used in 13 places.'>window</a>.<a href='../S/6.html#L83' title='Defined at 83 in window/Window.java.'>getUserInterface</a>().<a href='../S/7.html#L70' title='Defined at 70 in window/ui/UI.java.'>setDisplayedWorld</a>(<a href='../Y/117.html' title='Multiple used in 8 places.'>currentWorld</a>);
+<a name='L74'>  74                 <a href='../Y/202.html' title='Multiple used in 13 places.'>window</a>.<a href='../S/6.html#L64' title='Defined at 64 in window/Window.java.'>setGameState</a>();
+<a name='L75'>  75         <font color='red'>}</font>
+<a name='L76'>  76 
+<a name='L77'>  77 <font color='red'>}</font>;
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;][^][v]<a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>debug/Verbose.java</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/154.html'>debug</a>/Verbose.java</h2>
+<i><font color='green'>/* [&lt;][&gt;]<a href='#L81'>[^]</a><a href='#L145'>[v]</a>[top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<h2>DEFINITIONS</h2>
+This source file includes following definitions.
+<ol>
+<li><a href='#L81' title='Defined at 81.'>critical</a>
+<li><a href='#L97' title='Defined at 97.'>serious</a>
+<li><a href='#L113' title='Defined at 113.'>warning</a>
+<li><a href='#L129' title='Defined at 129.'>information</a>
+<li><a href='#L145' title='Defined at 145.'>calls</a>
+</ol>
+<hr>
+<pre>
+<a name='L1'>   1 <b>package</b> <a href='../Y/119.html' title='Multiple used in 6 places.'>debug</a>;
+<a name='L2'>   2 
+<a name='L3'>   3 <b>import</b> java.util.logging.Logger;
+<a name='L4'>   4 <b>import</b> java.util.logging.FileHandler;
+<a name='L5'>   5 <b>import</b> java.util.logging.Level;
+<a name='L6'>   6 <b>import</b> java.io.IOException;
+<a name='L7'>   7 
+<a name='L8'>   8 <i><font color='green'>/**</font></i>
+<a name='L9'>   9 <i><font color='green'> * Class used to display and log messages all over this program</font></i>
+<a name='L10'>  10 <i><font color='green'> */</font></i>
+<a name='L11'>  11 <b>public</b> <b>class</b> <a href='../S/141.html#L55' title='Refered from 55 in main/Philophobia.java.'>Verbose</a> <font color='red'>{</font>
+<a name='L12'>  12 
+<a name='L13'>  13         <i><font color='green'>/**</font></i>
+<a name='L14'>  14 <i><font color='green'>         * Level of verbosing, from 0 to 5</font></i>
+<a name='L15'>  15 <i><font color='green'>         * &lt;p&gt; </font></i>
+<a name='L16'>  16 <i><font color='green'>         * The number of information displayed and logged goes increasingly as the number increase</font></i>
+<a name='L17'>  17 <i><font color='green'>         * - Level 1 : Only critical errors and exeptions are displayed on the console</font></i>
+<a name='L18'>  18 <i><font color='green'>         * - Level 2 : Serious but not critical errors and level 1 displayed</font></i>
+<a name='L19'>  19 <i><font color='green'>         * - Level 3 : Warning and level 2 displayed</font></i>
+<a name='L20'>  20 <i><font color='green'>         * - Level 4 : Informations and level 3 displayed</font></i>
+<a name='L21'>  21 <i><font color='green'>         * - Level 5 : Everything, included Class instanciations and function calls and level 4 displayed</font></i>
+<a name='L22'>  22 <i><font color='green'>         */</font></i>
+<a name='L23'>  23         <b>protected</b> <b>int</b> <a href='../Y/199.html' title='Multiple used in 7 places.'>verboseMode</a> = 0;
+<a name='L24'>  24         
+<a name='L25'>  25         <i><font color='green'>/**</font></i>
+<a name='L26'>  26 <i><font color='green'>         * Logger used to log messages into a file</font></i>
+<a name='L27'>  27 <i><font color='green'>         */</font></i>
+<a name='L28'>  28         <a href='../Y/50.html' title='Multiple used in 3 places.'>Logger</a> <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>;
+<a name='L29'>  29 
+<a name='L30'>  30         <i><font color='green'>/**</font></i>
+<a name='L31'>  31 <i><font color='green'>         * Class constructor</font></i>
+<a name='L32'>  32 <i><font color='green'>         * </font></i>
+<a name='L33'>  33 <i><font color='green'>         * @param level Level of "verbosing"</font></i>
+<a name='L34'>  34 <i><font color='green'>         * @see #verboseMode</font></i>
+<a name='L35'>  35 <i><font color='green'>         */</font></i>
+<a name='L36'>  36         <b>public</b> Verbose(<b>int</b> <a href='../Y/144.html' title='Multiple used in 9 places.'>level</a>) <font color='red'>{</font>
+<a name='L37'>  37                 <b>this</b>.<a href='../Y/199.html' title='Multiple used in 7 places.'>verboseMode</a> = <a href='../Y/144.html' title='Multiple used in 9 places.'>level</a>;
+<a name='L38'>  38 
+<a name='L39'>  39                 <b>if</b>(<a href='../Y/144.html' title='Multiple used in 9 places.'>level</a> &gt; 0) <font color='red'>{</font>
+<a name='L40'>  40                         <a href='../Y/75.html' title='Multiple used in 14 places.'>System</a>.<a href='../Y/162.html' title='Multiple used in 14 places.'>out</a>.println("Verbose mode activated at level " + <a href='../Y/144.html' title='Multiple used in 9 places.'>level</a>);
+<a name='L41'>  41                         
+<a name='L42'>  42                                 <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a> = <a href='../Y/50.html' title='Multiple used in 3 places.'>Logger</a>.getLogger("Philophobia.log");
+<a name='L43'>  43                                 
+<a name='L44'>  44                                 <b>try</b> <font color='red'>{</font>
+<a name='L45'>  45                                         <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>.addHandler(<b>new</b> FileHandler("Philophobia.log"));
+<a name='L46'>  46                                 <font color='red'>}</font> <b>catch</b> (<a href='../Y/31.html' title='Multiple used in 11 places.'>IOException</a> <a href='../Y/127.html' title='Multiple used in 25 places.'>e</a>) <font color='red'>{</font>
+<a name='L47'>  47                                         <a href='../S/5.html#L113' title='Defined at 113 in debug/Verbose.java.'>warning</a>("Error initializing the log file", "org/debug/Verbose.java", "Verbose.Verbose(int)");
+<a name='L48'>  48                                 <font color='red'>}</font>
+<a name='L49'>  49 
+<a name='L50'>  50                                 <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>.setLevel(<a href='../Y/45.html' title='Multiple used in 2 places.'>Level</a>.parse("ALL"));
+<a name='L51'>  51 
+<a name='L52'>  52                                 <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>.info("Verbose at level " + <a href='../Y/144.html' title='Multiple used in 9 places.'>level</a> + ".");
+<a name='L53'>  53                                 <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>.info("Displayed messages are :");
+<a name='L54'>  54                                 <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>.info("- Criticals");
+<a name='L55'>  55 
+<a name='L56'>  56                                 <b>if</b>(<a href='../Y/144.html' title='Multiple used in 9 places.'>level</a> &gt;= 2) <font color='red'>{</font>
+<a name='L57'>  57                                         <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>.info("- Serious");
+<a name='L58'>  58                                 <font color='red'>}</font>
+<a name='L59'>  59                                 <b>if</b>(<a href='../Y/144.html' title='Multiple used in 9 places.'>level</a> &gt;= 3) <font color='red'>{</font>
+<a name='L60'>  60                                         <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>.info("- Warnings");
+<a name='L61'>  61                                 <font color='red'>}</font>
+<a name='L62'>  62                                 <b>if</b>(<a href='../Y/144.html' title='Multiple used in 9 places.'>level</a> &gt;= 4) <font color='red'>{</font>
+<a name='L63'>  63                                         <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>.info("- Informations");
+<a name='L64'>  64                                 <font color='red'>}</font>
+<a name='L65'>  65                                 <b>if</b>(<a href='../Y/144.html' title='Multiple used in 9 places.'>level</a> &gt;= 5) <font color='red'>{</font>
+<a name='L66'>  66                                         <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>.info("- Class instanciations and function calls");
+<a name='L67'>  67                                 <font color='red'>}</font>
+<a name='L68'>  68                 <font color='red'>}</font>
+<a name='L69'>  69 
+<a name='L70'>  70                 <b>this</b>.<a href='../S/5.html#L145' title='Defined at 145 in debug/Verbose.java.'>calls</a>("Verbose class created", "org/debug/Verbose.java", "Verbose.Verbose(int)");
+<a name='L71'>  71         <font color='red'>}</font>
+<a name='L72'>  72 
+<a name='L73'>  73         <i><font color='green'>/**</font></i>
+<a name='L74'>  74 <i><font color='green'>         * Display and log a message with additionnal informations in the log file</font></i>
+<a name='L75'>  75 <i><font color='green'>         * The message is displayed and logged if and only if the verbose level is greater or equal to 1</font></i>
+<a name='L76'>  76 <i><font color='green'>         *</font></i>
+<a name='L77'>  77 <i><font color='green'>         * @param message Message content</font></i>
+<a name='L78'>  78 <i><font color='green'>         * @param file File in which this function is called</font></i>
+<a name='L79'>  79 <i><font color='green'>         * @param location Class and function in which this function is called</font></i>
+<a name='L80'>  80 <i><font color='green'>         */</font></i>
+<a name='L81'>  81         <b>public</b> <b>void</b> critical(<a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a>, <a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/128.html' title='Multiple used in 10 places.'>file</a>, <a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/146.html' title='Multiple used in 10 places.'>location</a>) <font color='red'>{</font>
+<a name='L82'>  82                 <b>if</b>(<a href='../Y/199.html' title='Multiple used in 7 places.'>verboseMode</a> &gt;= 1) <font color='red'>{</font>
+<a name='L83'>  83                         <a href='../Y/75.html' title='Multiple used in 14 places.'>System</a>.<a href='../Y/162.html' title='Multiple used in 14 places.'>out</a>.println("Critical : " + <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a>);
+<a name='L84'>  84 
+<a name='L85'>  85                         <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>.severe("Critical : " + <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a> + " in file " + <a href='../Y/128.html' title='Multiple used in 10 places.'>file</a> + " in " + <a href='../Y/146.html' title='Multiple used in 10 places.'>location</a>);
+<a name='L86'>  86                 <font color='red'>}</font>
+<a name='L87'>  87         <font color='red'>}</font>
+<a name='L88'>  88 
+<a name='L89'>  89         <i><font color='green'>/**</font></i>
+<a name='L90'>  90 <i><font color='green'>         * Display and log a message with additionnal informations in the log file</font></i>
+<a name='L91'>  91 <i><font color='green'>         * The message is displayed and logged if and only if the verbose level is greater or equal to 2</font></i>
+<a name='L92'>  92 <i><font color='green'>         *</font></i>
+<a name='L93'>  93 <i><font color='green'>         * @param message Message content</font></i>
+<a name='L94'>  94 <i><font color='green'>         * @param file File in which this function is called</font></i>
+<a name='L95'>  95 <i><font color='green'>     * @param location Class and function in which this function is called</font></i>
+<a name='L96'>  96 <i><font color='green'>         */</font></i>
+<a name='L97'>  97         <b>public</b> <b>void</b> <a href='../R/66.html' title='Multiple refered from 7 places.'>serious</a>(<a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a>, <a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/128.html' title='Multiple used in 10 places.'>file</a>, <a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/146.html' title='Multiple used in 10 places.'>location</a>) <font color='red'>{</font>
+<a name='L98'>  98                 <b>if</b>(<a href='../Y/199.html' title='Multiple used in 7 places.'>verboseMode</a> &gt;= 2) <font color='red'>{</font>
+<a name='L99'>  99                         <a href='../Y/75.html' title='Multiple used in 14 places.'>System</a>.<a href='../Y/162.html' title='Multiple used in 14 places.'>out</a>.println("Serious : " + <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a>);
+<a name='L100'> 100                         
+<a name='L101'> 101                         <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>.severe("Serious : " + <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a> + " in file " + <a href='../Y/128.html' title='Multiple used in 10 places.'>file</a> + " in " + <a href='../Y/146.html' title='Multiple used in 10 places.'>location</a>);
+<a name='L102'> 102                 <font color='red'>}</font>
+<a name='L103'> 103         <font color='red'>}</font>
+<a name='L104'> 104         
+<a name='L105'> 105         <i><font color='green'>/**</font></i>
+<a name='L106'> 106 <i><font color='green'>         * Display and log a message with additionnal informations in the log file</font></i>
+<a name='L107'> 107 <i><font color='green'>         * The message is displayed and logged if and only if the verbose level is greater or equal to 3</font></i>
+<a name='L108'> 108 <i><font color='green'>         *</font></i>
+<a name='L109'> 109 <i><font color='green'>         * @param message Message content</font></i>
+<a name='L110'> 110 <i><font color='green'>         * @param file File in which this function is called</font></i>
+<a name='L111'> 111 <i><font color='green'>     * @param location Class and function in which this function is called</font></i>
+<a name='L112'> 112 <i><font color='green'>         */</font></i>
+<a name='L113'> 113         <b>public</b> <b>void</b> <a href='../R/71.html' title='Multiple refered from 7 places.'>warning</a>(<a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a>, <a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/128.html' title='Multiple used in 10 places.'>file</a>, <a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/146.html' title='Multiple used in 10 places.'>location</a>) <font color='red'>{</font>
+<a name='L114'> 114                 <b>if</b>(<a href='../Y/199.html' title='Multiple used in 7 places.'>verboseMode</a> &gt;= 3) <font color='red'>{</font>
+<a name='L115'> 115                         <a href='../Y/75.html' title='Multiple used in 14 places.'>System</a>.<a href='../Y/162.html' title='Multiple used in 14 places.'>out</a>.println("Warning : " + <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a>);
+<a name='L116'> 116                         
+<a name='L117'> 117                         <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>.<a href='../S/5.html#L113' title='Defined at 113 in debug/Verbose.java.'>warning</a>("Warning : " + <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a> + " in file " + <a href='../Y/128.html' title='Multiple used in 10 places.'>file</a> + " in " + <a href='../Y/146.html' title='Multiple used in 10 places.'>location</a>);
+<a name='L118'> 118                 <font color='red'>}</font>
+<a name='L119'> 119         <font color='red'>}</font>
+<a name='L120'> 120         
+<a name='L121'> 121         <i><font color='green'>/**</font></i>
+<a name='L122'> 122 <i><font color='green'>         * Display and log a message with additionnal informations in the log file</font></i>
+<a name='L123'> 123 <i><font color='green'>         * The message is displayed and logged if and only if the verbose level is greater or equal to 4</font></i>
+<a name='L124'> 124 <i><font color='green'>         *</font></i>
+<a name='L125'> 125 <i><font color='green'>         * @param message Message content</font></i>
+<a name='L126'> 126 <i><font color='green'>         * @param file File in which this function is called</font></i>
+<a name='L127'> 127 <i><font color='green'>     * @param location Class and function in which this function is called</font></i>
+<a name='L128'> 128 <i><font color='green'>         */</font></i>
+<a name='L129'> 129         <b>public</b> <b>void</b> <a href='../R/57.html' title='Multiple refered from 11 places.'>information</a>(<a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a>, <a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/128.html' title='Multiple used in 10 places.'>file</a>, <a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/146.html' title='Multiple used in 10 places.'>location</a>) <font color='red'>{</font>
+<a name='L130'> 130                 <b>if</b>(<a href='../Y/199.html' title='Multiple used in 7 places.'>verboseMode</a> &gt;= 4) <font color='red'>{</font>
+<a name='L131'> 131                         <a href='../Y/75.html' title='Multiple used in 14 places.'>System</a>.<a href='../Y/162.html' title='Multiple used in 14 places.'>out</a>.println("Information : " + <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a>);
+<a name='L132'> 132                         
+<a name='L133'> 133                         <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>.info("Information : " + <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a> + " in file " + <a href='../Y/128.html' title='Multiple used in 10 places.'>file</a> + " in " + <a href='../Y/146.html' title='Multiple used in 10 places.'>location</a>);
+<a name='L134'> 134                 <font color='red'>}</font>
+<a name='L135'> 135         <font color='red'>}</font>
+<a name='L136'> 136         
+<a name='L137'> 137         <i><font color='green'>/**</font></i>
+<a name='L138'> 138 <i><font color='green'>         * Display and log a message with additionnal informations in the log file</font></i>
+<a name='L139'> 139 <i><font color='green'>         * The message is displayed and logged if and only if the verbose level is equal to 5</font></i>
+<a name='L140'> 140 <i><font color='green'>         *</font></i>
+<a name='L141'> 141 <i><font color='green'>         * @param message Message content</font></i>
+<a name='L142'> 142 <i><font color='green'>         * @param file File in which this function is called</font></i>
+<a name='L143'> 143 <i><font color='green'>     * @param location Class and function in which this function is called</font></i>
+<a name='L144'> 144 <i><font color='green'>         */</font></i>
+<a name='L145'> 145         <b>public</b> <b>void</b> <a href='../R/28.html' title='Multiple refered from 20 places.'>calls</a>(<a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a>, <a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/128.html' title='Multiple used in 10 places.'>file</a>, <a href='../Y/74.html' title='Multiple used in 48 places.'>String</a> <a href='../Y/146.html' title='Multiple used in 10 places.'>location</a>) <font color='red'>{</font>
+<a name='L146'> 146                 <b>if</b>(<a href='../Y/199.html' title='Multiple used in 7 places.'>verboseMode</a> &gt;= 5) <font color='red'>{</font>
+<a name='L147'> 147                         <a href='../Y/75.html' title='Multiple used in 14 places.'>System</a>.<a href='../Y/162.html' title='Multiple used in 14 places.'>out</a>.println("Calls : " + <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a>);
+<a name='L148'> 148                         
+<a name='L149'> 149                         <a href='../Y/147.html' title='Multiple used in 16 places.'>log</a>.finer("Calls : " + <a href='../Y/151.html' title='Multiple used in 15 places.'>message</a> + " in file " + <a href='../Y/128.html' title='Multiple used in 10 places.'>file</a> + " in " + <a href='../Y/146.html' title='Multiple used in 10 places.'>location</a>);
+<a name='L150'> 150                 <font color='red'>}</font>
+<a name='L151'> 151         <font color='red'>}</font>
+<a name='L152'> 152 <font color='red'>}</font>;
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;]<a href='#L81'>[^]</a><a href='#L145'>[v]</a><a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>

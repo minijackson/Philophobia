@@ -1,0 +1,6 @@
+<map id="world.scenery.SavannaTheme" name="world.scenery.SavannaTheme">
+<area shape="rect" id="node3" href="$classworld_1_1scenery_1_1_grass.html" title="Class used to handle a grass object. " alt="" coords="5,89,147,122"/>
+<area shape="rect" id="node5" href="$classworld_1_1scenery_1_1_ground.html" title="Class used to handle a ground object. " alt="" coords="171,89,317,122"/>
+<area shape="rect" id="node7" href="$classworld_1_1scenery_1_1_shrub.html" title="Class used to handle a shrub object. " alt="" coords="341,89,480,122"/>
+<area shape="rect" id="node9" href="$classworld_1_1scenery_1_1_tree.html" title="Class used to handle a tree object. " alt="" coords="504,89,635,122"/>
+</map>

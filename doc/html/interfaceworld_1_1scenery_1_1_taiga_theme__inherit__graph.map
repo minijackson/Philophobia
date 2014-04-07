@@ -1,0 +1,10 @@
+<map id="world.scenery.TaigaTheme" name="world.scenery.TaigaTheme">
+<area shape="rect" id="node3" href="$classworld_1_1scenery_1_1_flower.html" title="Class used to handle a flower object. " alt="" coords="235,5,379,38"/>
+<area shape="rect" id="node5" href="$classworld_1_1scenery_1_1_grass.html" title="Class used to handle a grass object. " alt="" coords="236,61,377,94"/>
+<area shape="rect" id="node7" href="$classworld_1_1scenery_1_1_ground.html" title="Class used to handle a ground object. " alt="" coords="233,117,380,150"/>
+<area shape="rect" id="node9" href="$classworld_1_1scenery_1_1_rock.html" title="Class used to handle a rock object. " alt="" coords="239,173,375,206"/>
+<area shape="rect" id="node11" href="$classworld_1_1scenery_1_1_shore.html" title="Class used to handle a shore object. " alt="" coords="237,229,376,262"/>
+<area shape="rect" id="node13" href="$classworld_1_1scenery_1_1_shrub.html" title="Class used to handle a shrub object. " alt="" coords="237,285,376,318"/>
+<area shape="rect" id="node15" href="$classworld_1_1scenery_1_1_tree.html" title="Class used to handle a tree object. " alt="" coords="241,341,372,374"/>
+<area shape="rect" id="node17" href="$classworld_1_1scenery_1_1_water.html" title="Class used to handle a water object. " alt="" coords="237,397,376,430"/>
+</map>

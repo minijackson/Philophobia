@@ -1,0 +1,240 @@
+<html>
+<head>
+<title>gameplay/ai/mood/Mood.java</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/155.html'>gameplay</a>/<a href='../files/156.html'>ai</a>/<a href='../files/157.html'>mood</a>/Mood.java</h2>
+<i><font color='green'>/* [&lt;][&gt;]<a href='#L79'>[^]</a><a href='#L204'>[v]</a>[top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<h2>DEFINITIONS</h2>
+This source file includes following definitions.
+<ol>
+<li><a href='#L79' title='Defined at 79.'>getBetrayalThreshold</a>
+<li><a href='#L87' title='Defined at 87.'>getSlaveryThreshold</a>
+<li><a href='#L95' title='Defined at 95.'>getMoodsBetrayalCount</a>
+<li><a href='#L103' title='Defined at 103.'>getMoodsSlaveryThreshold</a>
+<li><a href='#L111' title='Defined at 111.'>incrementBetrayalCount</a>
+<li><a href='#L119' title='Defined at 119.'>incrementSlaveryCount</a>
+<li><a href='#L128' title='Defined at 128.'>getNextMood</a>
+<li><a href='#L148' title='Defined at 148.'>getPreviousMood</a>
+<li><a href='#L196' title='Defined at 196.'>getMood</a>
+<li><a href='#L204' title='Defined at 204.'>getProbability</a>
+</ol>
+<hr>
+<pre>
+<a name='L1'>   1 <b>package</b> <a href='../Y/132.html' title='Multiple used in 22 places.'>gameplay</a>.<a href='../Y/97.html' title='Multiple used in 20 places.'>ai</a>.<a href='../Y/152.html' title='Multiple used in 18 places.'>mood</a>;
+<a name='L2'>   2 
+<a name='L3'>   3 <b>import</b> main.Philophobia;
+<a name='L4'>   4 
+<a name='L5'>   5 <b>import</b> java.util.HashSet;
+<a name='L6'>   6 <b>import</b> java.util.Iterator;
+<a name='L7'>   7 
+<a name='L8'>   8 <i><font color='green'>/**</font></i>
+<a name='L9'>   9 <i><font color='green'> * Abstract class representing an</font></i>
+<a name='L10'>  10 <i><font color='green'> * AI mood</font></i>
+<a name='L11'>  11 <i><font color='green'> */</font></i>
+<a name='L12'>  12 <b>public</b> <b>abstract</b> <b>class</b> <a href='../R/10.html' title='Multiple refered from 4 places.'>Mood</a> <font color='red'>{</font>
+<a name='L13'>  13 
+<a name='L14'>  14         <i><font color='green'>/**</font></i>
+<a name='L15'>  15 <i><font color='green'>         * If the betrayal count goes</font></i>
+<a name='L16'>  16 <i><font color='green'>         * above the betrayal threshold,</font></i>
+<a name='L17'>  17 <i><font color='green'>         * then the robot must change its</font></i>
+<a name='L18'>  18 <i><font color='green'>         * current mood (randomness required)</font></i>
+<a name='L19'>  19 <i><font color='green'>         */</font></i>
+<a name='L20'>  20         <b>protected</b> <b>int</b> <a href='../Y/105.html' title='Multiple used in 4 places.'>betrayalThreshold</a>;
+<a name='L21'>  21 
+<a name='L22'>  22         <i><font color='green'>/**</font></i>
+<a name='L23'>  23 <i><font color='green'>         * If the slavery count goes</font></i>
+<a name='L24'>  24 <i><font color='green'>         * above the betrayal threshold,</font></i>
+<a name='L25'>  25 <i><font color='green'>         * then the robot must change its</font></i>
+<a name='L26'>  26 <i><font color='green'>         * current mood (randomness required)</font></i>
+<a name='L27'>  27 <i><font color='green'>         */</font></i>
+<a name='L28'>  28         <b>protected</b> <b>int</b> <a href='../Y/183.html' title='Multiple used in 4 places.'>slaveryThreshold</a>;
+<a name='L29'>  29 
+<a name='L30'>  30         <i><font color='green'>/**</font></i>
+<a name='L31'>  31 <i><font color='green'>         * Number of betrayals (requests from</font></i>
+<a name='L32'>  32 <i><font color='green'>         * the AI not done by the user)</font></i>
+<a name='L33'>  33 <i><font color='green'>         * done by the user when the AI</font></i>
+<a name='L34'>  34 <i><font color='green'>         * was currently in this mood</font></i>
+<a name='L35'>  35 <i><font color='green'>         * state</font></i>
+<a name='L36'>  36 <i><font color='green'>         */</font></i>
+<a name='L37'>  37         <b>protected</b> <b>int</b> <a href='../Y/154.html' title='Multiple used in 3 places.'>moodsBetrayalCount</a>;
+<a name='L38'>  38 
+<a name='L39'>  39         <i><font color='green'>/**</font></i>
+<a name='L40'>  40 <i><font color='green'>         * Number of requests from the AI</font></i>
+<a name='L41'>  41 <i><font color='green'>         * done positively by the user when</font></i>
+<a name='L42'>  42 <i><font color='green'>         * the AI was in this mood state</font></i>
+<a name='L43'>  43 <i><font color='green'>         */</font></i>
+<a name='L44'>  44         <b>protected</b> <b>int</b> <a href='../Y/155.html' title='Multiple used in 3 places.'>moodsSlaveryCount</a>;
+<a name='L45'>  45 
+<a name='L46'>  46         <i><font color='green'>/**</font></i>
+<a name='L47'>  47 <i><font color='green'>         * Associative array containing the possible</font></i>
+<a name='L48'>  48 <i><font color='green'>         * moods if the number of betrayals</font></i>
+<a name='L49'>  49 <i><font color='green'>         * (when the AI was in this mood state)</font></i>
+<a name='L50'>  50 <i><font color='green'>         * is greater than its threshold</font></i>
+<a name='L51'>  51 <i><font color='green'>         * with the probability associated</font></i>
+<a name='L52'>  52 <i><font color='green'>         */</font></i>
+<a name='L53'>  53         <b>protected</b> <a href='../Y/29.html' title='Multiple used in 3 places.'>HashSet</a>&lt;<a href='../Y/63.html' title='Multiple used in 6 places.'>ProbabilityMood</a>&gt; <a href='../Y/156.html' title='Multiple used in 2 places.'>nextMoods</a>;
+<a name='L54'>  54 
+<a name='L55'>  55         <i><font color='green'>/**</font></i>
+<a name='L56'>  56 <i><font color='green'>         * Associative array containing the possible</font></i>
+<a name='L57'>  57 <i><font color='green'>         * moods if the number of done actions asked</font></i>
+<a name='L58'>  58 <i><font color='green'>         * by the AI is greater than its threshold</font></i>
+<a name='L59'>  59 <i><font color='green'>         * with the probability associated</font></i>
+<a name='L60'>  60 <i><font color='green'>         */</font></i>
+<a name='L61'>  61         <b>protected</b> <a href='../Y/29.html' title='Multiple used in 3 places.'>HashSet</a>&lt;<a href='../Y/63.html' title='Multiple used in 6 places.'>ProbabilityMood</a>&gt; <a href='../Y/174.html' title='Multiple used in 2 places.'>previousMoods</a>;
+<a name='L62'>  62 
+<a name='L63'>  63         <i><font color='green'>/**</font></i>
+<a name='L64'>  64 <i><font color='green'>         * Mood constructor</font></i>
+<a name='L65'>  65 <i><font color='green'>         */</font></i>
+<a name='L66'>  66         <b>public</b> Mood(<b>int</b> <a href='../Y/105.html' title='Multiple used in 4 places.'>betrayalThreshold</a>, <b>int</b> <a href='../Y/183.html' title='Multiple used in 4 places.'>slaveryThreshold</a>) <font color='red'>{</font>
+<a name='L67'>  67 
+<a name='L68'>  68                 <a href='../Y/59.html' title='Multiple used in 90 places.'>Philophobia</a>.<a href='../S/141.html#L79' title='Defined at 79 in main/Philophobia.java.'>getVerbose</a>().<a href='../S/5.html#L129' title='Defined at 129 in debug/Verbose.java.'>information</a>("Creating new Mood class", "gameplay/ai/mood/Mood.java", "Mood.Mood(int, int)");
+<a name='L69'>  69 
+<a name='L70'>  70                 <b>this</b>.<a href='../Y/105.html' title='Multiple used in 4 places.'>betrayalThreshold</a> = <a href='../Y/105.html' title='Multiple used in 4 places.'>betrayalThreshold</a>;
+<a name='L71'>  71                 <b>this</b>.<a href='../Y/183.html' title='Multiple used in 4 places.'>slaveryThreshold</a> = <a href='../Y/183.html' title='Multiple used in 4 places.'>slaveryThreshold</a>;
+<a name='L72'>  72 
+<a name='L73'>  73         <font color='red'>}</font>
+<a name='L74'>  74 
+<a name='L75'>  75         <i><font color='green'>/**</font></i>
+<a name='L76'>  76 <i><font color='green'>         * Getter for the betrayal threshold field</font></i>
+<a name='L77'>  77 <i><font color='green'>         * @see #betrayalThreshold</font></i>
+<a name='L78'>  78 <i><font color='green'>         */</font></i>
+<a name='L79'>  79         <b>public</b> <b>int</b> <a href='../S/13.html#L90' title='Refered from 90 in gameplay/ai/AI.java.'>getBetrayalThreshold</a>() <font color='red'>{</font>
+<a name='L80'>  80                 <b>return</b> <a href='../Y/105.html' title='Multiple used in 4 places.'>betrayalThreshold</a>;
+<a name='L81'>  81         <font color='red'>}</font>
+<a name='L82'>  82 
+<a name='L83'>  83         <i><font color='green'>/**</font></i>
+<a name='L84'>  84 <i><font color='green'>         * Getter for the slavery threshold field</font></i>
+<a name='L85'>  85 <i><font color='green'>         * @see #slaveryThreshold</font></i>
+<a name='L86'>  86 <i><font color='green'>         */</font></i>
+<a name='L87'>  87         <b>public</b> <b>int</b> <a href='../S/13.html#L102' title='Refered from 102 in gameplay/ai/AI.java.'>getSlaveryThreshold</a>() <font color='red'>{</font>
+<a name='L88'>  88                 <b>return</b> <a href='../Y/183.html' title='Multiple used in 4 places.'>slaveryThreshold</a>;
+<a name='L89'>  89         <font color='red'>}</font>
+<a name='L90'>  90 
+<a name='L91'>  91         <i><font color='green'>/**</font></i>
+<a name='L92'>  92 <i><font color='green'>         * Getter for the betrayal count field</font></i>
+<a name='L93'>  93 <i><font color='green'>         * @see #moodsBetrayalCount</font></i>
+<a name='L94'>  94 <i><font color='green'>         */</font></i>
+<a name='L95'>  95         <b>public</b> <b>int</b> getMoodsBetrayalCount() <font color='red'>{</font>
+<a name='L96'>  96                 <b>return</b> <a href='../Y/154.html' title='Multiple used in 3 places.'>moodsBetrayalCount</a>;
+<a name='L97'>  97         <font color='red'>}</font>
+<a name='L98'>  98 
+<a name='L99'>  99         <i><font color='green'>/**</font></i>
+<a name='L100'> 100 <i><font color='green'>         * Getter for the slavery count field</font></i>
+<a name='L101'> 101 <i><font color='green'>         * @see #moodsSlaveryCount</font></i>
+<a name='L102'> 102 <i><font color='green'>         */</font></i>
+<a name='L103'> 103         <b>public</b> <b>int</b> getMoodsSlaveryThreshold() <font color='red'>{</font>
+<a name='L104'> 104                 <b>return</b> <a href='../Y/155.html' title='Multiple used in 3 places.'>moodsSlaveryCount</a>;
+<a name='L105'> 105         <font color='red'>}</font>
+<a name='L106'> 106 
+<a name='L107'> 107         <i><font color='green'>/**</font></i>
+<a name='L108'> 108 <i><font color='green'>         * Increment and return the betrayal count field</font></i>
+<a name='L109'> 109 <i><font color='green'>         * @see #moodsBetrayalCount</font></i>
+<a name='L110'> 110 <i><font color='green'>         */</font></i>
+<a name='L111'> 111         <b>public</b> <b>int</b> <a href='../S/13.html#L90' title='Refered from 90 in gameplay/ai/AI.java.'>incrementBetrayalCount</a>() <font color='red'>{</font>
+<a name='L112'> 112                 <b>return</b> ++<a href='../Y/154.html' title='Multiple used in 3 places.'>moodsBetrayalCount</a>;
+<a name='L113'> 113         <font color='red'>}</font>
+<a name='L114'> 114 
+<a name='L115'> 115         <i><font color='green'>/**</font></i>
+<a name='L116'> 116 <i><font color='green'>         * Increment and return the slavery count field</font></i>
+<a name='L117'> 117 <i><font color='green'>         * @see #moodsSlaveryCount</font></i>
+<a name='L118'> 118 <i><font color='green'>         */</font></i>
+<a name='L119'> 119         <b>public</b> <b>int</b> <a href='../S/13.html#L102' title='Refered from 102 in gameplay/ai/AI.java.'>incrementSlaveryCount</a>() <font color='red'>{</font>
+<a name='L120'> 120                 <b>return</b> ++<a href='../Y/155.html' title='Multiple used in 3 places.'>moodsSlaveryCount</a>;
+<a name='L121'> 121         <font color='red'>}</font>
+<a name='L122'> 122 
+<a name='L123'> 123         <i><font color='green'>/**</font></i>
+<a name='L124'> 124 <i><font color='green'>         * When the betrayal threshold is exceeded,</font></i>
+<a name='L125'> 125 <i><font color='green'>         * this function is called and return a new</font></i>
+<a name='L126'> 126 <i><font color='green'>         * mood given their probabilities</font></i>
+<a name='L127'> 127 <i><font color='green'>         */</font></i>
+<a name='L128'> 128         <b>public</b> <a href='../Y/14.html' title='Multiple used in 6 places.'>Class</a>&lt;<a href='../Y/53.html' title='Multiple used in 12 places.'>Mood</a>&gt; <a href='../S/13.html#L91' title='Refered from 91 in gameplay/ai/AI.java.'>getNextMood</a>() <font color='red'>{</font>
+<a name='L129'> 129                 <a href='../Y/40.html' title='Multiple used in 3 places.'>Iterator</a>&lt;<a href='../Y/63.html' title='Multiple used in 6 places.'>ProbabilityMood</a>&gt; <a href='../Y/140.html' title='Multiple used in 6 places.'>it</a> = <a href='../Y/156.html' title='Multiple used in 2 places.'>nextMoods</a>.iterator();
+<a name='L130'> 130                 <a href='../Y/63.html' title='Multiple used in 6 places.'>ProbabilityMood</a> <a href='../Y/175.html' title='Multiple used in 10 places.'>probMood</a> = <b>null</b>;
+<a name='L131'> 131                 <b>while</b>(<a href='../Y/140.html' title='Multiple used in 6 places.'>it</a>.hasNext()) <font color='red'>{</font>
+<a name='L132'> 132 
+<a name='L133'> 133                         <a href='../Y/175.html' title='Multiple used in 10 places.'>probMood</a> = <a href='../Y/140.html' title='Multiple used in 6 places.'>it</a>.next();
+<a name='L134'> 134                         <b>if</b>(<a href='../Y/52.html' title='Multiple used in 3 places.'>Math</a>.random() &gt;= <a href='../Y/175.html' title='Multiple used in 10 places.'>probMood</a>.<a href='../S/18.html#L204' title='Defined at 204 in gameplay/ai/mood/Mood.java.'>getProbability</a>()) <font color='red'>{</font>
+<a name='L135'> 135                                 <b>return</b> <a href='../Y/175.html' title='Multiple used in 10 places.'>probMood</a>.<a href='../S/18.html#L196' title='Defined at 196 in gameplay/ai/mood/Mood.java.'>getMood</a>();
+<a name='L136'> 136                         <font color='red'>}</font>
+<a name='L137'> 137 
+<a name='L138'> 138                 <font color='red'>}</font>
+<a name='L139'> 139 
+<a name='L140'> 140                 <b>return</b> <a href='../Y/175.html' title='Multiple used in 10 places.'>probMood</a>.<a href='../S/18.html#L196' title='Defined at 196 in gameplay/ai/mood/Mood.java.'>getMood</a>();
+<a name='L141'> 141         <font color='red'>}</font>
+<a name='L142'> 142 
+<a name='L143'> 143         <i><font color='green'>/**</font></i>
+<a name='L144'> 144 <i><font color='green'>         * When the slavery threshold is exceeded,</font></i>
+<a name='L145'> 145 <i><font color='green'>         * this function is called and return a new</font></i>
+<a name='L146'> 146 <i><font color='green'>         * mood given their probabilities</font></i>
+<a name='L147'> 147 <i><font color='green'>         */</font></i>
+<a name='L148'> 148         <b>public</b> <a href='../Y/14.html' title='Multiple used in 6 places.'>Class</a>&lt;<a href='../Y/53.html' title='Multiple used in 12 places.'>Mood</a>&gt; <a href='../S/13.html#L103' title='Refered from 103 in gameplay/ai/AI.java.'>getPreviousMood</a>() <font color='red'>{</font>
+<a name='L149'> 149                 <a href='../Y/40.html' title='Multiple used in 3 places.'>Iterator</a>&lt;<a href='../Y/63.html' title='Multiple used in 6 places.'>ProbabilityMood</a>&gt; <a href='../Y/140.html' title='Multiple used in 6 places.'>it</a> = <a href='../Y/174.html' title='Multiple used in 2 places.'>previousMoods</a>.iterator();
+<a name='L150'> 150                 <a href='../Y/63.html' title='Multiple used in 6 places.'>ProbabilityMood</a> <a href='../Y/175.html' title='Multiple used in 10 places.'>probMood</a> = <b>null</b>;
+<a name='L151'> 151                 <b>while</b>(<a href='../Y/140.html' title='Multiple used in 6 places.'>it</a>.hasNext()) <font color='red'>{</font>
+<a name='L152'> 152 
+<a name='L153'> 153                         <a href='../Y/175.html' title='Multiple used in 10 places.'>probMood</a> = <a href='../Y/140.html' title='Multiple used in 6 places.'>it</a>.next();
+<a name='L154'> 154                         <b>if</b>(<a href='../Y/52.html' title='Multiple used in 3 places.'>Math</a>.random() &gt;= <a href='../Y/175.html' title='Multiple used in 10 places.'>probMood</a>.<a href='../S/18.html#L204' title='Defined at 204 in gameplay/ai/mood/Mood.java.'>getProbability</a>()) <font color='red'>{</font>
+<a name='L155'> 155                                 <b>return</b> <a href='../Y/175.html' title='Multiple used in 10 places.'>probMood</a>.<a href='../S/18.html#L196' title='Defined at 196 in gameplay/ai/mood/Mood.java.'>getMood</a>();
+<a name='L156'> 156                         <font color='red'>}</font>
+<a name='L157'> 157 
+<a name='L158'> 158                 <font color='red'>}</font>
+<a name='L159'> 159 
+<a name='L160'> 160                 <b>return</b> <a href='../Y/175.html' title='Multiple used in 10 places.'>probMood</a>.<a href='../S/18.html#L196' title='Defined at 196 in gameplay/ai/mood/Mood.java.'>getMood</a>();
+<a name='L161'> 161         <font color='red'>}</font>
+<a name='L162'> 162 
+<a name='L163'> 163 <font color='red'>}</font>;
+<a name='L164'> 164 
+<a name='L165'> 165 <i><font color='green'>/**</font></i>
+<a name='L166'> 166 <i><font color='green'> * Class used to associate a</font></i>
+<a name='L167'> 167 <i><font color='green'> * mood with a probability</font></i>
+<a name='L168'> 168 <i><font color='green'> */</font></i>
+<a name='L169'> 169 <b>class</b> ProbabilityMood <font color='red'>{</font>
+<a name='L170'> 170 
+<a name='L171'> 171         <i><font color='green'>/**</font></i>
+<a name='L172'> 172 <i><font color='green'>         * Mood for which there is</font></i>
+<a name='L173'> 173 <i><font color='green'>         * a probability to be chosen</font></i>
+<a name='L174'> 174 <i><font color='green'>         */</font></i>
+<a name='L175'> 175         <b>protected</b> <a href='../Y/14.html' title='Multiple used in 6 places.'>Class</a>&lt;<a href='../Y/53.html' title='Multiple used in 12 places.'>Mood</a>&gt; <a href='../Y/152.html' title='Multiple used in 18 places.'>mood</a>;
+<a name='L176'> 176 
+<a name='L177'> 177         <i><font color='green'>/**</font></i>
+<a name='L178'> 178 <i><font color='green'>         * Probability of the mood</font></i>
+<a name='L179'> 179 <i><font color='green'>         * to be chosen</font></i>
+<a name='L180'> 180 <i><font color='green'>         */</font></i>
+<a name='L181'> 181         <b>protected</b> <b>double</b> <a href='../Y/176.html' title='Multiple used in 4 places.'>probability</a>;
+<a name='L182'> 182 
+<a name='L183'> 183         <i><font color='green'>/**</font></i>
+<a name='L184'> 184 <i><font color='green'>         * Constructor of the probability</font></i>
+<a name='L185'> 185 <i><font color='green'>         * mood class</font></i>
+<a name='L186'> 186 <i><font color='green'>         */</font></i>
+<a name='L187'> 187         <b>public</b> ProbabilityMood(<a href='../Y/14.html' title='Multiple used in 6 places.'>Class</a>&lt;<a href='../Y/53.html' title='Multiple used in 12 places.'>Mood</a>&gt; <a href='../Y/152.html' title='Multiple used in 18 places.'>mood</a>, <b>double</b> <a href='../Y/176.html' title='Multiple used in 4 places.'>probability</a>) <font color='red'>{</font>
+<a name='L188'> 188                 <b>this</b>.<a href='../Y/152.html' title='Multiple used in 18 places.'>mood</a> = <a href='../Y/152.html' title='Multiple used in 18 places.'>mood</a>;
+<a name='L189'> 189                 <b>this</b>.<a href='../Y/176.html' title='Multiple used in 4 places.'>probability</a> = <a href='../Y/176.html' title='Multiple used in 4 places.'>probability</a>;
+<a name='L190'> 190         <font color='red'>}</font>
+<a name='L191'> 191 
+<a name='L192'> 192         <i><font color='green'>/**</font></i>
+<a name='L193'> 193 <i><font color='green'>         * Getter for the mood field</font></i>
+<a name='L194'> 194 <i><font color='green'>         * @see #mood</font></i>
+<a name='L195'> 195 <i><font color='green'>         */</font></i>
+<a name='L196'> 196         <b>public</b> <a href='../Y/14.html' title='Multiple used in 6 places.'>Class</a>&lt;<a href='../Y/53.html' title='Multiple used in 12 places.'>Mood</a>&gt; <a href='../R/38.html' title='Multiple refered from 4 places.'>getMood</a>() <font color='red'>{</font>
+<a name='L197'> 197                 <b>return</b> <a href='../Y/152.html' title='Multiple used in 18 places.'>mood</a>;
+<a name='L198'> 198         <font color='red'>}</font>
+<a name='L199'> 199 
+<a name='L200'> 200         <i><font color='green'>/**</font></i>
+<a name='L201'> 201 <i><font color='green'>         * Getter for the probability field</font></i>
+<a name='L202'> 202 <i><font color='green'>         * @see #probability</font></i>
+<a name='L203'> 203 <i><font color='green'>         */</font></i>
+<a name='L204'> 204         <b>public</b> <b>double</b> <a href='../R/43.html' title='Multiple refered from 2 places.'>getProbability</a>() <font color='red'>{</font>
+<a name='L205'> 205                 <b>return</b> <a href='../Y/176.html' title='Multiple used in 4 places.'>probability</a>;
+<a name='L206'> 206         <font color='red'>}</font>
+<a name='L207'> 207 
+<a name='L208'> 208 <font color='red'>}</font>;
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;]<a href='#L79'>[^]</a><a href='#L204'>[v]</a><a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>
