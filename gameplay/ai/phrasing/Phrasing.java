@@ -1,8 +1,20 @@
+/**
+ * \package gameplay.ai.phrasing
+ * Package handling the talk system for the AI.
+ */
 package gameplay.ai.phrasing;
 
 import main.Philophobia;
 import gameplay.ai.phrasing.OrderedPhrases;
 
+/**
+ * Class handling the talk system for the AI
+ * <p>
+ * It contains a several number of phrases
+ * corresponding to each feeling, ordered
+ * corresponding to when the phrase were
+ * last said by the AI
+ */
 public class Phrasing {
 
 	/**

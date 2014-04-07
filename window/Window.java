@@ -1,4 +1,8 @@
-package	 window;
+/**
+ * \package window
+ * Package handling the proper Window (decorations, etc…).
+ */
+package window;
 
 import main.Philophobia;
 import window.ui.UI;
@@ -9,6 +13,13 @@ import javax.swing.JPanel;
 import java.awt.Toolkit;
 import java.awt.BorderLayout;
 
+/**
+ * Class handling the window with decorations, size, title, etc
+ * and the main components inside it
+ * <p>
+ * This class has three states, handled by the windowState field
+ * @see window.WindowState
+ */
 public class Window extends JFrame {
 
 	/**

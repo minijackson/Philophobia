@@ -1,3 +1,7 @@
+/**
+ * \package gameplay.ai
+ * Package handling the sadistic AI of the game.
+ */
 package gameplay.ai;
 
 import main.Philophobia;

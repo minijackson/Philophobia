@@ -1,3 +1,7 @@
+/**
+ * \package window.topbar
+ * Package handling the top bar (TopBar) UI component
+ */
 package window.topbar;
 
 import main.Philophobia;

@@ -1,3 +1,7 @@
+/**
+ * \package gameplay
+ * Package handling the gameplay of the game.
+ */
 package gameplay;
 
 import main.Philophobia;

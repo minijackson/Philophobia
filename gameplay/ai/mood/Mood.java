@@ -1,3 +1,7 @@
+/**
+ * \package gameplay.ai.mood
+ * Package handling the mood system for the AI.
+ */
 package gameplay.ai.mood;
 
 import main.Philophobia;

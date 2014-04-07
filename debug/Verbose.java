@@ -1,3 +1,7 @@
+/**
+ * \package debug
+ * Package used for debugging the game
+ */
 package debug;
 
 import java.util.logging.Logger;

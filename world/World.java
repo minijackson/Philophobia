@@ -1,3 +1,7 @@
+/**
+ * \package world
+ * Package handling the game's world.
+ */
 package world;
 
 import main.Philophobia;

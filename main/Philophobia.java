@@ -1,3 +1,7 @@
+/**
+ * \package main
+ * The main package in which the first function is called.
+ */
 package main;
 
 import java.util.Scanner;

@@ -3,6 +3,14 @@ package world;
 import main.Philophobia;
 import world.scenery.Scenery;
 
+/**
+ * Interface telling that the object interacts with the player
+ * <p>
+ * The object can trigger an action when the player press
+ * the action key, is near the object, enter or leave the object
+ * <p>
+ * It also specifies if the player can pass over the object
+ */
 public interface InteractiveObject {
 
 	/**

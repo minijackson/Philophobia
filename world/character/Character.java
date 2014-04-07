@@ -1,3 +1,7 @@
+/**
+ * \package world.character
+ * Package handling the playing and non playing Characters.
+ */
 package world.character;
 
 import main.Philophobia;

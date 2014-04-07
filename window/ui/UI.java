@@ -1,3 +1,7 @@
+/**
+ * \package window.ui
+ * Package handling the user interface (UI) inside the Window.
+ */
 package window.ui;
 
 import main.Philophobia;

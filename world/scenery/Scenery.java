@@ -1,3 +1,7 @@
+/**
+ * \package world.scenery
+ * Package handling the tiles (Scenery) in the game's World.
+ */
 package world.scenery;
 
 import main.Philophobia;
