@@ -25,12 +25,12 @@ abstract public class Scenery {
 	/**
 	 * Height of the graphical representation of a Scenery object
 	 */
-	protected static int SCENERY_HEIGHT = 48;
+	protected static int SCENERY_HEIGHT = 85;
 	
 	/**
 	 * Width of the graphical representation of a Scenery object
 	 */
-	protected static int SCENERY_WIDTH = 48;
+	protected static int SCENERY_WIDTH = 85;
 	
 	/**
 	 * Image graphically representing the object
@@ -136,7 +136,8 @@ abstract public class Scenery {
 
 	public void drawScenery(Graphics g, final int xLocation, final int yLocation, ImageObserver obs) {
 		// drawImage(Image img, int x, int y, int width, int height, Observer obs);
-		g.drawImage(spriteImage, xLocation + xShift, yLocation + yShift, width, height, obs);
+	//	g.drawImage(spriteImage, xLocation + xShift, yLocation + yShift, width, height, obs);
+		g.drawImage(spriteImage, xLocation + (int)(xShift*((float)SCENERY_WIDTH/(float)width)), yLocation + (int)(yShift*((float)SCENERY_WIDTH/(float)width)), SCENERY_WIDTH, (int)(height * ((float)SCENERY_WIDTH/(float)width)), obs);
 
 		visible = true;
 	}

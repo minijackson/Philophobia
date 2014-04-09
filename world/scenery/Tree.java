@@ -24,7 +24,7 @@ public class Tree extends Scenery implements InteractiveObject, TemperateBroadle
 	 */
 	public Tree(final String type) {
 
-		super(Philophobia.getImageFilePrefix() + type + "tree.png", 96, Scenery.getSceneryWidth(), 0, -48);
+		super(Philophobia.getImageFilePrefix() + type + "tree.png", 96, 48, 0, -48);
 
 	}
 
