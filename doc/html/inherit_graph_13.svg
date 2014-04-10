@@ -11,7 +11,7 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-492 533,-492 533,5 -4,5"/>
 <!-- Node1 -->
 <g id="node1" class="node"><title>Node1</title>
-<a xlink:href="a00002.html" target="_top" xlink:title="Interface used to define that a Scenery object have an Alpine Tundra style. ">
+<a xlink:href="interfaceworld_1_1scenery_1_1_alpine_tundra_theme.html" target="_top" xlink:title="Interface used to define that a Scenery object have an Alpine Tundra style. ">
 <polygon fill="white" stroke="black" points="16,-248 16,-288 152,-288 152,-248 16,-248"/>
 <text text-anchor="start" x="24" y="-275" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.AlpineTundra</text>
 <text text-anchor="middle" x="84" y="-259" font-family="Helvetica,sans-Serif" font-size="10.00">Theme</text>
@@ -19,7 +19,7 @@
 </g>
 <!-- Node2 -->
 <g id="node3" class="node"><title>Node2</title>
-<a xlink:href="a00009.html" target="_top" xlink:title="Class used to handle a flower object. ">
+<a xlink:href="classworld_1_1scenery_1_1_flower.html" target="_top" xlink:title="Class used to handle a flower object. ">
 <polygon fill="white" stroke="black" points="213.5,-189 213.5,-213 322.5,-213 322.5,-189 213.5,-189"/>
 <text text-anchor="middle" x="268" y="-200" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.Flower</text>
 </a>
@@ -31,7 +31,7 @@
 </g>
 <!-- Node3 -->
 <g id="node5" class="node"><title>Node3</title>
-<a xlink:href="a00011.html" target="_top" xlink:title="Class used to handle a grass object. ">
+<a xlink:href="classworld_1_1scenery_1_1_grass.html" target="_top" xlink:title="Class used to handle a grass object. ">
 <polygon fill="white" stroke="black" points="215,-357 215,-381 321,-381 321,-357 215,-357"/>
 <text text-anchor="middle" x="268" y="-368" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.Grass</text>
 </a>
@@ -43,7 +43,7 @@
 </g>
 <!-- Node4 -->
 <g id="node7" class="node"><title>Node4</title>
-<a xlink:href="a00012.html" target="_top" xlink:title="Class used to handle a ground object. ">
+<a xlink:href="classworld_1_1scenery_1_1_ground.html" target="_top" xlink:title="Class used to handle a ground object. ">
 <polygon fill="white" stroke="black" points="212.5,-273 212.5,-297 323.5,-297 323.5,-273 212.5,-273"/>
 <text text-anchor="middle" x="268" y="-284" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.Ground</text>
 </a>
@@ -55,7 +55,7 @@
 </g>
 <!-- Node5 -->
 <g id="node9" class="node"><title>Node5</title>
-<a xlink:href="a00022.html" target="_top" xlink:title="Class used to handle a rock object. ">
+<a xlink:href="classworld_1_1scenery_1_1_rock.html" target="_top" xlink:title="Class used to handle a rock object. ">
 <polygon fill="white" stroke="black" points="216.5,-147 216.5,-171 319.5,-171 319.5,-147 216.5,-147"/>
 <text text-anchor="middle" x="268" y="-158" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.Rock</text>
 </a>
@@ -67,7 +67,7 @@
 </g>
 <!-- Node6 -->
 <g id="node11" class="node"><title>Node6</title>
-<a xlink:href="a00026.html" target="_top" xlink:title="Class used to handle a shrub object. ">
+<a xlink:href="classworld_1_1scenery_1_1_shrub.html" target="_top" xlink:title="Class used to handle a shrub object. ">
 <polygon fill="white" stroke="black" points="215.5,-315 215.5,-339 320.5,-339 320.5,-315 215.5,-315"/>
 <text text-anchor="middle" x="268" y="-326" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.Shrub</text>
 </a>
@@ -79,7 +79,7 @@
 </g>
 <!-- Node7 -->
 <g id="node13" class="node"><title>Node7</title>
-<a xlink:href="a00033.html" target="_top" xlink:title="Class used to handle a tree object. ">
+<a xlink:href="classworld_1_1scenery_1_1_tree.html" target="_top" xlink:title="Class used to handle a tree object. ">
 <polygon fill="white" stroke="black" points="219,-231 219,-255 317,-255 317,-231 219,-231"/>
 <text text-anchor="middle" x="268" y="-242" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.Tree</text>
 </a>
@@ -91,7 +91,7 @@
 </g>
 <!-- Node8 -->
 <g id="node14" class="node"><title>Node8</title>
-<a xlink:href="a00004.html" target="_top" xlink:title="Interface used to tell that a Scenery object has a Cave style. ">
+<a xlink:href="interfaceworld_1_1scenery_1_1_cave_theme.html" target="_top" xlink:title="Interface used to tell that a Scenery object has a Cave style. ">
 <polygon fill="white" stroke="black" points="17.5,-206 17.5,-230 150.5,-230 150.5,-206 17.5,-206"/>
 <text text-anchor="middle" x="84" y="-217" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.CaveTheme</text>
 </a>
@@ -118,7 +118,7 @@
 </g>
 <!-- Node9 -->
 <g id="node19" class="node"><title>Node9</title>
-<a xlink:href="a00014.html" target="_top" xlink:title="Interface telling that the object interacts with the player. ">
+<a xlink:href="interfaceworld_1_1_interactive_object.html" target="_top" xlink:title="Interface telling that the object interacts with the player. ">
 <polygon fill="white" stroke="black" points="25.5,-22 25.5,-46 142.5,-46 142.5,-22 25.5,-22"/>
 <text text-anchor="middle" x="84" y="-33" font-family="Helvetica,sans-Serif" font-size="10.00">world.InteractiveObject</text>
 </a>
@@ -135,7 +135,7 @@
 </g>
 <!-- Node10 -->
 <g id="node21" class="node"><title>Node10</title>
-<a xlink:href="a00005.html" target="_top" xlink:title="Class used to handle a character (player or non&#45;player) ">
+<a xlink:href="classworld_1_1character_1_1_character.html" target="_top" xlink:title="Class used to handle a character (player or non&#45;player) ">
 <polygon fill="white" stroke="black" points="204,-21 204,-45 332,-45 332,-21 204,-21"/>
 <text text-anchor="middle" x="268" y="-32" font-family="Helvetica,sans-Serif" font-size="10.00">world.character.Character</text>
 </a>
@@ -147,7 +147,7 @@
 </g>
 <!-- Node13 -->
 <g id="node29" class="node"><title>Node13</title>
-<a xlink:href="a00036.html" target="_top" xlink:title="Class used to handle a water object. ">
+<a xlink:href="classworld_1_1scenery_1_1_water.html" target="_top" xlink:title="Class used to handle a water object. ">
 <polygon fill="white" stroke="black" points="215.5,-63 215.5,-87 320.5,-87 320.5,-63 215.5,-63"/>
 <text text-anchor="middle" x="268" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.Water</text>
 </a>
@@ -159,7 +159,7 @@
 </g>
 <!-- Node11 -->
 <g id="node23" class="node"><title>Node11</title>
-<a xlink:href="a00013.html" target="_top" xlink:title="Class handling the main playing Character. ">
+<a xlink:href="classworld_1_1character_1_1_hero.html" target="_top" xlink:title="Class handling the main playing Character. ">
 <polygon fill="white" stroke="black" points="394.5,-42 394.5,-66 501.5,-66 501.5,-42 394.5,-42"/>
 <text text-anchor="middle" x="448" y="-53" font-family="Helvetica,sans-Serif" font-size="10.00">world.character.Hero</text>
 </a>
@@ -171,7 +171,7 @@
 </g>
 <!-- Node12 -->
 <g id="node25" class="node"><title>Node12</title>
-<a xlink:href="a00029.html" target="_top" xlink:title="Class handling a talking character. ">
+<a xlink:href="classworld_1_1character_1_1_talking_character.html" target="_top" xlink:title="Class handling a talking character. ">
 <polygon fill="white" stroke="black" points="368.5,-0 368.5,-24 527.5,-24 527.5,-0 368.5,-0"/>
 <text text-anchor="middle" x="448" y="-11" font-family="Helvetica,sans-Serif" font-size="10.00">world.character.TalkingCharacter</text>
 </a>
@@ -183,7 +183,7 @@
 </g>
 <!-- Node14 -->
 <g id="node30" class="node"><title>Node14</title>
-<a xlink:href="a00019.html" target="_top" xlink:title="Interface used to define that a Scenery object has a Polar Desert style. ">
+<a xlink:href="interfaceworld_1_1scenery_1_1_polar_desert_theme.html" target="_top" xlink:title="Interface used to define that a Scenery object has a Polar Desert style. ">
 <polygon fill="white" stroke="black" points="18.5,-64 18.5,-104 149.5,-104 149.5,-64 18.5,-64"/>
 <text text-anchor="start" x="26.5" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.PolarDesert</text>
 <text text-anchor="middle" x="84" y="-75" font-family="Helvetica,sans-Serif" font-size="10.00">Theme</text>
@@ -216,7 +216,7 @@
 </g>
 <!-- Node15 -->
 <g id="node34" class="node"><title>Node15</title>
-<a xlink:href="a00025.html" target="_top" xlink:title="Class used to handle a shore object. ">
+<a xlink:href="classworld_1_1scenery_1_1_shore.html" target="_top" xlink:title="Class used to handle a shore object. ">
 <polygon fill="white" stroke="black" points="215.5,-105 215.5,-129 320.5,-129 320.5,-105 215.5,-105"/>
 <text text-anchor="middle" x="268" y="-116" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.Shore</text>
 </a>
@@ -228,7 +228,7 @@
 </g>
 <!-- Node16 -->
 <g id="node38" class="node"><title>Node16</title>
-<a xlink:href="a00023.html" target="_top" xlink:title="Interface used to define that a Scenery object have a Savanna style. ">
+<a xlink:href="interfaceworld_1_1scenery_1_1_savanna_theme.html" target="_top" xlink:title="Interface used to define that a Scenery object have a Savanna style. ">
 <polygon fill="white" stroke="black" points="10,-464 10,-488 158,-488 158,-464 10,-464"/>
 <text text-anchor="middle" x="84" y="-475" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.SavannaTheme</text>
 </a>
@@ -255,7 +255,7 @@
 </g>
 <!-- Node17 -->
 <g id="node43" class="node"><title>Node17</title>
-<a xlink:href="a00024.html" target="_top" xlink:title="Class used to handle any world object. ">
+<a xlink:href="classworld_1_1scenery_1_1_scenery.html" target="_top" xlink:title="Class used to handle any world object. ">
 <polygon fill="white" stroke="black" points="26,-122 26,-146 142,-146 142,-122 26,-122"/>
 <text text-anchor="middle" x="84" y="-133" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.Scenery</text>
 </a>
@@ -307,7 +307,7 @@
 </g>
 <!-- Node18 -->
 <g id="node53" class="node"><title>Node18</title>
-<a xlink:href="a00027.html" target="_top" xlink:title="Interface used to define that a Scenery object have a Steppe style. ">
+<a xlink:href="interfaceworld_1_1scenery_1_1_steppe_theme.html" target="_top" xlink:title="Interface used to define that a Scenery object have a Steppe style. ">
 <polygon fill="white" stroke="black" points="14,-422 14,-446 154,-446 154,-422 14,-422"/>
 <text text-anchor="middle" x="84" y="-433" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.SteppeTheme</text>
 </a>
@@ -334,7 +334,7 @@
 </g>
 <!-- Node19 -->
 <g id="node58" class="node"><title>Node19</title>
-<a xlink:href="a00028.html" target="_top" xlink:title="Interface used to define that a Scenery object have a Taiga style. ">
+<a xlink:href="interfaceworld_1_1scenery_1_1_taiga_theme.html" target="_top" xlink:title="Interface used to define that a Scenery object have a Taiga style. ">
 <polygon fill="white" stroke="black" points="17.5,-164 17.5,-188 150.5,-188 150.5,-164 17.5,-164"/>
 <text text-anchor="middle" x="84" y="-175" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.TaigaTheme</text>
 </a>
@@ -381,7 +381,7 @@
 </g>
 <!-- Node20 -->
 <g id="node67" class="node"><title>Node20</title>
-<a xlink:href="a00030.html" target="_top" xlink:title="Interface used to define that a Scenery object have a Temperate Broadleaf style. ">
+<a xlink:href="interfaceworld_1_1scenery_1_1_temperate_broadleaf_theme.html" target="_top" xlink:title="Interface used to define that a Scenery object have a Temperate Broadleaf style. ">
 <polygon fill="white" stroke="black" points="0.5,-306 0.5,-346 167.5,-346 167.5,-306 0.5,-306"/>
 <text text-anchor="start" x="8.5" y="-333" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.TemperateBroadleaf</text>
 <text text-anchor="middle" x="84" y="-317" font-family="Helvetica,sans-Serif" font-size="10.00">Theme</text>
@@ -419,7 +419,7 @@
 </g>
 <!-- Node21 -->
 <g id="node74" class="node"><title>Node21</title>
-<a xlink:href="a00040.html" target="_top" xlink:title="Interface used to define that a Scenery object have a Xeric Shrublands style. ">
+<a xlink:href="interfaceworld_1_1scenery_1_1_xeric_shrublands_theme.html" target="_top" xlink:title="Interface used to define that a Scenery object have a Xeric Shrublands style. ">
 <polygon fill="white" stroke="black" points="8.5,-364 8.5,-404 159.5,-404 159.5,-364 8.5,-364"/>
 <text text-anchor="start" x="16.5" y="-391" font-family="Helvetica,sans-Serif" font-size="10.00">world.scenery.XericShrublands</text>
 <text text-anchor="middle" x="84" y="-375" font-family="Helvetica,sans-Serif" font-size="10.00">Theme</text>

@@ -1,4 +1,0 @@
-<map id="world.scenery.Scenery.getSceneryHeight" name="world.scenery.Scenery.getSceneryHeight">
-<area shape="rect" id="node3" href="$a00034.html#ab8622a1cf2ea812537f90a9508bbe394" title="Function called to draw the world. " alt="" coords="229,15,392,49"/>
-<area shape="rect" id="node5" href="$a00034.html#a8cc928807d8b0aec6e3a5b9556748989" title="Function called when the program ask to paint the graphics. " alt="" coords="441,15,636,49"/>
-</map>

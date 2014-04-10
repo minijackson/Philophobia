@@ -1,5 +1,0 @@
-<map id="gameplay.ai.AI.newBetrayal" name="gameplay.ai.AI.newBetrayal">
-<area shape="rect" id="node3" href="$a00001.html#adbb46250627224cb4cd42ad99eaf42ba" title="Change the current mood field from a Class object. " alt="" coords="256,5,443,38"/>
-<area shape="rect" id="node5" href="$a00015.html#aa0080ad0116bb5b614bbbc56d448ad22" title="When the betrayal threshold is exceeded, this function is called and return a new mood given their pr..." alt="" coords="257,61,441,115"/>
-<area shape="rect" id="node7" href="$a00015.html#a322adb08d4a6f7dcd0eb00c77649d2d2" title="Increment and return the betrayal count field. " alt="" coords="237,138,461,193"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="world.scenery.PolarDesertTheme" name="world.scenery.PolarDesertTheme">
-<area shape="rect" id="node3" href="$a00012.html" title="Class used to handle a ground object. " alt="" coords="5,227,152,325"/>
-<area shape="rect" id="node5" href="$a00022.html" title="Class used to handle a rock object. " alt="" coords="176,174,312,378"/>
-<area shape="rect" id="node7" href="$a00025.html" title="Class used to handle a shore object. " alt="" coords="336,227,475,325"/>
-<area shape="rect" id="node9" href="$a00026.html" title="Class used to handle a shrub object. " alt="" coords="499,227,637,325"/>
-<area shape="rect" id="node11" href="$a00033.html" title="Class used to handle a tree object. " alt="" coords="661,174,792,378"/>
-<area shape="rect" id="node13" href="$a00036.html" title="Class used to handle a water object. " alt="" coords="816,174,955,378"/>
-</map>

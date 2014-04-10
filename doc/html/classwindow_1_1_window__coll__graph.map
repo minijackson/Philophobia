@@ -1,0 +1,8 @@
+<map id="window.Window" name="window.Window">
+<area shape="rect" id="node4" href="$enumwindow_1_1_window_state.html" title="Enumeration of the possible states of the displayed graphics. " alt="" coords="96,937,243,1119"/>
+<area shape="rect" id="node6" href="$classwindow_1_1topbar_1_1_top_bar.html" title="Class handling the top bar of the program&#39;s main window. " alt="" coords="267,915,416,1141"/>
+<area shape="rect" id="node16" href="$classwindow_1_1ui_1_1_u_i.html" title="Class used to handle the window&#39;s user interface. " alt="" coords="440,926,592,1130"/>
+<area shape="rect" id="node10" href="$classwindow_1_1topbar_1_1_top_bar_button.html" title="Class handling the UI buttons. " alt="" coords="219,641,405,759"/>
+<area shape="rect" id="node21" href="$classworld_1_1scenery_1_1_scenery.html" title="Class used to handle any world object. " alt="" coords="500,174,655,506"/>
+<area shape="rect" id="node19" href="$classworld_1_1_world.html" title="World is a class used to handle the game world graphics. " alt="" coords="515,577,640,823"/>
+</map>

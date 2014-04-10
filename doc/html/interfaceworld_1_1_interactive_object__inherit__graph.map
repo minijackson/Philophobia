@@ -1,0 +1,8 @@
+<map id="world.InteractiveObject" name="world.InteractiveObject">
+<area shape="rect" id="node3" href="$classworld_1_1character_1_1_character.html" title="Class used to handle a character (player or non&#45;player) " alt="" coords="88,238,264,634"/>
+<area shape="rect" id="node9" href="$classworld_1_1scenery_1_1_rock.html" title="Class used to handle a rock object. " alt="" coords="288,334,424,538"/>
+<area shape="rect" id="node11" href="$classworld_1_1scenery_1_1_tree.html" title="Class used to handle a tree object. " alt="" coords="448,334,579,538"/>
+<area shape="rect" id="node13" href="$classworld_1_1scenery_1_1_water.html" title="Class used to handle a water object. " alt="" coords="603,334,741,538"/>
+<area shape="rect" id="node5" href="$classworld_1_1character_1_1_hero.html" title="Class handling the main playing Character. " alt="" coords="5,705,147,802"/>
+<area shape="rect" id="node7" href="$classworld_1_1character_1_1_talking_character.html" title="Class handling a talking character. " alt="" coords="171,683,381,823"/>
+</map>

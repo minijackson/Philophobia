@@ -1,0 +1,5 @@
+<map id="world.character.TalkingCharacter" name="world.character.TalkingCharacter">
+<area shape="rect" id="node2" href="$classworld_1_1character_1_1_character.html" title="Class used to handle a character (player or non&#45;player) " alt="" coords="84,409,260,805"/>
+<area shape="rect" id="node4" href="$classworld_1_1scenery_1_1_scenery.html" title="Class used to handle any world object. " alt="" coords="5,6,160,359"/>
+<area shape="rect" id="node6" href="$interfaceworld_1_1_interactive_object.html" title="Interface telling that the object interacts with the player. " alt="" coords="184,91,339,274"/>
+</map>

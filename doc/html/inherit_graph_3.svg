@@ -11,14 +11,14 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-154 329,-154 329,5 -4,5"/>
 <!-- Node1 -->
 <g id="node1" class="node"><title>Node1</title>
-<a xlink:href="a00015.html" target="_top" xlink:title="Abstract class representing an AI mood. ">
+<a xlink:href="classgameplay_1_1ai_1_1mood_1_1_mood.html" target="_top" xlink:title="Abstract class representing an AI mood. ">
 <polygon fill="white" stroke="black" points="0,-63 0,-87 122,-87 122,-63 0,-63"/>
 <text text-anchor="middle" x="61" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00">gameplay.ai.mood.Mood</text>
 </a>
 </g>
 <!-- Node2 -->
 <g id="node3" class="node"><title>Node2</title>
-<a xlink:href="a00003.html" target="_top" xlink:title="Class used to handle the Anger mood. ">
+<a xlink:href="classgameplay_1_1ai_1_1mood_1_1_anger.html" target="_top" xlink:title="Class used to handle the Anger mood. ">
 <polygon fill="white" stroke="black" points="179,-126 179,-150 303,-150 303,-126 179,-126"/>
 <text text-anchor="middle" x="241" y="-137" font-family="Helvetica,sans-Serif" font-size="10.00">gameplay.ai.mood.Anger</text>
 </a>
@@ -30,7 +30,7 @@
 </g>
 <!-- Node3 -->
 <g id="node5" class="node"><title>Node3</title>
-<a xlink:href="a00007.html" target="_top" xlink:title="Class used to handle the Curiosity mood. ">
+<a xlink:href="classgameplay_1_1ai_1_1mood_1_1_curiosity.html" target="_top" xlink:title="Class used to handle the Curiosity mood. ">
 <polygon fill="white" stroke="black" points="172.5,-84 172.5,-108 309.5,-108 309.5,-84 172.5,-84"/>
 <text text-anchor="middle" x="241" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00">gameplay.ai.mood.Curiosity</text>
 </a>
@@ -42,7 +42,7 @@
 </g>
 <!-- Node4 -->
 <g id="node7" class="node"><title>Node4</title>
-<a xlink:href="a00008.html" target="_top" xlink:title="Class used to handle the Depression mood. ">
+<a xlink:href="classgameplay_1_1ai_1_1mood_1_1_depression.html" target="_top" xlink:title="Class used to handle the Depression mood. ">
 <polygon fill="white" stroke="black" points="167,-42 167,-66 315,-66 315,-42 167,-42"/>
 <text text-anchor="middle" x="241" y="-53" font-family="Helvetica,sans-Serif" font-size="10.00">gameplay.ai.mood.Depression</text>
 </a>
@@ -54,7 +54,7 @@
 </g>
 <!-- Node5 -->
 <g id="node9" class="node"><title>Node5</title>
-<a xlink:href="a00020.html" target="_top" xlink:title="Class used to handle the Power Complex mood. ">
+<a xlink:href="classgameplay_1_1ai_1_1mood_1_1_power_complex.html" target="_top" xlink:title="Class used to handle the Power Complex mood. ">
 <polygon fill="white" stroke="black" points="158.5,-0 158.5,-24 323.5,-24 323.5,-0 158.5,-0"/>
 <text text-anchor="middle" x="241" y="-11" font-family="Helvetica,sans-Serif" font-size="10.00">gameplay.ai.mood.PowerComplex</text>
 </a>

@@ -1,4 +1,0 @@
-<map id="world.character.Character" name="world.character.Character">
-<area shape="rect" id="node2" href="$a00024.html" title="Class used to handle any world object. " alt="" coords="5,174,160,506"/>
-<area shape="rect" id="node6" href="$a00014.html" title="Interface telling that the object interacts with the player. " alt="" coords="184,249,339,431"/>
-</map>

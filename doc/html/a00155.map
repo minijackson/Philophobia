@@ -1,6 +1,0 @@
-<map id="world.scenery.CaveTheme" name="world.scenery.CaveTheme">
-<area shape="rect" id="node3" href="$a00012.html" title="Class used to handle a ground object. " alt="" coords="5,206,152,303"/>
-<area shape="rect" id="node5" href="$a00022.html" title="Class used to handle a rock object. " alt="" coords="176,153,312,357"/>
-<area shape="rect" id="node7" href="$a00026.html" title="Class used to handle a shrub object. " alt="" coords="336,206,475,303"/>
-<area shape="rect" id="node9" href="$a00033.html" title="Class used to handle a tree object. " alt="" coords="499,153,629,357"/>
-</map>

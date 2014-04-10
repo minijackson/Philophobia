@@ -1,0 +1,366 @@
+\hypertarget{classgameplay_1_1ai_1_1_a_i}{\section{gameplay.\-ai.\-A\-I Class Reference}
+\label{classgameplay_1_1ai_1_1_a_i}\index{gameplay.\-ai.\-A\-I@{gameplay.\-ai.\-A\-I}}
+}
+
+
+Class representing the sadistic robot.  
+
+
+
+
+Collaboration diagram for gameplay.\-ai.\-A\-I\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classgameplay_1_1ai_1_1_a_i__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgameplay_1_1ai_1_1_a_i_afbee4fe418889d96a38c9874a36e901d}{A\-I} (\hyperlink{classworld_1_1_world}{World} \hyperlink{classgameplay_1_1ai_1_1_a_i_ae4344290e04c468cdd631fc367f4f885}{current\-World})
+\begin{DoxyCompactList}\small\item\em \hyperlink{classgameplay_1_1ai_1_1_a_i}{A\-I} class main constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classgameplay_1_1ai_1_1_a_i_a0e329d9bc649c02f73422c285e9e4e15}{set\-Current\-World} (\hyperlink{classworld_1_1_world}{World} world)
+\begin{DoxyCompactList}\small\item\em Setter for the current world field. \end{DoxyCompactList}\item 
+void \hyperlink{classgameplay_1_1ai_1_1_a_i_ade34cf6dd9b6f1c6ebceccf040fffeb4}{new\-Betrayal} ()
+\begin{DoxyCompactList}\small\item\em Method called when the player make a new betrayal (does not do what the \hyperlink{classgameplay_1_1ai_1_1_a_i}{A\-I} asked) \end{DoxyCompactList}\item 
+void \hyperlink{classgameplay_1_1ai_1_1_a_i_ae37c568fcf8ccf9596665b94cb9c4702}{new\-Slavery} ()
+\begin{DoxyCompactList}\small\item\em Method called when the player do what the \hyperlink{classgameplay_1_1ai_1_1_a_i}{A\-I} asked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classgameplay_1_1ai_1_1_a_i_adbb46250627224cb4cd42ad99eaf42ba}{change\-Mood} (Class$<$ \hyperlink{classgameplay_1_1ai_1_1mood_1_1_mood}{Mood} $>$ mood\-Class)
+\begin{DoxyCompactList}\small\item\em Change the current mood field from a Class object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classworld_1_1_world}{World} \hyperlink{classgameplay_1_1ai_1_1_a_i_ae4344290e04c468cdd631fc367f4f885}{current\-World}
+\begin{DoxyCompactList}\small\item\em World where the player is currently in. \end{DoxyCompactList}\item 
+\hyperlink{classgameplay_1_1ai_1_1mood_1_1_mood}{Mood} \hyperlink{classgameplay_1_1ai_1_1_a_i_aad698027b11d4b58a4da8c2952484ccb}{current\-Mood}
+\begin{DoxyCompactList}\small\item\em Mood in which the \hyperlink{classgameplay_1_1ai_1_1_a_i}{A\-I} is currently in. \end{DoxyCompactList}\item 
+\hyperlink{classgameplay_1_1ai_1_1phrasing_1_1_phrasing}{Phrasing} \hyperlink{classgameplay_1_1ai_1_1_a_i_ae868fc7b0dc6cab4bebd1d97712a6e7e}{phrasing\-System}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classgameplay_1_1ai_1_1_a_i}{A\-I} talk system. \end{DoxyCompactList}\item 
+int \hyperlink{classgameplay_1_1ai_1_1_a_i_a3e328844c8791e3034bcf2fa5cc00f28}{betrayal\-Count}
+\begin{DoxyCompactList}\small\item\em Number of betrayals done by the player. \end{DoxyCompactList}\item 
+int \hyperlink{classgameplay_1_1ai_1_1_a_i_a891607c5493095d3c5e7988b401b769c}{slavery\-Count}
+\begin{DoxyCompactList}\small\item\em Number of asked actions by the \hyperlink{classgameplay_1_1ai_1_1_a_i}{A\-I} done by the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing the sadistic robot. 
+
+The robot ask the player to do terrible things without taking out the player's choice to do or not to do the task 
+
+The \hyperlink{classgameplay_1_1ai_1_1_a_i}{A\-I} has a mood system with 4 basic moods \-: Curiosity, Anger, Depression, Power complex 
+
+The robot can switch between these moods considering the user's choices and interact with the environment in a bad way
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classgameplay_1_1ai_1_1mood_1_1_mood}{gameplay.\-ai.\-mood.\-Mood} 
+\end{DoxySeeAlso}
+
+
+Definition at line 32 of file A\-I.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classgameplay_1_1ai_1_1_a_i_afbee4fe418889d96a38c9874a36e901d}{\index{gameplay\-::ai\-::\-A\-I@{gameplay\-::ai\-::\-A\-I}!A\-I@{A\-I}}
+\index{A\-I@{A\-I}!gameplay::ai::AI@{gameplay\-::ai\-::\-A\-I}}
+\subsubsection[{A\-I}]{\setlength{\rightskip}{0pt plus 5cm}gameplay.\-ai.\-A\-I.\-A\-I (
+\begin{DoxyParamCaption}
+\item[{{\bf World}}]{current\-World}
+\end{DoxyParamCaption}
+)}}\label{classgameplay_1_1ai_1_1_a_i_afbee4fe418889d96a38c9874a36e901d}
+
+
+\hyperlink{classgameplay_1_1ai_1_1_a_i}{A\-I} class main constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\-World} & World where the player is currently in \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 64 of file A\-I.\-java.
+
+
+
+References gameplay.\-ai.\-A\-I.\-betrayal\-Count, gameplay.\-ai.\-A\-I.\-current\-Mood, gameplay.\-ai.\-A\-I.\-current\-World, gameplay.\-ai.\-A\-I.\-phrasing\-System, and gameplay.\-ai.\-A\-I.\-slavery\-Count.
+
+
+\begin{DoxyCode}
+64                                   \{
+65         Philophobia.getVerbose().information(\textcolor{stringliteral}{"Creating sadistic AI"}, \textcolor{stringliteral}{"gameplay/ai/AI.java"}, \textcolor{stringliteral}{"AI.AI(World)"})
+      ;
+66 
+67         this.currentWorld = \hyperlink{classgameplay_1_1ai_1_1_a_i_ae4344290e04c468cdd631fc367f4f885}{currentWorld};
+68         \hyperlink{classgameplay_1_1ai_1_1_a_i_aad698027b11d4b58a4da8c2952484ccb}{currentMood}  = \textcolor{keyword}{new} Curiosity();
+69         \hyperlink{classgameplay_1_1ai_1_1_a_i_ae868fc7b0dc6cab4bebd1d97712a6e7e}{phrasingSystem} = \textcolor{keyword}{new} Phrasing();
+70         \hyperlink{classgameplay_1_1ai_1_1_a_i_a3e328844c8791e3034bcf2fa5cc00f28}{betrayalCount} = 0;
+71         \hyperlink{classgameplay_1_1ai_1_1_a_i_a891607c5493095d3c5e7988b401b769c}{slaveryCount} = 0;
+72     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classgameplay_1_1ai_1_1_a_i_adbb46250627224cb4cd42ad99eaf42ba}{\index{gameplay\-::ai\-::\-A\-I@{gameplay\-::ai\-::\-A\-I}!change\-Mood@{change\-Mood}}
+\index{change\-Mood@{change\-Mood}!gameplay::ai::AI@{gameplay\-::ai\-::\-A\-I}}
+\subsubsection[{change\-Mood}]{\setlength{\rightskip}{0pt plus 5cm}void gameplay.\-ai.\-A\-I.\-change\-Mood (
+\begin{DoxyParamCaption}
+\item[{Class$<$ {\bf Mood} $>$}]{mood\-Class}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classgameplay_1_1ai_1_1_a_i_adbb46250627224cb4cd42ad99eaf42ba}
+
+
+Change the current mood field from a Class object. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classgameplay_1_1ai_1_1_a_i_aad698027b11d4b58a4da8c2952484ccb}{current\-Mood} 
+\end{DoxySeeAlso}
+
+
+Definition at line 116 of file A\-I.\-java.
+
+
+
+References gameplay.\-ai.\-A\-I.\-current\-Mood.
+
+
+
+Referenced by gameplay.\-ai.\-A\-I.\-new\-Betrayal(), and gameplay.\-ai.\-A\-I.\-new\-Slavery().
+
+
+\begin{DoxyCode}
+116                                                      \{  
+117         \textcolor{keywordflow}{try} \{
+118             Philophobia.getVerbose().information(\textcolor{stringliteral}{"AI switching from "} + 
+      \hyperlink{classgameplay_1_1ai_1_1_a_i_aad698027b11d4b58a4da8c2952484ccb}{currentMood}.getClass().getName() + \textcolor{stringliteral}{" mood to "} + moodClass.getName() + \textcolor{stringliteral}{" mood"}, \textcolor{stringliteral}{"
+      gameplay/ai/AI.java"}, \textcolor{stringliteral}{"AI.changeMood(Class)"});
+119             \hyperlink{classgameplay_1_1ai_1_1_a_i_aad698027b11d4b58a4da8c2952484ccb}{currentMood} = moodClass.newInstance();
+120         \} \textcolor{keywordflow}{catch}(SecurityException e) \{
+121             Philophobia.getVerbose().serious(\textcolor{stringliteral}{"Security exception when switching from "} + 
+      \hyperlink{classgameplay_1_1ai_1_1_a_i_aad698027b11d4b58a4da8c2952484ccb}{currentMood}.getClass().getName() + \textcolor{stringliteral}{" mood to "} + moodClass.getName() + \textcolor{stringliteral}{" mood: "} + e.getMessage(
+      ), \textcolor{stringliteral}{"gameplay/ai/AI.java"}, \textcolor{stringliteral}{"AI.changeMood(Class)"});
+122         \} \textcolor{keywordflow}{catch}(InstantiationException e) \{
+123             Philophobia.getVerbose().serious(\textcolor{stringliteral}{"Instantiation exception when switching from "} + 
+      \hyperlink{classgameplay_1_1ai_1_1_a_i_aad698027b11d4b58a4da8c2952484ccb}{currentMood}.getClass().getName() + \textcolor{stringliteral}{" mood to "} + moodClass.getName() + \textcolor{stringliteral}{" mood: "} + e.getMessage(
+      ), \textcolor{stringliteral}{"gameplay/ai/AI.java"}, \textcolor{stringliteral}{"AI.changeMood(Class)"});
+124         \} \textcolor{keywordflow}{catch}(IllegalAccessException e) \{
+125             Philophobia.getVerbose().serious(\textcolor{stringliteral}{"Illegal access exception when switching from "} + 
+      \hyperlink{classgameplay_1_1ai_1_1_a_i_aad698027b11d4b58a4da8c2952484ccb}{currentMood}.getClass().getName() + \textcolor{stringliteral}{" mood to "} + moodClass.getName() + \textcolor{stringliteral}{" mood: "} + e.getMessage(
+      ), \textcolor{stringliteral}{"gameplay/ai/AI.java"}, \textcolor{stringliteral}{"AI.changeMood(Class)"});
+126         \} 
+127     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgameplay_1_1ai_1_1_a_i_adbb46250627224cb4cd42ad99eaf42ba_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classgameplay_1_1ai_1_1_a_i_ade34cf6dd9b6f1c6ebceccf040fffeb4}{\index{gameplay\-::ai\-::\-A\-I@{gameplay\-::ai\-::\-A\-I}!new\-Betrayal@{new\-Betrayal}}
+\index{new\-Betrayal@{new\-Betrayal}!gameplay::ai::AI@{gameplay\-::ai\-::\-A\-I}}
+\subsubsection[{new\-Betrayal}]{\setlength{\rightskip}{0pt plus 5cm}void gameplay.\-ai.\-A\-I.\-new\-Betrayal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classgameplay_1_1ai_1_1_a_i_ade34cf6dd9b6f1c6ebceccf040fffeb4}
+
+
+Method called when the player make a new betrayal (does not do what the \hyperlink{classgameplay_1_1ai_1_1_a_i}{A\-I} asked) 
+
+
+
+Definition at line 91 of file A\-I.\-java.
+
+
+
+References gameplay.\-ai.\-A\-I.\-betrayal\-Count, gameplay.\-ai.\-A\-I.\-change\-Mood(), gameplay.\-ai.\-A\-I.\-current\-Mood, gameplay.\-ai.\-mood.\-Mood.\-get\-Next\-Mood(), and gameplay.\-ai.\-mood.\-Mood.\-increment\-Betrayal\-Count().
+
+
+\begin{DoxyCode}
+91                               \{
+92         Philophobia.getVerbose().calls(\textcolor{stringliteral}{"New betrayal action detected"}, \textcolor{stringliteral}{"gameplay/ai/AI.java"}, \textcolor{stringliteral}{"
+      AI.newBetrayal()"});
+93         \hyperlink{classgameplay_1_1ai_1_1_a_i_a3e328844c8791e3034bcf2fa5cc00f28}{betrayalCount}++;
+94         \textcolor{keywordflow}{if}(\hyperlink{classgameplay_1_1ai_1_1_a_i_aad698027b11d4b58a4da8c2952484ccb}{currentMood}.\hyperlink{classgameplay_1_1ai_1_1mood_1_1_mood_a322adb08d4a6f7dcd0eb00c77649d2d2}{incrementBetrayalCount}() >= 
+      currentMood.getBetrayalThreshold()) \{
+95             \hyperlink{classgameplay_1_1ai_1_1_a_i_adbb46250627224cb4cd42ad99eaf42ba}{changeMood}(\hyperlink{classgameplay_1_1ai_1_1_a_i_aad698027b11d4b58a4da8c2952484ccb}{currentMood}.\hyperlink{classgameplay_1_1ai_1_1mood_1_1_mood_aa0080ad0116bb5b614bbbc56d448ad22}{getNextMood}());
+96         \}
+97     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgameplay_1_1ai_1_1_a_i_ade34cf6dd9b6f1c6ebceccf040fffeb4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classgameplay_1_1ai_1_1_a_i_ae37c568fcf8ccf9596665b94cb9c4702}{\index{gameplay\-::ai\-::\-A\-I@{gameplay\-::ai\-::\-A\-I}!new\-Slavery@{new\-Slavery}}
+\index{new\-Slavery@{new\-Slavery}!gameplay::ai::AI@{gameplay\-::ai\-::\-A\-I}}
+\subsubsection[{new\-Slavery}]{\setlength{\rightskip}{0pt plus 5cm}void gameplay.\-ai.\-A\-I.\-new\-Slavery (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classgameplay_1_1ai_1_1_a_i_ae37c568fcf8ccf9596665b94cb9c4702}
+
+
+Method called when the player do what the \hyperlink{classgameplay_1_1ai_1_1_a_i}{A\-I} asked. 
+
+
+
+Definition at line 103 of file A\-I.\-java.
+
+
+
+References gameplay.\-ai.\-A\-I.\-change\-Mood(), gameplay.\-ai.\-A\-I.\-current\-Mood, gameplay.\-ai.\-mood.\-Mood.\-get\-Previous\-Mood(), gameplay.\-ai.\-mood.\-Mood.\-increment\-Slavery\-Count(), and gameplay.\-ai.\-A\-I.\-slavery\-Count.
+
+
+\begin{DoxyCode}
+103                              \{
+104         Philophobia.getVerbose().calls(\textcolor{stringliteral}{"New slavery action detected"}, \textcolor{stringliteral}{"gameplay/ai/AI.java"}, \textcolor{stringliteral}{"
+      AI.newSlavery()"});
+105         \hyperlink{classgameplay_1_1ai_1_1_a_i_a891607c5493095d3c5e7988b401b769c}{slaveryCount}++;
+106         \textcolor{keywordflow}{if}(\hyperlink{classgameplay_1_1ai_1_1_a_i_aad698027b11d4b58a4da8c2952484ccb}{currentMood}.\hyperlink{classgameplay_1_1ai_1_1mood_1_1_mood_ac416312a82ad5afce4090858b47b0c96}{incrementSlaveryCount}() >= 
+      currentMood.getSlaveryThreshold()) \{
+107             \hyperlink{classgameplay_1_1ai_1_1_a_i_adbb46250627224cb4cd42ad99eaf42ba}{changeMood}(\hyperlink{classgameplay_1_1ai_1_1_a_i_aad698027b11d4b58a4da8c2952484ccb}{currentMood}.\hyperlink{classgameplay_1_1ai_1_1mood_1_1_mood_aceaadc827da68781c215cf280a8062f8}{getPreviousMood}());
+108         \}
+109     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgameplay_1_1ai_1_1_a_i_ae37c568fcf8ccf9596665b94cb9c4702_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classgameplay_1_1ai_1_1_a_i_a0e329d9bc649c02f73422c285e9e4e15}{\index{gameplay\-::ai\-::\-A\-I@{gameplay\-::ai\-::\-A\-I}!set\-Current\-World@{set\-Current\-World}}
+\index{set\-Current\-World@{set\-Current\-World}!gameplay::ai::AI@{gameplay\-::ai\-::\-A\-I}}
+\subsubsection[{set\-Current\-World}]{\setlength{\rightskip}{0pt plus 5cm}void gameplay.\-ai.\-A\-I.\-set\-Current\-World (
+\begin{DoxyParamCaption}
+\item[{{\bf World}}]{world}
+\end{DoxyParamCaption}
+)}}\label{classgameplay_1_1ai_1_1_a_i_a0e329d9bc649c02f73422c285e9e4e15}
+
+
+Setter for the current world field. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classgameplay_1_1ai_1_1_a_i_ae4344290e04c468cdd631fc367f4f885}{current\-World} 
+\end{DoxySeeAlso}
+
+
+Definition at line 78 of file A\-I.\-java.
+
+
+
+References gameplay.\-ai.\-A\-I.\-current\-World.
+
+
+\begin{DoxyCode}
+78                                              \{
+79         \hyperlink{classgameplay_1_1ai_1_1_a_i_ae4344290e04c468cdd631fc367f4f885}{currentWorld} = world;
+80     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classgameplay_1_1ai_1_1_a_i_a3e328844c8791e3034bcf2fa5cc00f28}{\index{gameplay\-::ai\-::\-A\-I@{gameplay\-::ai\-::\-A\-I}!betrayal\-Count@{betrayal\-Count}}
+\index{betrayal\-Count@{betrayal\-Count}!gameplay::ai::AI@{gameplay\-::ai\-::\-A\-I}}
+\subsubsection[{betrayal\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int gameplay.\-ai.\-A\-I.\-betrayal\-Count\hspace{0.3cm}{\ttfamily [protected]}}}\label{classgameplay_1_1ai_1_1_a_i_a3e328844c8791e3034bcf2fa5cc00f28}
+
+
+Number of betrayals done by the player. 
+
+
+
+Definition at line 52 of file A\-I.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-A\-I.\-A\-I(), and gameplay.\-ai.\-A\-I.\-new\-Betrayal().
+
+\hypertarget{classgameplay_1_1ai_1_1_a_i_aad698027b11d4b58a4da8c2952484ccb}{\index{gameplay\-::ai\-::\-A\-I@{gameplay\-::ai\-::\-A\-I}!current\-Mood@{current\-Mood}}
+\index{current\-Mood@{current\-Mood}!gameplay::ai::AI@{gameplay\-::ai\-::\-A\-I}}
+\subsubsection[{current\-Mood}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mood} gameplay.\-ai.\-A\-I.\-current\-Mood\hspace{0.3cm}{\ttfamily [protected]}}}\label{classgameplay_1_1ai_1_1_a_i_aad698027b11d4b58a4da8c2952484ccb}
+
+
+Mood in which the \hyperlink{classgameplay_1_1ai_1_1_a_i}{A\-I} is currently in. 
+
+
+
+Definition at line 42 of file A\-I.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-A\-I.\-A\-I(), gameplay.\-ai.\-A\-I.\-change\-Mood(), gameplay.\-ai.\-A\-I.\-new\-Betrayal(), and gameplay.\-ai.\-A\-I.\-new\-Slavery().
+
+\hypertarget{classgameplay_1_1ai_1_1_a_i_ae4344290e04c468cdd631fc367f4f885}{\index{gameplay\-::ai\-::\-A\-I@{gameplay\-::ai\-::\-A\-I}!current\-World@{current\-World}}
+\index{current\-World@{current\-World}!gameplay::ai::AI@{gameplay\-::ai\-::\-A\-I}}
+\subsubsection[{current\-World}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World} gameplay.\-ai.\-A\-I.\-current\-World\hspace{0.3cm}{\ttfamily [protected]}}}\label{classgameplay_1_1ai_1_1_a_i_ae4344290e04c468cdd631fc367f4f885}
+
+
+World where the player is currently in. 
+
+
+
+Definition at line 37 of file A\-I.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-A\-I.\-A\-I(), and gameplay.\-ai.\-A\-I.\-set\-Current\-World().
+
+\hypertarget{classgameplay_1_1ai_1_1_a_i_ae868fc7b0dc6cab4bebd1d97712a6e7e}{\index{gameplay\-::ai\-::\-A\-I@{gameplay\-::ai\-::\-A\-I}!phrasing\-System@{phrasing\-System}}
+\index{phrasing\-System@{phrasing\-System}!gameplay::ai::AI@{gameplay\-::ai\-::\-A\-I}}
+\subsubsection[{phrasing\-System}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Phrasing} gameplay.\-ai.\-A\-I.\-phrasing\-System\hspace{0.3cm}{\ttfamily [protected]}}}\label{classgameplay_1_1ai_1_1_a_i_ae868fc7b0dc6cab4bebd1d97712a6e7e}
+
+
+\hyperlink{classgameplay_1_1ai_1_1_a_i}{A\-I} talk system. 
+
+
+
+Definition at line 47 of file A\-I.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-A\-I.\-A\-I().
+
+\hypertarget{classgameplay_1_1ai_1_1_a_i_a891607c5493095d3c5e7988b401b769c}{\index{gameplay\-::ai\-::\-A\-I@{gameplay\-::ai\-::\-A\-I}!slavery\-Count@{slavery\-Count}}
+\index{slavery\-Count@{slavery\-Count}!gameplay::ai::AI@{gameplay\-::ai\-::\-A\-I}}
+\subsubsection[{slavery\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int gameplay.\-ai.\-A\-I.\-slavery\-Count\hspace{0.3cm}{\ttfamily [protected]}}}\label{classgameplay_1_1ai_1_1_a_i_a891607c5493095d3c5e7988b401b769c}
+
+
+Number of asked actions by the \hyperlink{classgameplay_1_1ai_1_1_a_i}{A\-I} done by the player. 
+
+
+
+Definition at line 58 of file A\-I.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-A\-I.\-A\-I(), and gameplay.\-ai.\-A\-I.\-new\-Slavery().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gameplay/ai/\hyperlink{_a_i_8java}{A\-I.\-java}\end{DoxyCompactItemize}

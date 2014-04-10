@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['debug',['debug',['../a00080.html',1,'']]]
+  ['debug',['debug',['../namespacedebug.html',1,'']]]
 ];

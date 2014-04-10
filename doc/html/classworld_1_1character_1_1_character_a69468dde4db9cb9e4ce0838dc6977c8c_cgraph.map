@@ -1,0 +1,4 @@
+<map id="world.character.Character.move" name="world.character.Character.move">
+<area shape="rect" id="node3" href="$classworld_1_1character_1_1_character.html#afd88136a2b4b1ece60657bb4481ab955" title="Slowly horizontally move the character to a certain point regarding his current position. " alt="" coords="263,5,476,38"/>
+<area shape="rect" id="node5" href="$classworld_1_1character_1_1_character.html#af0dd57e9b3d6a43fec1292f5333f0208" title="Slowly vertically move the character to a certain point regarding his current position. " alt="" coords="263,61,476,94"/>
+</map>

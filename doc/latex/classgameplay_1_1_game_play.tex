@@ -1,0 +1,171 @@
+\hypertarget{classgameplay_1_1_game_play}{\section{gameplay.\-Game\-Play Class Reference}
+\label{classgameplay_1_1_game_play}\index{gameplay.\-Game\-Play@{gameplay.\-Game\-Play}}
+}
+
+
+Class handling the game play of this game.  
+
+
+
+
+Collaboration diagram for gameplay.\-Game\-Play\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classgameplay_1_1_game_play__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgameplay_1_1_game_play_acaa399a84e39a11a776da53da43ed3ea}{Game\-Play} (\hyperlink{classdebug_1_1_cli_options}{Cli\-Options} cli\-Options)
+\begin{DoxyCompactList}\small\item\em Constructor of the \hyperlink{classgameplay_1_1_game_play}{Game\-Play} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classworld_1_1_world}{World} \hyperlink{classgameplay_1_1_game_play_acac96730473a405274e9ff0a58e4d77e}{current\-World}
+\begin{DoxyCompactList}\small\item\em World currently being played. \end{DoxyCompactList}\item 
+String \hyperlink{classgameplay_1_1_game_play_adcc37bdd0470d8adc27fa249d93adcff}{current\-World\-Name}
+\begin{DoxyCompactList}\small\item\em Name of the world currently being played. \end{DoxyCompactList}\item 
+\hyperlink{classwindow_1_1_window}{Window} \hyperlink{classgameplay_1_1_game_play_aed3cc7a8f5e4838bb0b37d4014c6133e}{window}
+\begin{DoxyCompactList}\small\item\em The game window. \end{DoxyCompactList}\item 
+\hyperlink{classgameplay_1_1ai_1_1_a_i}{A\-I} \hyperlink{classgameplay_1_1_game_play_a416406c147a47ba292990aa11064d9aa}{artificial\-Intelligence}
+\begin{DoxyCompactList}\small\item\em Malicious artificial intelligence driving the player mad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class handling the game play of this game. 
+
+It handle the creation of worlds, the movements of the main character and all the other characters, (including the constraints), the interactions between the main character and the other characters or the scenery 
+
+The \hyperlink{classgameplay_1_1_game_play}{Game\-Play} class also controls the user interface mode (loading screen, win, fail, etc…) 
+
+This class is the equivalent of the controller in the M\-V\-C paradigm. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classworld_1_1_world}{world.\-World} 
+\end{DoxySeeAlso}
+
+
+Definition at line 29 of file Game\-Play.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classgameplay_1_1_game_play_acaa399a84e39a11a776da53da43ed3ea}{\index{gameplay\-::\-Game\-Play@{gameplay\-::\-Game\-Play}!Game\-Play@{Game\-Play}}
+\index{Game\-Play@{Game\-Play}!gameplay::GamePlay@{gameplay\-::\-Game\-Play}}
+\subsubsection[{Game\-Play}]{\setlength{\rightskip}{0pt plus 5cm}gameplay.\-Game\-Play.\-Game\-Play (
+\begin{DoxyParamCaption}
+\item[{{\bf Cli\-Options}}]{cli\-Options}
+\end{DoxyParamCaption}
+)}}\label{classgameplay_1_1_game_play_acaa399a84e39a11a776da53da43ed3ea}
+
+
+Constructor of the \hyperlink{classgameplay_1_1_game_play}{Game\-Play} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cli\-Options} & Opions for the game given via the command line \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 59 of file Game\-Play.\-java.
+
+
+
+References gameplay.\-Game\-Play.\-artificial\-Intelligence, gameplay.\-Game\-Play.\-current\-World, gameplay.\-Game\-Play.\-current\-World\-Name, and gameplay.\-Game\-Play.\-window.
+
+
+\begin{DoxyCode}
+59                                            \{
+60         Philophobia.getVerbose().information(\textcolor{stringliteral}{"Creating GamePlay class"}, \textcolor{stringliteral}{"gameplay/Gameplay.java"}, \textcolor{stringliteral}{"
+      GamePlay.GamePlay()"});
+61 
+62         \textcolor{comment}{// The default world is the Temperate Broadleaf world}
+63         \hyperlink{classgameplay_1_1_game_play_adcc37bdd0470d8adc27fa249d93adcff}{currentWorldName} = \textcolor{stringliteral}{"Temperate Broadleaf"};
+64         \hyperlink{classgameplay_1_1_game_play_acac96730473a405274e9ff0a58e4d77e}{currentWorld} = \textcolor{keyword}{new} World(\textcolor{stringliteral}{"temperatebroadleaf"});
+65 
+66         \hyperlink{classgameplay_1_1_game_play_aed3cc7a8f5e4838bb0b37d4014c6133e}{window} = \textcolor{keyword}{new} Window();
+67 
+68         \textcolor{keywordflow}{try} \{
+69             \textcolor{comment}{// Sleep during the length of the animation}
+70             Thread.sleep(2000);
+71         \} \textcolor{keywordflow}{catch}(InterruptedException e) \{
+72             Philophobia.getVerbose().warning(\textcolor{stringliteral}{"Sleep interrupted: "} + e.getMessage(), \textcolor{stringliteral}{"
+      gameplay/GamePlay.java"}, \textcolor{stringliteral}{"GamePlay.GamePlay(CliOptions)"});
+73         \}
+74 
+75         \hyperlink{classgameplay_1_1_game_play_a416406c147a47ba292990aa11064d9aa}{artificialIntelligence} = \textcolor{keyword}{new} AI(\hyperlink{classgameplay_1_1_game_play_acac96730473a405274e9ff0a58e4d77e}{currentWorld});
+76 
+77         window.getUserInterface().setDisplayedWorld(\hyperlink{classgameplay_1_1_game_play_acac96730473a405274e9ff0a58e4d77e}{currentWorld});
+78         window.setGameState();
+79     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classgameplay_1_1_game_play_a416406c147a47ba292990aa11064d9aa}{\index{gameplay\-::\-Game\-Play@{gameplay\-::\-Game\-Play}!artificial\-Intelligence@{artificial\-Intelligence}}
+\index{artificial\-Intelligence@{artificial\-Intelligence}!gameplay::GamePlay@{gameplay\-::\-Game\-Play}}
+\subsubsection[{artificial\-Intelligence}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\-I} gameplay.\-Game\-Play.\-artificial\-Intelligence\hspace{0.3cm}{\ttfamily [protected]}}}\label{classgameplay_1_1_game_play_a416406c147a47ba292990aa11064d9aa}
+
+
+Malicious artificial intelligence driving the player mad. 
+
+
+
+Definition at line 53 of file Game\-Play.\-java.
+
+
+
+Referenced by gameplay.\-Game\-Play.\-Game\-Play().
+
+\hypertarget{classgameplay_1_1_game_play_acac96730473a405274e9ff0a58e4d77e}{\index{gameplay\-::\-Game\-Play@{gameplay\-::\-Game\-Play}!current\-World@{current\-World}}
+\index{current\-World@{current\-World}!gameplay::GamePlay@{gameplay\-::\-Game\-Play}}
+\subsubsection[{current\-World}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World} gameplay.\-Game\-Play.\-current\-World\hspace{0.3cm}{\ttfamily [protected]}}}\label{classgameplay_1_1_game_play_acac96730473a405274e9ff0a58e4d77e}
+
+
+World currently being played. 
+
+
+
+Definition at line 34 of file Game\-Play.\-java.
+
+
+
+Referenced by gameplay.\-Game\-Play.\-Game\-Play().
+
+\hypertarget{classgameplay_1_1_game_play_adcc37bdd0470d8adc27fa249d93adcff}{\index{gameplay\-::\-Game\-Play@{gameplay\-::\-Game\-Play}!current\-World\-Name@{current\-World\-Name}}
+\index{current\-World\-Name@{current\-World\-Name}!gameplay::GamePlay@{gameplay\-::\-Game\-Play}}
+\subsubsection[{current\-World\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String gameplay.\-Game\-Play.\-current\-World\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classgameplay_1_1_game_play_adcc37bdd0470d8adc27fa249d93adcff}
+
+
+Name of the world currently being played. 
+
+It is used to detect in which world the player is and where are the other worlds 
+
+Definition at line 42 of file Game\-Play.\-java.
+
+
+
+Referenced by gameplay.\-Game\-Play.\-Game\-Play().
+
+\hypertarget{classgameplay_1_1_game_play_aed3cc7a8f5e4838bb0b37d4014c6133e}{\index{gameplay\-::\-Game\-Play@{gameplay\-::\-Game\-Play}!window@{window}}
+\index{window@{window}!gameplay::GamePlay@{gameplay\-::\-Game\-Play}}
+\subsubsection[{window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Window} gameplay.\-Game\-Play.\-window\hspace{0.3cm}{\ttfamily [protected]}}}\label{classgameplay_1_1_game_play_aed3cc7a8f5e4838bb0b37d4014c6133e}
+
+
+The game window. 
+
+
+
+Definition at line 47 of file Game\-Play.\-java.
+
+
+
+Referenced by gameplay.\-Game\-Play.\-Game\-Play().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gameplay/\hyperlink{_game_play_8java}{Game\-Play.\-java}\end{DoxyCompactItemize}
