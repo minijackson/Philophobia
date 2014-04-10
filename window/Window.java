@@ -66,12 +66,18 @@ public class Window extends JFrame {
 
 	}
 
+	/**
+	 * Change the current window state to loading state
+	 */
 	public void setLoadingState() {
 		Philophobia.getVerbose().information("Setting window's Loading mode", "window/Window.java", "Window.setLoadingState()");
 		topbar.hidePauseButton();
 		windowState = WindowState.LoadingScreen;
 	}
 
+	/**
+	 * Change the current window state to game state
+	 */
 	public void setGameState() {
 		Philophobia.getVerbose().information("Setting window's Game mode", "window/Window.java", "Window.setGameState()");
 		topbar.showPauseButton();
@@ -79,18 +85,28 @@ public class Window extends JFrame {
 		windowState = WindowState.Game;
 	}
 
+	/**
+	 * Change the current window state to fail state
+	 */
 	public void setFailState() {
 		Philophobia.getVerbose().information("Setting window's Fail mode", "window/Window.java", "Window.setFailState()");
 		topbar.hidePauseButton();
 		windowState = WindowState.Fail;
 	}
 
+	/**
+	 * Change the current window state to win state
+	 */
 	public void setWinState() {
 		Philophobia.getVerbose().information("Setting window's Win mode", "window/Window.java", "Window.setWindState()");
 		topbar.hidePauseButton();
 		windowState = WindowState.Win;
 	}
 
+	/**
+	 * Getter for the user interface field
+	 * @see #userInterface
+	 */
 	public UI getUserInterface() {
 		return userInterface;
 	}
