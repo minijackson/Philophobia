@@ -8,7 +8,8 @@ Class handling the window with decorations, size, title, etc and the main compon
 
 
 
-Inheritance diagram for window.\-Window\-:\nopagebreak
+Inheritance diagram for window.\-Window\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,7 +18,8 @@ Inheritance diagram for window.\-Window\-:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for window.\-Window\-:\nopagebreak
+Collaboration diagram for window.\-Window\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,15 +32,15 @@ Collaboration diagram for window.\-Window\-:\nopagebreak
 \hyperlink{classwindow_1_1_window_ac92fd9c8fc1bc83c8d8bd8b87eb62213}{Window} ()
 \begin{DoxyCompactList}\small\item\em Constructor of the \hyperlink{classwindow_1_1_window}{Window} class. \end{DoxyCompactList}\item 
 void \hyperlink{classwindow_1_1_window_a2e2049d1930bb104ec235b0d9ba431fa}{set\-Loading\-State} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Change the current window state to loading state. \end{DoxyCompactList}\item 
 void \hyperlink{classwindow_1_1_window_a77e3a4c06b4675bc24eefd91a1faaf11}{set\-Game\-State} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Change the current window state to game state. \end{DoxyCompactList}\item 
 void \hyperlink{classwindow_1_1_window_aa14be01e068317ed09bcbc6d12d8a365}{set\-Fail\-State} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Change the current window state to fail state. \end{DoxyCompactList}\item 
 void \hyperlink{classwindow_1_1_window_afc31496382fd285df057838b1e38d1c6}{set\-Win\-State} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Change the current window state to win state. \end{DoxyCompactList}\item 
 \hyperlink{classwindow_1_1ui_1_1_u_i}{U\-I} \hyperlink{classwindow_1_1_window_aab7fb1a0a97c03ddf4e94c5146d4c692}{get\-User\-Interface} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter for the user interface field. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -122,7 +124,14 @@ References window.\-Window\-State.\-First\-Loading, window.\-Window.\-topbar, wi
 )}}\label{classwindow_1_1_window_aab7fb1a0a97c03ddf4e94c5146d4c692}
 
 
-Definition at line 94 of file Window.\-java.
+Getter for the user interface field. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classwindow_1_1_window_a0021ebc966e051019f4f7c5e4984e77f}{user\-Interface} 
+\end{DoxySeeAlso}
+
+
+Definition at line 110 of file Window.\-java.
 
 
 
@@ -130,9 +139,9 @@ References window.\-Window.\-user\-Interface.
 
 
 \begin{DoxyCode}
-94                                  \{
-95         \textcolor{keywordflow}{return} \hyperlink{classwindow_1_1_window_a0021ebc966e051019f4f7c5e4984e77f}{userInterface};
-96     \}
+110                                  \{
+111         \textcolor{keywordflow}{return} \hyperlink{classwindow_1_1_window_a0021ebc966e051019f4f7c5e4984e77f}{userInterface};
+112     \}
 \end{DoxyCode}
 \hypertarget{classwindow_1_1_window_aa14be01e068317ed09bcbc6d12d8a365}{\index{window\-::\-Window@{window\-::\-Window}!set\-Fail\-State@{set\-Fail\-State}}
 \index{set\-Fail\-State@{set\-Fail\-State}!window::Window@{window\-::\-Window}}
@@ -143,7 +152,11 @@ References window.\-Window.\-user\-Interface.
 )}}\label{classwindow_1_1_window_aa14be01e068317ed09bcbc6d12d8a365}
 
 
-Definition at line 82 of file Window.\-java.
+Change the current window state to fail state. 
+
+
+
+Definition at line 91 of file Window.\-java.
 
 
 
@@ -151,12 +164,12 @@ References window.\-Window\-State.\-Fail, and window.\-Window.\-window\-State.
 
 
 \begin{DoxyCode}
-82                                \{
-83         Philophobia.getVerbose().information(\textcolor{stringliteral}{"Setting window's Fail mode"}, \textcolor{stringliteral}{"window/Window.java"}, \textcolor{stringliteral}{"
+91                                \{
+92         Philophobia.getVerbose().information(\textcolor{stringliteral}{"Setting window's Fail mode"}, \textcolor{stringliteral}{"window/Window.java"}, \textcolor{stringliteral}{"
       Window.setFailState()"});
-84         topbar.hidePauseButton();
-85         \hyperlink{classwindow_1_1_window_aaf636394a965f1a77233071375d4fe44}{windowState} = \hyperlink{enumwindow_1_1_window_state_ace96026e75eb5118b66e8703fd93d68c}{WindowState.Fail};
-86     \}
+93         topbar.hidePauseButton();
+94         \hyperlink{classwindow_1_1_window_aaf636394a965f1a77233071375d4fe44}{windowState} = \hyperlink{enumwindow_1_1_window_state_ace96026e75eb5118b66e8703fd93d68c}{WindowState.Fail};
+95     \}
 \end{DoxyCode}
 \hypertarget{classwindow_1_1_window_a77e3a4c06b4675bc24eefd91a1faaf11}{\index{window\-::\-Window@{window\-::\-Window}!set\-Game\-State@{set\-Game\-State}}
 \index{set\-Game\-State@{set\-Game\-State}!window::Window@{window\-::\-Window}}
@@ -167,7 +180,11 @@ References window.\-Window\-State.\-Fail, and window.\-Window.\-window\-State.
 )}}\label{classwindow_1_1_window_a77e3a4c06b4675bc24eefd91a1faaf11}
 
 
-Definition at line 75 of file Window.\-java.
+Change the current window state to game state. 
+
+
+
+Definition at line 81 of file Window.\-java.
 
 
 
@@ -175,13 +192,13 @@ References window.\-Window\-State.\-Game, window.\-Window.\-user\-Interface, and
 
 
 \begin{DoxyCode}
-75                                \{
-76         Philophobia.getVerbose().information(\textcolor{stringliteral}{"Setting window's Game mode"}, \textcolor{stringliteral}{"window/Window.java"}, \textcolor{stringliteral}{"
+81                                \{
+82         Philophobia.getVerbose().information(\textcolor{stringliteral}{"Setting window's Game mode"}, \textcolor{stringliteral}{"window/Window.java"}, \textcolor{stringliteral}{"
       Window.setGameState()"});
-77         topbar.showPauseButton();
-78         this.getContentPane().add(\hyperlink{classwindow_1_1_window_a0021ebc966e051019f4f7c5e4984e77f}{userInterface}, BorderLayout.CENTER);
-79         \hyperlink{classwindow_1_1_window_aaf636394a965f1a77233071375d4fe44}{windowState} = \hyperlink{enumwindow_1_1_window_state_abb4a2512f88d7104f91993174488282d}{WindowState.Game};
-80     \}
+83         topbar.showPauseButton();
+84         this.getContentPane().add(\hyperlink{classwindow_1_1_window_a0021ebc966e051019f4f7c5e4984e77f}{userInterface}, BorderLayout.CENTER);
+85         \hyperlink{classwindow_1_1_window_aaf636394a965f1a77233071375d4fe44}{windowState} = \hyperlink{enumwindow_1_1_window_state_abb4a2512f88d7104f91993174488282d}{WindowState.Game};
+86     \}
 \end{DoxyCode}
 \hypertarget{classwindow_1_1_window_a2e2049d1930bb104ec235b0d9ba431fa}{\index{window\-::\-Window@{window\-::\-Window}!set\-Loading\-State@{set\-Loading\-State}}
 \index{set\-Loading\-State@{set\-Loading\-State}!window::Window@{window\-::\-Window}}
@@ -192,7 +209,11 @@ References window.\-Window\-State.\-Game, window.\-Window.\-user\-Interface, and
 )}}\label{classwindow_1_1_window_a2e2049d1930bb104ec235b0d9ba431fa}
 
 
-Definition at line 69 of file Window.\-java.
+Change the current window state to loading state. 
+
+
+
+Definition at line 72 of file Window.\-java.
 
 
 
@@ -200,12 +221,12 @@ References window.\-Window\-State.\-Loading\-Screen, and window.\-Window.\-windo
 
 
 \begin{DoxyCode}
-69                                   \{
-70         Philophobia.getVerbose().information(\textcolor{stringliteral}{"Setting window's Loading mode"}, \textcolor{stringliteral}{"window/Window.java"}, \textcolor{stringliteral}{"
+72                                   \{
+73         Philophobia.getVerbose().information(\textcolor{stringliteral}{"Setting window's Loading mode"}, \textcolor{stringliteral}{"window/Window.java"}, \textcolor{stringliteral}{"
       Window.setLoadingState()"});
-71         topbar.hidePauseButton();
-72         \hyperlink{classwindow_1_1_window_aaf636394a965f1a77233071375d4fe44}{windowState} = \hyperlink{enumwindow_1_1_window_state_a281f52964a4be64ea19bf2a401184521}{WindowState.LoadingScreen};
-73     \}
+74         topbar.hidePauseButton();
+75         \hyperlink{classwindow_1_1_window_aaf636394a965f1a77233071375d4fe44}{windowState} = \hyperlink{enumwindow_1_1_window_state_a281f52964a4be64ea19bf2a401184521}{WindowState.LoadingScreen};
+76     \}
 \end{DoxyCode}
 \hypertarget{classwindow_1_1_window_afc31496382fd285df057838b1e38d1c6}{\index{window\-::\-Window@{window\-::\-Window}!set\-Win\-State@{set\-Win\-State}}
 \index{set\-Win\-State@{set\-Win\-State}!window::Window@{window\-::\-Window}}
@@ -216,7 +237,11 @@ References window.\-Window\-State.\-Loading\-Screen, and window.\-Window.\-windo
 )}}\label{classwindow_1_1_window_afc31496382fd285df057838b1e38d1c6}
 
 
-Definition at line 88 of file Window.\-java.
+Change the current window state to win state. 
+
+
+
+Definition at line 100 of file Window.\-java.
 
 
 
@@ -224,12 +249,12 @@ References window.\-Window\-State.\-Win, and window.\-Window.\-window\-State.
 
 
 \begin{DoxyCode}
-88                               \{
-89         Philophobia.getVerbose().information(\textcolor{stringliteral}{"Setting window's Win mode"}, \textcolor{stringliteral}{"window/Window.java"}, \textcolor{stringliteral}{"
+100                               \{
+101         Philophobia.getVerbose().information(\textcolor{stringliteral}{"Setting window's Win mode"}, \textcolor{stringliteral}{"window/Window.java"}, \textcolor{stringliteral}{"
       Window.setWindState()"});
-90         topbar.hidePauseButton();
-91         \hyperlink{classwindow_1_1_window_aaf636394a965f1a77233071375d4fe44}{windowState} = \hyperlink{enumwindow_1_1_window_state_adfd70a04c81f1ff3b289d5b766206fb5}{WindowState.Win};
-92     \}
+102         topbar.hidePauseButton();
+103         \hyperlink{classwindow_1_1_window_aaf636394a965f1a77233071375d4fe44}{windowState} = \hyperlink{enumwindow_1_1_window_state_adfd70a04c81f1ff3b289d5b766206fb5}{WindowState.Win};
+104     \}
 \end{DoxyCode}
 
 
