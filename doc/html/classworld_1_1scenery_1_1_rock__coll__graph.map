@@ -1,9 +1,0 @@
-<map id="world.scenery.Rock" name="world.scenery.Rock">
-<area shape="rect" id="node2" href="$classworld_1_1scenery_1_1_scenery.html" title="Class used to handle any world object. " alt="" coords="5,174,160,506"/>
-<area shape="rect" id="node6" href="$interfaceworld_1_1_interactive_object.html" title="Interface telling that the object interacts with the player. " alt="" coords="184,249,339,431"/>
-<area shape="rect" id="node8" href="$interfaceworld_1_1scenery_1_1_temperate_broadleaf_theme.html" title="Interface used to define that a Scenery object have a Temperate Broadleaf style. " alt="" coords="363,281,584,399"/>
-<area shape="rect" id="node10" href="$interfaceworld_1_1scenery_1_1_taiga_theme.html" title="Interface used to define that a Scenery object have a Taiga style. " alt="" coords="608,291,784,389"/>
-<area shape="rect" id="node12" href="$interfaceworld_1_1scenery_1_1_alpine_tundra_theme.html" title="Interface used to define that a Scenery object have an Alpine Tundra style. " alt="" coords="808,281,989,399"/>
-<area shape="rect" id="node14" href="$interfaceworld_1_1scenery_1_1_cave_theme.html" title="Interface used to tell that a Scenery object has a Cave style. " alt="" coords="1013,291,1189,389"/>
-<area shape="rect" id="node16" href="$interfaceworld_1_1scenery_1_1_polar_desert_theme.html" title="Interface used to define that a Scenery object has a Polar Desert style. " alt="" coords="1213,281,1387,399"/>
-</map>

@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classgameplay_1_1ai_1_1mood_1_1_mood.html" title="Abstract class representing an AI mood. " alt="" coords="5,89,168,122"/>
-<area shape="rect" id="node3" href="$classgameplay_1_1ai_1_1mood_1_1_anger.html" title="Class used to handle the Anger mood. " alt="" coords="244,5,409,38"/>
-<area shape="rect" id="node5" href="$classgameplay_1_1ai_1_1mood_1_1_curiosity.html" title="Class used to handle the Curiosity mood. " alt="" coords="236,61,417,94"/>
-<area shape="rect" id="node7" href="$classgameplay_1_1ai_1_1mood_1_1_depression.html" title="Class used to handle the Depression mood. " alt="" coords="228,117,425,150"/>
-<area shape="rect" id="node9" href="$classgameplay_1_1ai_1_1mood_1_1_power_complex.html" title="Class used to handle the Power Complex mood. " alt="" coords="217,173,436,206"/>
+<area shape="rect" id="node1" href="$a00015.html" title="Abstract class representing an AI mood. " alt="" coords="5,89,168,122"/>
+<area shape="rect" id="node3" href="$a00003.html" title="Class used to handle the Anger mood. " alt="" coords="244,5,409,38"/>
+<area shape="rect" id="node5" href="$a00007.html" title="Class used to handle the Curiosity mood. " alt="" coords="236,61,417,94"/>
+<area shape="rect" id="node7" href="$a00008.html" title="Class used to handle the Depression mood. " alt="" coords="228,117,425,150"/>
+<area shape="rect" id="node9" href="$a00020.html" title="Class used to handle the Power Complex mood. " alt="" coords="217,173,436,206"/>
 </map>

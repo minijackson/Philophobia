@@ -1,0 +1,218 @@
+\hypertarget{a00016}{\section{gameplay.\-ai.\-phrasing.\-Ordered\-Phrases Class Reference}
+\label{a00016}\index{gameplay.\-ai.\-phrasing.\-Ordered\-Phrases@{gameplay.\-ai.\-phrasing.\-Ordered\-Phrases}}
+}
+
+
+Class used to contain an ordered list of phrases.  
+
+
+
+
+Collaboration diagram for gameplay.\-ai.\-phrasing.\-Ordered\-Phrases\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{a00118}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00016_a053494ac21b135cc796b1607c928d704}{Ordered\-Phrases} (final String filename)
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00016}{Ordered\-Phrases} class constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{a00016_a3e549baaecd87057c01a8effafcf0ada}{get\-Phrases\-Number} (final String filename)
+\begin{DoxyCompactList}\small\item\em Method counting the number of line in filename. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String\mbox{[}$\,$\mbox{]} \hyperlink{a00016_ad31c26f17c9c223ae5a4260a77e60729}{phrases}
+\begin{DoxyCompactList}\small\item\em Array containing all the phrases corresponding to the current feeling and/or action. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \hyperlink{a00016_a8494c96fae41b483dc07c1d513da779e}{phrases\-Order}
+\begin{DoxyCompactList}\small\item\em Order of the phrases array field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to contain an ordered list of phrases. 
+
+It is ordered according to the last phrases that were spoken by the \hyperlink{a00001}{A\-I} 
+
+The last phrases that were spoken by the \hyperlink{a00001}{A\-I} are pushed at the bottom of the list 
+
+Definition at line 19 of file Ordered\-Phrases.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{a00016_a053494ac21b135cc796b1607c928d704}{\index{gameplay\-::ai\-::phrasing\-::\-Ordered\-Phrases@{gameplay\-::ai\-::phrasing\-::\-Ordered\-Phrases}!Ordered\-Phrases@{Ordered\-Phrases}}
+\index{Ordered\-Phrases@{Ordered\-Phrases}!gameplay::ai::phrasing::OrderedPhrases@{gameplay\-::ai\-::phrasing\-::\-Ordered\-Phrases}}
+\subsubsection[{Ordered\-Phrases}]{\setlength{\rightskip}{0pt plus 5cm}gameplay.\-ai.\-phrasing.\-Ordered\-Phrases.\-Ordered\-Phrases (
+\begin{DoxyParamCaption}
+\item[{final String}]{filename}
+\end{DoxyParamCaption}
+)}}\label{a00016_a053494ac21b135cc796b1607c928d704}
+
+
+\hyperlink{a00016}{Ordered\-Phrases} class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path and name of the file contaning line by line the phrases \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 38 of file Ordered\-Phrases.\-java.
+
+
+
+References gameplay.\-ai.\-phrasing.\-Ordered\-Phrases.\-get\-Phrases\-Number(), gameplay.\-ai.\-phrasing.\-Ordered\-Phrases.\-phrases, and gameplay.\-ai.\-phrasing.\-Ordered\-Phrases.\-phrases\-Order.
+
+
+\begin{DoxyCode}
+38                                                  \{
+39         Philophobia.getVerbose().calls(\textcolor{stringliteral}{"Creating new OrderedPhrases class"}, \textcolor{stringliteral}{"
+      gameplay/ai/phrasing/OrderedPhrases.java"}, \textcolor{stringliteral}{"OrderedPhrases.OrderedPhrases(String)"});
+40 
+41         \textcolor{keywordtype}{int} phrasesLength = \hyperlink{a00016_a3e549baaecd87057c01a8effafcf0ada}{getPhrasesNumber}(filename);
+42 
+43         \hyperlink{a00016_ad31c26f17c9c223ae5a4260a77e60729}{phrases} = \textcolor{keyword}{new} String[phrasesLength];
+44         \hyperlink{a00016_a8494c96fae41b483dc07c1d513da779e}{phrasesOrder} = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[phrasesLength];
+45 
+46         \textcolor{keywordflow}{try} \{
+47             RandomAccessFile raFile = \textcolor{keyword}{new} RandomAccessFile(\textcolor{keyword}{new} File(filename), \textcolor{stringliteral}{"r"});
+48 
+49             String currentLine = raFile.readLine();
+50             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0 ; currentLine != null ; ++i) \{
+51                 \hyperlink{a00016_ad31c26f17c9c223ae5a4260a77e60729}{phrases}[i] = currentLine;
+52                 currentLine = raFile.readLine();
+53             \}
+54         \} \textcolor{keywordflow}{catch}(FileNotFoundException e) \{
+55             Philophobia.getVerbose().serious(\textcolor{stringliteral}{"File not found exception: "} + e.getMessage(), \textcolor{stringliteral}{"
+      gameplay/ai/phrasing/OrderedPhrases.java"}, \textcolor{stringliteral}{"OrderedPhrases.OrderedPhrases(String)"});
+56         \} \textcolor{keywordflow}{catch}(IOException e) \{
+57             Philophobia.getVerbose().serious(\textcolor{stringliteral}{"IO exception: "} + e.getMessage(), \textcolor{stringliteral}{"
+      gameplay/ai/phrasing/OrderedPhrases.java"}, \textcolor{stringliteral}{"OrderedPhrases.OrderedPhrases(String)"});
+58         \}
+59     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00016_a053494ac21b135cc796b1607c928d704_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{a00016_a3e549baaecd87057c01a8effafcf0ada}{\index{gameplay\-::ai\-::phrasing\-::\-Ordered\-Phrases@{gameplay\-::ai\-::phrasing\-::\-Ordered\-Phrases}!get\-Phrases\-Number@{get\-Phrases\-Number}}
+\index{get\-Phrases\-Number@{get\-Phrases\-Number}!gameplay::ai::phrasing::OrderedPhrases@{gameplay\-::ai\-::phrasing\-::\-Ordered\-Phrases}}
+\subsubsection[{get\-Phrases\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int gameplay.\-ai.\-phrasing.\-Ordered\-Phrases.\-get\-Phrases\-Number (
+\begin{DoxyParamCaption}
+\item[{final String}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00016_a3e549baaecd87057c01a8effafcf0ada}
+
+
+Method counting the number of line in filename. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path and name of the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of phrases une the file or 0 if there is no phrases or an error 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file Ordered\-Phrases.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Ordered\-Phrases.\-Ordered\-Phrases().
+
+
+\begin{DoxyCode}
+66                                                           \{
+67 
+68         \textcolor{keywordflow}{try} \{
+69             \textcolor{comment}{// Opening filename i read mode }
+70             RandomAccessFile raFile = \textcolor{keyword}{new} RandomAccessFile(\textcolor{keyword}{new} File(filename), \textcolor{stringliteral}{"r"});
+71 
+72             \textcolor{comment}{// Count the number of lines}
+73             \textcolor{keywordtype}{int} i;
+74             \textcolor{keywordflow}{for}(i=0 ; raFile.readLine() != null ; ++i);
+75             \textcolor{keywordflow}{return} i;
+76         \} \textcolor{keywordflow}{catch}(FileNotFoundException e) \{
+77             Philophobia.getVerbose().serious(\textcolor{stringliteral}{"File not found exception: "} + e.getMessage(), \textcolor{stringliteral}{"
+      gameplay/ai/phrasing/OrderedPhrases.java"}, \textcolor{stringliteral}{"OrderedPhrases.OrderedPhrases(String)"});
+78         \} \textcolor{keywordflow}{catch}(IOException e) \{
+79             Philophobia.getVerbose().serious(\textcolor{stringliteral}{"IO exception: "} + e.getMessage(), \textcolor{stringliteral}{"
+      gameplay/ai/phrasing/OrderedPhrases.java"}, \textcolor{stringliteral}{"OrderedPhrases.OrderedPhrases(String)"});
+80         \}
+81         \textcolor{keywordflow}{return} 0;
+82     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00016_a3e549baaecd87057c01a8effafcf0ada_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{a00016_ad31c26f17c9c223ae5a4260a77e60729}{\index{gameplay\-::ai\-::phrasing\-::\-Ordered\-Phrases@{gameplay\-::ai\-::phrasing\-::\-Ordered\-Phrases}!phrases@{phrases}}
+\index{phrases@{phrases}!gameplay::ai::phrasing::OrderedPhrases@{gameplay\-::ai\-::phrasing\-::\-Ordered\-Phrases}}
+\subsubsection[{phrases}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} gameplay.\-ai.\-phrasing.\-Ordered\-Phrases.\-phrases\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00016_ad31c26f17c9c223ae5a4260a77e60729}
+
+
+Array containing all the phrases corresponding to the current feeling and/or action. 
+
+
+
+Definition at line 26 of file Ordered\-Phrases.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Ordered\-Phrases.\-Ordered\-Phrases().
+
+\hypertarget{a00016_a8494c96fae41b483dc07c1d513da779e}{\index{gameplay\-::ai\-::phrasing\-::\-Ordered\-Phrases@{gameplay\-::ai\-::phrasing\-::\-Ordered\-Phrases}!phrases\-Order@{phrases\-Order}}
+\index{phrases\-Order@{phrases\-Order}!gameplay::ai::phrasing::OrderedPhrases@{gameplay\-::ai\-::phrasing\-::\-Ordered\-Phrases}}
+\subsubsection[{phrases\-Order}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]} gameplay.\-ai.\-phrasing.\-Ordered\-Phrases.\-phrases\-Order\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00016_a8494c96fae41b483dc07c1d513da779e}
+
+
+Order of the phrases array field. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{a00016_ad31c26f17c9c223ae5a4260a77e60729}{phrases} 
+\end{DoxySeeAlso}
+
+
+Definition at line 32 of file Ordered\-Phrases.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Ordered\-Phrases.\-Ordered\-Phrases().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gameplay/ai/phrasing/\hyperlink{a00049}{Ordered\-Phrases.\-java}\end{DoxyCompactItemize}

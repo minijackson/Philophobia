@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hero',['Hero',['../classworld_1_1character_1_1_hero.html',1,'world::character']]]
+  ['hero',['Hero',['../a00013.html',1,'world::character']]]
 ];

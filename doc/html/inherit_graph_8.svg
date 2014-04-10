@@ -11,7 +11,7 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-28 97,-28 97,5 -4,5"/>
 <!-- Node1 -->
 <g id="node1" class="node"><title>Node1</title>
-<a xlink:href="classmain_1_1_philophobia.html" target="_top" xlink:title="Main class. ">
+<a xlink:href="a00017.html" target="_top" xlink:title="Main class. ">
 <polygon fill="white" stroke="black" points="0.5,-0 0.5,-24 91.5,-24 91.5,-0 0.5,-0"/>
 <text text-anchor="middle" x="46" y="-11" font-family="Helvetica,sans-Serif" font-size="10.00">main.Philophobia</text>
 </a>

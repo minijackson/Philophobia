@@ -1,0 +1,6 @@
+<map id="gameplay.ai.mood.Mood" name="gameplay.ai.mood.Mood">
+<area shape="rect" id="node3" href="$a00003.html" title="Class used to handle the Anger mood. " alt="" coords="5,430,171,527"/>
+<area shape="rect" id="node5" href="$a00007.html" title="Class used to handle the Curiosity mood. " alt="" coords="195,430,376,527"/>
+<area shape="rect" id="node7" href="$a00008.html" title="Class used to handle the Depression mood. " alt="" coords="400,430,597,527"/>
+<area shape="rect" id="node9" href="$a00020.html" title="Class used to handle the Power Complex mood. " alt="" coords="621,430,840,527"/>
+</map>

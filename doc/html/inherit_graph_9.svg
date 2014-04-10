@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node3" class="node"><title>Node2</title>
-<a xlink:href="classwindow_1_1topbar_1_1_top_bar.html" target="_top" xlink:title="Class handling the top bar of the program&#39;s main window. ">
+<a xlink:href="a00031.html" target="_top" xlink:title="Class handling the top bar of the program&#39;s main window. ">
 <polygon fill="white" stroke="black" points="84,-42 84,-66 196,-66 196,-42 84,-42"/>
 <text text-anchor="middle" x="140" y="-53" font-family="Helvetica,sans-Serif" font-size="10.00">window.topbar.TopBar</text>
 </a>
@@ -28,7 +28,7 @@
 </g>
 <!-- Node3 -->
 <g id="node5" class="node"><title>Node3</title>
-<a xlink:href="classwindow_1_1ui_1_1_u_i.html" target="_top" xlink:title="Class used to handle the window&#39;s user interface. ">
+<a xlink:href="a00034.html" target="_top" xlink:title="Class used to handle the window&#39;s user interface. ">
 <polygon fill="white" stroke="black" points="103.5,-0 103.5,-24 176.5,-24 176.5,-0 103.5,-0"/>
 <text text-anchor="middle" x="140" y="-11" font-family="Helvetica,sans-Serif" font-size="10.00">window.ui.UI</text>
 </a>

@@ -1,0 +1,4 @@
+<map id="gameplay.ai.AI.changeMood" name="gameplay.ai.AI.changeMood">
+<area shape="rect" id="node3" href="$a00001.html#ade34cf6dd9b6f1c6ebceccf040fffeb4" title="Method called when the player make a new betrayal (does not do what the AI asked) ..." alt="" coords="240,5,424,38"/>
+<area shape="rect" id="node5" href="$a00001.html#ae37c568fcf8ccf9596665b94cb9c4702" title="Method called when the player do what the AI asked. " alt="" coords="243,61,421,94"/>
+</map>

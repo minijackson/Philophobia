@@ -1,6 +1,0 @@
-<map id="world.scenery.Flower" name="world.scenery.Flower">
-<area shape="rect" id="node2" href="$classworld_1_1scenery_1_1_scenery.html" title="Class used to handle any world object. " alt="" coords="5,6,160,359"/>
-<area shape="rect" id="node4" href="$interfaceworld_1_1scenery_1_1_temperate_broadleaf_theme.html" title="Interface used to define that a Scenery object have a Temperate Broadleaf style. " alt="" coords="184,123,405,242"/>
-<area shape="rect" id="node6" href="$interfaceworld_1_1scenery_1_1_taiga_theme.html" title="Interface used to define that a Scenery object have a Taiga style. " alt="" coords="429,134,605,231"/>
-<area shape="rect" id="node8" href="$interfaceworld_1_1scenery_1_1_alpine_tundra_theme.html" title="Interface used to define that a Scenery object have an Alpine Tundra style. " alt="" coords="629,123,811,242"/>
-</map>

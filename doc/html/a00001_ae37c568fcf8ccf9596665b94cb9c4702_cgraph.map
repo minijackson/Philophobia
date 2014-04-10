@@ -1,0 +1,5 @@
+<map id="gameplay.ai.AI.newSlavery" name="gameplay.ai.AI.newSlavery">
+<area shape="rect" id="node3" href="$a00001.html#adbb46250627224cb4cd42ad99eaf42ba" title="Change the current mood field from a Class object. " alt="" coords="253,5,440,38"/>
+<area shape="rect" id="node5" href="$a00015.html#aceaadc827da68781c215cf280a8062f8" title="When the slavery threshold is exceeded, this function is called and return a new mood given their pro..." alt="" coords="255,61,439,115"/>
+<area shape="rect" id="node7" href="$a00015.html#ac416312a82ad5afce4090858b47b0c96" title="Increment and return the slavery count field. " alt="" coords="235,138,459,193"/>
+</map>

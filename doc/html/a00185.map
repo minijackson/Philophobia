@@ -1,0 +1,6 @@
+<map id="world.scenery.SteppeTheme" name="world.scenery.SteppeTheme">
+<area shape="rect" id="node3" href="$a00011.html" title="Class used to handle a grass object. " alt="" coords="5,206,147,303"/>
+<area shape="rect" id="node5" href="$a00012.html" title="Class used to handle a ground object. " alt="" coords="171,206,317,303"/>
+<area shape="rect" id="node7" href="$a00026.html" title="Class used to handle a shrub object. " alt="" coords="341,206,480,303"/>
+<area shape="rect" id="node9" href="$a00033.html" title="Class used to handle a tree object. " alt="" coords="504,153,635,357"/>
+</map>

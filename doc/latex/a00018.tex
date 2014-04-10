@@ -1,0 +1,330 @@
+\hypertarget{a00018}{\section{gameplay.\-ai.\-phrasing.\-Phrasing Class Reference}
+\label{a00018}\index{gameplay.\-ai.\-phrasing.\-Phrasing@{gameplay.\-ai.\-phrasing.\-Phrasing}}
+}
+
+
+Class handling the talk system for the \hyperlink{a00001}{A\-I}.  
+
+
+
+
+Collaboration diagram for gameplay.\-ai.\-phrasing.\-Phrasing\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{a00120}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00018_a369fb65d1e9363006fb8f4fa31b438de}{Phrasing} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{a00018}{Phrasing} class constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00016}{Ordered\-Phrases} \hyperlink{a00018_ad82ede6d0263d91e13511606f6696a18}{curiosity\-Motivation\-Phrases}
+\begin{DoxyCompactList}\small\item\em Attribute containing the \hyperlink{a00001}{A\-I} phrases for the curiosity Feeling that aims to motivate the player to do some actions. \end{DoxyCompactList}\item 
+\hyperlink{a00016}{Ordered\-Phrases} \hyperlink{a00018_a10f436b3727af6eedab39a382801306c}{curiosity\-Betrayal\-Phrases}
+\begin{DoxyCompactList}\small\item\em Attribute containing the \hyperlink{a00001}{A\-I} phrases for the curiosity Feeling that are said when the player refused to do the asked action. \end{DoxyCompactList}\item 
+\hyperlink{a00016}{Ordered\-Phrases} \hyperlink{a00018_a2e35ff33685cec980af1454e7f255d06}{curiosity\-Slavery\-Phrases}
+\begin{DoxyCompactList}\small\item\em Attribute containing the \hyperlink{a00001}{A\-I} phrases for the curiosity Feeling that are said when the player did the asked action. \end{DoxyCompactList}\item 
+\hyperlink{a00016}{Ordered\-Phrases} \hyperlink{a00018_a2fb3c3c2b96efbc4afee915d58967130}{anger\-Motivation\-Phrases}
+\begin{DoxyCompactList}\small\item\em Attribute containing the \hyperlink{a00001}{A\-I} phrases for the anger Feeling that aims to motivate the player to do some actions. \end{DoxyCompactList}\item 
+\hyperlink{a00016}{Ordered\-Phrases} \hyperlink{a00018_a69df7c3975018f12a43f29172bbc5789}{anger\-Betrayal\-Phrases}
+\begin{DoxyCompactList}\small\item\em Attribute containing the \hyperlink{a00001}{A\-I} phrases for the anger Feeling that are said when the player refused to do the asked action. \end{DoxyCompactList}\item 
+\hyperlink{a00016}{Ordered\-Phrases} \hyperlink{a00018_a1c50856055990e9a1c22fd2b364bdf85}{anger\-Slavery\-Phrases}
+\begin{DoxyCompactList}\small\item\em Attribute containing the \hyperlink{a00001}{A\-I} phrases for the anger Feeling that are said when the player did the asked action. \end{DoxyCompactList}\item 
+\hyperlink{a00016}{Ordered\-Phrases} \hyperlink{a00018_a7134cba12ee037a9737e6e5dcdc02ba8}{depression\-Motivation\-Phrases}
+\begin{DoxyCompactList}\small\item\em Attribute containing the \hyperlink{a00001}{A\-I} phrases for the depression Feeling that aims to motivate the player to do some actions. \end{DoxyCompactList}\item 
+\hyperlink{a00016}{Ordered\-Phrases} \hyperlink{a00018_a1ab28780f3cb894c496ebd26185493aa}{depression\-Betrayal\-Phrases}
+\begin{DoxyCompactList}\small\item\em Attribute containing the \hyperlink{a00001}{A\-I} phrases for the depression Feeling that are said when the player refused to do the asked action. \end{DoxyCompactList}\item 
+\hyperlink{a00016}{Ordered\-Phrases} \hyperlink{a00018_ab8f4fdd33f163351fb6ff578cb950a44}{depression\-Slavery\-Phrases}
+\begin{DoxyCompactList}\small\item\em Attribute containing the \hyperlink{a00001}{A\-I} phrases for the depression Feeling that are said when the player did the asked action. \end{DoxyCompactList}\item 
+\hyperlink{a00016}{Ordered\-Phrases} \hyperlink{a00018_ad566ad78166872e95e920833f4f36e90}{power\-Complex\-Motivation\-Phrases}
+\begin{DoxyCompactList}\small\item\em Attribute containing the \hyperlink{a00001}{A\-I} phrases for the power complex Feeling that aims to motivate the player to do some actions. \end{DoxyCompactList}\item 
+\hyperlink{a00016}{Ordered\-Phrases} \hyperlink{a00018_a77e67b74525c919463d3c9b830fe895d}{power\-Complex\-Betrayal\-Phrases}
+\begin{DoxyCompactList}\small\item\em Attribute containing the \hyperlink{a00001}{A\-I} phrases for the power complex Feeling that are said when the player refused to do the asked action. \end{DoxyCompactList}\item 
+\hyperlink{a00016}{Ordered\-Phrases} \hyperlink{a00018_afc6cf63da008d88b88e0e8138bb2fda9}{power\-Complex\-Slavery\-Phrases}
+\begin{DoxyCompactList}\small\item\em Attribute containing the \hyperlink{a00001}{A\-I} phrases for the power complex Feeling that are said when the player did the asked action. \end{DoxyCompactList}\item 
+String \hyperlink{a00018_a613e36f3cca02a5ff83401e2373effd9}{action\-Asked}
+\begin{DoxyCompactList}\small\item\em Field containing the asked action in a human readable format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class handling the talk system for the \hyperlink{a00001}{A\-I}. 
+
+It contains a several number of phrases corresponding to each feeling, ordered corresponding to when the phrase were last said by the \hyperlink{a00001}{A\-I} 
+
+Definition at line 18 of file Phrasing.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{a00018_a369fb65d1e9363006fb8f4fa31b438de}{\index{gameplay\-::ai\-::phrasing\-::\-Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}!Phrasing@{Phrasing}}
+\index{Phrasing@{Phrasing}!gameplay::ai::phrasing::Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}}
+\subsubsection[{Phrasing}]{\setlength{\rightskip}{0pt plus 5cm}gameplay.\-ai.\-phrasing.\-Phrasing.\-Phrasing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00018_a369fb65d1e9363006fb8f4fa31b438de}
+
+
+\hyperlink{a00018}{Phrasing} class constructor. 
+
+
+
+Definition at line 113 of file Phrasing.\-java.
+
+
+
+References gameplay.\-ai.\-phrasing.\-Phrasing.\-anger\-Betrayal\-Phrases, gameplay.\-ai.\-phrasing.\-Phrasing.\-anger\-Motivation\-Phrases, gameplay.\-ai.\-phrasing.\-Phrasing.\-anger\-Slavery\-Phrases, gameplay.\-ai.\-phrasing.\-Phrasing.\-curiosity\-Betrayal\-Phrases, gameplay.\-ai.\-phrasing.\-Phrasing.\-curiosity\-Motivation\-Phrases, gameplay.\-ai.\-phrasing.\-Phrasing.\-curiosity\-Slavery\-Phrases, gameplay.\-ai.\-phrasing.\-Phrasing.\-depression\-Betrayal\-Phrases, gameplay.\-ai.\-phrasing.\-Phrasing.\-depression\-Motivation\-Phrases, gameplay.\-ai.\-phrasing.\-Phrasing.\-depression\-Slavery\-Phrases, main.\-Philophobia.\-get\-Phrases\-File\-Prefix(), gameplay.\-ai.\-phrasing.\-Phrasing.\-power\-Complex\-Betrayal\-Phrases, gameplay.\-ai.\-phrasing.\-Phrasing.\-power\-Complex\-Motivation\-Phrases, and gameplay.\-ai.\-phrasing.\-Phrasing.\-power\-Complex\-Slavery\-Phrases.
+
+
+\begin{DoxyCode}
+113                       \{
+114         Philophobia.getVerbose().calls(\textcolor{stringliteral}{"Creating Phrasing class"}, \textcolor{stringliteral}{"gameplay/ai/phrasing/Phrasing.java"}, \textcolor{stringliteral}{"
+      Phrasing.Phrasing()"});
+115 
+116         \hyperlink{a00018_ad82ede6d0263d91e13511606f6696a18}{curiosityMotivationPhrases} = \textcolor{keyword}{new} OrderedPhrases(Philophobia.
+      getPhrasesFilePrefix() + \textcolor{stringliteral}{"curiositymotivation.phrases"});
+117         \hyperlink{a00018_a10f436b3727af6eedab39a382801306c}{curiosityBetrayalPhrases} = \textcolor{keyword}{new} OrderedPhrases(Philophobia.
+      getPhrasesFilePrefix() + \textcolor{stringliteral}{"curiositybetrayal.phrases"});
+118         \hyperlink{a00018_a2e35ff33685cec980af1454e7f255d06}{curiositySlaveryPhrases} = \textcolor{keyword}{new} OrderedPhrases(Philophobia.
+      getPhrasesFilePrefix() + \textcolor{stringliteral}{"curiosityslavery.phrases"});
+119         
+120         \hyperlink{a00018_a2fb3c3c2b96efbc4afee915d58967130}{angerMotivationPhrases} = \textcolor{keyword}{new} OrderedPhrases(Philophobia.getPhrasesFilePrefix(
+      ) + \textcolor{stringliteral}{"angermotivation.phrases"});
+121         \hyperlink{a00018_a69df7c3975018f12a43f29172bbc5789}{angerBetrayalPhrases} = \textcolor{keyword}{new} OrderedPhrases(Philophobia.getPhrasesFilePrefix() + \textcolor{stringliteral}{
+      "angerbetrayal.phrases"});
+122         \hyperlink{a00018_a1c50856055990e9a1c22fd2b364bdf85}{angerSlaveryPhrases} = \textcolor{keyword}{new} OrderedPhrases(Philophobia.getPhrasesFilePrefix() + \textcolor{stringliteral}{"
+      angerslavery.phrases"});
+123 
+124         \hyperlink{a00018_a7134cba12ee037a9737e6e5dcdc02ba8}{depressionMotivationPhrases} = \textcolor{keyword}{new} OrderedPhrases(Philophobia.
+      getPhrasesFilePrefix() + \textcolor{stringliteral}{"depressionmotivation.phrases"});
+125         \hyperlink{a00018_a1ab28780f3cb894c496ebd26185493aa}{depressionBetrayalPhrases} = \textcolor{keyword}{new} OrderedPhrases(Philophobia.
+      getPhrasesFilePrefix() + \textcolor{stringliteral}{"depressionbetrayal.phrases"});
+126         \hyperlink{a00018_ab8f4fdd33f163351fb6ff578cb950a44}{depressionSlaveryPhrases} = \textcolor{keyword}{new} OrderedPhrases(Philophobia.
+      getPhrasesFilePrefix() + \textcolor{stringliteral}{"depressionslavery.phrases"});
+127 
+128         \hyperlink{a00018_ad566ad78166872e95e920833f4f36e90}{powerComplexMotivationPhrases} = \textcolor{keyword}{new} OrderedPhrases(Philophobia.
+      getPhrasesFilePrefix() + \textcolor{stringliteral}{"powercomplexmotivation.phrases"});
+129         \hyperlink{a00018_a77e67b74525c919463d3c9b830fe895d}{powerComplexBetrayalPhrases} = \textcolor{keyword}{new} OrderedPhrases(Philophobia.
+      getPhrasesFilePrefix() + \textcolor{stringliteral}{"powercomplexbetrayal.phrases"});
+130         \hyperlink{a00018_afc6cf63da008d88b88e0e8138bb2fda9}{powerComplexSlaveryPhrases} = \textcolor{keyword}{new} OrderedPhrases(Philophobia.
+      getPhrasesFilePrefix() + \textcolor{stringliteral}{"powercomplexslavery.phrases"});
+131 
+132     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00018_a369fb65d1e9363006fb8f4fa31b438de_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{a00018_a613e36f3cca02a5ff83401e2373effd9}{\index{gameplay\-::ai\-::phrasing\-::\-Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}!action\-Asked@{action\-Asked}}
+\index{action\-Asked@{action\-Asked}!gameplay::ai::phrasing::Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}}
+\subsubsection[{action\-Asked}]{\setlength{\rightskip}{0pt plus 5cm}String gameplay.\-ai.\-phrasing.\-Phrasing.\-action\-Asked\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00018_a613e36f3cca02a5ff83401e2373effd9}
+
+
+Field containing the asked action in a human readable format. 
+
+
+
+Definition at line 108 of file Phrasing.\-java.
+
+\hypertarget{a00018_a69df7c3975018f12a43f29172bbc5789}{\index{gameplay\-::ai\-::phrasing\-::\-Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}!anger\-Betrayal\-Phrases@{anger\-Betrayal\-Phrases}}
+\index{anger\-Betrayal\-Phrases@{anger\-Betrayal\-Phrases}!gameplay::ai::phrasing::Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}}
+\subsubsection[{anger\-Betrayal\-Phrases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ordered\-Phrases} gameplay.\-ai.\-phrasing.\-Phrasing.\-anger\-Betrayal\-Phrases\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00018_a69df7c3975018f12a43f29172bbc5789}
+
+
+Attribute containing the \hyperlink{a00001}{A\-I} phrases for the anger Feeling that are said when the player refused to do the asked action. 
+
+
+
+Definition at line 53 of file Phrasing.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Phrasing.\-Phrasing().
+
+\hypertarget{a00018_a2fb3c3c2b96efbc4afee915d58967130}{\index{gameplay\-::ai\-::phrasing\-::\-Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}!anger\-Motivation\-Phrases@{anger\-Motivation\-Phrases}}
+\index{anger\-Motivation\-Phrases@{anger\-Motivation\-Phrases}!gameplay::ai::phrasing::Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}}
+\subsubsection[{anger\-Motivation\-Phrases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ordered\-Phrases} gameplay.\-ai.\-phrasing.\-Phrasing.\-anger\-Motivation\-Phrases\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00018_a2fb3c3c2b96efbc4afee915d58967130}
+
+
+Attribute containing the \hyperlink{a00001}{A\-I} phrases for the anger Feeling that aims to motivate the player to do some actions. 
+
+
+
+Definition at line 46 of file Phrasing.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Phrasing.\-Phrasing().
+
+\hypertarget{a00018_a1c50856055990e9a1c22fd2b364bdf85}{\index{gameplay\-::ai\-::phrasing\-::\-Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}!anger\-Slavery\-Phrases@{anger\-Slavery\-Phrases}}
+\index{anger\-Slavery\-Phrases@{anger\-Slavery\-Phrases}!gameplay::ai::phrasing::Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}}
+\subsubsection[{anger\-Slavery\-Phrases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ordered\-Phrases} gameplay.\-ai.\-phrasing.\-Phrasing.\-anger\-Slavery\-Phrases\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00018_a1c50856055990e9a1c22fd2b364bdf85}
+
+
+Attribute containing the \hyperlink{a00001}{A\-I} phrases for the anger Feeling that are said when the player did the asked action. 
+
+
+
+Definition at line 60 of file Phrasing.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Phrasing.\-Phrasing().
+
+\hypertarget{a00018_a10f436b3727af6eedab39a382801306c}{\index{gameplay\-::ai\-::phrasing\-::\-Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}!curiosity\-Betrayal\-Phrases@{curiosity\-Betrayal\-Phrases}}
+\index{curiosity\-Betrayal\-Phrases@{curiosity\-Betrayal\-Phrases}!gameplay::ai::phrasing::Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}}
+\subsubsection[{curiosity\-Betrayal\-Phrases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ordered\-Phrases} gameplay.\-ai.\-phrasing.\-Phrasing.\-curiosity\-Betrayal\-Phrases\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00018_a10f436b3727af6eedab39a382801306c}
+
+
+Attribute containing the \hyperlink{a00001}{A\-I} phrases for the curiosity Feeling that are said when the player refused to do the asked action. 
+
+
+
+Definition at line 32 of file Phrasing.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Phrasing.\-Phrasing().
+
+\hypertarget{a00018_ad82ede6d0263d91e13511606f6696a18}{\index{gameplay\-::ai\-::phrasing\-::\-Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}!curiosity\-Motivation\-Phrases@{curiosity\-Motivation\-Phrases}}
+\index{curiosity\-Motivation\-Phrases@{curiosity\-Motivation\-Phrases}!gameplay::ai::phrasing::Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}}
+\subsubsection[{curiosity\-Motivation\-Phrases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ordered\-Phrases} gameplay.\-ai.\-phrasing.\-Phrasing.\-curiosity\-Motivation\-Phrases\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00018_ad82ede6d0263d91e13511606f6696a18}
+
+
+Attribute containing the \hyperlink{a00001}{A\-I} phrases for the curiosity Feeling that aims to motivate the player to do some actions. 
+
+
+
+Definition at line 25 of file Phrasing.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Phrasing.\-Phrasing().
+
+\hypertarget{a00018_a2e35ff33685cec980af1454e7f255d06}{\index{gameplay\-::ai\-::phrasing\-::\-Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}!curiosity\-Slavery\-Phrases@{curiosity\-Slavery\-Phrases}}
+\index{curiosity\-Slavery\-Phrases@{curiosity\-Slavery\-Phrases}!gameplay::ai::phrasing::Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}}
+\subsubsection[{curiosity\-Slavery\-Phrases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ordered\-Phrases} gameplay.\-ai.\-phrasing.\-Phrasing.\-curiosity\-Slavery\-Phrases\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00018_a2e35ff33685cec980af1454e7f255d06}
+
+
+Attribute containing the \hyperlink{a00001}{A\-I} phrases for the curiosity Feeling that are said when the player did the asked action. 
+
+
+
+Definition at line 39 of file Phrasing.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Phrasing.\-Phrasing().
+
+\hypertarget{a00018_a1ab28780f3cb894c496ebd26185493aa}{\index{gameplay\-::ai\-::phrasing\-::\-Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}!depression\-Betrayal\-Phrases@{depression\-Betrayal\-Phrases}}
+\index{depression\-Betrayal\-Phrases@{depression\-Betrayal\-Phrases}!gameplay::ai::phrasing::Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}}
+\subsubsection[{depression\-Betrayal\-Phrases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ordered\-Phrases} gameplay.\-ai.\-phrasing.\-Phrasing.\-depression\-Betrayal\-Phrases\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00018_a1ab28780f3cb894c496ebd26185493aa}
+
+
+Attribute containing the \hyperlink{a00001}{A\-I} phrases for the depression Feeling that are said when the player refused to do the asked action. 
+
+
+
+Definition at line 74 of file Phrasing.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Phrasing.\-Phrasing().
+
+\hypertarget{a00018_a7134cba12ee037a9737e6e5dcdc02ba8}{\index{gameplay\-::ai\-::phrasing\-::\-Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}!depression\-Motivation\-Phrases@{depression\-Motivation\-Phrases}}
+\index{depression\-Motivation\-Phrases@{depression\-Motivation\-Phrases}!gameplay::ai::phrasing::Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}}
+\subsubsection[{depression\-Motivation\-Phrases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ordered\-Phrases} gameplay.\-ai.\-phrasing.\-Phrasing.\-depression\-Motivation\-Phrases\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00018_a7134cba12ee037a9737e6e5dcdc02ba8}
+
+
+Attribute containing the \hyperlink{a00001}{A\-I} phrases for the depression Feeling that aims to motivate the player to do some actions. 
+
+
+
+Definition at line 67 of file Phrasing.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Phrasing.\-Phrasing().
+
+\hypertarget{a00018_ab8f4fdd33f163351fb6ff578cb950a44}{\index{gameplay\-::ai\-::phrasing\-::\-Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}!depression\-Slavery\-Phrases@{depression\-Slavery\-Phrases}}
+\index{depression\-Slavery\-Phrases@{depression\-Slavery\-Phrases}!gameplay::ai::phrasing::Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}}
+\subsubsection[{depression\-Slavery\-Phrases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ordered\-Phrases} gameplay.\-ai.\-phrasing.\-Phrasing.\-depression\-Slavery\-Phrases\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00018_ab8f4fdd33f163351fb6ff578cb950a44}
+
+
+Attribute containing the \hyperlink{a00001}{A\-I} phrases for the depression Feeling that are said when the player did the asked action. 
+
+
+
+Definition at line 81 of file Phrasing.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Phrasing.\-Phrasing().
+
+\hypertarget{a00018_a77e67b74525c919463d3c9b830fe895d}{\index{gameplay\-::ai\-::phrasing\-::\-Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}!power\-Complex\-Betrayal\-Phrases@{power\-Complex\-Betrayal\-Phrases}}
+\index{power\-Complex\-Betrayal\-Phrases@{power\-Complex\-Betrayal\-Phrases}!gameplay::ai::phrasing::Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}}
+\subsubsection[{power\-Complex\-Betrayal\-Phrases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ordered\-Phrases} gameplay.\-ai.\-phrasing.\-Phrasing.\-power\-Complex\-Betrayal\-Phrases\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00018_a77e67b74525c919463d3c9b830fe895d}
+
+
+Attribute containing the \hyperlink{a00001}{A\-I} phrases for the power complex Feeling that are said when the player refused to do the asked action. 
+
+
+
+Definition at line 95 of file Phrasing.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Phrasing.\-Phrasing().
+
+\hypertarget{a00018_ad566ad78166872e95e920833f4f36e90}{\index{gameplay\-::ai\-::phrasing\-::\-Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}!power\-Complex\-Motivation\-Phrases@{power\-Complex\-Motivation\-Phrases}}
+\index{power\-Complex\-Motivation\-Phrases@{power\-Complex\-Motivation\-Phrases}!gameplay::ai::phrasing::Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}}
+\subsubsection[{power\-Complex\-Motivation\-Phrases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ordered\-Phrases} gameplay.\-ai.\-phrasing.\-Phrasing.\-power\-Complex\-Motivation\-Phrases\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00018_ad566ad78166872e95e920833f4f36e90}
+
+
+Attribute containing the \hyperlink{a00001}{A\-I} phrases for the power complex Feeling that aims to motivate the player to do some actions. 
+
+
+
+Definition at line 88 of file Phrasing.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Phrasing.\-Phrasing().
+
+\hypertarget{a00018_afc6cf63da008d88b88e0e8138bb2fda9}{\index{gameplay\-::ai\-::phrasing\-::\-Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}!power\-Complex\-Slavery\-Phrases@{power\-Complex\-Slavery\-Phrases}}
+\index{power\-Complex\-Slavery\-Phrases@{power\-Complex\-Slavery\-Phrases}!gameplay::ai::phrasing::Phrasing@{gameplay\-::ai\-::phrasing\-::\-Phrasing}}
+\subsubsection[{power\-Complex\-Slavery\-Phrases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ordered\-Phrases} gameplay.\-ai.\-phrasing.\-Phrasing.\-power\-Complex\-Slavery\-Phrases\hspace{0.3cm}{\ttfamily [protected]}}}\label{a00018_afc6cf63da008d88b88e0e8138bb2fda9}
+
+
+Attribute containing the \hyperlink{a00001}{A\-I} phrases for the power complex Feeling that are said when the player did the asked action. 
+
+
+
+Definition at line 102 of file Phrasing.\-java.
+
+
+
+Referenced by gameplay.\-ai.\-phrasing.\-Phrasing.\-Phrasing().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+gameplay/ai/phrasing/\hyperlink{a00050}{Phrasing.\-java}\end{DoxyCompactItemize}
