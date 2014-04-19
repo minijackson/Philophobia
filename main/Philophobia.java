@@ -18,17 +18,12 @@ public class Philophobia {
 	/**
 	 * Directory containing all the image files
 	 */
-	protected static String IMAGE_FILE_PREFIX = "src/images/";
-
-	/**
-	 * Directory containing all the world files
-	 */
-	protected static String WORLD_FILE_PREFIX = "src/world/";
+	protected static String IMAGE_FILE_PREFIX = "res/images/";
 
 	/**
 	 * Directory containing all the phrases files
 	 */
-	protected static String PHRASES_FILE_PREFIX = "src/phrases/";
+	protected static String PHRASES_FILE_PREFIX = "res/phrases/";
 
 	/**
 	 * Global variable used for debugging
