@@ -87,14 +87,6 @@ public class Philophobia {
 		return IMAGE_FILE_PREFIX;
 	}
 
-	/**
-	 * Getter for the WORLD_FILE_PREFIX field
-	 * @see #WORLD_FILE_PREFIX
-	 */
-	public static String getWorldFilePrefix() {
-		return WORLD_FILE_PREFIX;
-	}
-
 	public static String getPhrasesFilePrefix() {
 		return PHRASES_FILE_PREFIX;
 	}
